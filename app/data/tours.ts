@@ -21,7 +21,7 @@ export type Tour = {
   included: string[];
   excluded: string[];
   reviews: string[];
-  days: string;
+
   testimonials: Testimonial[];
 };
 
@@ -50,7 +50,6 @@ export const tours: Tour[] = [
     included: ["Hotel Pickup", "Professional Guide",],
     excluded: [""],
     reviews: ["⭐⭐⭐⭐⭐ Amazing experience!", "⭐⭐⭐⭐ Great tour and friendly guide."],
-    days: "6 Days",
     testimonials: [
       {
         id: 1,
@@ -104,7 +103,6 @@ export const tours: Tour[] = [
     included: [ "Airport Transfers", "Guide",],
     excluded: ["Drinks", "Tips"],
     reviews: ["⭐⭐⭐⭐⭐ Beautiful cruise!", "⭐⭐⭐⭐ Highly recommended."],
-    days: "7 Days",
     testimonials: [
       {
         id: 1,
@@ -156,7 +154,6 @@ export const tours: Tour[] = [
     included: [ "Guide",],
     excluded: ["Flights", "Tips"],
     reviews: ["⭐⭐⭐⭐⭐ Fantastic tour!", "⭐⭐⭐⭐ Loved it!"],
-    days: "8 Days",
     testimonials: [
       {
         id: 1,
@@ -210,7 +207,6 @@ export const tours: Tour[] = [
     included: ["Taxi", "Guide", "Limousine"],
     excluded: [""],
     reviews: ["⭐⭐⭐⭐⭐ Luxurious!", "⭐⭐⭐⭐ Amazing experience!"],
-    days: "7 Days",
     testimonials: [
       {
         id: 1,
@@ -259,7 +255,6 @@ export const tours: Tour[] = [
     included: ["Hotel", "Guide", "Meals"],
     excluded: ["Flights", "Tips"],
     reviews: ["⭐⭐⭐⭐⭐ Great tour!", "⭐⭐⭐⭐ Excellent guide."],
-    days: "5 Days",
     testimonials: [
       {
         id: 1,
@@ -313,7 +308,6 @@ export const tours: Tour[] = [
     included: ["Hotel", "Guide", "Meals", "Transport"],
     excluded: ["Flights", "Tips"],
     reviews: ["⭐⭐⭐⭐ Amazing tour!", "⭐⭐⭐⭐⭐ Loved it!"],
-    days: "6 Days",
     testimonials: [
       {
         id: 1,
@@ -363,7 +357,6 @@ export const tours: Tour[] = [
     included: ["Hotel", "Guide", "Meals", "Transport"],
     excluded: ["Flights", "Tips"],
     reviews: ["⭐⭐⭐⭐⭐ Excellent!", "⭐⭐⭐⭐ Fun trip!"],
-    days: "9 Days",
     testimonials: [
       {
         id: 1,
@@ -427,7 +420,6 @@ export const tours: Tour[] = [
     included: [ "Guide", "Meals", "Transport"],
     excluded: ["Flights", "Tips"],
     reviews: ["⭐⭐⭐⭐ Great cultural experience!", "⭐⭐⭐⭐⭐ Loved it!"],
-    days: "10 Days",
     testimonials: [
       {
         id: 1,

@@ -9,7 +9,7 @@ import { usePathname } from "next/navigation";
 
 const navLinks = [
   { label: "Home", href: "/" },
-  { label: "Our Trips", href: "/ourtrip" },
+  { label: "Our Tours", href: "/ourtrip" },
   { label: "Blog", href: "/blogs" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
@@ -88,7 +88,7 @@ export default function Navbar() {
             <Link href ="/ourtrip">
               <button className="relative overflow-hidden px-6 py-3 rounded-full bg-[#0A7BBE] text-white text-base font-semibold group">
                 <span className="absolute inset-0 bg-[#075E94] -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out" />
-                <span className="relative z-10">Book Now</span>
+                <span className="relative z-10">See Trips</span>
               </button>
             </Link>
           </div>
