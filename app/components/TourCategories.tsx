@@ -55,24 +55,7 @@ const categories = [
     image: '/images/trending/white-desert.webp',
     link: '/tours/fayom',
   },
-  {
-    title: 'Alexandria',
-    listings: 3,
-    image: '/images/trending/sinai.webp',
-    link: '/tours/alexandria',
-  },
-  {
-    title: 'Dahab',
-    listings: 2,
-    image: '/images/trending/khan.webp',
-    link: '/tours/dahab',
-  },
-  {
-    title: 'Giza',
-    listings: 5,
-    image: '/images/trending/philae.webp',
-    link: '/tours/giza',
-  },
+ 
 ];
 
 
