@@ -198,7 +198,7 @@ export const tours: Tour[] = [
   },
   {
     title: "Historic Cairo – Al Muizz & Khan El Khalili",
-    image: "/images/itinerary/khan-khalili.jpg",
+    image: "/images/itinerary/khan-khalili.webp",
     description: "Walk through Islamic Cairo’s famous streets and bazaars."
   },
   {
@@ -265,12 +265,12 @@ export const tours: Tour[] = [
   },
   {
     title: "Nefertari Submarine",
-    image: "/images/itinerary/nefertari.jpg",
+    image: "/images/itinerary/semi-submarine.jpg",
     description: "Underwater viewing experience inside a real submarine."
   },
   {
     title: "Super Desert Safari",
-    image: "/images/itinerary/super-safari.jpg",
+    image: "/images/itinerary/super-safari.webp",
     description: "Quad biking, camel ride, and desert sunset experience."
   },
   {
