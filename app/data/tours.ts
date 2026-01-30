@@ -9,18 +9,23 @@ export type Testimonial = {
 };
 
 export type Tour = {
-  title: string;      // Shown on the inner Tour Page
-  cardTitle?: string; // NEW: Shown on the Slider/Card. Independent of title and slug.
-  slug: string;       // The URL
+  title: string;      
+    cardTitle?: string;
+  slug: string;    
   description: string;
   heroImage: string;
   heroVideo?: string;
   gallery: string[];
   overview: string;
-  itinerary: string[];
   included: string[];
   excluded: string[];
   reviews: string[];
+itinerary: {
+  title: string;
+  image: string;
+  description: string;
+}[];
+
 
   testimonials: Testimonial[];
 };
@@ -42,11 +47,30 @@ export const tours: Tour[] = [
     gallery: ["/images/tours/2.webp", "/images/tours/3.jpg"],
     overview:
       "Luxor is a living museum of ancient Egypt. This trip takes you through the city’s iconic temples, royal tombs, and historic sites along the Nile, offering a perfect blend of culture, history, and breathtaking landscapes.",
-    itinerary: [
-      "Day Tour – Karnak, Valley of the kings, Memmon, Hatshepsut",
-      "Ballon – Hot Air Ballon Ride",
-      "Nile Cruise – Luxor to Aswan Boat Trip",
-    ],
+   itinerary: [
+  {
+    title: "Day Tour – Karnak, Valley of the Kings, Memnon, Hatshepsut",
+    image: "/images/itinerary/karnak.jpg",
+    description:
+      "Visit the massive Karnak Temple complex, explore the Valley of the Kings, see the Colossi of Memnon, and admire Queen Hatshepsut’s temple."
+  },
+  {
+    title: "Balloon – Hot Air Balloon Ride",
+    image: "/images/itinerary/balloon.jpg",
+    description:
+      "Enjoy a sunrise hot air balloon ride over Luxor with breathtaking views of temples and the Nile."
+  },
+  {
+    title: "Nile Cruise – Luxor to Aswan",
+    image: "/images/itinerary/nile-cruise.jpg",
+    description:
+      "Relax on a scenic Nile cruise from Luxor to Aswan, stopping at historic temples along the way."
+  }
+],
+
+
+
+
     included: ["Hotel Pickup", "Professional Guide",],
     excluded: [""],
     reviews: ["⭐⭐⭐⭐⭐ Amazing experience!", "⭐⭐⭐⭐ Great tour and friendly guide."],
@@ -94,12 +118,32 @@ export const tours: Tour[] = [
     overview:
       "Sharm El-Sheikh sea trips offer unforgettable marine experiences, from snorkeling over coral gardens to diving in famous Red Sea sites. Enjoy scenic boat rides and explore the underwater world of Egypt’s most popular coastal destination.",
     itinerary: [
-      "Sea Trip – Pirate Boat",
-      "Sea Trip 2 – Ras",
-      "Sea Trip 3 –Tiran Island",
-      "Submarin – Semi-submarine",
-      "Safari – Daily Safari",
-    ],
+  {
+    title: "Sea Trip – Pirate Boat",
+    image: "/images/itinerary/pirate-boat.jpg",
+    description: "Full-day pirate-style boat cruise with snorkeling, swimming, and onboard entertainment."
+  },
+  {
+    title: "Sea Trip – Ras Mohammed",
+    image: "/images/itinerary/ras-mohammed.jpg",
+    description: "Snorkeling and diving at Ras Mohammed National Park coral reefs."
+  },
+  {
+    title: "Sea Trip – Tiran Island",
+    image: "/images/itinerary/tiran-island.jpg",
+    description: "Boat trip to Tiran Island with snorkeling in crystal-clear waters."
+  },
+  {
+    title: "Submarine – Semi Submarine",
+    image: "/images/itinerary/semi-submarine.jpg",
+    description: "Glass-bottom boat experience to explore marine life without diving."
+  },
+  {
+    title: "Safari – Desert Safari",
+    image: "/images/itinerary/desert-safari.jpg",
+    description: "Quad biking, camel riding, and Bedouin village visit in Sinai desert."
+  }
+],
     included: [ "Airport Transfers", "Guide",],
     excluded: ["Drinks", "Tips"],
     reviews: ["⭐⭐⭐⭐⭐ Beautiful cruise!", "⭐⭐⭐⭐ Highly recommended."],
@@ -144,13 +188,34 @@ export const tours: Tour[] = [
     heroVideo: "/videos/cario.mp4",
     gallery: ["/images/tours/1.jpg", "/images/tours/3.jpg"],
     overview: "A perfect blend of history and modern Egypt, this Cairo trip covers the major archaeological sites and cultural highlights, giving you a deep insight into the country’s rich past.",
-    itinerary: [
-      "Day Tour – Giza Pyramids & The New Museum (GEM) ",
-      " Flight – scenic Flight iver Pyramids & Museum",
-      "Historic Cairo – Al-Muizz St. & Khan el-Khalili",
-      "Islamic Sites – Citadel, Al-Azhar, Mohamed Ali, Ibn Tulun & Main Mosques",
-      "Coptic Sites – Old Cairo Churches, Coptic Museum, & Hanging Church",
-    ],
+   itinerary: [
+  {
+    title: "Giza Pyramids & Grand Egyptian Museum",
+    image: "/images/itinerary/giza.jpg",
+    description: "Visit the Great Pyramids, Sphinx, and the Grand Egyptian Museum."
+  },
+  {
+    title: "Scenic Flight Over Pyramids",
+    image: "/images/itinerary/scenic-flight.jpg",
+    description: "Optional panoramic flight above the pyramids and Cairo skyline."
+  },
+  {
+    title: "Historic Cairo – Al Muizz & Khan El Khalili",
+    image: "/images/itinerary/khan-khalili.jpg",
+    description: "Walk through Islamic Cairo’s famous streets and bazaars."
+  },
+  {
+    title: "Islamic Cairo Mosques",
+    image: "/images/itinerary/citadel.jpg",
+    description: "Visit the Citadel, Mohamed Ali Mosque, Al-Azhar and Ibn Tulun Mosque."
+  },
+  {
+    title: "Coptic Cairo Churches",
+    image: "/images/itinerary/coptic-cairo.jpg",
+    description: "Explore Hanging Church, Coptic Museum, and Old Cairo churches."
+  }
+]
+,
     included: [ "Guide",],
     excluded: ["Flights", "Tips"],
     reviews: ["⭐⭐⭐⭐⭐ Fantastic tour!", "⭐⭐⭐⭐ Loved it!"],
@@ -196,14 +261,43 @@ export const tours: Tour[] = [
     gallery: ["/images/tours/1.jpg", "/images/tours/2.webp"],
     overview: "Marsa Alam is ideal for those looking to escape the crowds. This plan highlights the Red Sea’s natural wonders, from colorful coral reefs to crystal-clear waters, making it perfect for eco-tourism and marine adventures.",
     itinerary: [
-      "Submarine 1 – Royal Sea Scope",
-      "Submarine 2 – Nefertari",
-      "Safari– Super Safari",
-      "Sea Trip 1 –Dolphin House ",
-      "Sea Trip 2 – Satyah (Turtle)",
-      "Nature – Satyah ()Wadi el Gemal",
-      "Diving – Scuba Diving",
-    ],
+  {
+    title: "Royal Sea Scope Submarine",
+    image: "/images/itinerary/royal-seascope.jpg",
+    description: "Submarine tour to explore coral reefs and fish."
+  },
+  {
+    title: "Nefertari Submarine",
+    image: "/images/itinerary/nefertari.jpg",
+    description: "Underwater viewing experience inside a real submarine."
+  },
+  {
+    title: "Super Desert Safari",
+    image: "/images/itinerary/super-safari.jpg",
+    description: "Quad biking, camel ride, and desert sunset experience."
+  },
+  {
+    title: "Dolphin House Snorkeling",
+    image: "/images/itinerary/dolphin-house.jpg",
+    description: "Snorkel with dolphins in their natural habitat."
+  },
+  {
+    title: "Satyah Turtle Bay",
+    image: "/images/itinerary/turtle-bay.jpg",
+    description: "Snorkeling with turtles and colorful fish."
+  },
+  {
+    title: "Wadi El Gemal National Park",
+    image: "/images/itinerary/wadi-el-gemal.jpg",
+    description: "Nature reserve visit with mangroves and wildlife."
+  },
+  {
+    title: "Scuba Diving Trip",
+    image: "/images/itinerary/scuba-diving.jpg",
+    description: "Full-day diving excursion with professional instructors."
+  }
+]
+,
     included: ["Taxi", "Guide", "Limousine"],
     excluded: [""],
     reviews: ["⭐⭐⭐⭐⭐ Luxurious!", "⭐⭐⭐⭐ Amazing experience!"],
@@ -248,10 +342,19 @@ export const tours: Tour[] = [
     heroVideo: "/videos/fayoum.mp4",
     gallery: ["/images/tours/6.jpg", "/images/tours/7.jpg"],
     overview: "Fayoum is a peaceful oasis southwest of Cairo, known for its lakes, waterfalls, and protected natural areas. This itinerary includes visits to Wadi El-Rayan, Mudawara Mountain, and local villages, offering a perfect blend of nature and culture.",
-    itinerary: [
-      "Day 1 – Tunis village",
-      "Day 2 – Wadil El Rayan, Sandboarding & Safari",
-    ],
+   itinerary: [
+  {
+    title: "Tunis Village",
+    image: "/images/itinerary/tunis-village.jpg",
+    description: "Visit the famous pottery village and local art workshops."
+  },
+  {
+    title: "Wadi El Rayan & Sandboarding",
+    image: "/images/itinerary/wadi-el-rayan.jpg",
+    description: "Waterfalls, sandboarding, and desert safari adventure."
+  }
+]
+,
     included: ["Hotel", "Guide", "Meals"],
     excluded: ["Flights", "Tips"],
     reviews: ["⭐⭐⭐⭐⭐ Great tour!", "⭐⭐⭐⭐ Excellent guide."],
@@ -299,12 +402,29 @@ export const tours: Tour[] = [
       "/images/tours/9.jpg"
     ],
     overview: "Discover the magic of Siwa Oasis as you explore ancient ruins, relax in natural salt lakes, and experience thrilling desert safaris in Egypt’s western desert.",
-    itinerary: [
-      "Day 1 – Shali Fortress & Mountain of the Dead",
-      "Day 2 – Salt Lakes & Cleopatra’s Bath",
-      "Day 3 – Great Sand Sea Desert Safari",
-      "Extra – Extended Safari Experience", 
-    ],
+  itinerary: [
+  {
+    title: "Shali Fortress & Mountain of the Dead",
+    image: "/images/itinerary/shali.jpg",
+    description: "Explore ancient ruins and tombs."
+  },
+  {
+    title: "Salt Lakes & Cleopatra’s Bath",
+    image: "/images/itinerary/salt-lake.jpg",
+    description: "Relax in therapeutic salt lakes and Cleopatra’s Pool."
+  },
+  {
+    title: "Great Sand Sea Safari",
+    image: "/images/itinerary/great-sand-sea.jpg",
+    description: "4x4 desert safari with sand dunes and sunset views."
+  },
+  {
+    title: "Extended Safari Experience",
+    image: "/images/itinerary/siwa-safari.jpg",
+    description: "Additional desert adventure and camping option."
+  }
+]
+,
     included: ["Hotel", "Guide", "Meals", "Transport"],
     excluded: ["Flights", "Tips"],
     reviews: ["⭐⭐⭐⭐ Amazing tour!", "⭐⭐⭐⭐⭐ Loved it!"],
@@ -349,11 +469,24 @@ export const tours: Tour[] = [
     heroVideo: "/videos/aswan.mp4",
     gallery: ["/images/tours/1.jpg", "/images/tours/2.webp"],
     overview: "Aswan is known for its peaceful Nile setting and rich Nubian heritage. This itinerary includes visits to iconic sites such as Philae Temple, the High Dam, and traditional Nubian villages, offering a perfect mix of history and relaxation.",
-    itinerary: [
-      "Day 1 – High Dam, Philae, Kalabsha, Nubian Village & Museum",
-      "Day 2 – Abu Simbel(full Day) & Komo Ombo",
-      "Cruise – Nile Cruise: Aswan-luxor",
-    ],
+   itinerary: [
+  {
+    title: "High Dam, Philae & Nubian Village",
+    image: "/images/itinerary/philae.jpg",
+    description: "Visit High Dam, Philae Temple, Kalabsha Temple and Nubian Village."
+  },
+  {
+    title: "Abu Simbel & Kom Ombo",
+    image: "/images/itinerary/abu-simbel.jpg",
+    description: "Full-day trip to Abu Simbel and Kom Ombo Temple."
+  },
+  {
+    title: "Nile Cruise Aswan – Luxor",
+    image: "/images/itinerary/nile-cruise.jpg",
+    description: "Relaxing Nile cruise between Aswan and Luxor."
+  }
+]
+,
     included: ["Hotel", "Guide", "Meals", "Transport"],
     excluded: ["Flights", "Tips"],
     reviews: ["⭐⭐⭐⭐⭐ Excellent!", "⭐⭐⭐⭐ Fun trip!"],
@@ -399,23 +532,84 @@ export const tours: Tour[] = [
     gallery: ["/images/tours/10.jpeg", "/images/tours/11.jpg"],
     overview:
       "Learn about Egypt’s traditions, monuments, and culture.",
-    itinerary: [
-  "Luxury Island Experience – Tawila Island Hotel & Resort (VVIP)",
-  "Island Trip 1 – Hula Hula Island",
-  "Island Trip 2 – Eden Island",
-  "Island Trip 3 – Orange Island",
-  "Island Trip 4 – Paradise Island",
-  "Beach & Snorkeling – Sharm El Naga Beach",
-  "Underwater Tour – Sinbad Submarine",
-  "Water Sports – Parasailing",
-  "Sightseeing – Hurghada Aquarium",
-  "Private Sea  Re – Private Speedboat",
-  "Sea Activity – Fishing Trip",
-  "Scuba Diving – Diving",
-  "Desert / Beach Activity – Horse Riding",
-  "Marine Life / Snorkeling – Dolphin House",
-  "Evening Water Sports – Night Surf",
-],
+   itinerary: [
+  {
+    title: "Tawila Island Resort (VVIP)",
+    image: "/images/itinerary/tawila.jpg",
+    description: "Luxury island day experience."
+  },
+  {
+    title: "Hula Hula Island",
+    image: "/images/itinerary/hula-hula.jpg",
+    description: "Snorkeling and beach relaxation."
+  },
+  {
+    title: "Eden Island",
+    image: "/images/itinerary/eden-island.jpg",
+    description: "Island escape with coral reefs."
+  },
+  {
+    title: "Orange Bay Island",
+    image: "/images/itinerary/orange-bay.jpg",
+    description: "Relax on sandy beaches and swim."
+  },
+  {
+    title: "Paradise Island",
+    image: "/images/itinerary/paradise-island.jpg",
+    description: "Boat trip with snorkeling."
+  },
+  {
+    title: "Sharm El Naga Beach",
+    image: "/images/itinerary/sharm-el-naga.jpg",
+    description: "Snorkeling beach day."
+  },
+  {
+    title: "Sinbad Submarine",
+    image: "/images/itinerary/sinbad.jpg",
+    description: "Underwater viewing experience."
+  },
+  {
+    title: "Parasailing",
+    image: "/images/itinerary/parasailing.jpg",
+    description: "Fly over the Red Sea."
+  },
+  {
+    title: "Hurghada Aquarium",
+    image: "/images/itinerary/aquarium.jpg",
+    description: "Marine life exhibition."
+  },
+  {
+    title: "Private Speedboat",
+    image: "/images/itinerary/speedboat.jpg",
+    description: "Private sea tour."
+  },
+  {
+    title: "Fishing Trip",
+    image: "/images/itinerary/fishing.jpg",
+    description: "Sea fishing experience."
+  },
+  {
+    title: "Scuba Diving",
+    image: "/images/itinerary/diving.jpg",
+    description: "Certified diving session."
+  },
+  {
+    title: "Horse Riding",
+    image: "/images/itinerary/horse.jpg",
+    description: "Beach or desert horse ride."
+  },
+  {
+    title: "Dolphin House",
+    image: "/images/itinerary/dolphin-house.jpg",
+    description: "Snorkel with dolphins."
+  },
+  {
+    title: "Night Surf",
+    image: "/images/itinerary/night-surf.jpg",
+    description: "Evening water sports."
+  }
+]
+,
 
     included: [ "Guide", "Meals", "Transport"],
     excluded: ["Flights", "Tips"],

@@ -43,7 +43,6 @@ export default function TourPage({
   const [activeTab, setActiveTab] = useState<string | null>("overview");
   const isMobile = useMediaQuery("(max-width: 768px)");
 
-  // ✅ FORCE FIRST TAB TO OPEN ON LOAD
   useEffect(() => {
     setActiveTab("overview");
   }, []);
@@ -64,23 +63,17 @@ export default function TourPage({
     <section className="w-full -ml-2 px-4 md:px-12 py-14 mt-35">
 
       {/* ===== TITLE SECTION ===== */}
-     {/* ===== TITLE SECTION ===== */}
-<div className="w-full mb-10 flex justify-center -mt-10 items-center">
-  <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0A7BBE] break-words text-center">
-    {tour.title}
-  </h1>
-</div>
-
-
+      <div className="w-full mb-10 flex justify-center -mt-10 items-center">
+        <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0A7BBE] break-words text-center">
+          {tour.title}
+        </h1>
+      </div>
 
       <div className="overflow-x-hidden">
         <div className="grid grid-cols-2 gap-5 w-screen items-start">
 
           {/* VIDEO LEFT */}
-          <div
-            className="overflow-hidden rounded-[30px] h-[340px] w-full lg:w-195
-            md:h-[360px] lg:h-[520px]"
-          >
+          <div className="overflow-hidden rounded-[30px] h-[340px] w-full lg:w-195 md:h-[360px] lg:h-[520px]">
             <motion.video
               src={tour.heroVideo || undefined}
               autoPlay
@@ -92,7 +85,7 @@ export default function TourPage({
           </div>
 
           {/* IMAGES RIGHT */}
-          <div className="flex flex-col w-full lg:w-100 -ml-2  lg:ml-35 md:w-80 gap-2 pr-8 lg:pr-10">
+          <div className="flex flex-col w-full lg:w-100 -ml-2 lg:ml-35 md:w-80 gap-2 pr-8 lg:pr-10">
             {tour.gallery.slice(0, 2).map((img, i) => (
               <div
                 key={i}
@@ -134,10 +127,38 @@ export default function TourPage({
                 >
                   {tab.id === "overview" && <p>{tour.overview}</p>}
 
+                  {/* ✅ MOBILE ITINERARY FIX */}
                   {tab.id === "itinerary" && (
-                    <ul className="list-disc ml-5 space-y-2">
+                    <ul className="list-none text- ml-0 space-y-6">
                       {tour.itinerary.map((item, i) => (
-                        <li key={i}>{item}</li>
+                        <li key={i}>
+
+                         <p className="font-semibold text-lg mb-2 text-[#0A7BBE]">
+
+                            {item.title}
+                          </p>
+
+                          <div className="relative w-full h-[220px] mb-3 overflow-hidden rounded-xl">
+                            <Image
+                              src={item.image}
+                              alt={item.title}
+                              fill
+                              className="object-cover"
+                            />
+                          </div>
+
+                          <p className="text-gray-600 mb-3">
+                            {item.description}
+                          </p>
+
+                          <a
+                            href="/booknow"
+                            className="inline-block bg-[#0A7BBE] text-white px-6 py-3 rounded-full text-sm hover:bg-[#075E94] transition"
+                          >
+                            Book Now
+                          </a>
+
+                        </li>
                       ))}
                     </ul>
                   )}
@@ -180,13 +201,43 @@ export default function TourPage({
             className="mx-auto mt-8 bg-white text-black rounded-3xl p-6 shadow"
           >
             {activeTab === "overview" && <p>{tour.overview}</p>}
+
+            {/* ✅ DESKTOP ITINERARY FIX */}
             {activeTab === "itinerary" && (
-              <ul className="list-disc ml-5 space-y-2">
+              <ul className="list-none ml-0 space-y-8">
                 {tour.itinerary.map((item, i) => (
-                  <li key={i}>{item}</li>
+                  <li key={i}>
+
+                    <p className="font-semibold text-xl mb-3 text-[#0A7BBE]">
+
+                      {item.title}
+                    </p>
+
+                    <div className="relative w-full h-[300px] mb-4 overflow-hidden rounded-2xl">
+                      <Image
+                        src={item.image}
+                        alt={item.title}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+
+                    <p className="text-gray-700 mb-4">
+                      {item.description}
+                    </p>
+
+                    <a
+                      href="/booknow"
+                      className="inline-block bg-[#0A7BBE] text-white px-8 py-3 rounded-full hover:bg-[#075E94] transition"
+                    >
+                      Book Now
+                    </a>
+
+                  </li>
                 ))}
               </ul>
             )}
+
             {activeTab === "included" && (
               <ul className="list-disc ml-5 space-y-2">
                 {tour.included.map((item, i) => (
@@ -194,6 +245,7 @@ export default function TourPage({
                 ))}
               </ul>
             )}
+
             {activeTab === "excluded" && (
               <ul className="list-disc ml-5 space-y-2">
                 {tour.excluded.map((item, i) => (
@@ -201,6 +253,7 @@ export default function TourPage({
                 ))}
               </ul>
             )}
+
             {activeTab === "reviews" && (
               <ReviewTestimonial testimonials={tour.testimonials} />
             )}
@@ -209,26 +262,23 @@ export default function TourPage({
       )}
 
       {/* ACTION BUTTONS */}
-     <div className="mt-10 flex flex-col gap-4 items-center">
-  {/* See Trips button linking to new page */}
-  <a
-    href="/booknow"
-    className="flex items-center justify-center gap-3 bg-[#0A7BBE] text-white px-14 py-5 rounded-full font-semibold hover:bg-[#075E94] transition text-lg"
-  >
-    See Trips <ArrowRightIcon className="w-5 h-5" />
-  </a>
+      <div className="mt-10 flex flex-col gap-4 items-center">
+        <a
+          href="/booknow"
+          className="flex items-center justify-center gap-3 bg-[#0A7BBE] text-white px-14 py-5 rounded-full font-semibold hover:bg-[#075E94] transition text-lg"
+        >
+          Book Now <ArrowRightIcon className="w-5 h-5" />
+        </a>
 
-  {/* WhatsApp button */}
-  <a
-    href="https://wa.me/+201288062555"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="flex items-center justify-center gap-3 bg-green-500 text-white px-14 py-5 rounded-full font-semibold hover:bg-green-600 transition text-lg"
-  >
-    WhatsApp <ArrowRightIcon className="w-5 h-5" />
-  </a>
-</div>
-
+        <a
+          href="https://wa.me/+201288062555"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center justify-center gap-3 bg-green-500 text-white px-14 py-5 rounded-full font-semibold hover:bg-green-600 transition text-lg"
+        >
+          WhatsApp <ArrowRightIcon className="w-5 h-5" />
+        </a>
+      </div>
 
       <NewsletterSection />
     </section>

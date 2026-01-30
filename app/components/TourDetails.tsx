@@ -132,7 +132,7 @@ export default function TourDetails({
       {/* ACTION BUTTONS */}
       <div className="flex flex-col sm:flex-row gap-4">
         <button className="bg-[#0a7bbe] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#E9D09A] hover:text-black transition">
-          See Trips
+          Book Now
         </button>
 
         <a
