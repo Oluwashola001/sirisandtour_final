@@ -82,7 +82,7 @@ export default function PopularDestinationsSlider() {
 
                 <div className="mt-auto pt-6 flex items-center justify-between">
                   <span className="text-gray-600 flex items-center gap-2">
-                    ⏱ {tour.days}
+                    ⏱ 
                   </span>
 
                   <Link
