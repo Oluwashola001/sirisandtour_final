@@ -68,9 +68,6 @@ export const tours: Tour[] = [
   }
 ],
 
-
-
-
     included: ["Hotel Pickup", "Professional Guide",],
     excluded: [""],
     reviews: ["⭐⭐⭐⭐⭐ Amazing experience!", "⭐⭐⭐⭐ Great tour and friendly guide."],

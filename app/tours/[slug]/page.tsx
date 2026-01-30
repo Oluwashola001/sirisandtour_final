@@ -213,7 +213,7 @@ export default function TourPage({
                       {item.title}
                     </p>
 
-                    <div className="relative w-full h-[300px] mb-4 overflow-hidden rounded-2xl">
+                    <div className="relative w-200 h-[500px]  mb-4 overflow-hidden rounded-2xl">
                       <Image
                         src={item.image}
                         alt={item.title}
@@ -263,13 +263,7 @@ export default function TourPage({
 
       {/* ACTION BUTTONS */}
       <div className="mt-10 flex flex-col gap-4 items-center">
-        <a
-          href="/booknow"
-          className="flex items-center justify-center gap-3 bg-[#0A7BBE] text-white px-14 py-5 rounded-full font-semibold hover:bg-[#075E94] transition text-lg"
-        >
-          Book Now <ArrowRightIcon className="w-5 h-5" />
-        </a>
-
+      
         <a
           href="https://wa.me/+201288062555"
           target="_blank"
