@@ -402,7 +402,7 @@ export const tours: Tour[] = [
   itinerary: [
   {
     title: "Shali Fortress & Mountain of the Dead",
-    image: "/images/itinerary/shali.jpg",
+    image: "/images/itinerary/img2.webp",
     description: "Explore ancient ruins and tombs."
   },
   {
@@ -417,7 +417,7 @@ export const tours: Tour[] = [
   },
   {
     title: "Extended Safari Experience",
-    image: "/images/itinerary/siwa-safari.jpg",
+    image: "/images/itinerary/siwa-safari.webp",
     description: "Additional desert adventure and camping option."
   }
 ]
@@ -479,7 +479,7 @@ export const tours: Tour[] = [
   },
   {
     title: "Nile Cruise Aswan – Luxor",
-    image: "/images/itinerary/nile-cruise.webp",
+    image: "/images/itinerary/nile-cruise.jpg",
     description: "Relaxing Nile cruise between Aswan and Luxor."
   }
 ]
@@ -562,7 +562,7 @@ export const tours: Tour[] = [
   },
   {
     title: "Sinbad Submarine",
-    image: "/images/itinerary/img8.webp",
+    image: "/images/itinerary/semi-submarine.jpg",
     description: "Underwater viewing experience."
   },
   {
@@ -572,7 +572,7 @@ export const tours: Tour[] = [
   },
   {
     title: "Hurghada Aquarium",
-    image: "/images/itinerary/img13.webp",
+    image: "/images/itinerary/hurghada- aquarium.jpg",
     description: "Marine life exhibition."
   },
   {
