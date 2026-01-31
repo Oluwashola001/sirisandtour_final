@@ -5,59 +5,15 @@ import Link from 'next/link';
 import { pacifico } from '@/app/fonts';
 import { motion, type Variants } from 'framer-motion';
 import { useState } from 'react';
+import { tours } from '@/app/data/tours'; // import tours for slugs
 
-const categories = [
-  {
-    title: 'Cairo',
-    listings: 3,
-    image: '/images/categories/desert-safari.webp',
-    link: '/tours/cairo',
-  },
-  {
-    title: 'Hurghada',
-    listings: 4,
-    image: '/images/categories/historical.webp',
-    link: '/tours/hurghada',
-  },
-  {
-    title: 'Luxor',
-    listings: 2,
-    image: '/images/trending/luxor-tombs.webp',
-    link: '/tours/luxor',
-  },
-  {
-    title: 'Aswan',
-    listings: 5,
-    image: '/images/trending/whale-valley.webp',
-    link: '/tours/aswan',
-  },
-  {
-    title: 'Marsa Alam',
-    listings: 3,
-    image: '/images/trending/marsa-alam.webp',
-    link: '/tours/marsa-alam',
-  },
-  {
-    title: 'Sharm El Sheikh',
-    listings: 6,
-    image: '/images/trending/gem.webp',
-    link: '/tours/sharm',
-  },
-  {
-    title: 'Siwa',
-    listings: 2,
-    image: '/images/trending/siwa-salt.webp',
-    link: '/tours/siwa',
-  },
-  {
-    title: 'Al Fayom',
-    listings: 4,
-    image: '/images/trending/white-desert.webp',
-    link: '/tours/fayom',
-  },
- 
-];
-
+// Generate categories from tours
+const categories = tours.map((tour) => ({
+  title: tour.cardTitle || tour.title,
+  listings: tour.itinerary.length,
+  image: tour.heroImage,
+  slug: tour.slug,
+}));
 
 /* ================= ANIMATION VARIANTS ================= */
 const container: Variants = {
@@ -110,7 +66,7 @@ export default function TourCategories() {
             <motion.div
               key={index}
               layout
-              onClick={() => setActive(index)}  // <-- ONLY change on different click
+              onClick={() => setActive(index)}
               className="relative w-full cursor-pointer rounded-2xl overflow-hidden"
             >
               <motion.div
@@ -128,10 +84,7 @@ export default function TourCategories() {
 
                 {/* Overlay content */}
                 <div className="absolute inset-0 flex flex-col justify-end items-start text-white text-left p-6">
-                  <motion.h3
-                    variants={item}
-                    className="text-xl font-semibold"
-                  >
+                  <motion.h3 variants={item} className="text-xl font-semibold">
                     {cat.title}
                   </motion.h3>
 
@@ -143,10 +96,10 @@ export default function TourCategories() {
 
                       <motion.div variants={item}>
                         <Link
-                          href ="/ourtrip"
+                          href={`/tours/${cat.slug}`}
                           className="inline-block rounded-full border border-white px-6 py-2 text-sm font-semibold hover:bg-[#0A7BBE] hover:border-[#0A7BBE] hover:text-white transition"
                         >
-                          View All
+                          View All Trips
                         </Link>
                       </motion.div>
                     </div>
@@ -159,8 +112,7 @@ export default function TourCategories() {
       </div>
 
       {/* DESKTOP HORIZONTAL ACCORDION */}
-     <div className="hidden md:flex overflow-x-auto mx-auto max-w-[1300px] gap-6 px-6">
-
+      <div className="hidden md:flex overflow-x-auto mx-auto max-w-[1300px] gap-6 px-6">
         {categories.map((cat, index) => {
           const isActive = active === index;
           return (
@@ -168,8 +120,8 @@ export default function TourCategories() {
               key={index}
               onClick={() => setActive(index)}
               layout
-              animate={{ flexBasis: isActive ? "55%" : "22%" }}
-              transition={{ type: "spring", stiffness: 120, damping: 14 }}
+              animate={{ flexBasis: isActive ? '55%' : '22%' }}
+              transition={{ type: 'spring', stiffness: 120, damping: 14 }}
               className="relative h-[520px] cursor-pointer overflow-hidden rounded-[40px] flex-shrink-0"
             >
               <Image src={cat.image} alt={cat.title} fill className="object-cover" />
@@ -197,7 +149,7 @@ export default function TourCategories() {
                     {/* RIGHT BUTTON */}
                     <motion.div variants={item} className="mb-2">
                       <Link
-                        href ="/ourtrip"
+                        href={`/tours/${cat.slug}`}
                         className="inline-flex items-center justify-center rounded-full border border-white px-8 py-3 text-sm font-semibold hover:border-[#0A7BBE] hover:bg-[#0A7BBE] transition"
                       >
                         View All

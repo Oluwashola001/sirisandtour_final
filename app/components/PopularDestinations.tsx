@@ -92,8 +92,9 @@ export default function PopularDestinationsSlider() {
     block md:hidden
     mt-16
     mx-auto
+    -ml-3
     h-[750px]
-    max-w-[100%]
+    w-[106%]
     rounded-[32px]
     overflow-hidden
     border border-gray-200
