@@ -342,12 +342,12 @@ export const tours: Tour[] = [
    itinerary: [
   {
     title: "Tunis Village",
-    image: "/images/itinerary/tunis-village.jpg",
+    image: "/images/itinerary/tunis-village.webp",
     description: "Visit the famous pottery village and local art workshops."
   },
   {
     title: "Wadi El Rayan & Sandboarding",
-    image: "/images/itinerary/wadi-el-rayan.jpg",
+    image: "/images/itinerary/wadi-el-rayan.webp",
     description: "Waterfalls, sandboarding, and desert safari adventure."
   }
 ]
@@ -407,12 +407,12 @@ export const tours: Tour[] = [
   },
   {
     title: "Salt Lakes & Cleopatra’s Bath",
-    image: "/images/itinerary/salt-lake.jpg",
+    image: "/images/itinerary/salt-lake.webp",
     description: "Relax in therapeutic salt lakes and Cleopatra’s Pool."
   },
   {
     title: "Great Sand Sea Safari",
-    image: "/images/itinerary/great-sand-sea.jpg",
+    image: "/images/itinerary/great-sand-sea.webp",
     description: "4x4 desert safari with sand dunes and sunset views."
   },
   {
@@ -469,7 +469,7 @@ export const tours: Tour[] = [
    itinerary: [
   {
     title: "High Dam, Philae & Nubian Village",
-    image: "/images/itinerary/philae.jpg",
+    image: "/images/itinerary/philae.webp",
     description: "Visit High Dam, Philae Temple, Kalabsha Temple and Nubian Village."
   },
   {
@@ -479,7 +479,7 @@ export const tours: Tour[] = [
   },
   {
     title: "Nile Cruise Aswan – Luxor",
-    image: "/images/itinerary/nile-cruise.jpg",
+    image: "/images/itinerary/nile-cruise.webp",
     description: "Relaxing Nile cruise between Aswan and Luxor."
   }
 ]
@@ -532,17 +532,17 @@ export const tours: Tour[] = [
    itinerary: [
   {
     title: "Tawila Island Resort (VVIP)",
-    image: "/images/itinerary/tawila.jpg",
+    image: "/images/itinerary/img2.webp",
     description: "Luxury island day experience."
   },
   {
     title: "Hula Hula Island",
-    image: "/images/itinerary/hula-hula.jpg",
+    image: "/images/itinerary/img3.webp",
     description: "Snorkeling and beach relaxation."
   },
   {
     title: "Eden Island",
-    image: "/images/itinerary/eden-island.jpg",
+    image: "/images/itinerary/img5.webp",
     description: "Island escape with coral reefs."
   },
   {
@@ -552,27 +552,27 @@ export const tours: Tour[] = [
   },
   {
     title: "Paradise Island",
-    image: "/images/itinerary/paradise-island.jpg",
+    image: "/images/itinerary/nile-cruise.jpg",
     description: "Boat trip with snorkeling."
   },
   {
     title: "Sharm El Naga Beach",
-    image: "/images/itinerary/sharm-el-naga.jpg",
+    image: "/images/itinerary/img6.webp",
     description: "Snorkeling beach day."
   },
   {
     title: "Sinbad Submarine",
-    image: "/images/itinerary/sinbad.jpg",
+    image: "/images/itinerary/img8.webp",
     description: "Underwater viewing experience."
   },
   {
     title: "Parasailing",
-    image: "/images/itinerary/parasailing.jpg",
+    image: "/images/itinerary/img11.webp",
     description: "Fly over the Red Sea."
   },
   {
     title: "Hurghada Aquarium",
-    image: "/images/itinerary/aquarium.jpg",
+    image: "/images/itinerary/img13.webp",
     description: "Marine life exhibition."
   },
   {
@@ -587,7 +587,7 @@ export const tours: Tour[] = [
   },
   {
     title: "Scuba Diving",
-    image: "/images/itinerary/diving.jpg",
+    image: "/images/itinerary/scuba-diving.jpg",
     description: "Certified diving session."
   },
   {
