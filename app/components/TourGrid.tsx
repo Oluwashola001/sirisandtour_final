@@ -12,7 +12,7 @@ const destinations = [
   { id: 4, title: "Marsa Allam", image: "marsa-allam.jpg", slug: "luxury-siwa-oasis-white-desert-adventure" },
   { id: 5, title: "Al Fayom", image: "Fayom.jpg", slug: "cairo-alexandria-highlights-tour" },
   { id: 6, title: "Siwa", image: "siwa.jpg", slug: "red-sea--desert-safari-tour" },
-  { id: 7, title: "Aswan", image: "aswa.jpg", slug: "ancient-egypt-discovery-tour" },
+  { id: 7, title: "Aswan", image: "aswan.jpg", slug: "ancient-egypt-discovery-tour" },
   { id: 8, title: "Hurghada", image: "hurghada.jpg", slug: "egypt-cultural-heritage-tour" }, // new mixing card
 ];
 

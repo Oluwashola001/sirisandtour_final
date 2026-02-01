@@ -5,21 +5,21 @@ import { motion, type Variants } from "framer-motion";
 import { pacifico } from '@/app/fonts';
 
 const topImages = [
-  "abu-simbel.webp",
-  "balloon.webp",
-  "gem.webp",
-  "khan.webp",
-  "luxor-tombs.webp",
-  "white-desert.webp",
+  "1.jpg",
+  "2.jpg",
+  "3.jpg",
+  "4.jpg",
+  "5.jpg",
+  "6.jpg",
 ];
 
 const bottomImages = [
-  "marsa-alam.webp",
-  "nubian.webp",
-  "philae.webp",
-  "sinai.webp",
-  "siwa-salt.webp",
-  "whale-valley.webp",
+  "7.jpg",
+  "8.jpg",
+  "9.jpg",
+  "10.jpg",
+  "11.jpg",
+  "12.jpg",
 ];
 
 /* ================= ANIMATION VARIANTS ================= */

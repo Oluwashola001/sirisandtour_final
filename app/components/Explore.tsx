@@ -141,31 +141,6 @@ export default function PopularDestinationsSlider() {
         ))}
       </div>
 
-     {/* ================= MOBILE VIDEO (FIXED – NO SCROLL ZOOM) ================= */}
-<div
-  className="
-    block md:hidden
-    mt-16
-    mx-auto
-    -ml-3
-    h-[750px]
-    w-[106%]
-    rounded-[32px]
-    overflow-hidden
-    border border-gray-200
-    shadow-lg
-    
-  "
->
-  <video
-    src="/images/tours/video1.mp4"
-    autoPlay
-    muted
-    loop
-    playsInline
-    className="w-full h-full object-cover"
-  />
-</div>
 
     </section>
   );
