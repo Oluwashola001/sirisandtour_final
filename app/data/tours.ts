@@ -181,7 +181,7 @@ export const tours: Tour[] = [
     cardTitle: "Cairo",
     slug: makeSlug("Explore Egypt From the Pyramids to the White Desert"),
     description: "Discover the heart of Egypt with its pyramids, museums, and bustling streets.",
-    heroImage: "/images/tours/2.webp",
+    heroImage: "/images/trending/3.jpg",
     heroVideo: "/videos/cario.mp4",
     gallery: ["/images/tours/1.jpg", "/images/tours/3.jpg"],
     overview: "A perfect blend of history and modern Egypt, this Cairo trip covers the major archaeological sites and cultural highlights, giving you a deep insight into the country’s rich past.",

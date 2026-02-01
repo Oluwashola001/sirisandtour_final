@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 const destinations = [
   { id: 1, title: "Luxor", image: "luxor.jpg", slug: "6-day-egypt-desert--oasis-tour" },
-  { id: 2, title: "Sharm El-Sheikh", image: "aswan.webp", slug: "classic-nile-cruise-experience" },
+  { id: 2, title: "Sharm El-Sheikh", image: "aswan.jpg", slug: "classic-nile-cruise-experience" },
   { id: 3, title: "Cairo", image: "cairo.jpg", slug: "explore-egypt-from-the-pyramids-to-the-white-desert" },
   { id: 4, title: "Marsa Allam", image: "marsa-allam.jpg", slug: "luxury-siwa-oasis-white-desert-adventure" },
   { id: 5, title: "Al Fayom", image: "Fayom.jpg", slug: "cairo-alexandria-highlights-tour" },
