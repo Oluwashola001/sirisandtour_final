@@ -66,7 +66,7 @@ export default function Navbar() {
           {/* LOGO */}
           <Link href="/" className="flex items-center">
             <Image
-              src="/logo.png"
+              src="/logo.webp"
               alt="Siri Sand Tour Logo"
               width={290}
               height={100}
@@ -150,7 +150,7 @@ export default function Navbar() {
             {/* LOGO IN MOBILE MENU */}
             <div className="flex justify-start pl-0 -ml-5 -mt-9">
               <Image
-                src="/logo.png"
+                src="/logo.webp"
                 alt="Siri Sand Tour Logo"
                 width={190}
                 height={80}

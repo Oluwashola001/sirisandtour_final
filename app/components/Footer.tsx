@@ -24,7 +24,7 @@ export default function Footer() {
         <div>
           <div className="flex items-center -ml-6 gap-3 -mt-25  mb-5">
             <Image
-              src="/logo.png"
+              src="/logo.webp"
               alt="Siri Sand Tour"
               width={180}
               height={60}
