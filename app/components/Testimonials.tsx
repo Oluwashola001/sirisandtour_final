@@ -14,6 +14,7 @@ type Testimonial = {
   text: string;
 };
 
+
 const testimonials: Testimonial[] = [
   { id: 1, name: 'Martina B', date: '2025-06-05', title: 'Unforgettable trip', text: 'Unforgettable trip in the company of Mohamed. Everything was organized to perfection.' },
   { id: 2, name: 'Raziye A', date: '2025-05-07', title: 'White Desert & Siwa', text: 'Camping in the White Desert was a unique and unforgettable experience.' },
@@ -30,6 +31,8 @@ const testimonials: Testimonial[] = [
 export default function Testimonials() {
   const [index, setIndex] = useState(0);
   const [openId, setOpenId] = useState<number | null>(null);
+const [isDragging, setIsDragging] = useState(false);
+
 
   const maxIndexLg = testimonials.length - 4; // 4 visible on desktop
 
@@ -37,18 +40,21 @@ export default function Testimonials() {
   const prevLg = () => setIndex(prev => Math.max(prev - 1, 0));
 
   // AUTO SLIDE EFFECT
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex(prev => {
-        if (window.innerWidth >= 1024) {
-          return prev >= maxIndexLg ? 0 : prev + 1;
-        }
-        return prev >= testimonials.length - 1 ? 0 : prev + 1;
-      });
-    }, 7000); // every 7 seconds
+ useEffect(() => {
+  if (isDragging) return;
 
-    return () => clearInterval(interval);
-  }, [maxIndexLg]);
+  const interval = setInterval(() => {
+    setIndex(prev => {
+      if (window.innerWidth >= 1024) {
+        return prev >= maxIndexLg ? 0 : prev + 1;
+      }
+      return prev >= testimonials.length - 1 ? 0 : prev + 1;
+    });
+  }, 7000);
+
+  return () => clearInterval(interval);
+}, [maxIndexLg, isDragging]);
+
 
   const Card = (item: Testimonial) => {
     const isOpen = openId === item.id;
@@ -127,24 +133,35 @@ export default function Testimonials() {
 
         {/* MOBILE */}
         <div className="lg:hidden overflow-hidden relative">
-          <motion.div
-            className="flex"
-            drag="x"
-            dragConstraints={{ left: 0, right: 0 }}
-            dragElastic={0.3}
-            onDragEnd={(event, info) => {
-              const velocity = info.velocity.x;
-              const offset = info.offset.x;
+        
 
-              if (offset < -50 || velocity < -200) {
-                setIndex((prev) => Math.min(prev + 1, testimonials.length - 1));
-              } else if (offset > 50 || velocity > 200) {
-                setIndex((prev) => Math.max(prev - 1, 0));
-              }
-            }}
-            animate={{ x: `-${index * 100}%` }}
-            transition={{ type: "spring", stiffness: 300, damping: 30 }}
-          >
+
+  <motion.div
+    className="flex"
+    
+    drag="x"
+    onDragStart={() => setIsDragging(true)}
+    onDragEnd={(event, info) => {
+      setIsDragging(false);
+
+     if (info.offset.x < -120) {
+
+        setIndex((prev) =>
+          Math.min(prev + 1, testimonials.length - 1)
+        );
+      }else if (info.offset.x > 120) {
+
+        setIndex((prev) =>
+          Math.max(prev - 1, 0)
+        );
+      }
+    }}
+    animate={{ x: -index * 100 + "%" }}
+    transition={{ type: "spring", stiffness: 240, damping: 26 }}
+    style={{ touchAction: "pan-y" }}
+  >
+
+                  
             {testimonials.map((t) => (
               <div key={t.id} className="flex-shrink-0 w-full px-2">
                 {Card(t)}
@@ -154,10 +171,11 @@ export default function Testimonials() {
 
           {/* MOBILE TRACKER */}
           <div className="mt-4 relative h-1 w-full max-w-[120px] mx-auto bg-gray-200 rounded-full">
-            <motion.div
+           <motion.div
               className="absolute top-0 left-0 h-1 w-6 bg-black rounded-full"
               animate={{ x: (index / (testimonials.length - 1)) * maxTranslate }}
-              transition={{ type: 'spring', stiffness: 100, damping: 20 }}
+             transition={{ type: "spring", stiffness: 220, damping: 26 }}
+
             />
           </div>
         </div>
