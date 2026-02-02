@@ -8,14 +8,6 @@ import { ArrowRightIcon } from "lucide-react";
 import ReviewTestimonial from "../../components/ReviewTestimonial";
 import NewsletterSection from "../../components/Newsletter";
 
-const tabs = [
-  { id: "overview", label: "Trip Overview" },
-  { id: "itinerary", label: "Itinerary Details" },
-  { id: "included", label: "What's Included" },
-  { id: "excluded", label: "What's Not Included" },
-  { id: "reviews", label: "Traveler Reviews" },
-];
-
 function useMediaQuery(query: string) {
   const [matches, setMatches] = useState(false);
 
@@ -40,16 +32,25 @@ export default function TourPage({
   const { slug } = use(params);
   const tour: Tour | undefined = tours.find((t) => t.slug === slug);
 
-  const [activeTab, setActiveTab] = useState<string | null>("overview");
-  const isMobile = useMediaQuery("(max-width: 768px)");
-
-  useEffect(() => {
-    setActiveTab("overview");
-  }, []);
-
   if (!tour) {
     return <div className="p-20 text-center text-2xl">Tour Not Found</div>;
   }
+
+  /* ✅ TABS INSIDE COMPONENT */
+  const tabs = [
+    { id: "overview", label: "Trip Overview" },
+    {
+      id: "itinerary",
+      label: `${tour.cardTitle || tour.title} Detail`,
+    },
+    { id: "included", label: "What's Included" },
+    { id: "excluded", label: "What's Not Included" },
+    { id: "reviews", label: "Traveler Reviews" },
+  ];
+
+  /* ✅ ITINERARY OPENS BY DEFAULT */
+  const [activeTab, setActiveTab] = useState<string | null>("itinerary");
+  const isMobile = useMediaQuery("(max-width: 768px)");
 
   const handleTabClick = (id: string) => {
     if (activeTab === id) {
@@ -127,14 +128,12 @@ export default function TourPage({
                 >
                   {tab.id === "overview" && <p>{tour.overview}</p>}
 
-                  {/* ✅ MOBILE ITINERARY FIX */}
                   {tab.id === "itinerary" && (
-                    <ul className="list-none text- ml-0 space-y-6">
+                    <ul className="list-none ml-0 space-y-6">
                       {tour.itinerary.map((item, i) => (
                         <li key={i}>
 
-                         <p className="font-semibold text-lg mb-2 text-[#0A7BBE]">
-
+                          <p className="font-semibold text-lg mb-2 text-[#0A7BBE]">
                             {item.title}
                           </p>
 
@@ -202,18 +201,16 @@ export default function TourPage({
           >
             {activeTab === "overview" && <p>{tour.overview}</p>}
 
-            {/* ✅ DESKTOP ITINERARY FIX */}
             {activeTab === "itinerary" && (
               <ul className="list-none ml-0 space-y-8">
                 {tour.itinerary.map((item, i) => (
                   <li key={i}>
 
                     <p className="font-semibold text-xl mb-3 text-[#0A7BBE]">
-
                       {item.title}
                     </p>
 
-                    <div className="relative w-200 h-[500px]  mb-4 overflow-hidden rounded-2xl">
+                    <div className="relative w-200 h-[500px] mb-4 overflow-hidden rounded-2xl">
                       <Image
                         src={item.image}
                         alt={item.title}
@@ -263,14 +260,13 @@ export default function TourPage({
 
       {/* ACTION BUTTONS */}
       <div className="mt-10 flex flex-col gap-4 items-center">
-      
         <a
           href="https://wa.me/+201288062555"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center justify-center gap-3 bg-green-500 text-white px-14 py-5 rounded-full font-semibold hover:bg-green-600 transition text-lg"
         >
-          WhatsApp <ArrowRightIcon className="w-5 h-5" />
+          WhatsApp <ArrowRightIcon className="w-5 h--5" />
         </a>
       </div>
 
