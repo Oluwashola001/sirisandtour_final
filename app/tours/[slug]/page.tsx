@@ -38,11 +38,13 @@ export default function TourPage({
 
   /* ✅ TABS INSIDE COMPONENT */
   const tabs = [
-    { id: "overview", label: "Trip Overview" },
-    {
+   
+   {
       id: "itinerary",
-      label: `${tour.cardTitle || tour.title} Detail`,
+      label: `${tour.cardTitle || tour.title} Categories`,
     },
+    { id: "overview", label: "Trip Overview" },
+    
     { id: "included", label: "What's Included" },
     { id: "excluded", label: "What's Not Included" },
     { id: "reviews", label: "Traveler Reviews" },
