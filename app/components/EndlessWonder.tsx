@@ -59,12 +59,12 @@ export default function EndlessWonder() {
 >
   {/* Mobile version (broken, larger text) */}
   <span className="block lg:hidden text-3xl sm:text-5xl md:text-6xl">
-   Where land's history meets <br /> the sea's magic
+   Where land's history <br />  meets  the sea's magic
   </span>
 
-  {/* Large screens (single line, slightly smaller if needed) */}
+  {/* Large screens  */}
   <span className="hidden lg:inline lg:text-4xl xl:text-5xl">
-    Discover 7000 Years of Egyptian Civilization
+     Where land's history   meets  the sea's magic
   </span>
 </motion.h2>
 
