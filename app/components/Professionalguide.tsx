@@ -66,10 +66,7 @@ export default function TripSection() {
               variants={item}
               className="text-gray-600 leading-relaxed -mt-5"
             >
-              Explore the beauty of Egypt with unforgettable group tours to
-              amazing destinations like Siwa Oasis, the White Desert, Luxor,
-              Aswan and Fayoum. Let’s go together and create memories that will
-              stay with you forever.
+               Behind every grain of sand lies a story, and with every wave in the sea, a new laugh. We don't just offer sightseeing tours; we create a space for families to gather away from the hustle and bustle of life. Start your day with a safari adventure amidst the golden dunes, and end it with the tranquility of sunset on the beach.  Our programs are designed to suit the passion of youth, the comfort of adults, and the curiosity of children
             </motion.p>
 
             <motion.div variants={item} className="flex flex-col gap-8">
@@ -77,11 +74,10 @@ export default function TripSection() {
                 <div className="w-12 h-12 min-w-[48px] rounded-full bg-[#E9D09A] group-hover:bg-[#075E94] transition-colors duration-300" />
                 <div>
                   <h3 className="font-semibold text-lg text-[#0A7BBE]">
-                    Exclusive Trip
+                    Exclusive Trips
                   </h3>
                   <p className="text-gray-600 text-sm leading-relaxed">
-                    Discover exclusive trip experiences in Egypt from private
-                    desert tours to hidden gems in Siwa, Luxor and Aswan.
+                   Between the magic of the desert and the tranquility of the waves, we design bespoke itineraries that combine adventure and privacy to suit your family's aspirations
                   </p>
                 </div>
               </motion.div>
@@ -93,9 +89,7 @@ export default function TripSection() {
                     Professional Guide
                   </h3>
                   <p className="text-gray-600 text-sm leading-relaxed">
-                    Discover Egypt with a professional guide who makes every
-                    trip easier, more enjoyable and full of cultural local
-                    insights.
+                    Travel companions with local expertise who transform every tour into an enjoyable experience and ensure your family's safety and comfort every step of the way 
                   </p>
                 </div>
               </motion.div>

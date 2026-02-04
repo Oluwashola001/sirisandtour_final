@@ -61,7 +61,9 @@ export default function BackgroundAnimationPage() {
           {/* Heading */}
           <motion.h2
             variants={item}
-            className="mt-3 text-xl sm:text-4xl mb-5 lg:text-5xl font-bold text-[#0A7BBE] w-70 lg:w-220 line-clamp-2"
+            className="mt-3 text-xl sm:text-4xl mb-5 lg:text-5xl font-bold text-[#0A7BBE] w-70 lg:w-220 
+            lg:-ml-20
+            line-clamp-2"
           >
             Popular Destinations we offer for all
           </motion.h2>
@@ -71,9 +73,7 @@ export default function BackgroundAnimationPage() {
             variants={item}
             className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed break-normal"
           >
-            Explore the beauty of Egypt with unforgettable group tours to amazing destinations like
-            Siwa Oasis, the White Desert, Luxor, Aswan and Fayoum. Let's go together and create
-            memories that will stay with you forever.
+           We don't take you to places             we give you experiences. Explore Egypt's amazing diversity on family trips that combine desert adventures with beach relaxation, so together we can create pictures that fill your walls with love
           </motion.p>
         </motion.div>
 

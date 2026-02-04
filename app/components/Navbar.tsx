@@ -46,13 +46,13 @@ export default function Navbar() {
   if (!showNav) return null;
 
   return (
-    <>
+    <div className="relative overflow-x-hidden">
       {/* DESKTOP NAV */}
       <motion.nav
         initial={{ y: -20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="fixed top-0 z-50 w-full bg-transparent"
+className="fixed inset-x-0 top-0 z-50 bg-transparent overflow-x-hidden"
       >
         <div
           className="
@@ -85,7 +85,7 @@ export default function Navbar() {
 
           {/* BOOK NOW BUTTON */}
           <div className="hidden md:flex">
-            <Link href ="/ourtrip">
+            <Link href="/ourtrip">
               <button className="relative overflow-hidden px-6 py-3 rounded-full bg-[#0A7BBE] text-white text-base font-semibold group">
                 <span className="absolute inset-0 bg-[#075E94] -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out" />
                 <span className="relative z-10">Book Now</span>
@@ -108,14 +108,13 @@ export default function Navbar() {
         {shadowVisible && (
           <motion.div
             key="shadow"
-            initial={{ x: "-100%", opacity: 0 }}
+            initial={{ x: "-100vw", opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
-            exit={{ x: "-100%", opacity: 0 }}
+            exit={{ x: "-100vw", opacity: 0 }}
             transition={{
               type: "spring",
               stiffness: 200,
               damping: 25,
-              duration: 0.6,
             }}
             className="fixed inset-0 z-40 bg-black/20 backdrop-blur-sm"
             onClick={() => setMobileOpen(false)}
@@ -128,16 +127,16 @@ export default function Navbar() {
         {menuVisible && (
           <motion.aside
             key="menu"
-            initial={{ x: "-100%" }}
+            initial={{ x: "-100vw" }}
             animate={{ x: 0 }}
-            exit={{ x: "-100%" }}
+            exit={{ x: "-100vw" }}
             transition={{
               type: "spring",
               stiffness: 220,
               damping: 28,
-              duration: 0.6,
             }}
-            className="fixed left-0 top-0 z-50 h-full w-[92%] bg-white shadow-2xl"
+           className="fixed left-0 top-0 z-50 h-full w-[92%] bg-white shadow-2xl overflow-x-hidden"
+
           >
             {/* CLOSE BUTTON */}
             <button
@@ -147,7 +146,7 @@ export default function Navbar() {
               <HiOutlineX />
             </button>
 
-            {/* LOGO IN MOBILE MENU */}
+            {/* LOGO */}
             <div className="flex justify-start pl-0 -ml-5 -mt-9">
               <Image
                 src="/logo.webp"
@@ -157,7 +156,7 @@ export default function Navbar() {
               />
             </div>
 
-            {/* NAV LINKS */}
+            {/* LINKS */}
             <motion.nav
               initial="hidden"
               animate="visible"
@@ -177,7 +176,6 @@ export default function Navbar() {
                     hidden: { opacity: 0, y: 20 },
                     visible: { opacity: 1, y: 0 },
                   }}
-                  transition={{ duration: 0.5, ease: "easeOut" }}
                 >
                   <Link
                     href={link.href}
@@ -192,11 +190,11 @@ export default function Navbar() {
           </motion.aside>
         )}
       </AnimatePresence>
-    </>
+    </div>
   );
 }
 
-/* 🔹 ONLY CHANGE IS HERE 🔹 */
+/* NAV LINK */
 function NavLink({
   href,
   children,
@@ -213,7 +211,7 @@ function NavLink({
       className={`
         group relative text-lg font-semibold px-3 transition
         ${isHome ? "text-white" : "text-[#0a7bbe]"}
-        hover:text-[#075E94]"
+        hover:text-[#075E94]
       `}
     >
       {children}

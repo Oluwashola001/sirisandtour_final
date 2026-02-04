@@ -25,12 +25,38 @@ export default function AboutUs() {
 
           {/* Description */}
           <p className="text-gray-600 leading-relaxed -mt-5">
-<span className="block mt-5">              Siri Sand Tours was born from our love for the desert and a desire to share its magic in a way that truly transforms you. Egypt is more than pyramids and museums; it’s vast, silent dunes, hidden oases, and starlit skies that make time feel infinite. Here, the world slows down. You walk across endless sands, sleep under the stars, and share stories with Bedouins who know the land like the back of their hand.
+<span className="block mt-5">       
+         At Siri Sand Tours, we don't just organize trips; we welcome you as part of our extended family.   </span>
+<span className="block mt-5">          Our Story and Spirit: Our company didn't start in closed offices. It began with our passion for the desert and the sea, and our desire to share this magic in a way that transforms your soul. We believe that Egypt is more than just pyramids and museums; its tranquil sandy beaches, hidden oases, and starry skies make time seem endless. In our world, time slows down, giving you the chance to connect with yourselves and your loved ones.
             </span>
-<span className="block mt-5">              Our journeys are real, grounded, and designed to awaken your senses. You’ll taste simple, authentic meals that somehow taste better than anything else, feel the warm desert breeze on your face, and leave the noise of everyday life behind. Every detail matters from the moment you arrive to the moment you depart so each adventure becomes a story you’ll remember and share for years to come.
+<span className="block mt-5">              Why are we a "family"?
             </span>
-<span className="block mt-5">              At Siri Sand Tours, every trip is more than a tour it’s an experience. A chance to step into nature, reconnect with what matters, and feel the desert’s quiet magic in ways most travelers never get to. It’s adventure, laughter, peace, and soul—all rolled into one unforgettable journey through Egypt’s most breathtaking landscapes.
-            </span>
+<span className="block mt-5">Attention to the smallest details: Every detail matters to us, from the moment we meet you until the moment we say goodbye, so that your adventure becomes a story we cherish as well.                                                 Why is Siri Sand Tours the best?
+          </span>
+
+            <span className= " block mt-5" >
+We believe that the true journey begins from within, so we focus on:</span>
+
+<span className=" block mt-3 ">
+  A genuine family spirit: We don't just welcome "tourists," but our brothers and sisters, our fellow travelers.  We care for everyone, young and old, to ensure a safe, comfortable, and inspiring journey.
+</span>
+<span className=" block mt-3 ">
+  
+Authenticity in every detail: You'll enjoy dishes lovingly prepared by locals, hear stories you won't find in books, and experience authenticity far removed from the hustle and bustle of digital cities.
+</span>
+Our philosophy: "From the sky to the sea": We are experts on land and sea; we know the secrets of the desert as well as the depths of the sea , offering you the diversity your family deserves.
+<span className=" block mt-3 ">
+
+Our promise: To be your trusted guide in nature's embrace. We promise your family a seamless blend of excitement and safety, from the refreshing breezes of the Red Sea to the magic of the desert and mountains.
+</span>
+
+<span className='block mt-5'>
+  Let us transform your holidays into legendary tales to be told to your children and grandchildren. Join SIRISANDTOURS, where every trip is the beginning of a new love story with Egypt.
+</span>
+<span className=" block mt-5  ml-3 ">
+  
+SIRISANDTOURS " sky to sea "          <br /> your next adventure is calling...
+</span>
           </p>
 
           {/* Features */}
@@ -47,8 +73,7 @@ export default function AboutUs() {
                   Exclusive Trip
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  Discover exclusive trip experiences in Egypt from private
-                  desert tours to hidden gems in Siwa, Luxor and Aswan.
+                  Between the magic of the desert and the tranquility of the waves, we design bespoke itineraries that combine adventure and privacy to suit your family's aspirations.
                 </p>
               </div>
             </div>
@@ -65,8 +90,7 @@ export default function AboutUs() {
                   Professional Guide
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  Discover Egypt with a professional guide who makes every trip
-                  easier, more enjoyable and full of cultural local insights.
+                 Travel companions with local expertise who transform every tour into an enjoyable experience and ensure your family's safety and comfort every step of the way.
                 </p>
               </div>
             </div>
@@ -107,7 +131,7 @@ export default function AboutUs() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="order-2 -mt-50 lg:order-1 w-full flex flex-col gap-6"
+          className="order-2 -mt-5 lg:order-1 w-full flex flex-col gap-6"
         >
           {/* TOP IMAGE */}
           <div

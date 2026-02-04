@@ -5,6 +5,12 @@
   --foreground:#ffffff;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
+
 /* ================= SHINE EFFECT ================= */
 
 .shine-wrapper {

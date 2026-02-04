@@ -36,7 +36,7 @@ export const makeSlug = (title: string) =>
 export const tours: Tour[] = [
   {
     title: "Experience Luxor’s legendary heritage ", 
-    cardTitle: "Luxor Trip Plan", 
+    cardTitle: "Luxor", 
     
     slug: makeSlug("6 Day Egypt Desert  Oasis Tour"), 
     
@@ -105,7 +105,7 @@ export const tours: Tour[] = [
 
   {
     title: "Experience world-class sea trips from Sharm El-Sheikh",
-    cardTitle: "Sharm El-Sheikh Diving",
+    cardTitle: "Sharm El-Sheikh ",
     slug: makeSlug("Classic Nile Cruise Experience"),
     description:
       "Experience world-class sea trips from Sharm El-Sheikh, featuring iconic dive spots and stunning scenery.",
@@ -459,7 +459,7 @@ export const tours: Tour[] = [
 
   {
     title: "Explore Aswan’s serene Nile scenery & ancient temples",
-    cardTitle: "Aswan Cultural Tour",
+    cardTitle: "Aswan ",
     slug: makeSlug("Ancient Egypt Discovery Tour"),
     description: "Explore Aswan’s serene Nile scenery, ancient temples, and Nubian culture.",
     heroImage: "/images/tours/8.jpg",

@@ -39,7 +39,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative lg:h-200 h-screen w-full overflow-hidden">
+    <section className="relative lg:h-200 h-screen w-screen overflow-hidden">
       {/* VIDEO BACKGROUND */}
       <video
         suppressHydrationWarning
