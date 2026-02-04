@@ -59,7 +59,7 @@ export default function EndlessWonder() {
 >
   {/* Mobile version (broken, larger text) */}
   <span className="block lg:hidden text-3xl sm:text-5xl md:text-6xl">
-    Discover 7000 Years of <br /> Egyptian Civilization
+   Where land's history meets <br /> the sea's magic
   </span>
 
   {/* Large screens (single line, slightly smaller if needed) */}

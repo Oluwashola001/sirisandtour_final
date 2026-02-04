@@ -131,7 +131,7 @@ SIRISANDTOURS " sky to sea "          <br /> your next adventure is calling...
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="order-2 -mt-5 lg:order-1 w-full flex flex-col gap-6"
+          className="order-2 -mt-5 lg:-mt-180 lg:order-1 w-full flex flex-col gap-6"
         >
           {/* TOP IMAGE */}
           <div
@@ -168,7 +168,8 @@ SIRISANDTOURS " sky to sea "          <br /> your next adventure is calling...
               src="/sunset.jpg"
               alt="Sunset Tour"
               fill
-              sizes="(max-width: 768px) 90vw, 40vw"
+              sizes="
+              (max-width: 768px) 90vw, 40vw"
               className="object-cover"
             />
           </motion.div>

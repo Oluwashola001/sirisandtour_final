@@ -105,7 +105,7 @@ export default function Testimonials() {
         <div className="text-center mb-16">
           {/* Using inline style for cursive as fallback for custom font */}
           <p className="text-[#0A7BBE] text-3xl mb-2" style={{ fontFamily: 'cursive' }}>Testimonials</p>
-          <h2 className="text-4xl font-bold text-[#0A7BBE] mb-6">What Clients Say About us</h2>
+          <h2 className="text-4xl font-bold text-[#0A7BBE] mb-6"> Partners in success tell the story</h2>
           <p className="font-bold text-lg text-black">EXCELLENT</p>
 
           <div className="flex justify-center gap-2 my-3">

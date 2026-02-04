@@ -1,16 +1,9 @@
 'use client';
 
-import { useState } from 'react';
-import Image from 'next/image';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import {
-  HiChevronLeft,
-  HiChevronRight,
-  HiX,
-  HiArrowsExpand,
-  HiOutlineShare,
-} from 'react-icons/hi';
-import { pacifico } from '@/app/fonts';
+
+/* ---------------- IMAGES ---------------- */
 
 const images = [
   '/images/gallery/1.jpg',
@@ -22,330 +15,277 @@ const images = [
   '/images/gallery/7.jpg',
 ];
 
-/* ---------------- IMAGE CARD ---------------- */
-function ImageCard({
-  src,
-  index,
-  onOpen,
-}: {
+/* ---------------- TYPES ---------------- */
+
+type TapeProps = {
+  color: string;
+  className?: string;
+};
+
+type PolaroidProps = {
   src: string;
   index: number;
   onOpen: (i: number) => void;
-}) {
+  className?: string;
+  rotate: number;
+  tapeColor: string;
+  tapeClass?: string;
+  aspect?: 'portrait' | 'square' | 'landscape';
+};
+
+/* ---------------- TAPE ---------------- */
+
+const Tape: React.FC<TapeProps> = ({ color, className }) => (
+  <div
+    className={`absolute h-8 w-24 opacity-90 shadow-sm z-50 ${className || ''}`}
+    style={{ backgroundColor: color }}
+  />
+);
+
+/* ---------------- POLAROID ---------------- */
+
+const Polaroid: React.FC<PolaroidProps> = ({
+  src,
+  index,
+  onOpen,
+  className,
+  rotate,
+  tapeColor,
+  tapeClass,
+  aspect = 'square',
+}) => {
+  let aspectClass = 'aspect-square';
+  if (aspect === 'portrait') aspectClass = 'aspect-[3/4]';
+  if (aspect === 'landscape') aspectClass = 'aspect-[16/9]';
+
   return (
     <motion.div
-      whileHover={{ scale: 1.04 }}
-      className="group relative cursor-pointer overflow-hidden rounded-[32px] shadow-lg"
+      whileHover={{ scale: 1.1, zIndex: 60 }}
+      whileTap={{ scale: 1.1, zIndex: 60 }}
+      transition={{ duration: 0.3 }}
+      className={`absolute bg-white p-3 md:p-4 shadow-2xl transition-all cursor-pointer group ${className || ''}`}
+      style={{ transform: `rotate(${rotate}deg)` }}
       onClick={() => onOpen(index)}
     >
-      <div className="relative overflow-hidden">
-        {/* IMAGE */}
-        <Image
+      <Tape color={tapeColor} className={tapeClass} />
+
+      <div
+        className={`relative w-full h-full overflow-hidden bg-gray-900 ${aspectClass}`}
+      >
+        <img
           src={src}
-          alt="Travel moment"
-          width={420}
-          height={520}
-          className="w-full object-cover transition-transform duration-500 group-hover:scale-105"
+          alt={`Travel moment ${index + 1}`}
+          className="w-full h-full object-cover"
         />
 
-        {/* WHITE SHINE (top -> bottom) */}
-       {/* WHITE SHINE (top -> bottom) */}
-<div className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-  <div className="absolute top-0 left-0 h-full w-full overflow-hidden">
-    <div className="absolute top-[-60%] left-0 h-[60%] w-full bg-white/20 blur-2xl animate-shine" />
-  </div>
-</div>
-
-
-        {/* ZOOM ICON OVERLAY */}
-        <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 transition group-hover:opacity-100">
-          <div className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-white">
-            {/* zoom icon */}
-            <div className="relative h-4 w-4">
-              <span className="absolute inset-x-0 top-1/2 h-[2px] bg-white" />
-              <span className="absolute inset-y-0 left-1/2 w-[2px] bg-white" />
-            </div>
-          </div>
+        {/* Shine */}
+        <div className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-transparent translate-y-full group-hover:-translate-y-full transition-transform duration-1000" />
         </div>
       </div>
-
-      {/* SHINE ANIMATION CSS */}
-      <style jsx>{`
-        .shine {
-          position: absolute;
-          top: -60%;
-          left: 0;
-          width: 100%;
-          height: 60%;
-          background: rgba(255, 255, 255, 0.22);
-          filter: blur(18px);
-          animation: shineMove 1.1s ease-in-out forwards;
-        }
-
-        @keyframes shineMove {
-          0% {
-            transform: translateY(-100%);
-          }
-          50% {
-            transform: translateY(20%);
-          }
-          100% {
-            transform: translateY(110%);
-          }
-        }
-      `}</style>
     </motion.div>
   );
-}
+};
 
-/* ---------------- MAIN COMPONENT ---------------- */
+/* ---------------- MAIN ---------------- */
+
 export default function RecentTravelMoments() {
   const [open, setOpen] = useState(false);
   const [current, setCurrent] = useState(0);
   const [fullScreen, setFullScreen] = useState(false);
   const [zoomed, setZoomed] = useState(false);
-  const [shareOpen, setShareOpen] = useState(false);
 
-  const next = () => setCurrent((p) => (p + 1) % images.length);
-  const prev = () => setCurrent((p) => (p === 0 ? images.length - 1 : p - 1));
+  const next = (e?: React.MouseEvent) => {
+    e?.stopPropagation();
+    setCurrent((p) => (p + 1) % images.length);
+  };
+
+  const prev = (e?: React.MouseEvent) => {
+    e?.stopPropagation();
+    setCurrent((p) =>
+      p === 0 ? images.length - 1 : p - 1
+    );
+  };
 
   return (
-    <>
-      {/* GALLERY */}
-      <section className="bg-white py-28">
-        <div className="mx-auto max-w-7xl px-4">
-          {/* HEADER */}
-          <div className="mb-24 text-center">
-            <p className={`${pacifico.className} mb-4 font-[cursive] text-2xl text-[#0A7BBE]`}>
-              Embark on a soul-stirring journey
-            </p>
-            <h2 className="text-5xl font-bold -mb-15 text-[#0A7BBE]">
-              Recent travel moments
-            </h2>
-          </div>
+    <div className="min-h-screen w-full bg-white text-black font-sans pb-20 overflow-hidden">
 
-          {/* DESKTOP GRID */}
-          <div className="hidden lg:grid grid-cols-5 gap-5 max-w-[920px] mx-auto">
-            <div className="translate-y-32 mt-5">
-              <ImageCard
-                src={images[0]}
-                index={0}
-                onOpen={(i) => {
-                  setCurrent(i);
-                  setOpen(true);
-                }}
-              />
-            </div>
-            <div className="flex flex-col gap-4 translate-y-12">
-              <ImageCard
-                src={images[1]}
-                index={1}
-                onOpen={(i) => {
-                  setCurrent(i);
-                  setOpen(true);
-                }}
-              />
-              <ImageCard
-                src={images[2]}
-                index={2}
-                onOpen={(i) => {
-                  setCurrent(i);
-                  setOpen(true);
-                }}
-              />
-            </div>
-            <div className="translate-y-32 mt-5">
-              <ImageCard
-                src={images[3]}
-                index={3}
-                onOpen={(i) => {
-                  setCurrent(i);
-                  setOpen(true);
-                }}
-              />
-            </div>
-            <div className="flex flex-col gap-4 translate-y-12">
-              <ImageCard
-                src={images[4]}
-                index={4}
-                onOpen={(i) => {
-                  setCurrent(i);
-                  setOpen(true);
-                }}
-              />
-              <ImageCard
-                src={images[5]}
-                index={5}
-                onOpen={(i) => {
-                  setCurrent(i);
-                  setOpen(true);
-                }}
-              />
-            </div>
-            <div className="translate-y-32 mt-5">
-              <ImageCard
-                src={images[6]}
-                index={6}
-                onOpen={(i) => {
-                  setCurrent(i);
-                  setOpen(true);
-                }}
-              />
-            </div>
-          </div>
+      {/* HEADER */}
+      <div className="pt-20 pb-10 text-center px-4 mb-10">
+        <p
+          className="font-[cursive] text-2xl mb-4 text-[#0A7BBE]"
+          style={{ fontFamily: 'Pacifico, cursive' }}
+        >
+          Embark on a soul-stirring journey
+        </p>
 
-          {/* MOBILE STACK */}
-          <div className="lg:hidden flex flex-col gap-8">
-            {images.map((img, i) => (
-              <ImageCard
-                key={i}
-                src={img}
-                index={i}
-                onOpen={(i) => {
-                  setCurrent(i);
-                  setOpen(true);
-                }}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
+        <h2 className="text-5xl font-bold text-[#0A7BBE]">
+          Recent travel moments
+        </h2>
+      </div>
 
-      {/* MODAL / LIGHTBOX */}
+      {/* SCATTERED LAYOUT */}
+     <div className="relative w-full max-w-[90vw] md:max-w-[900px] h-[400px] md:h-[800px] mx-auto mt-4 md:mt-16">
+
+
+        <Polaroid
+          src={images[0]}
+          index={0}
+          onOpen={(i) => { setCurrent(i); setOpen(true); }}
+          className="left-[5%] top-0 w-[35%] md:w-[30%] z-10"
+          rotate={-10}
+          aspect="portrait"
+          tapeColor="#fcd34d"
+          tapeClass="-top-4 -left-2 -rotate-[35deg]"
+        />
+
+        <Polaroid
+          src={images[1]}
+          index={1}
+          onOpen={(i) => { setCurrent(i); setOpen(true); }}
+          className="right-[5%] top-[5%] w-[35%] md:w-[30%] z-10"
+          rotate={6}
+          aspect="portrait"
+          tapeColor="#a78bfa"
+          tapeClass="-top-4 -right-2 rotate-[35deg]"
+        />
+
+        <Polaroid
+          src={images[2]}
+          index={2}
+          onOpen={(i) => { setCurrent(i); setOpen(true); }}
+          className="left-[32%] top-[35%] w-[36%] md:w-[32%] z-20"
+          rotate={-3}
+          aspect="square"
+          tapeColor="#d6d3d1"
+          tapeClass="-top-4 left-1/2 -translate-x-1/2 rotate-2"
+        />
+
+        <Polaroid
+          src={images[3]}
+          index={3}
+          onOpen={(i) => { setCurrent(i); setOpen(true); }}
+          className="left-[5%] bottom-0 w-[38%] md:w-[32%] z-30"
+          rotate={2}
+          aspect="square"
+          tapeColor="#60a5fa"
+          tapeClass="-top-4 left-1/3 -rotate-[15deg]"
+        />
+
+        <Polaroid
+          src={images[4]}
+          index={4}
+          onOpen={(i) => { setCurrent(i); setOpen(true); }}
+          className="right-[2%] bottom-[5%] w-[48%] md:w-[40%] z-30"
+          rotate={8}
+          aspect="landscape"
+          tapeColor="#86efac"
+          tapeClass="-top-3 right-2 rotate-[25deg]"
+        />
+
+      </div>
+
+      {/* LIGHTBOX */}
       <AnimatePresence>
         {open && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4 lg:p-0"
-            onClick={(e) => {
-              if (shareOpen && !(e.target as HTMLElement).closest('#share-panel')) {
-                setShareOpen(false);
-              }
-            }}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 p-4"
+            onClick={() => setOpen(false)}
           >
+
             <motion.div
-              initial={{ scale: 0.95 }}
-              animate={{ scale: 1 }}
-              exit={{ scale: 0.95 }}
-              className="relative flex items-center justify-center w-full max-w-4xl"
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              className="relative w-full max-w-6xl flex flex-col items-center"
+              onClick={(e) => e.stopPropagation()}
             >
-              {/* LEFT ARROW */}
-              <button
-                onClick={prev}
-                className="absolute left-0 top-1/2 -translate-y-1/2 rounded-full border border-white/40 p-3 text-white hover:bg-white/10 z-20"
-              >
-                <HiChevronLeft size={32} />
-              </button>
 
-              {/* IMAGE + ICONS */}
-              <div className="flex flex-col w-full items-center">
-                {/* ICONS: top-right overlay on desktop, above image on mobile */}
-                <div className="flex flex-row lg:flex-col items-center justify-end gap-2 mb-2 w-full lg:absolute lg:top-4 lg:right-4 lg:mb-0">
-                  <button
-                    onClick={() => setFullScreen((p) => !p)}
-                    className="rounded-full border border-white/40 p-2 text-white hover:bg-white/10"
-                  >
-                    <HiArrowsExpand size={20} />
-                  </button>
-
-                  <button
-                    onClick={() => setZoomed((p) => !p)}
-                    className="rounded-full border border-white/40 p-2 text-white hover:bg-white/10"
-                  >
-                    {zoomed ? <span className="text-xl">➖</span> : <span className="text-xl">➕</span>}
-                  </button>
-
-                  <button
-                    onClick={() => setShareOpen((p) => !p)}
-                    className="rounded-full border border-white/40 p-2 text-white hover:bg-white/10"
-                  >
-                    <HiOutlineShare size={20} />
-                  </button>
-
-                  <button
-                    onClick={() => setOpen(false)}
-                    className="rounded-full border border-white/40 p-2 text-white hover:bg-white/10"
-                  >
-                    <HiX size={20} />
-                  </button>
-                </div>
-
-                {/* IMAGE WITH CLICK TO TOGGLE ZOOM */}
-                <motion.div
-                  onClick={() => setZoomed((p) => !p)}
-                  animate={{ scale: zoomed ? 2 : 1 }}
-                  transition={{ type: 'spring', stiffness: 300 }}
-                  className="w-auto cursor-zoom-in"
-                >
-                  <Image
-                    src={images[current]}
-                    alt="Zoomed"
-                    width={fullScreen ? 1920 : 900}
-                    height={fullScreen ? 1080 : 500}
-                    className="max-h-[80vh] w-auto rounded-2xl object-contain"
-                  />
-                </motion.div>
+              {/* TOOLBAR */}
+              <div className="absolute -top-12 right-0 flex gap-4 text-white">
+                <button onClick={() => setFullScreen(!fullScreen)}>
+                  <MaximizeIcon />
+                </button>
+                <button onClick={() => setZoomed(!zoomed)}>
+                  {zoomed ? <ZoomOutIcon /> : <ZoomInIcon />}
+                </button>
+                <button onClick={() => setOpen(false)}>
+                  <CloseIcon />
+                </button>
               </div>
 
-              {/* RIGHT ARROW */}
-              <button
-                onClick={next}
-                className="absolute right-0 top-1/2 -translate-y-1/2 rounded-full border border-white/40 p-3 text-white hover:bg-white/10 z-20"
-              >
-                <HiChevronRight size={32} />
-              </button>
+              {/* IMAGE */}
+              <div className="relative flex items-center justify-center w-full">
 
-              {/* SHARE PANEL */}
-              {shareOpen && (
-                <div
-                  id="share-panel"
-                  className="absolute top-16 right-4 flex flex-col gap-2 bg-black/70 p-2 rounded z-30"
+                <button
+                  onClick={prev}
+                  className="absolute left-2 md:-left-12 p-2 bg-white/10 rounded-full text-white z-50"
                 >
-                  <a
-                    href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
-                      window.location.href
-                    )}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-3 py-1 bg-blue-600 text-white rounded hover:bg-blue-700"
-                  >
-                    Facebook
-                  </a>
-                  <a
-                    href={`https://www.instagram.com/`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-3 py-1 bg-pink-500 text-white rounded hover:bg-pink-600"
-                  >
-                    Instagram
-                  </a>
-                  <a
-                    href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(
-                      window.location.href
-                    )}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-3 py-1 bg-blue-400 text-white rounded hover:bg-blue-500"
-                  >
-                    X
-                  </a>
-                  <button
-                    onClick={() => {
-                      navigator.clipboard.writeText(window.location.href);
-                      alert('Link copied to clipboard!');
-                    }}
-                    className="px-3 py-1 bg-gray-700 text-white rounded hover:bg-gray-800"
-                  >
-                    Copy Link
-                  </button>
-                </div>
-              )}
+                  <ChevronLeftIcon />
+                </button>
+
+                <motion.div
+                  animate={{ scale: zoomed ? 1.5 : 1 }}
+                  className={`relative overflow-hidden rounded-lg shadow-2xl transition-all duration-300 ${
+                    fullScreen
+                      ? 'w-screen h-screen fixed inset-0 z-40 bg-black flex items-center justify-center'
+                      : 'w-full max-h-[80vh]'
+                  }`}
+                >
+                  <img
+                    src={images[current]}
+                    alt="Travel"
+                    className={`${fullScreen
+                      ? 'max-w-full max-h-full object-contain'
+                      : 'w-full max-h-[80vh] object-contain'
+                    } rounded-md`}
+                  />
+                </motion.div>
+
+                <button
+                  onClick={next}
+                  className="absolute right-2 md:-right-12 p-2 bg-white/10 rounded-full text-white z-50"
+                >
+                  <ChevronRightIcon />
+                </button>
+
+              </div>
+
             </motion.div>
+
           </motion.div>
         )}
       </AnimatePresence>
-    </>
+
+    </div>
   );
 }
+
+/* ---------------- ICONS ---------------- */
+
+const MaximizeIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg>
+);
+
+const ZoomInIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+);
+
+const ZoomOutIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+);
+
+const CloseIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+);
+
+const ChevronLeftIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="15 18 9 12 15 6"/></svg>
+);
+
+const ChevronRightIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="9 18 15 12 9 6"/></svg>
+);

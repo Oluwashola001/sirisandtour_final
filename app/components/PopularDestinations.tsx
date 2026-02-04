@@ -44,6 +44,8 @@ export default function PopularDestinationsSlider() {
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
                   priority
                 />
+
+                
               </div>
 
               <div className="p-6 flex flex-col flex-1">
