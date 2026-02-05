@@ -44,7 +44,7 @@ export const tours: Tour[] = [
       "Experience Luxor’s legendary heritage and serene Nile vistas in comfort and style.",
     heroImage: "/images/tours/1.jpg",
     heroVideo: "/videos/luxor.mp4",
-    gallery: ["/images/tours/2.jpg", "/images/tours/3.jpg"],
+    gallery: ["/images/gallery/2.jpg", "/images/gallery/3.jpg"],
     overview:
       "Luxor is a living museum of ancient Egypt. This trip takes you through the city’s iconic temples, royal tombs, and historic sites along the Nile, offering a perfect blend of culture, history, and breathtaking landscapes.",
    itinerary: [
@@ -183,7 +183,7 @@ export const tours: Tour[] = [
     description: "Discover the heart of Egypt with its pyramids, museums, and bustling streets.",
     heroImage: "/images/trending/3.jpg",
     heroVideo: "/videos/cario.mp4",
-    gallery: ["/images/tours/1.jpg", "/images/tours/3.jpg"],
+    gallery: ["/images/gallery/1.jpg", "/images/gallery/3.jpg"],
     overview: "A perfect blend of history and modern Egypt, this Cairo trip covers the major archaeological sites and cultural highlights, giving you a deep insight into the country’s rich past.",
    itinerary: [
   {
@@ -253,9 +253,9 @@ export const tours: Tour[] = [
     cardTitle: "Marsa Alam ",
     slug: makeSlug("Luxury Siwa Oasis White Desert Adventure"),
     description: "Experience a peaceful Red Sea getaway with snorkeling, diving, and coastal relaxation in Marsa Alam.",
-    heroImage: "/images/tours/4.jpg",
+    heroImage: "/images/trending/4.jpg",
     heroVideo: "/videos/marsa.mp4",
-    gallery: ["/images/tours/1.jpg", "/images/tours/2.webp"],
+    gallery: ["/images/gallery/6.jpg", "/images/gallery/5.jpg"],
     overview: "Marsa Alam is ideal for those looking to escape the crowds. This plan highlights the Red Sea’s natural wonders, from colorful coral reefs to crystal-clear waters, making it perfect for eco-tourism and marine adventures.",
     itinerary: [
   {
@@ -337,7 +337,7 @@ export const tours: Tour[] = [
     description: "Explore Fayoum’s natural beauty, ancient sites, and desert landscapes on a refreshing escape from the city.",
     heroImage: "/images/tours/5.jpg",
     heroVideo: "/videos/fayoum.mp4",
-    gallery: ["/images/tours/6.jpg", "/images/tours/7.jpg"],
+    gallery: ["/images/gallery/7.jpg", "/images/gallery/8.jpg"],
     overview: "Fayoum is a peaceful oasis southwest of Cairo, known for its lakes, waterfalls, and protected natural areas. This itinerary includes visits to Wadi El-Rayan, Mudawara Mountain, and local villages, offering a perfect blend of nature and culture.",
    itinerary: [
   {
@@ -395,8 +395,8 @@ export const tours: Tour[] = [
     heroImage: "/images/tours/7.jpg",
     heroVideo: "/videos/siwa.mp4",
     gallery: [
-      "/images/tours/8.jpg",
-      "/images/tours/9.jpg"
+      "/images/gallery/10.jpg",
+      "/images/gallery/9.jpg"
     ],
     overview: "Discover the magic of Siwa Oasis as you explore ancient ruins, relax in natural salt lakes, and experience thrilling desert safaris in Egypt’s western desert.",
   itinerary: [
@@ -464,7 +464,7 @@ export const tours: Tour[] = [
     description: "Explore Aswan’s serene Nile scenery, ancient temples, and Nubian culture.",
     heroImage: "/images/tours/8.jpg",
     heroVideo: "/videos/aswan.mp4",
-    gallery: ["/images/tours/1.jpg", "/images/tours/2.webp"],
+    gallery: ["/images/gallery/14.jpg", "/images/gallery/15.jpg"],
     overview: "Aswan is known for its peaceful Nile setting and rich Nubian heritage. This itinerary includes visits to iconic sites such as Philae Temple, the High Dam, and traditional Nubian villages, offering a perfect mix of history and relaxation.",
    itinerary: [
   {
@@ -526,7 +526,7 @@ export const tours: Tour[] = [
     description: "Immerse yourself in Egypt’s history and culture.",
     heroImage: "/images/tours/9.jpg",
     heroVideo: "/videos/hurghada.mp4",
-    gallery: ["/images/tours/10.jpeg", "/images/tours/11.jpg"],
+    gallery: ["/images/gallery/12.jpeg", "/images/gallery/11.jpg"],
     overview:
       "Learn about Egypt’s traditions, monuments, and culture.",
    itinerary: [
