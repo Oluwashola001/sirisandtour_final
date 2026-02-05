@@ -111,7 +111,7 @@ export const tours: Tour[] = [
       "Experience world-class sea trips from Sharm El-Sheikh, featuring iconic dive spots and stunning scenery.",
     heroImage: "/images/tours/6.jpg",
     heroVideo: "/videos/sham.mp4",
-    gallery: ["/images/tours/4.jpg", "/images/tours/5.jpg"],
+    gallery: ["/images/gallery/16.jpg", "/images/gallery/15.jpg"],
     overview:
       "Sharm El-Sheikh sea trips offer unforgettable marine experiences, from snorkeling over coral gardens to diving in famous Red Sea sites. Enjoy scenic boat rides and explore the underwater world of Egypt’s most popular coastal destination.",
     itinerary: [
@@ -526,7 +526,7 @@ export const tours: Tour[] = [
     description: "Immerse yourself in Egypt’s history and culture.",
     heroImage: "/images/tours/9.jpg",
     heroVideo: "/videos/hurghada.mp4",
-    gallery: ["/images/gallery/12.jpeg", "/images/gallery/11.jpg"],
+    gallery: ["/images/gallery/12.jpg", "/images/gallery/11.jpg"],
     overview:
       "Learn about Egypt’s traditions, monuments, and culture.",
    itinerary: [
