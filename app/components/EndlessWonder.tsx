@@ -223,8 +223,7 @@ export default function RecentTravelMoments() {
       </div>
 
       {/* --- SCATTERED CONTAINER (second section) --- */}
-      {/* Added mt-32 to create clear separation between the two clusters */}
-    <div className="relative w-full max-w-[90vw] md:max-w-[900px] h-[350px] md:h-[800px] mx-auto mt-32 md:mt-16">
+    <div className="relative w-full max-w-[90vw] md:max-w-[900px] h-[350px] md:h-[800px] mx-auto lg:mt-32 mt-12 -mb-25 md:mt-16">
 
 
         {/* 1. TOP LEFT */}

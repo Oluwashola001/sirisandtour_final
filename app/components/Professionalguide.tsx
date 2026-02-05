@@ -142,7 +142,7 @@ export default function TripSection() {
               }}
             >
               <Image
-                src="/group.jpg"
+src="/images/gallery/2.jpg"
                 alt="Tour Group"
                 fill
                 className="object-cover"
@@ -162,7 +162,7 @@ export default function TripSection() {
               }}
             >
               <Image
-                src="/sunset.jpg"
+src="/images/gallery/8.jpg"
                 alt="Sunset Tour"
                 fill
                 className="object-cover"

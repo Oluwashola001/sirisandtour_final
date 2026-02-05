@@ -138,7 +138,7 @@ SIRISANDTOURS " sky to sea "          <br /> your next adventure is calling...
             className="relative w-full h-[320px] sm:h-[380px] lg:h-[520px] overflow-hidden rounded-[40px]"
           >
             <Image
-              src="/group.jpg"
+src="/images/gallery/7.jpg"
               alt="Tour Group"
               fill
               sizes="(max-width: 768px) 90vw, 40vw"
@@ -165,7 +165,8 @@ SIRISANDTOURS " sky to sea "          <br /> your next adventure is calling...
             }}
           >
             <Image
-              src="/sunset.jpg"
+              src="/images/gallery/1.jpg"
+
               alt="Sunset Tour"
               fill
               sizes="
