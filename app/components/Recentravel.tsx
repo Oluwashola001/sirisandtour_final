@@ -13,6 +13,13 @@ const images = [
   '/images/gallery/5.jpg',
   '/images/gallery/6.jpg',
   '/images/gallery/7.jpg',
+  '/images/gallery/8.jpg',
+  '/images/gallery/9.jpg',
+  '/images/gallery/10.jpg',
+  '/images/gallery/11.jpg',
+  '/images/gallery/12.jpg',
+  '/images/gallery/13.jpg',
+  '/images/gallery/14.jpg',
 ];
 
 /* ---------------- TYPES ---------------- */
@@ -108,7 +115,7 @@ export default function RecentTravelMoments() {
   };
 
   return (
-    <div className="min-h-screen w-full bg-white text-black font-sans pb-20 overflow-hidden">
+    <div className="min-h-screen w-full bg-white text-black font-sans pb-32 overflow-x-hidden">
 
       {/* HEADER */}
       <div className="pt-20 pb-10 text-center px-4 mb-10">
@@ -124,10 +131,12 @@ export default function RecentTravelMoments() {
         </h2>
       </div>
 
-      {/* SCATTERED LAYOUT */}
-     <div className="relative w-full max-w-[90vw] md:max-w-[900px] h-[400px] md:h-[800px] mx-auto mt-4 md:mt-16">
+      {/* --- SCATTERED CONTAINER (first section) --- */}
+      {/* Increased height to 600px on mobile to prevent overlapping */}
+      <div className="relative w-full max-w-[90vw] md:max-w-[900px] h-[350px] md:h-[800px] mx-auto mt-4 md:mt-16">
 
 
+        {/* 1. TOP LEFT */}
         <Polaroid
           src={images[0]}
           index={0}
@@ -139,6 +148,7 @@ export default function RecentTravelMoments() {
           tapeClass="-top-4 -left-2 -rotate-[35deg]"
         />
 
+        {/* 2. TOP RIGHT */}
         <Polaroid
           src={images[1]}
           index={1}
@@ -150,6 +160,7 @@ export default function RecentTravelMoments() {
           tapeClass="-top-4 -right-2 rotate-[35deg]"
         />
 
+        {/* 3. CENTER */}
         <Polaroid
           src={images[2]}
           index={2}
@@ -161,6 +172,7 @@ export default function RecentTravelMoments() {
           tapeClass="-top-4 left-1/2 -translate-x-1/2 rotate-2"
         />
 
+        {/* 4. BOTTOM LEFT */}
         <Polaroid
           src={images[3]}
           index={3}
@@ -172,6 +184,7 @@ export default function RecentTravelMoments() {
           tapeClass="-top-4 left-1/3 -rotate-[15deg]"
         />
 
+        {/* 5. BOTTOM RIGHT */}
         <Polaroid
           src={images[4]}
           index={4}
@@ -181,6 +194,120 @@ export default function RecentTravelMoments() {
           aspect="landscape"
           tapeColor="#86efac"
           tapeClass="-top-3 right-2 rotate-[25deg]"
+        />
+
+        {/* 6. LEFT FLANK (Hidden on Mobile) */}
+        <Polaroid
+          src={images[5]}
+          index={5}
+          onOpen={(i) => { setCurrent(i); setOpen(true); }}
+          className="hidden md:block left-[-2%] md:left-[-6%] top-[38%] w-[35%] md:w-[28%] z-15"
+          rotate={-12}
+          aspect="portrait"
+          tapeColor="#f472b6"
+          tapeClass="-top-4 right-2 rotate-[15deg]"
+        />
+
+        {/* 7. RIGHT FLANK (Hidden on Mobile) */}
+        <Polaroid
+          src={images[6]}
+          index={6}
+          onOpen={(i) => { setCurrent(i); setOpen(true); }}
+          className="hidden md:block right-[-2%] md:right-[-6%] top-[35%] w-[35%] md:w-[28%] z-15"
+          rotate={10}
+          aspect="square"
+          tapeColor="#fb923c"
+          tapeClass="-top-4 left-2 -rotate-[10deg]"
+        />
+
+      </div>
+
+      {/* --- SCATTERED CONTAINER (second section) --- */}
+    <div className="relative w-full max-w-[90vw] md:max-w-[900px] h-[350px] md:h-[800px] mx-auto lg:mt-32 mt-12 -mb-25 md:mt-16">
+
+
+        {/* 1. TOP LEFT */}
+        <Polaroid
+          src={images[7]}
+          index={7}
+          onOpen={(i) => { setCurrent(i); setOpen(true); }}
+          className="left-[5%] top-0 w-[35%] md:w-[30%] z-10"
+          rotate={-10}
+          aspect="portrait"
+          tapeColor="#fcd34d"
+          tapeClass="-top-4 -left-2 -rotate-[35deg]"
+        />
+
+        {/* 2. TOP RIGHT */}
+        <Polaroid
+          src={images[8]}
+          index={8}
+          onOpen={(i) => { setCurrent(i); setOpen(true); }}
+          className="right-[5%] top-[5%] w-[35%] md:w-[30%] z-10"
+          rotate={6}
+          aspect="portrait"
+          tapeColor="#a78bfa"
+          tapeClass="-top-4 -right-2 rotate-[35deg]"
+        />
+
+        {/* 3. CENTER */}
+        <Polaroid
+          src={images[9]}
+          index={9}
+          onOpen={(i) => { setCurrent(i); setOpen(true); }}
+          className="left-[32%] top-[35%] w-[36%] md:w-[32%] z-20"
+          rotate={-3}
+          aspect="square"
+          tapeColor="#d6d3d1"
+          tapeClass="-top-4 left-1/2 -translate-x-1/2 rotate-2"
+        />
+
+        {/* 4. BOTTOM LEFT */}
+        <Polaroid
+          src={images[10]}
+          index={10}
+          onOpen={(i) => { setCurrent(i); setOpen(true); }}
+          className="left-[5%] bottom-0 w-[38%] md:w-[32%] z-30"
+          rotate={2}
+          aspect="square"
+          tapeColor="#60a5fa"
+          tapeClass="-top-4 left-1/3 -rotate-[15deg]"
+        />
+
+        {/* 5. BOTTOM RIGHT */}
+        <Polaroid
+          src={images[11]}
+          index={11}
+          onOpen={(i) => { setCurrent(i); setOpen(true); }}
+          className="right-[2%] bottom-[5%] w-[48%] md:w-[40%] z-30"
+          rotate={8}
+          aspect="landscape"
+          tapeColor="#86efac"
+          tapeClass="-top-3 right-2 rotate-[25deg]"
+        />
+
+        {/* 6. LEFT FLANK (Hidden on Mobile) */}
+        <Polaroid
+          src={images[12]}
+          index={12}
+          onOpen={(i) => { setCurrent(i); setOpen(true); }}
+          className="hidden md:block left-[-2%] md:left-[-6%] top-[38%] w-[35%] md:w-[28%] z-15"
+          rotate={-12}
+          aspect="portrait"
+          tapeColor="#f472b6"
+          tapeClass="-top-4 right-2 rotate-[15deg]"
+        />
+
+        {/* 7. RIGHT FLANK (Hidden on Mobile) */}
+        <Polaroid
+          src={images[13]}
+          index={13}
+          onOpen={(i) => { setCurrent(i); setOpen(true); }}
+          className="hidden md:block right-[-2%] md:right-[-6%] top-[35%] w-[35%] md:w-[28%] z-15"
+          rotate={10}
+          aspect="square"
+          tapeColor="#fb923c"
+          tapeClass="-top-4 left-2 -rotate-[10deg]"
         />
 
       </div>
