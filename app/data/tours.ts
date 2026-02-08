@@ -23,8 +23,10 @@ export type Tour = {
 itinerary: {
   title: string;
   image: string;
-  description: string;
+  pickup: string;
+  highlights: string[];
 }[];
+
 
 
   testimonials: Testimonial[];
@@ -183,32 +185,32 @@ export const tours: Tour[] = [
     description: "Discover the heart of Egypt with its pyramids, museums, and bustling streets.",
     heroImage: "/images/trending/3.jpg",
     heroVideo: "/videos/cario.mp4",
-    gallery: ["/images/tours/1.jpg", "/images/tours/3.jpg"],
+    gallery: ["/images/trending/4.jpg", "/images/trending/21.jpg"],
     overview: "A perfect blend of history and modern Egypt, this Cairo trip covers the major archaeological sites and cultural highlights, giving you a deep insight into the country’s rich past.",
    itinerary: [
   {
     title: "Giza Pyramids & Grand Egyptian Museum",
-    image: "/images/itinerary/giza.jpg",
+    image: "/images/itinerary/22.jpg",
     description: "Visit the Great Pyramids, Sphinx, and the Grand Egyptian Museum."
   },
   {
     title: "Scenic Flight Over Pyramids",
-    image: "/images/itinerary/scenic-flight.jpg",
+    image: "/images/itinerary/20.jpg",
     description: "Optional panoramic flight above the pyramids and Cairo skyline."
   },
   {
     title: "Historic Cairo – Al Muizz & Khan El Khalili",
-    image: "/images/itinerary/khan-khalili.webp",
+    image: "/images/itinerary/23.jpg",
     description: "Walk through Islamic Cairo’s famous streets and bazaars."
   },
   {
     title: "Islamic Cairo Mosques",
-    image: "/images/itinerary/citadel.jpg",
+    image: "/images/trending/5.jpg",
     description: "Visit the Citadel, Mohamed Ali Mosque, Al-Azhar and Ibn Tulun Mosque."
   },
   {
     title: "Coptic Cairo Churches",
-    image: "/images/itinerary/coptic-cairo.jpg",
+    image: "/images/itinerary/24.jpg",
     description: "Explore Hanging Church, Coptic Museum, and Old Cairo churches."
   }
 ]
@@ -255,7 +257,7 @@ export const tours: Tour[] = [
     description: "Experience a peaceful Red Sea getaway with snorkeling, diving, and coastal relaxation in Marsa Alam.",
     heroImage: "/images/tours/4.jpg",
     heroVideo: "/videos/marsa.mp4",
-    gallery: ["/images/tours/1.jpg", "/images/tours/2.webp"],
+    gallery: ["/images/tours/1.jpg", "/images/tours/marsa-allam.jpg"],
     overview: "Marsa Alam is ideal for those looking to escape the crowds. This plan highlights the Red Sea’s natural wonders, from colorful coral reefs to crystal-clear waters, making it perfect for eco-tourism and marine adventures.",
     itinerary: [
   {

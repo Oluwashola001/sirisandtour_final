@@ -41,7 +41,7 @@ export default function TourPage({
    
    {
       id: "itinerary",
-      label: `${tour.cardTitle || tour.title} Categories`,
+      label: `Categories ${tour.cardTitle || tour.title}`,
     },
     { id: "overview", label: "Trip Overview" },
     
