@@ -109,7 +109,7 @@ export const tours: Tour[] = [
     slug: makeSlug("Classic Nile Cruise Experience"),
     description:
       "Experience world-class sea trips from Sharm El-Sheikh, featuring iconic dive spots and stunning scenery.",
-    heroImage: "/images/tours/6.jpg",
+    heroImage: "/images/tours/2.jpg",
     heroVideo: "/videos/sham.mp4",
     gallery: ["/images/tours/4.jpg", "/images/tours/5.jpg"],
     overview:
