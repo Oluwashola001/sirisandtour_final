@@ -483,6 +483,7 @@
   {/* DETAILS BUTTON */}
   <button
     className={`flex-1 border-2 py-2 sm:py-2.5 rounded-xl font-semibold text-xs sm:text-sm transition 
+      border-[#0a7bee] text-[#0a7bee]
                 hover:bg-[#075E94] hover:text-white hover:border-[#075E94] border-[${BRAND}] text-[${BRAND}]`}
   >
     ℹ Details
