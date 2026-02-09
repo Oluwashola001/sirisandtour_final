@@ -21,10 +21,14 @@ export type Tour = {
   excluded: string[];
   reviews: string[];
 itinerary: {
-  title: string;
-  image: string;
-  pickup: string;
-  highlights: string[];
+   title: string;
+   image: string;
+   price?: number;
+   duration?: string;
+   currency?: string;
+   pickupTimes?: string[];
+   highlights?: string[];
+   description: string;
 }[];
 
 
@@ -53,18 +57,58 @@ export const tours: Tour[] = [
   {
     title: "Day Tour – Karnak, Valley of the Kings, Memnon, Hatshepsut",
     image: "/images/itinerary/karnak.jpg",
+      price: 25,
+  currency: "€",
+  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
+  highlights: [
+    "2-hours on Orange Island",
+    "2-Snorkeling stops",
+    "Water sports: banana & sofa boat",
+    "2-hours on Orange Island",
+    "2-Snorkeling stops",
+    "Water sports: banana & sofa boat"
+    
+    
+  ],
+
     description:
-      "Visit the massive Karnak Temple complex, explore the Valley of the Kings, see the Colossi of Memnon, and admire Queen Hatshepsut’s temple."
+      "Visit the massive Karnak Temple complex, explore the Valley of the Kings, see the Colossi of Memnon, and admire Queen Hatshepsut’s temple.",
   },
   {
     title: "Balloon – Hot Air Balloon Ride",
     image: "/images/itinerary/balloon.jpg",
+         price: 25,
+  currency: "€",
+  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
+  highlights: [
+    "2-hours on Orange Island",
+    "2-Snorkeling stops",
+    "Water sports: banana & sofa boat",
+    "2-hours on Orange Island",
+    "2-Snorkeling stops",
+    "Water sports: banana & sofa boat"
+    
+    
+  ],
     description:
       "Enjoy a sunrise hot air balloon ride over Luxor with breathtaking views of temples and the Nile."
   },
   {
     title: "Nile Cruise – Luxor to Aswan",
     image: "/images/itinerary/nile-cruise.jpg",
+         price: 25,
+  currency: "€",
+  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
+  highlights: [
+    "2-hours on Orange Island",
+    "2-Snorkeling stops",
+    "Water sports: banana & sofa boat",
+    "2-hours on Orange Island",
+    "2-Snorkeling stops",
+    "Water sports: banana & sofa boat"
+    
+    
+  ],
     description:
       "Relax on a scenic Nile cruise from Luxor to Aswan, stopping at historic temples along the way."
   }
@@ -117,6 +161,7 @@ export const tours: Tour[] = [
     overview:
       "Sharm El-Sheikh sea trips offer unforgettable marine experiences, from snorkeling over coral gardens to diving in famous Red Sea sites. Enjoy scenic boat rides and explore the underwater world of Egypt’s most popular coastal destination.",
     itinerary: [
+      
   {
     title: "Sea Trip – Pirate Boat",
     image: "/images/itinerary/pirate-boat.jpg",

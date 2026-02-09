@@ -1,218 +1,179 @@
-"use client";
+          "use client";
 
-import { use, useEffect, useState } from "react";
-import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
-import { tours, Tour } from "../../data/tours";
-import { ArrowRightIcon } from "lucide-react";
-import ReviewTestimonial from "../../components/ReviewTestimonial";
-import NewsletterSection from "../../components/Newsletter";
+          import { use, useEffect, useState } from "react";
+          import Image from "next/image";
+          import { motion, AnimatePresence } from "framer-motion";
+          import { tours, Tour } from "../../data/tours";
+          import { ArrowRightIcon } from "lucide-react";
+          import ReviewTestimonial from "../../components/ReviewTestimonial";
+          import NewsletterSection from "../../components/Newsletter";
+          import { ChevronDown, ChevronUp } from "lucide-react";
+          import { FaWhatsapp } from "react-icons/fa";
 
-function useMediaQuery(query: string) {
-  const [matches, setMatches] = useState(false);
 
-  useEffect(() => {
-    const media = window.matchMedia(query);
-    setMatches(media.matches);
+          function useMediaQuery(query: string) {
+            const [matches, setMatches] = useState(false);
 
-    const listener = () => setMatches(media.matches);
-    media.addEventListener("change", listener);
+            useEffect(() => {
+              const media = window.matchMedia(query);
+              setMatches(media.matches);
 
-    return () => media.removeEventListener("change", listener);
-  }, [query]);
+              const listener = () => setMatches(media.matches);
+              media.addEventListener("change", listener);
 
-  return matches;
-}
+              return () => media.removeEventListener("change", listener);
+            }, [query]);
 
-export default function TourPage({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
-  const { slug } = use(params);
-  const tour: Tour | undefined = tours.find((t) => t.slug === slug);
+            return matches;
+          }
 
-  if (!tour) {
-    return <div className="p-20 text-center text-2xl">Tour Not Found</div>;
-  }
+          export default function TourPage({
+            params,
+          }: {
+            params: Promise<{ slug: string }>;
+          }) {
+            const { slug } = use(params);
+            const tour: Tour | undefined = tours.find((t) => t.slug === slug);
 
-  /* ✅ TABS INSIDE COMPONENT */
-  const tabs = [
-   
-   {
-      id: "itinerary",
-      label: `Categories ${tour.cardTitle || tour.title}`,
-    },
-    { id: "overview", label: "Trip Overview" },
-    
-    { id: "included", label: "What's Included" },
-    { id: "excluded", label: "What's Not Included" },
-    { id: "reviews", label: "Traveler Reviews" },
-  ];
+            if (!tour) {
+              return <div className="p-20 text-center text-2xl">Tour Not Found</div>;
+            }
 
-  /* ✅ ITINERARY OPENS BY DEFAULT */
-  const [activeTab, setActiveTab] = useState<string | null>("itinerary");
-  const isMobile = useMediaQuery("(max-width: 768px)");
+            const BRAND = "#0a7bee"; // change this once to update everything
 
-  const handleTabClick = (id: string) => {
-    if (activeTab === id) {
-      setActiveTab(null);
-    } else {
-      setActiveTab(id);
-    }
-  };
+            /* ✅ TABS INSIDE COMPONENT */
+            const tabs = [
+            
+            {
+                id: "itinerary",
+                label: `Discover ${tour.cardTitle || tour.title}`,
+              },
+              { id: "overview", label: "Trip Overview" },
+              
+              { id: "included", label: "What's Included" },
+              { id: "excluded", label: "What's Not Included" },
+              { id: "reviews", label: "Traveler Reviews" },
+            ];
 
-  return (
-    <section className="w-full -ml-2 px-4 md:px-12 py-14 mt-35">
+            /* ✅ ITINERARY OPENS BY DEFAULT */
+            const [activeTab, setActiveTab] = useState<string | null>("itinerary");
+            const isMobile = useMediaQuery("(max-width: 768px)");
 
-      {/* ===== TITLE SECTION ===== */}
-      <div className="w-full mb-10 flex justify-center -mt-10 items-center">
-        <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0A7BBE] break-words text-center">
-          {tour.title}
-        </h1>
-      </div>
+            const handleTabClick = (id: string) => {
+              if (activeTab === id) {
+                setActiveTab(null);
+              } else {
+                setActiveTab(id);
+              }
+            };
 
-      <div className="overflow-x-hidden">
-        <div className="grid grid-cols-2 gap-5 w-screen items-start">
+            return (
+              <section className="w-full -ml-2 px-4 md:px-12 py-14 mt-35">
 
-          {/* VIDEO LEFT */}
-          <div className="overflow-hidden rounded-[30px] h-[340px] w-full lg:w-195 md:h-[360px] lg:h-[520px]">
-            <motion.video
-              src={tour.heroVideo || undefined}
-              autoPlay
-              muted
-              loop
-              playsInline
-              className="w-full h-full object-cover"
-            />
-          </div>
+                {/* ===== TITLE SECTION ===== */}
+                <div className="w-full mb-10 flex justify-center -mt-10 items-center">
+                  <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0A7BBE] break-words text-center">
+                    {tour.title}
+                  </h1>
+                </div>
 
-          {/* IMAGES RIGHT */}
-          <div className="flex flex-col w-full lg:w-100 -ml-2 lg:ml-35 md:w-80 gap-2 pr-8 lg:pr-10">
-            {tour.gallery.slice(0, 2).map((img, i) => (
-              <div
-                key={i}
-                className="overflow-hidden rounded-[30px] relative w-full h-[165px] md:h-[180px] lg:h-[250px]"
-              >
-                <Image src={img} alt="" fill className="object-cover" />
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+                <div className="overflow-x-hidden">
+                  <div className="grid grid-cols-2 gap-5 w-screen items-start">
 
-      {/* TABS */}
-      <div className="mt-10">
-        <div className="flex flex-col items-center gap-3 md:flex-row md:justify-center md:flex-wrap">
-          {tabs.map((tab) => (
-            <div key={tab.id} className="w-full md:w-auto">
+                    {/* VIDEO LEFT */}
+                    <div className="overflow-hidden rounded-[30px] h-[340px] w-full lg:w-195 md:h-[360px] lg:h-[520px]">
+                      <motion.video
+                        src={tour.heroVideo || undefined}
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
 
-              <button
-                onClick={() => handleTabClick(tab.id)}
-                className={`w-full md:w-auto px-6 py-3 rounded-t-3xl h-15 transition-all text-black
-                  ${
-                    activeTab === tab.id
-                      ? "bg-[#0a7bbe] text-white"
-                      : "bg-gray-100 hover:bg-[#075E94] hover:text-white"
-                  }`}
-              >
-                {tab.label}
-              </button>
+                    {/* IMAGES RIGHT */}
+                    <div className="flex flex-col w-full lg:w-100 -ml-2 lg:ml-35 md:w-80 gap-2 pr-8 lg:pr-10">
+                      {tour.gallery.slice(0, 2).map((img, i) => (
+                        <div
+                          key={i}
+                          className="overflow-hidden rounded-[30px] relative w-full h-[165px] md:h-[180px] lg:h-[250px]"
+                        >
+                          <Image src={img} alt="" fill className="object-cover" />
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
 
-              {/* MOBILE CONTENT */}
-              {isMobile && activeTab === tab.id && (
-                <motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -10 }}
-                  transition={{ duration: 0.25 }}
-                  className="bg-white text-black rounded-b-3xl p-6 shadow"
-                >
-                  {tab.id === "overview" && <p>{tour.overview}</p>}
+                {/* TABS */}
+                <div className="mt-10">
+                  <div className="flex flex-col items-center gap-3 md:flex-row md:justify-center md:flex-wrap">
+                    {tabs.map((tab) => (
+                      <div key={tab.id} className="w-full md:w-auto">
 
-                  {tab.id === "itinerary" && (
-                    <ul className="list-none ml-0 space-y-6">
-                      {tour.itinerary.map((item, i) => (
-                        <li key={i}>
+                        <button
+                          onClick={() => handleTabClick(tab.id)}
+                          className={`w-full md:w-auto px-6 py-3 rounded-t-3xl h-15 transition-all text-black
+                            ${
+                              activeTab === tab.id
+                                ? "bg-[#0a7bbe] text-white"
+                                : "bg-gray-100 hover:bg-[#075E94] hover:text-white"
+                            }`}
+                        >
+                          {tab.label}
+                        </button>
 
-                          <p className="font-semibold text-lg mb-2 text-[#0A7BBE]">
-                            {item.title}
-                          </p>
-
-                          <div className="relative w-full h-[220px] mb-3 overflow-hidden rounded-xl">
-                            <Image
-                              src={item.image}
-                              alt={item.title}
-                              fill
-                              className="object-cover"
-                            />
-                          </div>
-
-                          <p className="text-gray-600 mb-3">
-                            {item.description}
-                          </p>
-
-                          <a
-                            href="/booknow"
-                            className="inline-block bg-[#0A7BBE] text-white px-6 py-3 rounded-full text-sm hover:bg-[#075E94] transition"
+                        {/* MOBILE CONTENT */}
+                        {isMobile && activeTab === tab.id && (
+                          <motion.div
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -10 }}
+                            transition={{ duration: 0.25 }}
+                            className="bg-white text-black rounded-b-3xl p-6 shadow"
                           >
-                            Book Now
-                          </a>
+                            {tab.id === "overview" && <p>{tour.overview}</p>}
+          {activeTab === "itinerary" && (
+            <ul className="flex flex-col items-center space-y-8 px-2 sm:px-0">
+              {tour.itinerary.map((item, i) => {
 
-                        </li>
-                      ))}
-                    </ul>
-                  )}
+                const [openPickup, setOpenPickup] = useState<number | null>(null);
+                const [openDescription, setOpenDescription] = useState<number | null>(null);
 
-                  {tab.id === "included" && (
-                    <ul className="list-disc ml-5 space-y-2">
-                      {tour.included.map((item, i) => (
-                        <li key={i}>{item}</li>
-                      ))}
-                    </ul>
-                  )}
+                const whatsappNumber = "201288062555";
+                const message = `Hello, I'm interested in ${item.title}`;
+                const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
-                  {tab.id === "excluded" && (
-                    <ul className="list-disc ml-5 space-y-2">
-                      {tour.excluded.map((item, i) => (
-                        <li key={i}>{item}</li>
-                      ))}
-                    </ul>
-                  )}
-
-                  {tab.id === "reviews" && (
-                    <ReviewTestimonial testimonials={tour.testimonials} />
-                  )}
-                </motion.div>
-              )}
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* DESKTOP TAB CONTENT */}
-      {!isMobile && activeTab && (
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={activeTab}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.35 }}
-            className="mx-auto mt-8 bg-white text-black rounded-3xl p-6 shadow"
+                return (
+                  <li
+            key={i}
+            className="w-full max-w-2xl bg-[#f4f7f8] rounded-[28px] shadow-xl overflow-hidden 
+                      transform transition-transform duration-300 hover:scale-105"
           >
-            {activeTab === "overview" && <p>{tour.overview}</p>}
+                    {/* IMAGE */}
+                    <div className="relative w-full h-40 sm:h-48">
+                      {/* Duration */}
+                      {item.duration && (
+                        <div
+                          className="absolute top-2 left-2 z-10 text-white text-[10px] sm:text-xs px-2 py-1 rounded-full font-semibold shadow-md"
+                          style={{ backgroundColor: BRAND }}
+                        >
+                          ⏱ {item.duration}
+                        </div>
+                      )}
 
-            {activeTab === "itinerary" && (
-              <ul className="list-none ml-0 space-y-8">
-                {tour.itinerary.map((item, i) => (
-                  <li key={i}>
+                      {/* Price */}
+                      {item.price && item.currency && (
+                      <div
+            className="absolute top-2 right-2 z-10 text-white text-xs sm:text-sm font-semibold px-4 py-1.5 rounded-full border-2 border-white shadow-lg flex items-center gap-1.5"
+            style={{ backgroundColor: BRAND }}
+          >
+            {item.currency} {item.price}
+          </div>
 
-                    <p className="font-semibold text-xl mb-3 text-[#0A7BBE]">
-                      {item.title}
-                    </p>
+                      )}
 
-                    <div className="relative w-200 h-[500px] mb-4 overflow-hidden rounded-2xl">
                       <Image
                         src={item.image}
                         alt={item.title}
@@ -221,58 +182,351 @@ export default function TourPage({
                       />
                     </div>
 
-                    <p className="text-gray-700 mb-4">
-                      {item.description}
-                    </p>
+                    {/* CONTENT */}
+                    <div className="px-3 sm:px-6 py-3 sm:py-4 text-center">
 
-                    <a
-                      href="/booknow"
-                      className="inline-block bg-[#0A7BBE] text-white px-8 py-3 rounded-full hover:bg-[#075E94] transition"
+                      <h2
+                        className="text-base sm:text-lg font-semibold mb-1"
+                        style={{ color: BRAND }}
+                      >
+                        {item.title}
+                      </h2>
+
+                      <p className="text-gray-600 text-xs sm:text-sm mb-2">
+                        Every day
+                      </p>
+
+                      {/* PICKUP DROPDOWN */}
+                      <div className="mb-4">
+                        <button
+                          onClick={() =>
+                            setOpenPickup(openPickup === i ? null : i)
+                          }
+                          className="flex items-center justify-center gap-1 text-xs sm:text-sm font-medium w-full"
+                          style={{ color: BRAND }}
+                        >
+                          Pickup
+                          {openPickup === i ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+                        </button>
+
+                        {openPickup === i && (
+                          <div className="mt-2 bg-white rounded-lg shadow p-2 text-xs space-y-1">
+                            {item.pickupTimes?.map((time, index) => (
+                              <p key={index}>{time}</p>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+
+                      {/* HIGHLIGHTS */}
+                      <div className="text-left mb-4">
+                        <h3 className="text-sm sm:text-base font-semibold mb-2 text-center">
+                          Highlights:
+                        </h3>
+
+                        <div className="max-h-24 overflow-y-auto pr-2 custom-scroll">
+                          <ul className="space-y-1">
+                            {item.highlights?.map((point: string, index: number) => (
+                              <li
+                                key={index}
+                                className="flex items-start gap-2 text-gray-700 text-xs sm:text-sm"
+                              >
+                                <span style={{ color: BRAND }}>✓</span>
+                                {point}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </div>
+
+                      {/* DESCRIPTION DROPDOWN */}
+                      <div className="mb-4">
+                        <button
+                          onClick={() =>
+                            setOpenDescription(openDescription === i ? null : i)
+                          }
+                          className="flex items-center justify-center gap-1 font-semibold w-full text-xs sm:text-sm"
+                          style={{ color: BRAND }}
+                        >
+                          Description
+                          {openDescription === i ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+                        </button>
+
+                        {openDescription === i && (
+                          <p className="mt-2 text-gray-600 text-xs sm:text-sm leading-relaxed">
+                            {item.description}
+                          </p>
+                        )}
+                      </div>
+
+                      {/* WHATSAPP BUTTON */}
+                      <a
+                        href={whatsappLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-full py-2 sm:py-3 rounded-xl font-semibold text-white text-xs sm:text-sm flex items-center justify-center gap-2 mb-2 transition shadow-md"
+                        style={{ backgroundColor: BRAND }}
+                      >
+                        <FaWhatsapp className="text-xl sm:text-2xl" />
+                        Contact Now
+                      </a>
+
+                      {/* DETAILS BUTTON */}
+                      <button
+                        className="w-full border-2 py-2 sm:py-3 rounded-xl font-semibold text-xs sm:text-sm transition"
+                        style={{
+                          borderColor: BRAND,
+                          color: BRAND
+                        }}
+                      >
+                        ℹ Details
+                      </button>
+
+                    </div>
+                  </li>
+                );
+              })}
+            </ul>
+          )}
+
+                            {tab.id === "included" && (
+                              <ul className="list-disc ml-5 space-y-2">
+                                {tour.included.map((item, i) => (
+                                  <li key={i}>{item}</li>
+                                ))}
+                              </ul>
+                            )}
+
+                            {tab.id === "excluded" && (
+                              <ul className="list-disc ml-5 space-y-2">
+                                {tour.excluded.map((item, i) => (
+                                  <li key={i}>{item}</li>
+                                ))}
+                              </ul>
+                            )}
+
+                            {tab.id === "reviews" && (
+                              <ReviewTestimonial testimonials={tour.testimonials} />
+                            )}
+                          </motion.div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* DESKTOP TAB CONTENT */}
+                {!isMobile && activeTab && (
+                  <AnimatePresence mode="wait">
+                    <motion.div
+                      key={activeTab}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -20 }}
+                      transition={{ duration: 0.35 }}
+                      className="mx-auto mt-8 bg-white text-black  p-6 shadow"
                     >
-                      Book Now
-                    </a>
+                      {activeTab === "overview" && <p>{tour.overview}</p>}
+          {activeTab === "itinerary" && (
+            <ul
+            className="grid gap-6 px-4 sm:px-0"
+            style={{
+              gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",     maxWidth: "1400px",
 
+            }}
+          >
+
+
+              {tour.itinerary.map((item, i) => {
+
+                const [openPickup, setOpenPickup] = useState<number | null>(null);
+                const [openDescription, setOpenDescription] = useState<number | null>(null);
+
+                const whatsappNumber = "201288062555";
+                const message = `Hello, I'm interested in ${item.title}`;
+                const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+                return (
+              <li
+            key={i}
+            className="group w-full max-w-2xl bg-[#f4f7f8] rounded-[28px] shadow-xl overflow-hidden 
+                      transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
+          >
+
+            {/* IMAGE */}
+            <div className="relative w-full max-h-48 sm:h-64 overflow-hidden">
+              {/* Duration */}
+              {item.duration && (
+                <div
+                  className="absolute top-3 left-3 z-10 text-white text-xs sm:text-sm px-3 py-2 rounded-full font-semibold shadow-md"
+                  style={{ backgroundColor: BRAND }}
+                >
+                  ⏱ {item.duration}
+                </div>
+              )}
+
+              {/* Dynamic Price */}
+              {item.price && item.currency && (
+                <div
+                  className="absolute top-2 right-2 z-10 text-white text-xs sm:text-sm font-semibold px-4 py-1.5 rounded-full border-2 border-white shadow-lg flex items-center gap-1.5"
+                  style={{ backgroundColor: BRAND }}
+                >
+                  {item.currency} {item.price}
+                </div>
+              )}
+
+              {/* Image */}
+              <Image
+                src={item.image}
+                alt={item.title}
+                fill
+                className="object-cover transform transition-transform duration-500 group-hover:scale-110"
+              />
+            </div>
+
+            {/* CONTENT */}
+            <div className="px-4 sm:px-6 py-4 sm:py-6 text-center">
+
+              <h2
+                className="text-lg sm:text-xl font-semibold mb-2"
+                style={{ color: BRAND }}
+              >
+                {item.title}
+              </h2>
+
+              <p className="text-gray-600 text-xs sm:text-sm">
+                Every day
+              </p>
+
+              {/* PICKUP DROPDOWN */}
+              <div className="mt-3 mb-6">
+                <button
+                  onClick={() =>
+                    setOpenPickup(openPickup === i ? null : i)
+                  }
+                  className="flex items-center justify-center gap-2 text-sm sm:text-base font-medium w-full"
+                  style={{ color: BRAND }}
+                >
+                  Pickup
+                  {openPickup === i ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
+                </button>
+
+                {openPickup === i && (
+                  <div className="mt-3 bg-white rounded-lg shadow p-3 text-sm space-y-2">
+                    {item.pickupTimes?.map((time, index) => (
+                      <p key={index}>{time}</p>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {/* HIGHLIGHTS WITH SCROLL */}
+            <div className="text-left mb-6">
+            <h3 className="text-base sm:text-lg font-semibold mb-4 text-center">
+              Highlights :
+            </h3>
+
+            <div className="max-h-[6.5rem] overflow-y-auto pr-3 custom-scroll">
+              <ul className="space-y-3">
+                {item.highlights?.map((point: string, index: number) => (
+                  <li
+                    key={index}
+                    className="flex items-start gap-3 text-gray-700 text-xs sm:text-sm"
+                  >
+                    <span style={{ color: BRAND }}>✓</span>
+                    {point}
                   </li>
                 ))}
               </ul>
-            )}
+            </div>
+          </div>
 
-            {activeTab === "included" && (
-              <ul className="list-disc ml-5 space-y-2">
-                {tour.included.map((item, i) => (
-                  <li key={i}>{item}</li>
-                ))}
-              </ul>
-            )}
+              {/* DESCRIPTION DROPDOWN */}
+              <div className="mb-6">
+                <button
+                  onClick={() =>
+                    setOpenDescription(openDescription === i ? null : i)
+                  }
+                  className="flex items-center justify-center gap-2 font-semibold w-full"
+                  style={{ color: BRAND }}
+                >
+                  Description
+                  {openDescription === i ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
+                </button>
 
-            {activeTab === "excluded" && (
-              <ul className="list-disc ml-5 space-y-2">
-                {tour.excluded.map((item, i) => (
-                  <li key={i}>{item}</li>
-                ))}
-              </ul>
-            )}
+                {openDescription === i && (
+                  <p className="mt-4 text-gray-600 text-xs sm:text-sm leading-relaxed">
+                    {item.description}
+                  </p>
+                )}
+              </div>
 
-            {activeTab === "reviews" && (
-              <ReviewTestimonial testimonials={tour.testimonials} />
-            )}
-          </motion.div>
-        </AnimatePresence>
-      )}
+              {/* buttons */}
+   <div className="flex flex-row gap-3">
+  {/* WHATSAPP BUTTON */}
+  <a
+  href={whatsappLink}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex-1 py-2 sm:py-2.5 rounded-xl font-semibold text-xs sm:text-sm flex items-center justify-center gap-2 transition 
+             hover:bg-[#075E94] hover:text-white"
+  style={{ 
+    backgroundColor: BRAND, 
+    color: 'white'
+  }}
+>
+  <FaWhatsapp className="text-xl sm:text-xl ml-2" />
+  Contact Now
+</a>
 
-      {/* ACTION BUTTONS */}
-      <div className="mt-10 flex flex-col gap-4 items-center">
-        <a
-          href="https://wa.me/+201288062555"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center justify-center gap-3 bg-green-500 text-white px-14 py-5 rounded-full font-semibold hover:bg-green-600 transition text-lg"
-        >
-          WhatsApp <ArrowRightIcon className="w-5 h--5" />
-        </a>
-      </div>
 
-      <NewsletterSection />
-    </section>
-  );
-}
+  {/* DETAILS BUTTON */}
+  <button
+    className={`flex-1 border-2 py-2 sm:py-2.5 rounded-xl font-semibold text-xs sm:text-sm transition 
+                hover:bg-[#075E94] hover:text-white hover:border-[#075E94] border-[${BRAND}] text-[${BRAND}]`}
+  >
+    ℹ Details
+  </button>
+</div>
+
+
+
+            </div>
+          </li>
+
+                );
+              })}
+            </ul>
+          )}
+
+
+
+                      {activeTab === "included" && (
+                        <ul className="list-disc ml-5 space-y-2">
+                          {tour.included.map((item, i) => (
+                            <li key={i}>{item}</li>
+                          ))}
+                        </ul>
+                      )}
+
+                      {activeTab === "excluded" && (
+                        <ul className="list-disc ml-5 space-y-2">
+                          {tour.excluded.map((item, i) => (
+                            <li key={i}>{item}</li>
+                          ))}
+                        </ul>
+                      )}
+
+                      {activeTab === "reviews" && (
+                        <ReviewTestimonial testimonials={tour.testimonials} />
+                      )}
+                    </motion.div>
+                  </AnimatePresence>
+                )}
+
+              
+
+                <NewsletterSection />
+              </section>
+            );
+          }

@@ -10,6 +10,15 @@ body {
   overflow-x: hidden;
 }
 
+.custom-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  background-color: #0a7bbe;
+  border-radius: 10px;
+}
+
 
 /* ================= SHINE EFFECT ================= */
 

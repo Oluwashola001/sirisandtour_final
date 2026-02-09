@@ -64,7 +64,7 @@ export default function EndlessWonder() {
 
   {/* Large screens (single line, slightly smaller if needed) */}
   <span className="hidden lg:inline lg:text-4xl xl:text-5xl">
-    Where land's history meets <br/> the sea's magic
+    Where land's history meets the sea's magic
   </span>
 </motion.h2>
 
