@@ -186,7 +186,12 @@ export const tours: Tour[] = [
     title: "Safari – Desert Safari",
     image: "/images/itinerary/siwa-safari.jpg",
     description: "Quad biking, camel riding, and Bedouin village visit in Sinai desert."
-  }
+  },
+   {
+    title: "Airport Transfer",
+    image: "/images/itinerary/airport.jpg",
+    description: "Evening water sports."
+  },
 ],
     included: [ "Airport Transfers", "Guide",],
     excluded: ["Drinks", "Tips"],
@@ -672,6 +677,11 @@ export const tours: Tour[] = [
   {
     title: "Tattoo",
     image: "/images/itinerary/tattoo.jpg",
+    description: "Evening water sports."
+  },
+   {
+    title: "Limousine + Taxi",
+    image: "/images/itinerary/limouse.jpg",
     description: "Evening water sports."
   }
 ]
