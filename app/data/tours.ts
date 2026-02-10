@@ -157,7 +157,7 @@ export const tours: Tour[] = [
       "Experience world-class sea trips from Sharm El-Sheikh, featuring iconic dive spots and stunning scenery.",
     heroImage: "/images/tours/2.jpg",
     heroVideo: "/videos/sham.mp4",
-    gallery: ["/images/tours/4.jpg", "/images/tours/5.jpg"],
+    gallery: ["/images/tours/16.jpg", "/images/tours/17.jpg"],
     overview:
       "Sharm El-Sheikh sea trips offer unforgettable marine experiences, from snorkeling over coral gardens to diving in famous Red Sea sites. Enjoy scenic boat rides and explore the underwater world of Egypt’s most popular coastal destination.",
     itinerary: [
@@ -179,12 +179,12 @@ export const tours: Tour[] = [
   },
   {
     title: "Submarine – Semi Submarine",
-    image: "/images/itinerary/semi-submarine.jpg",
+    image: "/images/itinerary/submarin.jpg",
     description: "Glass-bottom boat experience to explore marine life without diving."
   },
   {
     title: "Safari – Desert Safari",
-    image: "/images/itinerary/desert-safari.webp",
+    image: "/images/itinerary/siwa-safari.jpg",
     description: "Quad biking, camel riding, and Bedouin village visit in Sinai desert."
   }
 ],
@@ -312,7 +312,7 @@ export const tours: Tour[] = [
   },
   {
     title: "Nefertari Submarine",
-    image: "/images/itinerary/semi-submarine.jpg",
+    image: "/images/itinerary/Nefertari.jpg",
     description: "Underwater viewing experience inside a real submarine."
   },
   {
@@ -384,17 +384,17 @@ export const tours: Tour[] = [
     description: "Explore Fayoum’s natural beauty, ancient sites, and desert landscapes on a refreshing escape from the city.",
     heroImage: "/images/tours/5.jpg",
     heroVideo: "/videos/fayoum.mp4",
-    gallery: ["/images/tours/6.jpg", "/images/tours/7.jpg"],
+    gallery: ["/images/tours/18.jpg", "/images/tours/19.jpg"],
     overview: "Fayoum is a peaceful oasis southwest of Cairo, known for its lakes, waterfalls, and protected natural areas. This itinerary includes visits to Wadi El-Rayan, Mudawara Mountain, and local villages, offering a perfect blend of nature and culture.",
    itinerary: [
   {
     title: "Tunis Village",
-    image: "/images/itinerary/tunis-village.webp",
+    image: "/images/itinerary/tunis-village.jpg",
     description: "Visit the famous pottery village and local art workshops."
   },
   {
     title: "Wadi El Rayan & Sandboarding",
-    image: "/images/itinerary/wadi-el-rayan.webp",
+    image: "/images/itinerary/wadi-el-rayan.jpg",
     description: "Waterfalls, sandboarding, and desert safari adventure."
   }
 ]
@@ -442,14 +442,14 @@ export const tours: Tour[] = [
     heroImage: "/images/tours/7.jpg",
     heroVideo: "/videos/siwa.mp4",
     gallery: [
-      "/images/tours/8.jpg",
-      "/images/tours/9.jpg"
+      "/images/tours/21.jpg",
+      "/images/tours/20.jpg"
     ],
     overview: "Discover the magic of Siwa Oasis as you explore ancient ruins, relax in natural salt lakes, and experience thrilling desert safaris in Egypt’s western desert.",
   itinerary: [
   {
     title: "Shali Fortress & Mountain of the Dead",
-    image: "/images/itinerary/img2.webp",
+    image: "/images/itinerary/shali-fortress.jpg",
     description: "Explore ancient ruins and tombs."
   },
   {
@@ -462,11 +462,7 @@ export const tours: Tour[] = [
     image: "/images/itinerary/great-sand-sea.webp",
     description: "4x4 desert safari with sand dunes and sunset views."
   },
-  {
-    title: "Extended Safari Experience",
-    image: "/images/itinerary/siwa-safari.webp",
-    description: "Additional desert adventure and camping option."
-  }
+ 
 ]
 ,
     included: ["Hotel", "Guide", "Meals", "Transport"],
@@ -579,17 +575,17 @@ export const tours: Tour[] = [
    itinerary: [
   {
     title: "Tawila Island Resort (VVIP)",
-    image: "/images/itinerary/img2.webp",
+    image: "/images/itinerary/tawila.jpg",
     description: "Luxury island day experience."
   },
   {
     title: "Hula Hula Island",
-    image: "/images/itinerary/img3.webp",
+    image: "/images/itinerary/hula.jpg",
     description: "Snorkeling and beach relaxation."
   },
   {
     title: "Eden Island",
-    image: "/images/itinerary/img5.webp",
+    image: "/images/itinerary/eden.jpg",
     description: "Island escape with coral reefs."
   },
   {
@@ -599,22 +595,22 @@ export const tours: Tour[] = [
   },
   {
     title: "Paradise Island",
-    image: "/images/itinerary/nile-cruise.jpg",
+    image: "/images/itinerary/paradise.jpg",
     description: "Boat trip with snorkeling."
   },
   {
     title: "Sharm El Naga Beach",
-    image: "/images/itinerary/img6.webp",
+    image: "/images/itinerary/sharm.jpg",
     description: "Snorkeling beach day."
   },
   {
     title: "Sinbad Submarine",
-    image: "/images/itinerary/semi-submarine.jpg",
+    image: "/images/itinerary/sinbad.jpg",
     description: "Underwater viewing experience."
   },
   {
     title: "Parasailing",
-    image: "/images/itinerary/img11.webp",
+    image: "/images/itinerary/parasailing.jpg",
     description: "Fly over the Red Sea."
   },
   {
@@ -634,7 +630,7 @@ export const tours: Tour[] = [
   },
   {
     title: "Scuba Diving",
-    image: "/images/itinerary/scuba-diving.jpg",
+    image: "/images/itinerary/scuba-diving2.jpg",
     description: "Certified diving session."
   },
   {
@@ -644,12 +640,38 @@ export const tours: Tour[] = [
   },
   {
     title: "Dolphin House",
-    image: "/images/itinerary/dolphin-house.jpg",
+    image: "/images/itinerary/dolphin-house2.jpg",
     description: "Snorkel with dolphins."
   },
   {
     title: "Night Surf",
     image: "/images/itinerary/night-surf.jpg",
+    description: "Evening water sports."
+  },
+   {
+    title: "Safari Hurghada",
+    image: "/images/itinerary/safari-hurghada.jpg",
+    description: "Evening water sports."
+  }
+  ,
+   {
+    title: "City Tours",
+    image: "/images/itinerary/city.jpg",
+    description: "Evening water sports."
+  },
+   {
+    title: "Golf",
+    image: "/images/itinerary/golf.jpg",
+    description: "Evening water sports."
+  },
+  {
+    title: "Massage + spa",
+    image: "/images/itinerary/spa.jpg",
+    description: "Evening water sports."
+  },
+  {
+    title: "Tattoo",
+    image: "/images/itinerary/tattoo.jpg",
     description: "Evening water sports."
   }
 ]
