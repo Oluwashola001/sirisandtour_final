@@ -24,7 +24,7 @@ itinerary: {
    title: string;
    image: string;
    price?: number;
-   duration?: string;
+duration?: number | string;
    currency?: string;
    pickupTimes?: string[];
    highlights?: string[];
@@ -57,7 +57,8 @@ export const tours: Tour[] = [
   {
     title: "Day Tour – Karnak, Valley of the Kings, Memnon, Hatshepsut",
     image: "/images/itinerary/karnak.jpg",
-      price: 25,
+duration: "3 hrs",
+      price: 75,
   currency: "€",
   pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
   highlights: [
@@ -77,7 +78,7 @@ export const tours: Tour[] = [
   {
     title: "Balloon – Hot Air Balloon Ride",
     image: "/images/itinerary/balloon.jpg",
-         price: 25,
+         price: 70,
   currency: "€",
   pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
   highlights: [
@@ -96,7 +97,7 @@ export const tours: Tour[] = [
   {
     title: "Nile Cruise – Luxor to Aswan",
     image: "/images/itinerary/nile-cruise.jpg",
-         price: 25,
+         price: 90,
   currency: "€",
   pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
   highlights: [
@@ -165,26 +166,91 @@ export const tours: Tour[] = [
   {
     title: "Sea Trip – Pirate Boat",
     image: "/images/itinerary/pirate-boat.jpg",
+      price: 120,
+  currency: "€",
+  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
+  highlights: [
+    "2-hours on Orange Island",
+    "2-Snorkeling stops",
+    "Water sports: banana & sofa boat",
+    "2-hours on Orange Island",
+    "2-Snorkeling stops",
+    "Water sports: banana & sofa boat"
+    
+    
+  ],
     description: "Full-day pirate-style boat cruise with snorkeling, swimming, and onboard entertainment."
   },
   {
     title: "Sea Trip – Ras Mohammed",
     image: "/images/itinerary/ras-mohammed.jpg",
+      price: 28,
+  currency: "€",
+  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
+  highlights: [
+    "2-hours on Orange Island",
+    "2-Snorkeling stops",
+    "Water sports: banana & sofa boat",
+    "2-hours on Orange Island",
+    "2-Snorkeling stops",
+    "Water sports: banana & sofa boat"
+    
+    
+  ],
     description: "Snorkeling and diving at Ras Mohammed National Park coral reefs."
   },
   {
     title: "Sea Trip – Tiran Island",
     image: "/images/itinerary/tiran-island.jpg",
+      price: 25,
+  currency: "€",
+  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
+  highlights: [
+    "2-hours on Orange Island",
+    "2-Snorkeling stops",
+    "Water sports: banana & sofa boat",
+    "2-hours on Orange Island",
+    "2-Snorkeling stops",
+    "Water sports: banana & sofa boat"
+    
+    
+  ],
     description: "Boat trip to Tiran Island with snorkeling in crystal-clear waters."
   },
   {
     title: "Submarine – Semi Submarine",
     image: "/images/itinerary/submarin.jpg",
+      price: 22,
+  currency: "€",
+  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
+  highlights: [
+    "2-hours on Orange Island",
+    "2-Snorkeling stops",
+    "Water sports: banana & sofa boat",
+    "2-hours on Orange Island",
+    "2-Snorkeling stops",
+    "Water sports: banana & sofa boat"
+    
+    
+  ],
     description: "Glass-bottom boat experience to explore marine life without diving."
   },
   {
     title: "Safari – Desert Safari",
     image: "/images/itinerary/siwa-safari.jpg",
+      price: 25,
+  currency: "€",
+  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
+  highlights: [
+    "2-hours on Orange Island",
+    "2-Snorkeling stops",
+    "Water sports: banana & sofa boat",
+    "2-hours on Orange Island",
+    "2-Snorkeling stops",
+    "Water sports: banana & sofa boat"
+    
+    
+  ],
     description: "Quad biking, camel riding, and Bedouin village visit in Sinai desert."
   },
    {
@@ -241,26 +307,93 @@ export const tours: Tour[] = [
   {
     title: "Giza Pyramids & Grand Egyptian Museum",
     image: "/images/itinerary/22.jpg",
-    description: "Visit the Great Pyramids, Sphinx, and the Grand Egyptian Museum."
+    
+      price: 80,
+  currency: "€",
+  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
+  highlights: [
+    "2-hours on Orange Island",
+    "2-Snorkeling stops",
+    "Water sports: banana & sofa boat",
+    "2-hours on Orange Island",
+    "2-Snorkeling stops",
+    "Water sports: banana & sofa boat"
+  ],description: "Visit the Great Pyramids, Sphinx, and the Grand Egyptian Museum."
   },
   {
     title: "Scenic Flight Over Pyramids",
     image: "/images/itinerary/20.jpg",
-    description: "Optional panoramic flight above the pyramids and Cairo skyline."
+     price: 120,
+  currency: "€",
+  pickupTimes: ["8:00 am"],
+  highlights: [
+    "Feel the thrill of a private helicopter flight over Cairo and the Pyramids",
+
+"Perfect for couples, families, or VIP guests seeking a luxurious experience"
+,
+"Enjoy breathtaking aerial views of Cairo and the Pyramids of Giza",
+
+"Capture breathtaking photos from the sky as you glide over ancient landmarks",
+
+"exclusive landing at the Pyramids for a truly unforgettable adventure!"
+
+    
+    
+  ],
+description: "Experience Cairo like never before. Take off on a private helicopter ride and enjoy breathtaking panoramic views of the Nile, Cairo Tower, and the historic Salah El-Din Citadel. Feel the thrill of soaring above the ancient wonders of Cairo and Giza in a luxurious private aircraft—an experience that blends opulence with adventure. From the moment of ascent, the vast metropolis of Cairo unfolds beneath you, where winding streets, historic landmarks, and modern structures merge seamlessly with the surrounding desert. As the journey continues toward Giza, the legendary pyramids rise majestically from the sands, offering an unobstructed aerial view of the Great Pyramid of Khufu, the Pyramid of Khafre, and the Pyramid of Menkaure. More than a sightseeing tour, this exclusive flight is an immersive encounter with Egypt’s timeless history, revealing its grandeur from a perspective reserved for the few."
   },
   {
     title: "Historic Cairo – Al Muizz & Khan El Khalili",
     image: "/images/itinerary/23.jpg",
+      price: 40,
+  currency: "€",
+  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
+  highlights: [
+    "2-hours on Orange Island",
+    "2-Snorkeling stops",
+    "Water sports: banana & sofa boat",
+    "2-hours on Orange Island",
+    "2-Snorkeling stops",
+    "Water sports: banana & sofa boat"
+    
+    
+  ],
     description: "Walk through Islamic Cairo’s famous streets and bazaars."
   },
   {
     title: "Islamic Cairo Mosques",
     image: "/images/trending/5.jpg",
+     price: 65,
+  currency: "€",
+  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
+  highlights: [
+    "2-hours on Orange Island",
+    "2-Snorkeling stops",
+    "Water sports: banana & sofa boat",
+    "2-hours on Orange Island",
+    "2-Snorkeling stops",
+    "Water sports: banana & sofa boat"
+    
+    
+  ],
     description: "Visit the Citadel, Mohamed Ali Mosque, Al-Azhar and Ibn Tulun Mosque."
   },
   {
     title: "Coptic Cairo Churches",
     image: "/images/itinerary/24.jpg",
+      price: 65,
+  currency: "€",
+  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
+  highlights: [
+    "2-hours on Orange Island",
+    "2-Snorkeling stops",
+    "Water sports: banana & sofa boat",
+    "2-hours on Orange Island",
+    "2-Snorkeling stops",
+    "Water sports: banana & sofa boat"
+    
+    
+  ],
     description: "Explore Hanging Church, Coptic Museum, and Old Cairo churches."
   }
 ]
@@ -313,36 +446,127 @@ export const tours: Tour[] = [
   {
     title: "Royal Sea Scope Submarine",
     image: "/images/itinerary/royal-seascope.jpg",
+      price: 35,
+  currency: "€",
+  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
+  highlights: [
+    "2-hours on Orange Island",
+    "2-Snorkeling stops",
+    "Water sports: banana & sofa boat",
+    "2-hours on Orange Island",
+    "2-Snorkeling stops",
+    "Water sports: banana & sofa boat"
+    
+    
+  ],
     description: "Submarine tour to explore coral reefs and fish."
   },
   {
     title: "Nefertari Submarine",
     image: "/images/itinerary/Nefertari.jpg",
+      price: 40,
+  currency: "€",
+  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
+  highlights: [
+    "2-hours on Orange Island",
+    "2-Snorkeling stops",
+    "Water sports: banana & sofa boat",
+    "2-hours on Orange Island",
+    "2-Snorkeling stops",
+    "Water sports: banana & sofa boat"
+    
+    
+  ],
     description: "Underwater viewing experience inside a real submarine."
   },
   {
     title: "Super Desert Safari",
     image: "/images/itinerary/super-safari.jpg",
+      price: 40,
+  currency: "€",
+  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
+  highlights: [
+    "2-hours on Orange Island",
+    "2-Snorkeling stops",
+    "Water sports: banana & sofa boat",
+    "2-hours on Orange Island",
+    "2-Snorkeling stops",
+    "Water sports: banana & sofa boat"
+    
+    
+  ],
     description: "Quad biking, camel ride, and desert sunset experience."
   },
   {
     title: "Dolphin House Snorkeling",
     image: "/images/itinerary/dolphin-house.jpg",
+      price: 50,
+  currency: "€",
+  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
+  highlights: [
+    "2-hours on Orange Island",
+    "2-Snorkeling stops",
+    "Water sports: banana & sofa boat",
+    "2-hours on Orange Island",
+    "2-Snorkeling stops",
+    "Water sports: banana & sofa boat"
+    
+    
+  ],
     description: "Snorkel with dolphins in their natural habitat."
   },
   {
     title: "Satyah Turtle Bay",
     image: "/images/itinerary/turtle-bay.jpg",
+      price: 35,
+  currency: "€",
+  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
+  highlights: [
+    "2-hours on Orange Island",
+    "2-Snorkeling stops",
+    "Water sports: banana & sofa boat",
+    "2-hours on Orange Island",
+    "2-Snorkeling stops",
+    "Water sports: banana & sofa boat"
+    
+    
+  ],
     description: "Snorkeling with turtles and colorful fish."
   },
   {
     title: "Wadi El Gemal National Park",
     image: "/images/itinerary/wadi-el-gemal.jpg",
+      price: 28,
+  currency: "€",
+  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
+  highlights: [
+    "2-hours on Orange Island",
+    "2-Snorkeling stops",
+    "Water sports: banana & sofa boat",
+    "2-hours on Orange Island",
+    "2-Snorkeling stops",
+    "Water sports: banana & sofa boat"
+    
+    
+  ],
     description: "Nature reserve visit with mangroves and wildlife."
   },
   {
     title: "Scuba Diving Trip",
     image: "/images/itinerary/scuba-diving.jpg",
+      price: 45,
+  currency: "€",
+  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
+  highlights: [
+    "2-hours on Orange Island",
+    "2-Snorkeling stops",
+    "Water sports: banana & sofa boat",
+    "2-hours on Orange Island",
+    "2-Snorkeling stops",
+    "Water sports: banana & sofa boat"
+    
+    
+  ],
     description: "Full-day diving excursion with professional instructors."
   }
 ]
@@ -395,11 +619,37 @@ export const tours: Tour[] = [
   {
     title: "Tunis Village",
     image: "/images/itinerary/tunis-village.jpg",
+      price: 70,
+  currency: "€",
+  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
+  highlights: [
+    "2-hours on Orange Island",
+    "2-Snorkeling stops",
+    "Water sports: banana & sofa boat",
+    "2-hours on Orange Island",
+    "2-Snorkeling stops",
+    "Water sports: banana & sofa boat"
+    
+    
+  ],
     description: "Visit the famous pottery village and local art workshops."
   },
   {
     title: "Wadi El Rayan & Sandboarding",
     image: "/images/itinerary/wadi-el-rayan.jpg",
+      price: 25,
+  currency: "€",
+  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
+  highlights: [
+    "2-hours on Orange Island",
+    "2-Snorkeling stops",
+    "Water sports: banana & sofa boat",
+    "2-hours on Orange Island",
+    "2-Snorkeling stops",
+    "Water sports: banana & sofa boat"
+    
+    
+  ],
     description: "Waterfalls, sandboarding, and desert safari adventure."
   }
 ]
@@ -455,16 +705,55 @@ export const tours: Tour[] = [
   {
     title: "Shali Fortress & Mountain of the Dead",
     image: "/images/itinerary/shali-fortress.jpg",
+      price: 45,
+  currency: "€",
+  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
+  highlights: [
+    "2-hours on Orange Island",
+    "2-Snorkeling stops",
+    "Water sports: banana & sofa boat",
+    "2-hours on Orange Island",
+    "2-Snorkeling stops",
+    "Water sports: banana & sofa boat"
+    
+    
+  ],
     description: "Explore ancient ruins and tombs."
   },
   {
     title: "Salt Lakes & Cleopatra’s Bath",
     image: "/images/itinerary/salt-lake.webp",
+      price: 40,
+  currency: "€",
+  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
+  highlights: [
+    "2-hours on Orange Island",
+    "2-Snorkeling stops",
+    "Water sports: banana & sofa boat",
+    "2-hours on Orange Island",
+    "2-Snorkeling stops",
+    "Water sports: banana & sofa boat"
+    
+    
+  ],
     description: "Relax in therapeutic salt lakes and Cleopatra’s Pool."
   },
   {
     title: "Great Sand Sea Safari",
     image: "/images/itinerary/great-sand-sea.webp",
+      price: 60,
+  currency: "€",
+  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
+  highlights: [
+    "2-hours on Orange Island",
+    "2-Snorkeling stops",
+    "Water sports: banana & sofa boat",
+    "2-hours on Orange Island",
+    "2-Snorkeling stops",
+    "Water sports: banana & sofa boat"
+    
+    
+  ],
     description: "4x4 desert safari with sand dunes and sunset views."
   },
  
@@ -518,16 +807,54 @@ export const tours: Tour[] = [
   {
     title: "High Dam, Philae & Nubian Village",
     image: "/images/itinerary/philae.jpg",
+      price: 60,
+  currency: "€",
+  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
+  highlights: [
+    "2-hours on Orange Island",
+    "2-Snorkeling stops",
+    "Water sports: banana & sofa boat",
+    "2-hours on Orange Island",
+    "2-Snorkeling stops",
+    "Water sports: banana & sofa boat"
+    
+    
+  ],
     description: "Visit High Dam, Philae Temple, Kalabsha Temple and Nubian Village."
   },
   {
     title: "Abu Simbel & Kom Ombo",
     image: "/images/itinerary/abu-simbel.jpg",
+      price: 80,
+  currency: "€",
+  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
+  highlights: [
+    "2-hours on Orange Island",
+    "2-Snorkeling stops",
+    "Water sports: banana & sofa boat",
+    "2-hours on Orange Island",
+    "2-Snorkeling stops",
+    "Water sports: banana & sofa boat"
+    
+    
+  ],
     description: "Full-day trip to Abu Simbel and Kom Ombo Temple."
   },
   {
     title: "Nile Cruise Aswan – Luxor",
     image: "/images/itinerary/nile-cruise2.jpg",
+      price: 90,
+  currency: "€",
+  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
+  highlights: [
+    "2-hours on Orange Island",
+    "2-Snorkeling stops",
+    "Water sports: banana & sofa boat",
+    "2-hours on Orange Island",
+    "2-Snorkeling stops",
+    "Water sports: banana & sofa boat"
+
+  ],
     description: "Relaxing Nile cruise between Aswan and Luxor."
   }
 ]
@@ -568,7 +895,7 @@ export const tours: Tour[] = [
   },
 
   {
-    title: "Immerse yourself in Egypt’s history and culture.",
+    title: "SIRI SAND TOURS presents your personalized Hurghada city tour program, tailored to your preferences, from 4:00 PM to 9:00 PM:",
     cardTitle: "Hurghada",
     slug: makeSlug("Egypt Cultural Heritage Tour"),
     description: "Immerse yourself in Egypt’s history and culture.",
@@ -581,109 +908,183 @@ export const tours: Tour[] = [
   {
     title: "Tawila Island Resort (VVIP)",
     image: "/images/itinerary/tawila.jpg",
+duration: "3 hrs",
+       price: 320,
+  currency: "€",
+  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
     description: "Luxury island day experience."
   },
   {
     title: "Hula Hula Island",
     image: "/images/itinerary/hula.jpg",
+       price: 23,
+  currency: "€",
+  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
+    
     description: "Snorkeling and beach relaxation."
   },
   {
     title: "Eden Island",
     image: "/images/itinerary/eden.jpg",
+       price: 40,
+  currency: "€",
+  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
     description: "Island escape with coral reefs."
   },
   {
     title: "Orange Bay Island",
     image: "/images/itinerary/orange-bay.jpg",
+       price:25 ,
+  currency: "€",
+  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
     description: "Relax on sandy beaches and swim."
   },
   {
     title: "Paradise Island",
     image: "/images/itinerary/paradise.jpg",
+    price: 30,
+  currency: "€",
+  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
     description: "Boat trip with snorkeling."
   },
   {
     title: "Sharm El Naga Beach",
     image: "/images/itinerary/sharm.jpg",
+    price:35 ,
+  currency: "€",
+  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
     description: "Snorkeling beach day."
   },
   {
     title: "Sinbad Submarine",
     image: "/images/itinerary/sinbad.jpg",
+    price:22 ,
+  currency: "€",
+  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
     description: "Underwater viewing experience."
   },
   {
     title: "Parasailing",
     image: "/images/itinerary/parasailing.jpg",
+    price:20 ,
+  currency: "€",
+  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
     description: "Fly over the Red Sea."
   },
   {
     title: "Hurghada Aquarium",
     image: "/images/itinerary/hurghada- aquarium.jpg",
+    price:30 ,
+  currency: "€",
+  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
     description: "Marine life exhibition."
   },
   {
     title: "Private Speedboat",
     image: "/images/itinerary/speedboat.jpg",
+    price:110 ,
+  currency: "€",
+  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
     description: "Private sea tour."
   },
   {
     title: "Fishing Trip",
     image: "/images/itinerary/fishing.jpg",
+    price:100 ,
+  currency: "€",
+  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
     description: "Sea fishing experience."
   },
   {
     title: "Scuba Diving",
     image: "/images/itinerary/scuba-diving2.jpg",
+    price:27 ,
+  currency: "€",
+  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
     description: "Certified diving session."
   },
   {
     title: "Horse Riding",
     image: "/images/itinerary/horse.jpg",
+    price:20 ,
+  currency: "€",
+  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
     description: "Beach or desert horse ride."
   },
   {
     title: "Dolphin House",
     image: "/images/itinerary/dolphin-house2.jpg",
+    price:25 ,
+  currency: "€",
+  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
     description: "Snorkel with dolphins."
   },
   {
-    title: "Night Surf",
+    title: "Kite Surf",
     image: "/images/itinerary/night-surf.jpg",
+    price:160 ,
+  currency: "€",
+  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
     description: "Evening water sports."
   },
    {
     title: "Safari Hurghada",
     image: "/images/itinerary/safari-hurghada.jpg",
+    price:35 ,
+  currency: "€",
+  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
     description: "Evening water sports."
   }
   ,
    {
     title: "City Tours",
     image: "/images/itinerary/city.jpg",
+    price:15 ,
+  currency: "€",
+  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
     description: "Evening water sports."
   },
    {
     title: "Golf",
     image: "/images/itinerary/golf.jpg",
+    price:55 ,
+  currency: "€",
+  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
     description: "Evening water sports."
   },
   {
     title: "Massage + spa",
     image: "/images/itinerary/spa.jpg",
+    price:40 ,
+  currency: "€",
+  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
     description: "Evening water sports."
   },
   {
     title: "Tattoo",
     image: "/images/itinerary/tattoo.jpg",
+    price:28 ,
+  currency: "€",
+  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
     description: "Evening water sports."
   },
    {
     title: "Limousine + Taxi",
     image: "/images/itinerary/limouse.jpg",
+    price:15 ,
+  currency: "€",
+  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
+    description: "Evening water sports."
+  },
+ {
+    title: "Sea Scope",
+    image: "/images/itinerary/sea.jpg",
+    price:2 ,
+  currency: "€",
+  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
     description: "Evening water sports."
   }
+
 ]
 ,
 

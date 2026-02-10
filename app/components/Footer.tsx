@@ -110,8 +110,7 @@ export default function Footer() {
               <span className="w-11 h-11 rounded-full bg-[#EEF7FB] flex items-center justify-center text-[#0A7BBE]">
                 <FaMapMarkerAlt />
               </span>
-              Giza, Egypt
-            </li>
+Hurghada_Red Sea_Egypt            </li>
           </ul>
         </div>
       </div>

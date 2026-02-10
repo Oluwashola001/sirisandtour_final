@@ -26,9 +26,9 @@ export default function ContactSection() {
                 Our Address
               </h3>
               <p className="mt-2 text-lg text-gray-700">
-                El Bawiti, Bahariya Oasis,
+                Hurghada _ Red Sea _ Egypt,
                 <br />
-                Giza, Egypt
+                
               </p>
             </div>
           </div>
@@ -65,17 +65,19 @@ export default function ContactSection() {
         </div>
 
         {/* Map */}
-        <div className="mt-12 rounded-lg overflow-hidden border">
-          <iframe
-            title="Bahariya Oasis Map"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3447.962786495368!2d28.82512541501315!3d26.34012498329833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1440c38a3ef5f85b%3A0xa0c3d5eae3a8d6f8!2sBahariya%20Oasis!5e0!3m2!1sen!2seg!4v1700000000000!5m2!1sen!2seg"
-            width="100%"
-            height="450"
-            className="border-0"
-            allowFullScreen
-            loading="lazy"
-          />
-        </div>
+    <div className="mt-12 rounded-lg overflow-hidden border">
+  <iframe
+    title="Hurghada, Red Sea, Egypt Map"
+    src="https://www.google.com/maps?q=Hurghada,Red%20Sea,Egypt&output=embed"
+    width="100%"
+    height="450"
+    className="border-0"
+    loading="lazy"
+    allowFullScreen
+  />
+</div>
+
+
       </div>
     </section>
   );

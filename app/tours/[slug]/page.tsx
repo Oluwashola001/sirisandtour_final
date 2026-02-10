@@ -158,17 +158,18 @@ const [openDescriptionIndex, setOpenDescriptionIndex] = useState<number | null>(
                       {/* Duration */}
                       {item.duration && (
                         <div
-                          className="absolute top-2 left-2 z-10 text-white text-[10px] sm:text-xs px-2 py-1 rounded-full font-semibold shadow-md"
+                          className="absolute top-2 left-2 z-10 text-white text-[10px] sm:text-xs px-2 py-1 rounded-full font-semibold shadow-md  border-2 border-white shadow-lg"
                           style={{ backgroundColor: BRAND }}
                         >
-                          ⏱ {item.duration}
+                          <span className="">approx.</span>
+    <span>{item.duration}</span>
                         </div>
                       )}
 
                       {/* Price */}
                       {item.price && item.currency && (
                       <div
-            className="absolute top-2 right-2 z-10 text-white text-xs sm:text-sm font-semibold px-4 py-1.5 rounded-full border-2 border-white shadow-lg flex items-center gap-1.5"
+            className="absolute top-2 right-2 z-10 text-white text-[10px] sm:text-xs px-2 py-1 rounded-full font-semibold shadow-md  border-2 border-white shadow-lg"
             style={{ backgroundColor: BRAND }}
           >
             {item.currency} {item.price}
@@ -199,25 +200,22 @@ const [openDescriptionIndex, setOpenDescriptionIndex] = useState<number | null>(
                       </p>
 
                       {/* PICKUP DROPDOWN */}
-                      <div className="mb-4">
-                        <button
-                          onClick={() =>
-                            setOpenPickupIndex(openPickupIndex === i ? null : i)
-                          }
-                          className="flex items-center justify-center gap-1 text-xs sm:text-sm font-medium w-full"
-                          style={{ color: BRAND }}
-                        >
-                          Pickup
-                          {openPickupIndex === i ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
-                        </button>
+                     <div className="mt-3 mb-6">
+  <div
+    className="text-sm sm:text-base font-medium mb-2"
+    style={{ color: BRAND }}
+  >
+    Pickup:
+     <div className="text-black">
+    {item.pickupTimes?.map((time, index) => (
+      <p key={index}>{time}</p>
+    ))}
+  </div>
+  </div>
 
-                {openPickupIndex === i && (                          <div className="mt-2 bg-white rounded-lg shadow p-2 text-xs space-y-1">
-                            {item.pickupTimes?.map((time, index) => (
-                              <p key={index}>{time}</p>
-                            ))}
-                          </div>
-                        )}
-                      </div>
+ 
+</div>
+
 
                       {/* HIGHLIGHTS */}
                       <div className="text-left mb-4">
@@ -357,10 +355,13 @@ const [openDescriptionIndex, setOpenDescriptionIndex] = useState<number | null>(
               {/* Duration */}
               {item.duration && (
                 <div
-                  className="absolute top-3 left-3 z-10 text-white text-xs sm:text-sm px-3 py-2 rounded-full font-semibold shadow-md"
+                  className="absolute top-3 left-3 z-10 text-white text-xs sm:text-sm px-3 py-2 rounded-full  border-2 border-white  font-semibold shadow-md"
                   style={{ backgroundColor: BRAND }}
                 >
-                  ⏱ {item.duration}
+
+                  
+                  <span className="">approx.</span>
+    <span>{item.duration}</span>
                 </div>
               )}
 
@@ -398,26 +399,21 @@ const [openDescriptionIndex, setOpenDescriptionIndex] = useState<number | null>(
               </p>
 
               {/* PICKUP DROPDOWN */}
-              <div className="mt-3 mb-6">
-                <button
-                  onClick={() =>
-                    setOpenPickupIndex(openPickupIndex === i ? null : i)
-                  }
-                  className="flex items-center justify-center gap-2 text-sm sm:text-base font-medium w-full"
-                  style={{ color: BRAND }}
-                >
-                  Pickup
-                  {openPickupIndex === i ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
-                </button>
+           <div className="mt-3 mb-6">
+  <div
+    className="text-sm sm:text-base font-medium mb-2"
+    style={{ color: BRAND }}
+  >
+    Pickup:
+  </div>
 
-                {openPickupIndex === i && (
-                  <div className="mt-3 bg-white rounded-lg shadow p-3 text-sm space-y-2">
-                    {item.pickupTimes?.map((time, index) => (
-                      <p key={index}>{time}</p>
-                    ))}
-                  </div>
-                )}
-              </div>
+  <div className="bg-white rounded-lg shadow p-3 text-sm space-y-2">
+    {item.pickupTimes?.map((time, index) => (
+      <p key={index}>{time}</p>
+    ))}
+  </div>
+</div>
+
 
               {/* HIGHLIGHTS WITH SCROLL */}
             <div className="text-left mb-6">
