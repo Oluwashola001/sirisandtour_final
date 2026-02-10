@@ -50,7 +50,7 @@ export const tours: Tour[] = [
       "Experience Luxor’s legendary heritage and serene Nile vistas in comfort and style.",
     heroImage: "/images/tours/1.jpg",
     heroVideo: "/videos/luxor.mp4",
-    gallery: ["/images/tours/2.jpg", "/images/tours/3.jpg"],
+    gallery: ["/images/tours/luxor.jpg", "/images/tours/luxor2.jpg"],
     overview:
       "Luxor is a living museum of ancient Egypt. This trip takes you through the city’s iconic temples, royal tombs, and historic sites along the Nile, offering a perfect blend of culture, history, and breathtaking landscapes.",
    itinerary: [
@@ -184,7 +184,7 @@ export const tours: Tour[] = [
   },
   {
     title: "Safari – Desert Safari",
-    image: "/images/itinerary/desert-safari.jpg",
+    image: "/images/itinerary/desert-safari.webp",
     description: "Quad biking, camel riding, and Bedouin village visit in Sinai desert."
   }
 ],

@@ -59,6 +59,11 @@
             const [activeTab, setActiveTab] = useState<string | null>("itinerary");
             const isMobile = useMediaQuery("(max-width: 768px)");
 
+           const [openPickupIndex, setOpenPickupIndex] = useState<number | null>(null);
+const [openDescriptionIndex, setOpenDescriptionIndex] = useState<number | null>(null);
+
+
+
             const handleTabClick = (id: string) => {
               if (activeTab === id) {
                 setActiveTab(null);
@@ -138,9 +143,6 @@
             <ul className="flex flex-col items-center space-y-8 px-2 sm:px-0">
               {tour.itinerary.map((item, i) => {
 
-                const [openPickup, setOpenPickup] = useState<number | null>(null);
-                const [openDescription, setOpenDescription] = useState<number | null>(null);
-
                 const whatsappNumber = "201288062555";
                 const message = `Hello, I'm interested in ${item.title}`;
                 const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
@@ -200,17 +202,16 @@
                       <div className="mb-4">
                         <button
                           onClick={() =>
-                            setOpenPickup(openPickup === i ? null : i)
+                            setOpenPickupIndex(openPickupIndex === i ? null : i)
                           }
                           className="flex items-center justify-center gap-1 text-xs sm:text-sm font-medium w-full"
                           style={{ color: BRAND }}
                         >
                           Pickup
-                          {openPickup === i ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+                          {openPickupIndex === i ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
                         </button>
 
-                        {openPickup === i && (
-                          <div className="mt-2 bg-white rounded-lg shadow p-2 text-xs space-y-1">
+                {openPickupIndex === i && (                          <div className="mt-2 bg-white rounded-lg shadow p-2 text-xs space-y-1">
                             {item.pickupTimes?.map((time, index) => (
                               <p key={index}>{time}</p>
                             ))}
@@ -242,17 +243,18 @@
                       {/* DESCRIPTION DROPDOWN */}
                       <div className="mb-4">
                         <button
+                         
                           onClick={() =>
-                            setOpenDescription(openDescription === i ? null : i)
-                          }
+  setOpenDescriptionIndex(openDescriptionIndex === i ? null : i)
+}
                           className="flex items-center justify-center gap-1 font-semibold w-full text-xs sm:text-sm"
                           style={{ color: BRAND }}
                         >
                           Description
-                          {openDescription === i ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+                          {openDescriptionIndex === i ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
                         </button>
 
-                        {openDescription === i && (
+                        {openDescriptionIndex === i && (
                           <p className="mt-2 text-gray-600 text-xs sm:text-sm leading-relaxed">
                             {item.description}
                           </p>
@@ -339,9 +341,6 @@
 
               {tour.itinerary.map((item, i) => {
 
-                const [openPickup, setOpenPickup] = useState<number | null>(null);
-                const [openDescription, setOpenDescription] = useState<number | null>(null);
-
                 const whatsappNumber = "201288062555";
                 const message = `Hello, I'm interested in ${item.title}`;
                 const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
@@ -402,16 +401,16 @@
               <div className="mt-3 mb-6">
                 <button
                   onClick={() =>
-                    setOpenPickup(openPickup === i ? null : i)
+                    setOpenPickupIndex(openPickupIndex === i ? null : i)
                   }
                   className="flex items-center justify-center gap-2 text-sm sm:text-base font-medium w-full"
                   style={{ color: BRAND }}
                 >
                   Pickup
-                  {openPickup === i ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
+                  {openPickupIndex === i ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
                 </button>
 
-                {openPickup === i && (
+                {openPickupIndex === i && (
                   <div className="mt-3 bg-white rounded-lg shadow p-3 text-sm space-y-2">
                     {item.pickupTimes?.map((time, index) => (
                       <p key={index}>{time}</p>
@@ -445,16 +444,16 @@
               <div className="mb-6">
                 <button
                   onClick={() =>
-                    setOpenDescription(openDescription === i ? null : i)
+                    setOpenDescriptionIndex(openDescriptionIndex === i ? null : i)
                   }
                   className="flex items-center justify-center gap-2 font-semibold w-full"
                   style={{ color: BRAND }}
                 >
                   Description
-                  {openDescription === i ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
+                  {openDescriptionIndex === i ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
                 </button>
 
-                {openDescription === i && (
+                {openDescriptionIndex === i && (
                   <p className="mt-4 text-gray-600 text-xs sm:text-sm leading-relaxed">
                     {item.description}
                   </p>
