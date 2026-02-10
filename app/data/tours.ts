@@ -302,7 +302,7 @@ export const tours: Tour[] = [
     description: "Experience a peaceful Red Sea getaway with snorkeling, diving, and coastal relaxation in Marsa Alam.",
     heroImage: "/images/tours/4.jpg",
     heroVideo: "/videos/marsa.mp4",
-    gallery: ["/images/tours/1.jpg", "/images/tours/marsa-allam.jpg"],
+    gallery: ["/images/tours/14.jpg", "/images/tours/15.jpg"],
     overview: "Marsa Alam is ideal for those looking to escape the crowds. This plan highlights the Red Sea’s natural wonders, from colorful coral reefs to crystal-clear waters, making it perfect for eco-tourism and marine adventures.",
     itinerary: [
   {
@@ -317,7 +317,7 @@ export const tours: Tour[] = [
   },
   {
     title: "Super Desert Safari",
-    image: "/images/itinerary/super-safari.webp",
+    image: "/images/itinerary/super-safari.jpg",
     description: "Quad biking, camel ride, and desert sunset experience."
   },
   {
@@ -511,12 +511,12 @@ export const tours: Tour[] = [
     description: "Explore Aswan’s serene Nile scenery, ancient temples, and Nubian culture.",
     heroImage: "/images/tours/8.jpg",
     heroVideo: "/videos/aswan.mp4",
-    gallery: ["/images/tours/1.jpg", "/images/tours/2.webp"],
+    gallery: ["/images/tours/12.jpg", "/images/tours/13.jpg"],
     overview: "Aswan is known for its peaceful Nile setting and rich Nubian heritage. This itinerary includes visits to iconic sites such as Philae Temple, the High Dam, and traditional Nubian villages, offering a perfect mix of history and relaxation.",
    itinerary: [
   {
     title: "High Dam, Philae & Nubian Village",
-    image: "/images/itinerary/philae.webp",
+    image: "/images/itinerary/philae.jpg",
     description: "Visit High Dam, Philae Temple, Kalabsha Temple and Nubian Village."
   },
   {
@@ -526,7 +526,7 @@ export const tours: Tour[] = [
   },
   {
     title: "Nile Cruise Aswan – Luxor",
-    image: "/images/itinerary/nile-cruise.jpg",
+    image: "/images/itinerary/nile-cruise2.jpg",
     description: "Relaxing Nile cruise between Aswan and Luxor."
   }
 ]
