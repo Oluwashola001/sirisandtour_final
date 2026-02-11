@@ -1,6 +1,7 @@
 'use client';
 
 import { motion, type Variants } from 'framer-motion';
+import { Rocket } from 'lucide-react';
 
 export default function NewsletterSection() {
   // ----------------- VARIANTS -----------------
@@ -12,27 +13,56 @@ export default function NewsletterSection() {
   };
 
   const item: Variants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: 'easeOut' },
+    },
+  };
+
+  const floatingIcon: Variants = {
+    hidden: { y: -10 },
+    visible: {
+      y: [0, -10, 0],
+      transition: {
+        duration: 2,
+        repeat: Infinity,
+        ease: 'easeInOut',
+      },
+    },
   };
 
   return (
-    <section className="bg-white py-20 px-6 lg:px-40">
+    <section className="relative py-24 px-6 lg:px-40 bg-white via-white to-white-100 overflow-hidden">
       <motion.div
-        className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-6 lg:gap-8"
+        className="max-w-6xl mx-auto bg-white/60 backdrop-blur-xl border border-white/40 shadow-2xl rounded-3xl p-10 lg:p-16 flex flex-col lg:flex-row items-center gap-10"
         variants={container}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.6 }}
+        viewport={{ once: true, amount: 0.5 }}
       >
-        {/* TEXT */}
+        {/* LEFT CONTENT */}
         <motion.div variants={item} className="flex-1 text-center lg:text-left">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0A7BBE] leading-tight">
+          
+          {/* Coming Soon Badge */}
+          <div className="inline-flex items-center gap-2 bg-[#0A7BBE]/10 text-[#0A7BBE] px-4 py-2 rounded-full text-sm font-medium mb-6">
+            <motion.div variants={floatingIcon} animate="visible">
+              <Rocket size={16} />
+            </motion.div>
+            Coming Soon
+          </div>
+
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0A7BBE] leading-tight mb-4">
             Subscribe To Our <br /> Newsletter
           </h2>
+
+          <p className="text-gray-600 text-sm sm:text-base max-w-md mx-auto lg:mx-0">
+            We’re working on something exciting!
+          </p>
         </motion.div>
 
-        {/* INPUT + BUTTON */}
+        {/* RIGHT FORM */}
         <motion.div
           variants={item}
           className="flex flex-col sm:flex-row w-full lg:w-[500px] gap-4"
@@ -40,13 +70,20 @@ export default function NewsletterSection() {
           <input
             type="email"
             placeholder="Enter your Email"
-            className="flex-1 border border-gray-300 rounded-full px-8 py-4 text-gray-700 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-[#0A7BBE]"
+            disabled
+            className="flex-1 border border-gray-300 rounded-full px-8 py-4 text-gray-500 text-sm sm:text-base bg-gray-100 cursor-not-allowed"
           />
-          <button className="bg-[#0A7BBE] text-white rounded-full px-8 py-4 text-sm sm:text-base flex items-center justify-center hover:bg-[#095c8c] transition-colors duration-300">
-            Subscribe Now <span className="ml-2">📧</span>
+          <button
+            disabled
+            className="bg-gray-400 text-white rounded-full px-8 py-4 text-sm sm:text-base flex items-center justify-center cursor-not-allowed"
+          >
+            Launching Soon 🚀
           </button>
         </motion.div>
       </motion.div>
+
+      {/* Decorative Blur Circle */}
+      <div className="absolute -top-20 -right-20 w-72 h-72 bg-[#0A7BBE]/20 rounded-full blur-3xl"></div>
     </section>
   );
 }
