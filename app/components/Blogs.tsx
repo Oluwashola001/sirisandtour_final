@@ -14,7 +14,7 @@ const blogPosts = [
     title: "Egypt: A Journey Through Time from the Nile to the Sea",
     excerpt:
       "Egypt is more than just a destination; it's a unique and unforgettable experience. Your journey begins at the majestic temples of Luxor and Aswan on the banks of the Nile, and continues to the vibrant beaches of Hurghada and Sharm El Sheikh. Whether you seek to uncover the secrets of the pharaohs or simply relax by the turquoise waters of the Red Sea, every corner of Egypt offers a new story.",
-    image: "/images/trending/sinai.webp",
+    image: "/images/trending/2.jpg",
   },
   {
     id: 2,
@@ -24,7 +24,7 @@ const blogPosts = [
     title: "The Magic of the South: Luxor and Aswan, Where History Smile",
     excerpt:
       " In the heart of Upper Egypt, where the Nile flows gently between granite cliffs, Luxor and Aswan await you. Here, the grandeur of ancient architecture in the Valley of the Kings meets the warm hospitality of Nubian culture on Heissa Island. It's an invitation to disconnect from the modern world and connect with the roots of human civilization on a tranquil Nile cruise under a warm, ever-present sun.",
-    image: "/images/trending/siwa-salt.webp",
+    image: "/images/trending/3.jpg",
   },
   {
     id: 3,
@@ -34,7 +34,7 @@ const blogPosts = [
     title: "The Red Sea Trilogy: Hurghada, Sharm El Sheikh, and Marsa Alam",
     excerpt:
       "  For adventure seekers and those who crave the deep, the Red Sea offers three unforgettable experiences.  Enjoy the luxury and vibrant nightlife of Sharm El Sheikh, discover the diverse family activities of Hurghada, or escape to the tranquility of unspoiled nature and rare marine life in Marsa Alam. Our waters are not just for swimming; they are a world of coral and vibrant colors waiting to be explored.",
-    image: "/images/trending/white-desert.webp",
+    image: "/images/trending/4.jpg",
   },
   {
     id: 4,
@@ -54,7 +54,7 @@ const blogPosts = [
     title: "Adventure Safari: From the Dunes of Siwa to the Mountains of Marsa Alam",
     excerpt:
       " For thrill-seekers, Egypt's deserts offer an incredible variety of experiences; from sandboarding in Siwa's Great Sand Sea to mountain safaris in Sharm El Sheikh and Marsa Alam. Our bespoke tours take you to uncharted territories where rugged mountains meet the sea, and where you can enjoy evenings around a Bedouin campfire under a starry sky.",
-    image: "/images/trending/gem.webp",
+    image: "/images/trending/5.jpg",
   },
   {
     id: 6,
@@ -64,7 +64,7 @@ const blogPosts = [
     title: "Wellness Egypt: Restoring Balance in Siwa and Aswan",
     excerpt:
       "Beyond traditional tourism, Egypt stands out as a global center for natural wellness. Immerse yourself in the healing sands of Aswan, or enjoy the sulfur springs and mineral waters of Siwa. Here, nature is the healer, and the dry climate and fresh air are your means to restore your energy and rejuvenate in an atmosphere of complete privacy.",
-    image: "/images/trending/khan.webp",
+    image: "/images/trending/6.jpg",
   },
 ];
 
