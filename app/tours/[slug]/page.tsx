@@ -41,7 +41,7 @@ export default function TourPage({
     return <div className="p-20 text-center text-2xl">Tour Not Found</div>;
   }
 
-  const BRAND = "#0a7bee"; // change this once to update everything
+  const BRAND = "#0A7BBE"; // change this once to update everything
 
   /* ✅ TABS INSIDE COMPONENT */
   const tabs = [
@@ -492,7 +492,7 @@ const [openDescriptionIndex, setOpenDescriptionIndex] = useState<number | null>(
   <button
     onClick={() => setSelectedItinerary(item)}
     className={`flex-1 border-2 py-2 sm:py-2.5 rounded-xl font-semibold text-xs sm:text-sm transition 
-      border-[#0a7bee] text-[#0a7bee]
+      border-[#0A7BBE] text-[#0A7BBE]
                 hover:bg-[#075E94] hover:text-white hover:border-[#075E94] border-[${BRAND}] text-[${BRAND}]`}
   >
     ℹ Details
@@ -589,7 +589,7 @@ const [openDescriptionIndex, setOpenDescriptionIndex] = useState<number | null>(
                 
                 {/* Pricing Information */}
                <div className="mt-12">
-  <h3 className="text-[#0a7bee] text-xl font-semibold flex items-center gap-2 mb-8">
+  <h3 className="text-[#0A7BBE] text-xl font-semibold flex items-center gap-2 mb-8">
     <Tag size={18} className="fill-current" />
 Overview
   </h3>
@@ -598,11 +598,11 @@ Overview
     
     {/* Adult Card */}
     <div className="bg-white border border-gray-100 rounded-2xl p-6 text-center shadow-sm hover:shadow-lg hover:-translate-y-1 transition duration-300">
-      <div className="w-14 h-14 bg-[#0a7bee]/10 rounded-full mx-auto flex items-center justify-center text-[#0a7bee] mb-4">
+      <div className="w-14 h-14 bg-[#0A7BBE]/10 rounded-full mx-auto flex items-center justify-center text-[#0A7BBE] mb-4">
         <User size={24} />
       </div>
       <p className="text-sm text-gray-500 mb-1">Price</p>
-      <p className="text-2xl font-semibold text-[#0a7bee]">
+      <p className="text-2xl font-semibold text-[#0A7BBE]">
         € {selectedItinerary.price}
       </p>
       <p className="text-xs text-gray-400 mt-1">Per person</p>
@@ -721,7 +721,7 @@ Overview
                       target="_blank"
                       rel="noopener noreferrer"
                       className="block w-full sm:w-1/2 mx-auto py-3 rounded-xl font-bold text-white text-center transition hover:opacity-90 shadow-lg"
-                      style={{ backgroundColor: '#0a7bee' }} // Turquoise color from image button
+                      style={{ backgroundColor: '#0A7BBE' }} // Turquoise color from image button
                     >
                        <span className="flex items-center justify-center gap-2">
                          <FaWhatsapp className="text-xl" /> Contact Now
