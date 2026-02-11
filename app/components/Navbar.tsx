@@ -85,7 +85,7 @@ className="fixed inset-x-0 top-0 z-50 bg-transparent overflow-x-hidden"
 
           {/* BOOK NOW BUTTON */}
           <div className="hidden md:flex">
-            <Link href="/ourtrip">
+            <Link href="/booknow">
               <button className="relative overflow-hidden px-6 py-3 rounded-full bg-[#0A7BBE] text-white text-base font-semibold group">
                 <span className="absolute inset-0 bg-[#075E94] -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out" />
                 <span className="relative z-10">Book Now</span>

@@ -5,12 +5,13 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
 export default function BookingForm() {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
+
+  const [FullName, setFullName] = useState("");
   const [mobile, setMobile] = useState("");
+  const [RoomNumber, setRoomNumber] = useState("");
+  const [HomeCountry, setHomeCountry] = useState("");
   const [email, setEmail] = useState("");
-  const [checkIn, setCheckIn] = useState<Date | null>(null);
-  const [checkOut, setCheckOut] = useState<Date | null>(null);
+  const [HotelName, setHotelName] = useState("");
   const [adults, setAdults] = useState<number>(1);
   const [children, setChildren] = useState<number>(0);
   const [comment, setComment] = useState("");
@@ -28,31 +29,18 @@ const handleSubmit = (e: React.FormEvent) => {
 
   let hasError = false;
 
-  if (!checkIn) {
-    setErrors((prev) => ({ ...prev, checkIn: true }));
-    hasError = true;
-  }
-  if (!checkOut) {
-    setErrors((prev) => ({ ...prev, checkOut: true }));
-    hasError = true;
-  }
-  if (checkIn && checkOut && checkOut < checkIn) {
-    setErrors((prev) => ({ ...prev, dateOrder: true }));
-    hasError = true;
-  }
+ 
 
   if (hasError) return;
 
   const subject = "New Booking Request – Siris & Tours";
 
   const body = `
-First Name: ${firstName}
-Last Name: ${lastName}
+Full Name: ${FullName}
 Mobile Number: ${mobile}
 Email Address: ${email}
 
-Check-in Date: ${checkIn?.toDateString()}
-Check-out Date: ${checkOut?.toDateString()}
+
 
 Number of Adults: ${adults}
 Number of Children: ${children}
@@ -76,31 +64,17 @@ ${comment}
       </h2>
 
       <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-6 text-black">
-        {/* First Name */}
-        <div>
-          <label className="block font-semibold mb-1">
-            First Name <span className="text-red-500">*</span>
-          </label>
-          <input
-            type="text"
-            value={firstName}
-            onChange={(e) => setFirstName(e.target.value)}
-            placeholder="Enter your first name here"
-            className="w-full px-4 py-3 rounded-lg border text-gray-200 border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#0A7BBE]"
-            required
-          />
-        </div>
 
         {/* Last Name */}
         <div>
           <label className="block font-semibold mb-1">
-            Last Name <span className="text-red-500">*</span>
+            Full Name <span className="text-red-500">*</span>
           </label>
           <input
             type="text"
-            value={lastName}
-            onChange={(e) => setLastName(e.target.value)}
-            placeholder="Enter your last name here"
+            value={FullName}
+            onChange={(e) => setFullName(e.target.value)}
+            placeholder="Enter your full name here"
             className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#0A7BBE]"
             required
           />
@@ -136,50 +110,25 @@ ${comment}
           />
         </div>
 
-        {/* Check-in Date */}
+    {/* Home country */}
         <div>
           <label className="block font-semibold mb-1">
-            Check-in Date <span className="text-red-500">*</span>
+            Home Country  <span className="text-red-500">*</span>
           </label>
-          <DatePicker
-            selected={checkIn}
-            onChange={(date: Date | null) => setCheckIn(date)}
-            dateFormat="dd - MM - yyyy"
-            placeholderText="DD - MM - YYYY"
-            className={`w-full px-4 py-3 rounded-lg border focus:outline-none focus:ring-2 ${
-              errors.checkIn || errors.dateOrder
-                ? "border-red-500 focus:ring-red-500"
-                : "border-gray-200 focus:ring-[#0A7BBE]"
-            }`}
+          <input
+            type="HomeCountry "
+            value={HomeCountry }
+            onChange={(e) => setHomeCountry (e.target.value)}
+            placeholder="Example: USA"
+            className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#0A7BBE]"
+            required
           />
-          {errors.checkIn && <p className="text-red-500 text-sm mt-1">Check-in date is required</p>}
-        </div>
-
-        {/* Check-out Date */}
-        <div>
-          <label className="block font-semibold mb-1">
-            Check-out Date <span className="text-red-500">*</span>
-          </label>
-          <DatePicker
-            selected={checkOut}
-            onChange={(date: Date | null) => setCheckOut(date)}
-            dateFormat="dd - MM - yyyy"
-            placeholderText="DD - MM - YYYY"
-            minDate={checkIn || new Date()} // Prevent check-out before check-in
-            className={`w-full px-4 py-3 rounded-lg border focus:outline-none focus:ring-2 ${
-              errors.checkOut || errors.dateOrder
-                ? "border-red-500 focus:ring-red-500"
-                : "border-gray-200 focus:ring-[#0A7BBE]"
-            }`}
-          />
-          {errors.checkOut && <p className="text-red-500 text-sm mt-1">Check-out date is required</p>}
-          {errors.dateOrder && <p className="text-red-500 text-sm mt-1">Check-out cannot be before Check-in</p>}
         </div>
 
         {/* Number of Adults */}
         <div>
           <label className="block font-semibold mb-1">
-            Number of Adults <span className="text-red-500">*</span>
+             Adults <span className="text-red-500">*</span>
           </label>
           <input
             type="number"
@@ -193,7 +142,7 @@ ${comment}
 
         {/* Number of Children */}
         <div>
-          <label className="block font-semibold mb-1">Number of Children</label>
+          <label className="block font-semibold mb-1">Children</label>
           <input
             type="number"
             min={0}
@@ -203,10 +152,44 @@ ${comment}
           />
         </div>
 
-        {/* Comments */}
+     {/*Hotel name */}
+        <div>
+          <label className="block font-semibold mb-1">
+            Hotel name 
+  <span className="text-red-500">*</span>
+          </label>
+          <input
+            type="HotelName"
+            value={HotelName}
+            onChange={(e) => setHotelName  (e.target.value)}
+            placeholder="Example: USA"
+            className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#0A7BBE]"
+            required
+          />
+        </div>
+
+        
+{/*Room number 
+*/}
+        <div>
+          <label className="block font-semibold mb-1">
+            Room Number 
+
+  <span className="text-red-500">*</span>
+          </label>
+          <input
+            type=" RoomNumber"
+            value={ RoomNumber}
+            onChange={(e) => setRoomNumber  (e.target.value)}
+            placeholder=""
+            className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#0A7BBE]"
+            required
+          />
+        </div>
+        {/* Selected Trips */}
         <div className="md:col-span-2">
           <label className="block font-semibold mb-1">
-            Write your comment here <span className="text-red-500">*</span>
+           Your Selected Trip (s) <span className="text-red-500">*</span>
           </label>
           <textarea
             value={comment}
