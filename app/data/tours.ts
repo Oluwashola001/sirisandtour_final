@@ -396,7 +396,13 @@ description: "Experience Cairo like never before. Take off on a private helicopt
     
   ],
     description: "Explore Hanging Church, Coptic Museum, and Old Cairo churches."
+  },
+ {
+    title: "Airport Transfer",
+    image: "/images/itinerary/airport.jpg",
+    description: "Evening water sports."
   }
+
 ]
 ,
     included: [ "Guide",],
@@ -1090,12 +1096,12 @@ description: "Experience Cairo like never before. Take off on a private helicopt
   pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
     description: "Evening water sports."
   },
- {
-    title: "Sea Scope",
-    image: "/images/itinerary/sea.jpg",
-    price:2 ,
-  currency: "€",
-  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
+
+
+
+   {
+    title: "Airport Transfer",
+    image: "/images/itinerary/airport.jpg",
     description: "Evening water sports."
   }
 
