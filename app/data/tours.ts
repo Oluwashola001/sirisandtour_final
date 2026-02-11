@@ -10,7 +10,7 @@ export type Testimonial = {
 
 export type Tour = {
   title: string;      
-    cardTitle?: string;
+  cardTitle?: string;
   slug: string;    
   description: string;
   heroImage: string;
@@ -20,19 +20,20 @@ export type Tour = {
   included: string[];
   excluded: string[];
   reviews: string[];
-itinerary: {
-   title: string;
-   image: string;
-   price?: number;
-duration?: number | string;
-   currency?: string;
-   pickupTimes?: string[];
-   highlights?: string[];
-   description: string;
-}[];
-
-
-
+  itinerary: {
+    title: string;
+    image: string;
+    price?: number;
+    childPrice?: number; // Added for the popup
+    infantPrice?: string; // Added for the popup
+    extraCharge?: string; // Added for the popup
+    duration?: number | string;
+    currency?: string;
+    pickupTimes?: string[];
+    returnTime?: string; // Added for the popup
+    highlights?: string[];
+    description: string;
+  }[];
   testimonials: Testimonial[];
 };
 
@@ -53,11 +54,11 @@ export const tours: Tour[] = [
     gallery: ["/images/tours/luxor.jpg", "/images/tours/luxor2.jpg"],
     overview:
       "Luxor is a living museum of ancient Egypt. This trip takes you through the city’s iconic temples, royal tombs, and historic sites along the Nile, offering a perfect blend of culture, history, and breathtaking landscapes.",
-   itinerary: [
+    itinerary: [
   {
     title: "Day Tour – Karnak, Valley of the Kings, Memnon, Hatshepsut",
     image: "/images/itinerary/karnak.jpg",
-duration: "3 hrs",
+    duration: "3 hrs",
       price: 75,
   currency: "€",
   pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
@@ -303,7 +304,7 @@ duration: "3 hrs",
     heroVideo: "/videos/cario.mp4",
     gallery: ["/images/trending/4.jpg", "/images/trending/21.jpg"],
     overview: "A perfect blend of history and modern Egypt, this Cairo trip covers the major archaeological sites and cultural highlights, giving you a deep insight into the country’s rich past.",
-   itinerary: [
+    itinerary: [
   {
     title: "Giza Pyramids & Grand Egyptian Museum",
     image: "/images/itinerary/22.jpg",
@@ -615,7 +616,7 @@ description: "Experience Cairo like never before. Take off on a private helicopt
     heroVideo: "/videos/fayoum.mp4",
     gallery: ["/images/tours/18.jpg", "/images/tours/19.jpg"],
     overview: "Fayoum is a peaceful oasis southwest of Cairo, known for its lakes, waterfalls, and protected natural areas. This itinerary includes visits to Wadi El-Rayan, Mudawara Mountain, and local villages, offering a perfect blend of nature and culture.",
-   itinerary: [
+    itinerary: [
   {
     title: "Tunis Village",
     image: "/images/itinerary/tunis-village.jpg",
@@ -756,7 +757,7 @@ description: "Experience Cairo like never before. Take off on a private helicopt
   ],
     description: "4x4 desert safari with sand dunes and sunset views."
   },
- 
+  
 ]
 ,
     included: ["Hotel", "Guide", "Meals", "Transport"],
@@ -803,7 +804,7 @@ description: "Experience Cairo like never before. Take off on a private helicopt
     heroVideo: "/videos/aswan.mp4",
     gallery: ["/images/tours/12.jpg", "/images/tours/13.jpg"],
     overview: "Aswan is known for its peaceful Nile setting and rich Nubian heritage. This itinerary includes visits to iconic sites such as Philae Temple, the High Dam, and traditional Nubian villages, offering a perfect mix of history and relaxation.",
-   itinerary: [
+    itinerary: [
   {
     title: "High Dam, Philae & Nubian Village",
     image: "/images/itinerary/philae.jpg",
@@ -904,11 +905,11 @@ description: "Experience Cairo like never before. Take off on a private helicopt
     gallery: ["/images/tours/10.jpeg", "/images/tours/11.jpg"],
     overview:
       "Learn about Egypt’s traditions, monuments, and culture.",
-   itinerary: [
+    itinerary: [
   {
     title: "Tawila Island Resort (VVIP)",
     image: "/images/itinerary/tawila.jpg",
-duration: "3 hrs",
+    duration: "3 hrs",
        price: 320,
   currency: "€",
   pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
@@ -940,11 +941,23 @@ duration: "3 hrs",
     description: "Relax on sandy beaches and swim."
   },
   {
+    // === POPULATED WITH EXACT POPUP DATA FOR PREVIEW === //
     title: "Paradise Island",
     image: "/images/itinerary/paradise.jpg",
-    price: 30,
-  currency: "€",
-  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
+    price: 50,
+    childPrice: 10,
+    infantPrice: "",
+    extraCharge: "5 Euro for natural park",
+    duration: "approx. 3 hours",
+    currency: "€",
+    pickupTimes: ["8:00 am"],
+    returnTime: "4:00 pm",
+    highlights: [
+      "3-hours in the Paradise island",
+      "1 stop for snorkelling",
+      "Snorkeling Equipment",
+      "Get your lunch in the island open buffet"
+    ],
     description: "Boat trip with snorkeling."
   },
   {
