@@ -255,7 +255,7 @@ const [openDescriptionIndex, setOpenDescriptionIndex] = useState<number | null>(
                         className="flex items-center justify-center gap-1 font-semibold w-full text-xs sm:text-sm"
                         style={{ color: BRAND }}
                       >
-                        Description
+                       Full Description
                         {openDescriptionIndex === i ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
                       </button>
 
@@ -458,7 +458,7 @@ const [openDescriptionIndex, setOpenDescriptionIndex] = useState<number | null>(
                 className="flex items-center justify-center gap-2 font-semibold w-full"
                 style={{ color: BRAND }}
               >
-                Description
+               Full Description
                 {openDescriptionIndex === i ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
               </button>
 
@@ -674,18 +674,45 @@ Overview
                   </div>
                 </div>
 
-                {/* What's Included */}
-                <div>
-                  <h3 className="font-bold text-lg mb-4 text-gray-800">What's Included :</h3>
-                  <ul className="space-y-3">
-                    {selectedItinerary.highlights?.map((h: string, idx: number) => (
-                      <li key={idx} className="flex items-start gap-3 text-sm text-gray-600 font-medium">
-                        <Check className="text-cyan-500 shrink-0 mt-0.5" size={16}/> 
-                        <span>{h}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+               {/* What's Included */}
+<div>
+  <h3 className="font-bold text-lg mb-4 text-gray-800">
+    What's Included :
+  </h3>
+
+  <ul className="space-y-3">
+    {tour.included?.map((item: string, idx: number) => (
+      <li
+        key={idx}
+        className="flex items-start gap-3 text-sm text-gray-600 font-medium"
+      >
+        <Check className="text-cyan-500 shrink-0 mt-0.5" size={16} />
+        <span>{item}</span>
+      </li>
+    ))}
+  </ul>
+</div>
+
+
+                       {/* What's Not Included */}
+<div>
+  <h3 className="font-bold text-lg mb-4 text-gray-800">
+    Exclude :
+  </h3>
+
+  <ul className="space-y-3">
+    {tour.excluded?.map((item: string, idx: number) => (
+      <li
+        key={idx}
+        className="flex items-start gap-3 text-sm text-gray-600 font-medium"
+      >
+        <Check className="text-red-400 shrink-0 mt-0.5" size={16} />
+        <span>{item}</span>
+      </li>
+    ))}
+  </ul>
+</div>
+
 
                 {/* Footer Button */}
                 <div className="pt-2">

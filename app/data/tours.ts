@@ -950,6 +950,7 @@ description: "Experience Cairo like never before. Take off on a private helicopt
     extraCharge: "5 Euro for natural park",
     duration: "approx. 3 hours",
     currency: "€",
+  
     pickupTimes: ["8:00 am"],
     returnTime: "4:00 pm",
     highlights: [
