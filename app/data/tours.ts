@@ -256,7 +256,7 @@ export const tours: Tour[] = [
   },
    {
     title: "Airport Transfer",
-    image: "/images/itinerary/airport.jpg",
+    image: "/images/itinerary/limouse2.jpg",
     description: "Evening water sports."
   },
 ],
