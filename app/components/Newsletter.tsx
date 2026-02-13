@@ -4,7 +4,7 @@ import { motion, type Variants } from 'framer-motion';
 import { Rocket } from 'lucide-react';
 
 export default function NewsletterSection() {
-  // ----------------- VARIANTS -----------------
+ 
   const container: Variants = {
     hidden: {},
     visible: {
@@ -34,9 +34,9 @@ export default function NewsletterSection() {
   };
 
   return (
-    <section className="relative py-24 px-6 lg:px-40 bg-white via-white to-white-100 overflow-hidden">
+    <section className="relative py-24 px-6 lg:px-40 bg-white overflow-hidden">
       <motion.div
-        className="max-w-6xl mx-auto bg-white/60 backdrop-blur-xl border border-white/40 shadow-2xl rounded-3xl p-10 lg:p-16 flex flex-col lg:flex-row items-center gap-10"
+        className="max-w-6xl mx-auto bg-white border border-[#0a7bbe] shadow-1xl rounded-3xl p-10 lg:p-16 flex flex-col lg:flex-row items-center gap-10"
         variants={container}
         initial="hidden"
         whileInView="visible"
@@ -58,7 +58,7 @@ export default function NewsletterSection() {
           </h2>
 
           <p className="text-gray-600 text-sm sm:text-base max-w-md mx-auto lg:mx-0">
-            We’re working on something exciting!
+            We’re working on something exciting!!!
           </p>
         </motion.div>
 
@@ -82,8 +82,7 @@ export default function NewsletterSection() {
         </motion.div>
       </motion.div>
 
-      {/* Decorative Blur Circle */}
-      <div className="absolute -top-20 -right-20 w-72 h-72 bg-[#0A7BBE]/20 rounded-full blur-3xl"></div>
+      
     </section>
   );
 }

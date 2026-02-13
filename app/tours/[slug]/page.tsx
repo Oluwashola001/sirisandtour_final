@@ -584,10 +584,12 @@ const [openDescriptionIndex, setOpenDescriptionIndex] = useState<number | null>(
                 </div>
               </div>
 
-              {/* Body */}
+           {/* Body */}
+<div className="p-6 md:p-8 space-y-10">
+
               
-                
-                {/* Pricing Information */}
+              
+                {/* Overview Information */}
                <div className="mt-12">
   <h3 className="text-[#0A7BBE] text-xl font-semibold flex items-center gap-2 mb-8">
     <Tag size={18} className="fill-current" />
@@ -733,8 +735,6 @@ Overview
   </div>
 )}
 
-
-
                 {/* Footer Button */}
                 <div className="pt-2">
                    <a
@@ -749,6 +749,7 @@ Overview
                        </span>
                     </a>
                 </div>
+</div> {/* End Body */}
 
               </div>
             </motion.div>
