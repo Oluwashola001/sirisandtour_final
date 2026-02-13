@@ -585,7 +585,7 @@ const [openDescriptionIndex, setOpenDescriptionIndex] = useState<number | null>(
               </div>
 
               {/* Body */}
-              <div className="p-6 space-y-6">
+              
                 
                 {/* Pricing Information */}
                <div className="mt-12">
@@ -613,13 +613,13 @@ Overview
       <div className="w-14 h-14 bg-[#0a2340]/10 rounded-full mx-auto flex items-center justify-center text-[#0a2340] mb-4">
         <User size={22} />
       </div>
-      <p className="text-sm text-gray-500  mb-1">More Details</p>
-      <p className="text-2xl font-semibold text-[#0a2340]">
-         {selectedItinerary.childPrice || 
-          (selectedItinerary.price 
-            ? Math.round(selectedItinerary.price * 0.5) 
-            : 0)}
-      </p>
+      
+      <div className="text-sm text-[#0a2340] space-y-1">
+  {selectedItinerary.moreDetails?.map((detail: string, i: number) => (
+    <p key={i}>{detail}</p>
+  ))}
+</div>
+
       <p className="text-xs text-gray-400 mt-1">50% of adult price</p>
     </div>
 
@@ -640,78 +640,99 @@ Overview
 
 
                 {/* Extra Charge Alert */}
-                {selectedItinerary.extraCharge && (
-                  <div className="bg-[#fff9c4] text-[#856404] px-4 py-3 rounded-lg flex items-start gap-2 text-sm font-semibold border-l-4 border-[#ffeb3b]">
-                    <Info size={18} className="mt-0.5 shrink-0"/> 
-                    <span>Extra Charge: {selectedItinerary.extraCharge}</span>
-                  </div>
-                )}
+            {selectedItinerary.extraInfo && (
+  <div className="bg-[#fff9c4] text-[#856404] px-4 py-3 rounded-lg flex items-start gap-2 text-sm font-semibold border-l-4 border-[#ffeb3b]">
+    <Info size={18} className="mt-0.5 shrink-0"/> 
+    <div className="space-y-1">
+      {selectedItinerary.extraInfo.map((info: string, i: number) => (
+        <p key={i}>{info}</p>
+      ))}
+    </div>
+  </div>
+)}
+
 
                 {/* Times (Pickup & Return) */}
                 <div className="space-y-3">
-                  <div className="bg-cyan-50/50 p-4 rounded-xl flex items-center gap-4 border border-cyan-100">
-                    <div className="w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-600">
-                      <ArrowUp size={18} />
-                    </div>
-                    <div>
-                      <p className="text-xs text-gray-500 font-bold uppercase tracking-wider">Hotel Pickup :</p>
-                      <p className="font-semibold text-gray-800 text-sm">
-                        {selectedItinerary.pickupTimes?.[0] || "8:00 am"}
-                      </p>
-                    </div>
-                  </div>
+           {selectedItinerary.pickupTimes?.length > 0 && (
+  <div className="bg-cyan-50/50 p-4 rounded-xl flex items-center gap-4 border border-cyan-100">
+    <div className="w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-600">
+      <ArrowUp size={18} />
+    </div>
+    <div>
+      <p className="text-xs text-gray-500 font-bold uppercase tracking-wider">
+        Hotel Pickup :
+      </p>
+      <p className="font-semibold text-gray-800 text-sm">
+        {selectedItinerary.pickupTimes[0]}
+      </p>
+    </div>
+  </div>
+)}
 
-                  <div className="bg-cyan-50/50 p-4 rounded-xl flex items-center gap-4 border border-cyan-100">
-                    <div className="w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-600">
-                      <ArrowDown size={18} />
-                    </div>
-                    <div>
-                      <p className="text-xs text-gray-500 font-bold uppercase tracking-wider">Hotel Return :</p>
-                      <p className="font-semibold text-gray-800 text-sm">
-                        {selectedItinerary.returnTime || "4:00 pm"}
-                      </p>
-                    </div>
-                  </div>
-                </div>
+
+
+           {selectedItinerary.returnTime && (
+  <div className="bg-cyan-50/50 p-4 rounded-xl flex items-center gap-4 border border-cyan-100">
+    <div className="w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-600">
+      <ArrowDown size={18} />
+    </div>
+    <div>
+      <p className="text-xs text-gray-500 font-bold uppercase tracking-wider">
+        Hotel Return :
+      </p>
+      <p className="font-semibold text-gray-800 text-sm">
+        {selectedItinerary.returnTime}
+      </p>
+    </div>
+  </div>
+)}
+
 
                {/* What's Included */}
-<div>
-  <h3 className="font-bold text-lg mb-4 text-gray-800">
-    What's Included :
-  </h3>
+{selectedItinerary.included?.length > 0 && (
+  <div>
+    <h3 className="font-bold text-lg mb-4 text-[#0a7bbe]">
+      What's Included :
+    </h3>
 
-  <ul className="space-y-3">
-    {tour.included?.map((item: string, idx: number) => (
-      <li
-        key={idx}
-        className="flex items-start gap-3 text-sm text-gray-600 font-medium"
-      >
-        <Check className="text-cyan-500 shrink-0 mt-0.5" size={16} />
-        <span>{item}</span>
-      </li>
-    ))}
-  </ul>
-</div>
+    <ul className="space-y-3">
+      {selectedItinerary.included.map((item: string, idx: number) => (
+        <li
+          key={idx}
+          className="flex items-start gap-3 text-sm text-gray-600 font-medium"
+        >
+          <Check className="text-cyan-500 shrink-0 mt-0.5" size={16} />
+          <span>{item}</span>
+        </li>
+      ))}
+    </ul>
+  </div>
+)}
+
 
 
                        {/* What's Not Included */}
-<div>
-  <h3 className="font-bold text-lg mb-4 text-gray-800">
-    Exclude :
-  </h3>
+{selectedItinerary.excluded?.length > 0 && (
+  <div>
+    <h3 className="font-bold text-lg mb-4 text-[#0a7bbe]">
+      Exclude :
+    </h3>
 
-  <ul className="space-y-3">
-    {tour.excluded?.map((item: string, idx: number) => (
-      <li
-        key={idx}
-        className="flex items-start gap-3 text-sm text-gray-600 font-medium"
-      >
-        <Check className="text-red-400 shrink-0 mt-0.5" size={16} />
-        <span>{item}</span>
-      </li>
-    ))}
-  </ul>
-</div>
+    <ul className="space-y-3">
+      {selectedItinerary.excluded.map((item: string, idx: number) => (
+        <li
+          key={idx}
+          className="flex items-start gap-3 text-sm text-gray-600 font-medium"
+        >
+          <Check className="text-red-400 shrink-0 mt-0.5" size={16} />
+          <span>{item}</span>
+        </li>
+      ))}
+    </ul>
+  </div>
+)}
+
 
 
                 {/* Footer Button */}

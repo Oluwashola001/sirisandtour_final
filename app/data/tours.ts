@@ -1,5 +1,7 @@
 // app/data/tours.ts
 
+import { Certificate } from "crypto";
+
 export type Testimonial = {
   id: number;
   name: string;
@@ -24,13 +26,15 @@ export type Tour = {
     title: string;
     image: string;
     price?: number;
-    childPrice?: number; // Added for the popup
+    moreDetails?: string[]; // Added for the popup
     infantPrice?: string; // Added for the popup
-    extraCharge?: string; // Added for the popup
+    extraInfo?: string []; // Added for the popup
     duration?: number | string;
     currency?: string;
     pickupTimes?: string[];
     returnTime?: string; // Added for the popup
+     included?: string[];
+  excluded?: string[];
     highlights?: string[];
     description: string;
   }[];
@@ -79,22 +83,26 @@ export const tours: Tour[] = [
   {
     title: "Balloon – Hot Air Balloon Ride",
     image: "/images/itinerary/balloon.jpg",
-         price: 70,
+     duration: "3hrs" ,
+     price: 70,
   currency: "€",
-  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
+  pickupTimes: ["8:00 am"],
+  returnTime:"3pm",
   highlights: [
-    "2-hours on Orange Island",
+    "Flight Time : 45minutes",
     "2-Snorkeling stops",
-    "Water sports: banana & sofa boat",
-    "2-hours on Orange Island",
-    "2-Snorkeling stops",
-    "Water sports: banana & sofa boat"
-    
-    
+    "Transportation: Hotel/Cruise pick-up & drop-off (A/C vehicles)",
+    "River Crossing: Speedboat transfer to the West Bank",  
   ],
+  included:[ "Flight Certificate, Water, Tea, Cpffee"],
+  excluded:["Gratuities (Tipping)"], 
+    infantPrice: "Not allowed for childern under 6 years old", 
+    extraInfo: ["Refund Policy: Full refund for weather cancellations or 24h notice " ,"Booking Advice: Highly recommended to book 3 days in advance"],
+    moreDetails: ["Health & Safety: Not for: Pregnant women, Heart/Back patients, or Wheelchair users" ," Weather Note: Bring a light jacket (it is cold in the early morning)"],
     description:
       "Enjoy a sunrise hot air balloon ride over Luxor with breathtaking views of temples and the Nile."
   },
+
   {
     title: "Nile Cruise – Luxor to Aswan",
     image: "/images/itinerary/nile-cruise.jpg",
@@ -951,9 +959,9 @@ description: "Experience Cairo like never before. Take off on a private helicopt
     title: "Paradise Island",
     image: "/images/itinerary/paradise.jpg",
     price: 50,
-    childPrice: 10,
+    moreDetails: ["" ],
     infantPrice: "",
-    extraCharge: "5 Euro for natural park",
+    extraInfo: ["5 Euro for natural park"],
     duration: "approx. 3 hours",
     currency: "€",
   
