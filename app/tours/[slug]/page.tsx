@@ -79,7 +79,7 @@ const [openDescriptionIndex, setOpenDescriptionIndex] = useState<number | null>(
 
       {/* ===== TITLE SECTION ===== */}
       <div className="w-full mb-10 flex justify-center -mt-10 items-center">
-        <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0A7BBE] break-words text-center">
+        <h1 className="text-1xl md:text-3xl lg:text-2xl font-bold text-[#0A7BBE] break-words text-center">
           {tour.title}
         </h1>
       </div>
@@ -622,7 +622,7 @@ Overview
   ))}
 </div>
 
-      <p className="text-xs text-gray-400 mt-1">50% of adult price</p>
+      {/* <p className="text-xs text-gray-400 mt-1">50% of adult price</p> */}
     </div>
 
     {/* Infant Card */}
