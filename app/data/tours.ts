@@ -9,6 +9,11 @@ export type Testimonial = {
   title: string;
   text: string;
 };
+export type BringItem = {
+  item: string;
+  reason: string;
+};
+
 
 export type Tour = {
   title: string;      
@@ -26,7 +31,10 @@ export type Tour = {
     title: string;
     image: string;
     price?: number;
-    moreDetails?: string[]; // Added for the popup
+moreDetails?: {
+  item: string;
+  reason: string;
+}[];
     infantPrice?: string; // Added for the popup
     extraInfo?: string []; // Added for the popup
     duration?: number | string;
@@ -87,20 +95,49 @@ export const tours: Tour[] = [
      price: 70,
   currency: "€",
   pickupTimes: ["8:00 am"],
-  returnTime:"3pm",
-  highlights: [
-    "Flight Time : 45minutes",
-    "2-Snorkeling stops",
-    "Transportation: Hotel/Cruise pick-up & drop-off (A/C vehicles)",
-    "River Crossing: Speedboat transfer to the West Bank",  
-  ],
+ highlights: [
+  "Experience the thrill of soaring above fairy chimneys and rock-cut churches",
+  "Fuel up with complimentary tea, coffee, and a pastry before your take-off",
+  "Savor views of Cappadocia from a bird's-eye-perspective in a hot air balloon",
+  "Raise a toast to your flight and watch the sunrise with a champagne in hand",
+  "Commemorate your memorable experience with an individual flight certificate"
+]
+,
   included:[ "Flight Certificate, Water, Tea, Cpffee"],
   excluded:["Gratuities (Tipping)"], 
     infantPrice: "Not allowed for childern under 6 years old", 
     extraInfo: ["Refund Policy: Full refund for weather cancellations or 24h notice " ,"Booking Advice: Highly recommended to book 3 days in advance"],
-    moreDetails: ["Health & Safety: Not for: Pregnant women, Heart/Back patients, or Wheelchair users" ," Weather Note: Bring a light jacket (it is cold in the early morning)"],
-    description:
-      "Enjoy a sunrise hot air balloon ride over Luxor with breathtaking views of temples and the Nile."
+  moreDetails: [
+  {
+    item: "Flight Time",
+    reason: "45 minutes"
+  },
+  {
+    item: "Snorkeling Stops",
+    reason: "2 stops"
+  },
+  {
+    item: "Transportation",
+    reason: "Hotel/Cruise pick-up & drop-off (A/C vehicles)"
+  },
+  {
+    item: "River Crossing",
+    reason: "Speedboat transfer to the West Bank"
+  },
+  {
+    item: "Health & Safety",
+    reason: "Not suitable for pregnant women, people with heart or back problems, or wheelchair users."
+  },
+  {
+    item: "Weather Note",
+    reason: "Bring a light jacket — it can be cold in the early morning."
+  }
+]
+,
+
+  description:
+      "Explore a spectacular setting from the sky on this hot air balloon ride over Cappadocia. Be picked up from your accommodation in Göreme before the first light of day and relax on the transfer to the launch site, a location selected by your pilot based on the day's weather conditions.Upon arrival, enjoy tea and coffee with a light pastry while the crew makes flight preparations. Get into the basket and listen as the pilot gives detailed safety instructions. Then, as the burners are fired up, slowly rise into the sky. Watch the balloon gently gain elevation as you soar above the Cappadocia scenery. Upon returning to the ground, celebrate your flight with sparkling wine or champagne. Receive a flight certificate to commemorate your experience before heading back to your hotel."
+
   },
 
   {
@@ -108,17 +145,16 @@ export const tours: Tour[] = [
     image: "/images/itinerary/nile-cruise.jpg",
          price: 90,
   currency: "€",
-  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
-  highlights: [
-    "2-hours on Orange Island",
-    "2-Snorkeling stops",
-    "Water sports: banana & sofa boat",
-    "2-hours on Orange Island",
-    "2-Snorkeling stops",
-    "Water sports: banana & sofa boat"
-    
-    
-  ],
+  pickupTimes: ["8:00 am"],
+       duration: "5hrs" ,
+ highlights: [
+  "Covers all must-do experiences in Luxor & Aswan in one epic journey",
+  "Soar over Luxor on an unforgettable hot air balloon ride",
+  "Walk in the footsteps of pharaohs at Karnak & the Valley of the Kings",
+  "Cruise the Nile in style with guided stops at Egypt’s top temples",
+  "Witness the awe-inspiring Abu Simbel Temples"
+],
+included:["Live tour guide" ,":" , "Arabic, English, German, Spanish, French"],
     description:
       "Relax on a scenic Nile cruise from Luxor to Aswan, stopping at historic temples along the way."
   }
@@ -335,6 +371,18 @@ export const tours: Tour[] = [
      price: 120,
   currency: "€",
   pickupTimes: ["8:00 am"],
+included:["Private group", "Host or Greeter : English, Arabic"],
+    infantPrice: "",
+    extraInfo:["Free Cancellation: Cancel up 24hrs in advance for full refund", "Reserve now & pay later: Keep your travel plans flexble- book your spot and pay nothing today"
+     ], 
+  
+moreDetails: [
+  {
+    item: "Priority Access",
+    reason: "Skip the line through a separate entrance for faster entry."
+  }
+],
+
   highlights: [
     "Feel the thrill of a private helicopter flight over Cairo and the Pyramids",
 
@@ -344,10 +392,7 @@ export const tours: Tour[] = [
 
 "Capture breathtaking photos from the sky as you glide over ancient landmarks",
 
-"exclusive landing at the Pyramids for a truly unforgettable adventure!"
-
-    
-    
+"exclusive landing at the Pyramids for a truly unforgettable adventure!"  
   ],
 description: "Experience Cairo like never before. Take off on a private helicopter ride and enjoy breathtaking panoramic views of the Nile, Cairo Tower, and the historic Salah El-Din Citadel. Feel the thrill of soaring above the ancient wonders of Cairo and Giza in a luxurious private aircraft—an experience that blends opulence with adventure. From the moment of ascent, the vast metropolis of Cairo unfolds beneath you, where winding streets, historic landmarks, and modern structures merge seamlessly with the surrounding desert. As the journey continues toward Giza, the legendary pyramids rise majestically from the sands, offering an unobstructed aerial view of the Great Pyramid of Khufu, the Pyramid of Khafre, and the Pyramid of Menkaure. More than a sightseeing tour, this exclusive flight is an immersive encounter with Egypt’s timeless history, revealing its grandeur from a perspective reserved for the few."
   },
@@ -356,18 +401,45 @@ description: "Experience Cairo like never before. Take off on a private helicopt
     image: "/images/itinerary/23.jpg",
       price: 40,
   currency: "€",
-  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
+  pickupTimes: ["8:00 am",],
+included:["Private group", "Host or Greeter : English, Arabic"],
+    infantPrice: "",
+    extraInfo:["Free Cancellation: Cancel up 24hrs in advance for full refund", "Reserve now & pay later: Keep your travel plans flexble- book your spot and pay nothing today"
+     ], 
+  
+moreDetails: [
+  {
+    item: "Comfortable Walking Shoes",
+    reason: "The tour involves walking on historic cobblestone streets."
+  },
+  {
+    item: "Camera or Smartphone",
+    reason: "To capture stunning photos of thousand-year-old landmarks."
+  },
+  {
+    item: "Headscarf / Light Shawl",
+    reason: "Useful for sun protection and for ladies when entering mosques."
+  },
+  {
+    item: "Cash (Local Currency)",
+    reason: "Recommended for shopping and tipping in the small alleys."
+  },
+  {
+    item: "Sunglasses",
+    reason: "To protect your eyes from the bright daylight."
+  }
+],
+
+
+
   highlights: [
-    "2-hours on Orange Island",
-    "2-Snorkeling stops",
-    "Water sports: banana & sofa boat",
-    "2-hours on Orange Island",
-    "2-Snorkeling stops",
-    "Water sports: banana & sofa boat"
-    
-    
+    "Stop 1 : Bab al-Futuh & Al-Muizz St.,Exploring Fatimid walls and the Qalawun Complex",
+"Stop 2: Islamic Architecture (Bayt al-Suhaymi),Admiring traditional Cairene house design and Mashrabiya",
+"Stop 3:The Historic Souq (Khan el-Khalili), Free time for shopping for antiques, textiles, and souvenirs",
+"Stop 4: Heritage Break (El Fishawy Cafe),Relaxing at Cairo’s oldest cafe with traditional Egyptian tea",
+"Stop 5 : Tour Finale (Al-Hussein Area),Enjoying lunch or dinner at a restaurant with an ancient view"
   ],
-    description: "Walk through Islamic Cairo’s famous streets and bazaars."
+    description: "A Note from SIRI SAND TOURS: We pay attention to every detail to ensure you have an unforgettable journey through history."
   },
   {
     title: "Islamic Cairo Mosques",
@@ -392,18 +464,48 @@ description: "Experience Cairo like never before. Take off on a private helicopt
     image: "/images/itinerary/24.jpg",
       price: 65,
   currency: "€",
-  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
-  highlights: [
-    "2-hours on Orange Island",
-    "2-Snorkeling stops",
-    "Water sports: banana & sofa boat",
-    "2-hours on Orange Island",
-    "2-Snorkeling stops",
-    "Water sports: banana & sofa boat"
-    
-    
-  ],
-    description: "Explore Hanging Church, Coptic Museum, and Old Cairo churches."
+  pickupTimes: ["8:00 am",],
+ highlights: [
+  "Purpose Reason 1. Modest clothing in respect for the sanctity of the places and houses of worship.",
+  "Professional camera. The ancient Coptic icons and inlaid wood details (the altar veil) are worth documenting.",
+  "Hat and glasses for moving around the outdoor areas between churches.",
+  "An information booklet (or guide). The area is rich in spiritual stories that need explanation to understand its value."
+],
+
+  moreDetails: [
+  {
+    item: "9:00 AM – Muhammad Ali Mosque (Marble Mosque)",
+    reason:
+      "Icon of the Citadel, famous for its Ottoman architecture, towering minarets, and breathtaking panoramic views over Cairo. Located inside the Citadel of Saladin."
+  },
+  {
+    item: "10:30 AM – Mosque of al-Nasir Muhammad ibn Qalawun",
+    reason:
+      "A remarkable Mamluk mosque distinguished by its minarets decorated with green mosaic tiles (Qashani). Located inside the Citadel of Saladin."
+  },
+  {
+    item: "11:30 AM – Mosque & Madrasa of Sultan Hassan",
+    reason:
+      "Known as the 'Pyramid of Islamic Architecture' and considered one of the greatest Mamluk buildings in the world. Located at Citadel Square."
+  },
+  {
+    item: "12:30 PM – Al-Rifa’i Mosque",
+    reason:
+      "Located opposite Sultan Hassan Mosque, it houses the tombs of the Muhammad Ali dynasty and the Shah of Iran, distinguished by its royal decorations."
+  },
+  {
+    item: "1:30 PM – Mosque of Ahmad Ibn Tulun",
+    reason:
+      "The oldest mosque preserved in its original state, famous for its unique spiral minaret and vast courtyard. Located in Sayyida Zainab."
+  },
+  {
+    item: "2:30 PM – Lunch & Relaxation",
+    reason:
+      "Enjoy an oriental lunch at a restaurant overlooking the historic landmarks of Old Cairo in the Citadel / Al-Azhar area."
+  }
+]
+,
+    description: "🗺️ SIRI SAND TOURS' advice to our clients : This tour is located entirely within a safe pedestrian zone, making it ideal for families and seniors, as there is no need to use a car once you reach the entrance of the religious complex."
   },
  {
     title: "Airport Transfer",
@@ -824,17 +926,20 @@ description: "Experience Cairo like never before. Take off on a private helicopt
     image: "/images/itinerary/philae.jpg",
       price: 60,
   currency: "€",
-  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
+  duration:"6hrs"
+  ,
+    extraInfo:["Free Cancellation: Cancel up 24hrs in advance for full refund", "Reserve now & pay later: Keep your travel plans flexble- book your spot and pay nothing today"
+     ], 
+  included:["Live tour guide" ,":" , "Arabic, English, German, Spanish, French"],
+  pickupTimes: ["8:00 am"],
   highlights: [
-    "2-hours on Orange Island",
-    "2-Snorkeling stops",
-    "Water sports: banana & sofa boat",
-    "2-hours on Orange Island",
-    "2-Snorkeling stops",
-    "Water sports: banana & sofa boat"
-    
-    
-  ],
+  "Stand in awe at Philae Temple, rescued from the Nile's rising waters",
+  "Enjoy the unique view of the Nile as it crosses Aswan High Dam",
+  "Find out the secrets and the story behind the Unfinished Obelisk",
+  "Discover the vibrant Nubian Village and its painted alleyways",
+  "Step into history, culture, and modern miracles in one unforgettable day"
+]
+,
     description: "Visit High Dam, Philae Temple, Kalabsha Temple and Nubian Village."
   },
   {
@@ -842,17 +947,19 @@ description: "Experience Cairo like never before. Take off on a private helicopt
     image: "/images/itinerary/abu-simbel.jpg",
       price: 80,
   currency: "€",
-  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
-  highlights: [
-    "2-hours on Orange Island",
-    "2-Snorkeling stops",
-    "Water sports: banana & sofa boat",
-    "2-hours on Orange Island",
-    "2-Snorkeling stops",
-    "Water sports: banana & sofa boat"
-    
-    
+    extraInfo:["Free Cancellation: Cancel up 24hrs in advance for full refund", "Reserve now & pay later: Keep your travel plans flexble- book your spot and pay nothing today"
+     ], 
+     duration:"10hrs",
+  pickupTimes: ["8:00 am"],
+  included:["Live tour guide" ,":" , "Arabic, English, German, Spanish, French"
+    ,"Pickup: You will be picked up from your accomodation in aswan"
   ],
+ highlights: [
+  "Enjoy a full day tour exploring Abu Simbel temple",
+  "Enjoy visiting Abu Simbel temple (one of UNESCO site)",
+  "Enjoy a comfortable Pick up and drop off from your hotel"
+]
+,
     description: "Full-day trip to Abu Simbel and Kom Ombo Temple."
   },
   {
@@ -860,16 +967,19 @@ description: "Experience Cairo like never before. Take off on a private helicopt
     image: "/images/itinerary/nile-cruise2.jpg",
       price: 90,
   currency: "€",
-  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
-  highlights: [
-    "2-hours on Orange Island",
-    "2-Snorkeling stops",
-    "Water sports: banana & sofa boat",
-    "2-hours on Orange Island",
-    "2-Snorkeling stops",
-    "Water sports: banana & sofa boat"
-
-  ],
+  
+  pickupTimes: ["8:00 am"],
+    extraInfo:["Free Cancellation: Cancel up 24hrs in advance for full refund", "Reserve now & pay later: Keep your travel plans flexble- book your spot and pay nothing today"
+     ], 
+     duration:"5hrs",
+ highlights: [
+  "Explore the temples of Philae, Kom Ombo, Edfu, Luxor, and Karnak",
+  "Discover.. Cruise the Nile with overnights in Aswan, Edfu, and Luxor",
+  "Visit the majestic Abu Simbel Temples with an Egyptologist guide"
+]
+,
+included:["Live tour guide" ,"" , "English",  "Pickup: All guest will be contacted by the guide one day before their arrival"
+],
     description: "Relaxing Nile cruise between Aswan and Luxor."
   }
 ]
@@ -959,12 +1069,10 @@ description: "Experience Cairo like never before. Take off on a private helicopt
     title: "Paradise Island",
     image: "/images/itinerary/paradise.jpg",
     price: 50,
-    moreDetails: ["" ],
     infantPrice: "",
     extraInfo: ["5 Euro for natural park"],
     duration: "approx. 3 hours",
     currency: "€",
-  
     pickupTimes: ["8:00 am"],
     returnTime: "4:00 pm",
     highlights: [

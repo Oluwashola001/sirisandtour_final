@@ -584,174 +584,191 @@ const [openDescriptionIndex, setOpenDescriptionIndex] = useState<number | null>(
                 </div>
               </div>
 
-           {/* Body */}
-<div className="p-6 md:p-8 space-y-10">
+         {/* Body */}
+<div className="p-6 md:p-8 space-y-12">
 
-              
-              
-                {/* Overview Information */}
-               <div className="mt-12">
-  <h3 className="text-[#0A7BBE] text-xl font-semibold flex items-center gap-2 mb-8">
-    <Tag size={18} className="fill-current" />
-Overview
-  </h3>
-
-  <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-    
-    {/* Adult Card */}
-    <div className="bg-white border border-gray-100 rounded-2xl p-6 text-center shadow-sm hover:shadow-lg hover:-translate-y-1 transition duration-300">
-      <div className="w-14 h-14 bg-[#0A7BBE]/10 rounded-full mx-auto flex items-center justify-center text-[#0A7BBE] mb-4">
-        <User size={24} />
-      </div>
-      <p className="text-sm text-gray-500 mb-1">Price</p>
-      <p className="text-2xl font-semibold text-[#0A7BBE]">
-        € {selectedItinerary.price}
-      </p>
-      <p className="text-xs text-gray-400 mt-1">Per person</p>
-    </div>
-
-    {/* Children Card */}
-    <div className="bg-white border border-gray-100 rounded-2xl p-6 text-center shadow-sm hover:shadow-lg hover:-translate-y-1 transition duration-300">
-      <div className="w-14 h-14 bg-[#0a2340]/10 rounded-full mx-auto flex items-center justify-center text-[#0a2340] mb-4">
-        <User size={22} />
-      </div>
-      
-      <div className="text-sm text-[#0a2340] space-y-1">
-  {selectedItinerary.moreDetails?.map((detail: string, i: number) => (
-    <p key={i}>{detail}</p>
-  ))}
-</div>
-
-      {/* <p className="text-xs text-gray-400 mt-1">50% of adult price</p> */}
-    </div>
-
-    {/* Infant Card */}
-    <div className="bg-white border border-gray-100 rounded-2xl p-6 text-center shadow-sm hover:shadow-lg hover:-translate-y-1 transition duration-300">
-      <div className="w-14 h-14 bg-cyan-100 rounded-full mx-auto flex items-center justify-center text-[#0a2340] mb-4">
-        <Baby size={24} />
-      </div>
-      <p className="text-sm text-gray-500 mb-1">Infants/Children details</p>
-      <p className="text-2xl font-semibold text-[#0a2340]">
-        {selectedItinerary.infantPrice || "FREE"}
-      </p>
-      <p className="text-xs text-gray-400 mt-1">No charge</p>
-    </div>
-
-  </div>
-</div>
-
-
-                {/* Extra Charge Alert */}
-            {selectedItinerary.extraInfo && (
-  <div className="bg-[#fff9c4] text-[#856404] px-4 py-3 rounded-lg flex items-start gap-2 text-sm font-semibold border-l-4 border-[#ffeb3b]">
-    <Info size={18} className="mt-0.5 shrink-0"/> 
-    <div className="space-y-1">
-      {selectedItinerary.extraInfo.map((info: string, i: number) => (
-        <p key={i}>{info}</p>
-      ))}
-    </div>
-  </div>
-)}
-
-
-                {/* Times (Pickup & Return) */}
-                <div className="space-y-3">
-           {selectedItinerary.pickupTimes?.length > 0 && (
-  <div className="bg-cyan-50/50 p-4 rounded-xl flex items-center gap-4 border border-cyan-100">
-    <div className="w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-600">
-      <ArrowUp size={18} />
-    </div>
-    <div>
-      <p className="text-xs text-gray-500 font-bold uppercase tracking-wider">
-        Hotel Pickup :
-      </p>
-      <p className="font-semibold text-gray-800 text-sm">
-        {selectedItinerary.pickupTimes[0]}
-      </p>
-    </div>
-  </div>
-)}
-
-
-
-           {selectedItinerary.returnTime && (
-  <div className="bg-cyan-50/50 p-4 rounded-xl flex items-center gap-4 border border-cyan-100">
-    <div className="w-8 h-8 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-600">
-      <ArrowDown size={18} />
-    </div>
-    <div>
-      <p className="text-xs text-gray-500 font-bold uppercase tracking-wider">
-        Hotel Return :
-      </p>
-      <p className="font-semibold text-gray-800 text-sm">
-        {selectedItinerary.returnTime}
-      </p>
-    </div>
-  </div>
-)}
-
-
-               {/* What's Included */}
-{selectedItinerary.included?.length > 0 && (
+  {/* ===== OVERVIEW ===== */}
   <div>
-    <h3 className="font-bold text-lg mb-4 text-[#0a7bbe]">
-      What's Included :
+    <h3 className="text-[#0A7BBE] text-xl font-semibold flex items-center gap-2 mb-8">
+      <Tag size={18} />
+      Overview
     </h3>
 
-    <ul className="space-y-3">
-      {selectedItinerary.included.map((item: string, idx: number) => (
-        <li
-          key={idx}
-          className="flex items-start gap-3 text-sm text-gray-600 font-medium"
-        >
-          <Check className="text-cyan-500 shrink-0 mt-0.5" size={16} />
-          <span>{item}</span>
-        </li>
-      ))}
-    </ul>
+    <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+
+      {/* Adult */}
+      <div className="bg-white border border-gray-100 rounded-2xl p-6 text-center shadow-sm hover:shadow-lg transition">
+        <div className="w-14 h-14 bg-[#0A7BBE]/10 rounded-full mx-auto flex items-center justify-center text-[#0A7BBE] mb-4">
+          <User size={24} />
+        </div>
+        <p className="text-sm text-gray-500 mb-1">Price</p>
+        <p className="text-2xl font-semibold text-[#0A7BBE]">
+          € {selectedItinerary.price}
+        </p>
+        <p className="text-xs text-gray-400 mt-1">Per person</p>
+      </div>
+
+      {/* Duration */}
+      <div className="bg-white border border-gray-100 rounded-2xl p-6 text-center shadow-sm hover:shadow-lg transition">
+        <div className="w-14 h-14 bg-[#0a2340]/10 rounded-full mx-auto flex items-center justify-center text-[#0a2340] mb-4">
+          <Clock size={22} />
+        </div>
+        <p className="text-sm text-gray-500 mb-1">Duration</p>
+        <p className="text-lg font-semibold text-[#0a2340]">
+          {selectedItinerary.duration}
+        </p>
+      </div>
+
+      {/* Infant */}
+      <div className="bg-white border border-gray-100 rounded-2xl p-6 text-center shadow-sm hover:shadow-lg transition">
+        <div className="w-14 h-14 bg-cyan-100 rounded-full mx-auto flex items-center justify-center text-[#0a2340] mb-4">
+          <Baby size={24} />
+        </div>
+        <p className="text-sm text-gray-500 mb-1">Infants</p>
+        <p className="text-2xl font-semibold text-[#0a2340]">
+          {selectedItinerary.infantPrice || "FREE"}
+        </p>
+      </div>
+
+    </div>
   </div>
-)}
 
 
+  {/* ===== TOUR SCHEDULE (TIMELINE STYLE) ===== */}
+  {selectedItinerary.moreDetails?.length > 0 && (
+    <div>
+      <h3 className="text-[#0A7BBE] text-xl font-semibold mb-8">
+        Trip Details
+      </h3>
 
-                       {/* What's Not Included */}
-{selectedItinerary.excluded?.length > 0 && (
-  <div>
-    <h3 className="font-bold text-lg mb-4 text-[#0a7bbe]">
-      Exclude :
-    </h3>
+      <div className="relative border-l-2 border-[#0A7BBE]/30 pl-6 space-y-10">
 
-    <ul className="space-y-3">
-      {selectedItinerary.excluded.map((item: string, idx: number) => (
-        <li
-          key={idx}
-          className="flex items-start gap-3 text-sm text-gray-600 font-medium"
-        >
-          <Check className="text-red-400 shrink-0 mt-0.5" size={16} />
-          <span>{item}</span>
-        </li>
-      ))}
-    </ul>
+        {selectedItinerary.moreDetails.map((detail: any, i: number) => (
+          <div key={i} className="relative">
+
+            {/* Timeline Dot */}
+            <span className="absolute -left-[9px] top-1 w-4 h-4 bg-[#0A7BBE] rounded-full border-4 border-white shadow"></span>
+
+            <div className="bg-gray-50 rounded-xl p-5 shadow-sm border border-gray-100">
+
+              <p className="font-semibold text-[#0A7BBE] mb-2 text-base">
+                {detail.item}
+              </p>
+
+              <p className="text-sm text-gray-600 leading-relaxed">
+                {detail.reason}
+              </p>
+
+            </div>
+
+          </div>
+        ))}
+
+      </div>
+    </div>
+  )}
+
+
+  {/* ===== EXTRA INFO ===== */}
+  {selectedItinerary.extraInfo && (
+    <div className="bg-[#fff9c4] text-[#856404] px-4 py-3 rounded-lg flex items-start gap-2 text-sm font-semibold border-l-4 border-[#ffeb3b]">
+      <Info size={18} className="mt-0.5 shrink-0"/> 
+      <div className="space-y-1">
+        {selectedItinerary.extraInfo.map((info: string, i: number) => (
+          <p key={i}>{info}</p>
+        ))}
+      </div>
+    </div>
+  )}
+
+
+  {/* ===== PICKUP & RETURN ===== */}
+  <div className="space-y-4">
+
+    {selectedItinerary.pickupTimes?.length > 0 && (
+      <div className="bg-cyan-50 p-4 rounded-xl flex items-center gap-4 border border-cyan-100">
+        <ArrowUp size={18} className="text-cyan-600" />
+        <div>
+          <p className="text-xs text-gray-500 font-bold uppercase tracking-wider">
+            Hotel Pickup
+          </p>
+          <p className="font-semibold text-gray-800 text-sm">
+            {selectedItinerary.pickupTimes[0]}
+          </p>
+        </div>
+      </div>
+    )}
+
+    {selectedItinerary.returnTime && (
+      <div className="bg-cyan-50 p-4 rounded-xl flex items-center gap-4 border border-cyan-100">
+        <ArrowDown size={18} className="text-cyan-600" />
+        <div>
+          <p className="text-xs text-gray-500 font-bold uppercase tracking-wider">
+            Hotel Return
+          </p>
+          <p className="font-semibold text-gray-800 text-sm">
+            {selectedItinerary.returnTime}
+          </p>
+        </div>
+      </div>
+    )}
+
   </div>
-)}
 
-                {/* Footer Button */}
-                <div className="pt-2">
-                   <a
-                      href={`https://wa.me/201288062555?text=${encodeURIComponent(`Hello, I'm interested in ${selectedItinerary.title}`)}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block w-full sm:w-1/2 mx-auto py-3 rounded-xl font-bold text-white text-center transition hover:opacity-90 shadow-lg"
-                      style={{ backgroundColor: '#0A7BBE' }} // Turquoise color from image button
-                    >
-                       <span className="flex items-center justify-center gap-2">
-                         <FaWhatsapp className="text-xl" /> Contact Now
-                       </span>
-                    </a>
-                </div>
-</div> {/* End Body */}
 
-              </div>
+  {/* ===== INCLUDED ===== */}
+  {selectedItinerary.included?.length > 0 && (
+    <div>
+      <h3 className="font-bold text-lg mb-4 text-[#0a7bbe]">
+        What's Included
+      </h3>
+      <ul className="space-y-3">
+        {selectedItinerary.included.map((item: string, idx: number) => (
+          <li key={idx} className="flex items-start gap-3 text-sm text-gray-600 font-medium">
+            <Check className="text-cyan-500 mt-0.5" size={16} />
+            <span>{item}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )}
+
+
+  {/* ===== EXCLUDED ===== */}
+  {selectedItinerary.excluded?.length > 0 && (
+    <div>
+      <h3 className="font-bold text-lg mb-4 text-[#0a7bbe]">
+        Exclude
+      </h3>
+      <ul className="space-y-3">
+        {selectedItinerary.excluded.map((item: string, idx: number) => (
+          <li key={idx} className="flex items-start gap-3 text-sm text-gray-600 font-medium">
+            <Check className="text-red-400 mt-0.5" size={16} />
+            <span>{item}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )}
+
+
+  {/* ===== CONTACT BUTTON ===== */}
+  <div className="pt-4">
+    <a
+      href={`https://wa.me/201288062555?text=${encodeURIComponent(`Hello, I'm interested in ${selectedItinerary.title}`)}`}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="block w-full sm:w-1/2 mx-auto py-3 rounded-xl font-bold text-white text-center transition hover:opacity-90 shadow-lg"
+      style={{ backgroundColor: '#0A7BBE' }}
+    >
+      <span className="flex items-center justify-center gap-2">
+        <FaWhatsapp className="text-xl" /> Contact Now
+      </span>
+    </a>
+  </div>
+
+</div>
+
             </motion.div>
           </motion.div>
         )}
