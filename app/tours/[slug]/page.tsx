@@ -207,21 +207,23 @@ const [openDescriptionIndex, setOpenDescriptionIndex] = useState<number | null>(
                     </p>
 
                     {/* PICKUP DROPDOWN */}
-                   <div className="mt-3 mb-6">
-  <div
-    className="text-sm sm:text-base font-medium mb-2"
-    style={{ color: BRAND }}
-  >
-    Pickup:
-     <div className="text-black">
-    {item.pickupTimes?.map((time, index) => (
-      <p key={index}>{time}</p>
-    ))}
-  </div>
-  </div>
+      
+{item.pickupTimes && item.pickupTimes.length > 0 && (
+  <div className="mt-3 mb-6">
+    <div
+      className="text-sm sm:text-base font-medium mb-2"
+      style={{ color: BRAND }}
+    >
+      Pickup:
+    </div>
 
- 
-</div>
+    <div className="text-black">
+      {item.pickupTimes.map((time, index) => (
+        <p key={index}>{time}</p>
+      ))}
+    </div>
+  </div>
+)}
 
 
                     {/* HIGHLIGHTS */}
@@ -626,7 +628,7 @@ const [openDescriptionIndex, setOpenDescriptionIndex] = useState<number | null>(
         </div>
         <p className="text-sm text-gray-500 mb-1">Infants</p>
         <p className="text-2xl font-semibold text-[#0a2340]">
-          {selectedItinerary.infantPrice || "FREE"}
+          {selectedItinerary.infantPrice || ""}
         </p>
       </div>
 
