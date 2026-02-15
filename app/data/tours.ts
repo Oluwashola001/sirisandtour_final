@@ -298,9 +298,58 @@ included:["Live tour guide" ,":" , "Arabic, English, German, Spanish, French"],
   ],
     description: "Quad biking, camel riding, and Bedouin village visit in Sinai desert."
   },
-   {
-    title: "Airport Transfer",
+     {
+    title: "Limousine + Taxi",
     image: "/images/itinerary/limouse2.jpg",
+    price:15 ,
+  currency: "€",
+  highlights: [
+  "Professional representative with personalized sign and luggage assistance",
+  "100% On-time guarantee; drivers arrive 15 minutes early",
+  "Modern, fully air-conditioned vehicles (Standard Sedan, Family Van, Luxury Business Class)",
+  "Complimentary High-speed Wi-Fi, bottled mineral water, and mobile charging ports",
+  "Professional, multilingual drivers",
+  "Transparent all-inclusive rates (Tolls and Parking included)"
+],
+
+moreDetails: [
+  {
+    item: "Meet & Greet",
+    reason: "A professional representative awaits you with a personalized sign and full luggage assistance"
+  },
+  {
+    item: "Punctuality",
+    reason: "100% On-time guarantee; drivers arrive 15 minutes before scheduled pickup"
+  },
+  {
+    item: "Premium Fleet",
+    reason: "Modern, fully air-conditioned vehicles (Standard Sedan, Family Van, Luxury Business Class)"
+  },
+  {
+    item: "Onboard Comfort",
+    reason: "Complimentary High-speed Wi-Fi, bottled mineral water, and mobile charging ports"
+  },
+  {
+    item: "Expert Drivers",
+    reason: "Professional, multilingual drivers with deep knowledge of Egypt's safest and fastest routes"
+  },
+  {
+    item: "Fixed Pricing",
+    reason: "Transparent, all-inclusive rates (Tolls and Parking included) with no hidden fees"
+  }
+],
+
+included: [
+  "Personalized Meet & Greet",
+  "Full luggage assistance",
+  "Air-conditioned vehicle",
+  "High-speed Wi-Fi",
+  "Bottled mineral water",
+  "Mobile charging ports"
+],
+
+
+
     description: "Evening water sports."
   },
 ],
@@ -507,11 +556,60 @@ moreDetails: [
 ,
     description: "🗺️ SIRI SAND TOURS' advice to our clients : This tour is located entirely within a safe pedestrian zone, making it ideal for families and seniors, as there is no need to use a car once you reach the entrance of the religious complex."
   },
- {
-    title: "Airport Transfer",
-    image: "/images/itinerary/airport.jpg",
-    description: "Evening water sports."
+  {
+    title: "Limousine + Taxi",
+    image: "/images/itinerary/limouse.jpg",
+    price:15 ,
+  currency: "€",
+  highlights: [
+  "Professional representative with personalized sign and luggage assistance",
+  "100% On-time guarantee; drivers arrive 15 minutes early",
+  "Modern, fully air-conditioned vehicles (Standard Sedan, Family Van, Luxury Business Class)",
+  "Complimentary High-speed Wi-Fi, bottled mineral water, and mobile charging ports",
+  "Professional, multilingual drivers",
+  "Transparent all-inclusive rates (Tolls and Parking included)"
+],
+
+moreDetails: [
+  {
+    item: "Meet & Greet",
+    reason: "A professional representative awaits you with a personalized sign and full luggage assistance"
+  },
+  {
+    item: "Punctuality",
+    reason: "100% On-time guarantee; drivers arrive 15 minutes before scheduled pickup"
+  },
+  {
+    item: "Premium Fleet",
+    reason: "Modern, fully air-conditioned vehicles (Standard Sedan, Family Van, Luxury Business Class)"
+  },
+  {
+    item: "Onboard Comfort",
+    reason: "Complimentary High-speed Wi-Fi, bottled mineral water, and mobile charging ports"
+  },
+  {
+    item: "Expert Drivers",
+    reason: "Professional, multilingual drivers with deep knowledge of Egypt's safest and fastest routes"
+  },
+  {
+    item: "Fixed Pricing",
+    reason: "Transparent, all-inclusive rates (Tolls and Parking included) with no hidden fees"
   }
+],
+
+included: [
+  "Personalized Meet & Greet",
+  "Full luggage assistance",
+  "Air-conditioned vehicle",
+  "High-speed Wi-Fi",
+  "Bottled mineral water",
+  "Mobile charging ports"
+],
+
+
+
+    description: "Evening water sports."
+  },
 
 ]
 ,
@@ -565,17 +663,31 @@ moreDetails: [
     image: "/images/itinerary/royal-seascope.jpg",
       price: 35,
   currency: "€",
-  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
-  highlights: [
-    "2-hours on Orange Island",
-    "2-Snorkeling stops",
-    "Water sports: banana & sofa boat",
-    "2-hours on Orange Island",
-    "2-Snorkeling stops",
-    "Water sports: banana & sofa boat"
-    
-    
-  ],
+  pickupTimes: ["9:00 am"],
+  
+moreDetails: [
+  {
+    item: "Morning Trip(1)",
+    reason: "09:00AM- 11:00AM"
+  },
+ {
+    item: "Morning Trip (2)",
+    reason: "11:00AM- 1:00PM"
+  },
+ {
+    item: "afternoon Trip(3)",
+    reason: "03:00AM- 5:00PM"
+  },
+],
+ duration: "8hrs" ,
+
+ highlights: [
+  "Underwater Viewing: Descend to a depth of 3 meters inside the Sea Scope submarine.",
+  "Enjoy 45 minutes of viewing diverse marine life through specialized glass windows.",
+  "Snorkeling Stop: 45 minutes stop to explore vibrant coral reefs on the sea floor."
+],
+
+  included:["Complimentary Gear: Full", "snorkeling equipment (Life jackets, masks, and fins) provided for free." ,"Refreshments: Free mineral water available from the dispenser throughout the trip."],
     description: "Submarine tour to explore coral reefs and fish."
   },
   {
@@ -583,17 +695,51 @@ moreDetails: [
     image: "/images/itinerary/Nefertari.jpg",
       price: 40,
   currency: "€",
-  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
-  highlights: [
-    "2-hours on Orange Island",
-    "2-Snorkeling stops",
-    "Water sports: banana & sofa boat",
-    "2-hours on Orange Island",
-    "2-Snorkeling stops",
-    "Water sports: banana & sofa boat"
-    
-    
-  ],
+ pickupTimes: ["09:00 AM"],
+duration: "10hrs",
+included: [
+  "Soft drinks and mineral water",
+  "Life jacket",
+  "Lunch",
+  "Hotel transfers (Pick-up & Drop-off)",
+  "Snorkeling equipment",
+  "National Park fees and taxes"
+],
+
+excluded: [
+  "Professional Photographer",
+  "Transfers from South Marsa Alam Airport ($7 per person)"
+],
+
+extraInfo: [
+  "Free Cancellation: Cancel up to 24 hours in advance for a full refund.",
+  "Reserve now & pay later: Keep your travel plans flexible — book your spot and pay nothing today."
+],
+
+highlights: [
+  "Morning Trip: Starts at 09:00 AM and ends at 01:30 PM.",
+  "Sunset Trip: Starts at 02:00 PM and ends at 07:00 PM."
+],
+
+moreDetails: [
+  {
+    item: "Required Documents",
+    reason: "Personal ID (for Egyptians) or Passport (for non-Egyptians)."
+  },
+  {
+    item: "Clothing & Footwear",
+    reason: "Comfortable clothes and comfortable shoes are recommended."
+  },
+  {
+    item: "Personal Essentials",
+    reason: "Sunglasses and sunscreen."
+  },
+  {
+    item: "Snorkeling Guide",
+    reason: "Professional snorkeling guide available during the trip."
+  }
+],
+
     description: "Underwater viewing experience inside a real submarine."
   },
   {
@@ -601,17 +747,55 @@ moreDetails: [
     image: "/images/itinerary/super-safari.jpg",
       price: 40,
   currency: "€",
-  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
-  highlights: [
-    "2-hours on Orange Island",
-    "2-Snorkeling stops",
-    "Water sports: banana & sofa boat",
-    "2-hours on Orange Island",
-    "2-Snorkeling stops",
-    "Water sports: banana & sofa boat"
-    
-    
-  ],
+ pickupTimes: ["12:30 PM"],
+
+included: [
+  "4x4 Jeep Cars",
+  "Bedouin Party",
+  "Helmet",
+  "Dinner",
+  "Mineral Water",
+  "Tour Guide",
+  "Beach Buggy",
+  "Bedouin Village",
+  "Bedouin & Oriental Show",
+  "Camel Riding",
+  "Hotel Transfers (Pick up & Drop off)",
+  "All Taxes & Service Charges"
+],
+
+excluded: [
+  "Scarf (Shawl)",
+  "Photographer"
+],
+duration: "7 Hours",
+
+highlights: [
+  "Trip Time: Starts from 12:30 PM until 7:30 PM.",
+  "Desert adventure with 4x4 Jeep and Beach Buggy experience.",
+  "Camel riding and visit to a traditional Bedouin village.",
+  "Enjoy Bedouin dinner with Oriental show entertainment."
+],
+
+moreDetails: [
+  {
+    item: "Required Items",
+    reason: "National ID or Passport (for non-Egyptians)."
+  },
+  {
+    item: "Clothing",
+    reason: "Comfortable clothes"
+  },
+  {
+    item: "Footwear",
+    reason: "Sports shoes (sneakers)"
+  },
+  {
+    item: "Extra",
+    reason: "Bring a jacket or coat."
+  }
+],
+
     description: "Quad biking, camel ride, and desert sunset experience."
   },
   {
@@ -619,17 +803,29 @@ moreDetails: [
     image: "/images/itinerary/dolphin-house.jpg",
       price: 50,
   currency: "€",
-  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
-  highlights: [
-    "2-hours on Orange Island",
-    "2-Snorkeling stops",
-    "Water sports: banana & sofa boat",
-    "2-hours on Orange Island",
-    "2-Snorkeling stops",
-    "Water sports: banana & sofa boat"
-    
-    
-  ],
+  duration: "10 Hours",
+
+pickupTimes: ["07:30 AM"],
+
+included: [
+  "Snorkeling gear",
+  "Life jacket",
+  "Lunch",
+  "Drinks",
+  "Hotel transfers"
+],
+
+excluded: [
+  "Photographer"
+],
+
+moreDetails: [
+  {
+    item: "Must Bring",
+    reason: "Swimwear, sunscreen, sunglasses, and ID/Passport."
+  }
+],
+
     description: "Snorkel with dolphins in their natural habitat."
   },
   {
@@ -637,17 +833,21 @@ moreDetails: [
     image: "/images/itinerary/turtle-bay.jpg",
       price: 35,
   currency: "€",
-  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
-  highlights: [
-    "2-hours on Orange Island",
-    "2-Snorkeling stops",
-    "Water sports: banana & sofa boat",
-    "2-hours on Orange Island",
-    "2-Snorkeling stops",
-    "Water sports: banana & sofa boat"
-    
-    
-  ],
+ included: [
+  "Professional snorkeling guide",
+  "Life jacket",
+  "Lunch on the yacht",
+  "snorkeling eguipment",
+  "National park fees ",
+  "All necesary permits",
+  "Drinks",
+  "Hotel transfers"
+],
+duration:"8hrs",
+highlights:["Exact pickup time is confimed during booking"],
+excluded: [
+  "Professional Photographer"
+],
     description: "Snorkeling with turtles and colorful fish."
   },
   {
@@ -655,17 +855,17 @@ moreDetails: [
     image: "/images/itinerary/wadi-el-gemal.jpg",
       price: 28,
   currency: "€",
-  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
-  highlights: [
-    "2-hours on Orange Island",
-    "2-Snorkeling stops",
-    "Water sports: banana & sofa boat",
-    "2-hours on Orange Island",
-    "2-Snorkeling stops",
-    "Water sports: banana & sofa boat"
-    
-    
-  ],
+  duration:"8hrs",
+highlights:["Pickup time set upon booking"],
+excluded: [
+  "Professional Photographer", "personal expenses"
+],
+moreDetails: [
+  {
+    item: "Essentials",
+    reason: "Comfortable clothings & shoes sunscreen, sunglasses, ID/Passport."
+  }
+],
     description: "Nature reserve visit with mangroves and wildlife."
   },
   {
@@ -673,17 +873,30 @@ moreDetails: [
     image: "/images/itinerary/scuba-diving.jpg",
       price: 45,
   currency: "€",
-  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
-  highlights: [
-    "2-hours on Orange Island",
-    "2-Snorkeling stops",
-    "Water sports: banana & sofa boat",
-    "2-hours on Orange Island",
-    "2-Snorkeling stops",
-    "Water sports: banana & sofa boat"
+  pickupTimes: ["8:00 am"],
+  included:["Permit"],
+  excluded:["Photographer"],
+  duration:"7hrs",
+  moreDetails: [
+  {
+    item: "Requirements",
+    reason: "ID/Passport, Sunglasses, Sunscreen, Swimwear"},
     
-    
-  ],
+  {
+    item: "Transfers",
+    reason: " Included (Hotel pick-up & drop-off)"
+  },
+  {
+    item: "Equipment",
+    reason: "Included (Diving & Snorkeling gear)"
+  },
+  {
+    item: "Food & Drinks",
+    reason: "Included (Open buffet lunch, Water, Soft drinks)"
+  },
+  
+],
+  
     description: "Full-day diving excursion with professional instructors."
   }
 ]
@@ -738,17 +951,34 @@ moreDetails: [
     image: "/images/itinerary/tunis-village.jpg",
       price: 70,
   currency: "€",
-  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
-  highlights: [
-    "2-hours on Orange Island",
-    "2-Snorkeling stops",
-    "Water sports: banana & sofa boat",
-    "2-hours on Orange Island",
-    "2-Snorkeling stops",
-    "Water sports: banana & sofa boat"
-    
-    
-  ],
+  pickupTimes: ["8:00 am"],
+  moreDetails: [
+  {
+    item: "08:00 AM",
+    reason: "Traditional Breakfast: Arrive at the village for a rural breakfast (Feteer & Honey) overlooking the lake."
+  },
+  {
+    item: "10:00 AM",
+    reason: "Pottery School: Tour the workshops, try hand-making pottery, or shop for unique handicrafts."
+  },
+  {
+    item: "12:00 PM",
+    reason: "4x4 Safari: Visit Wadi El Rayan, the Waterfalls, and Mudawarra Mountain with Sandboarding."
+  },
+  {
+    item: "03:00 PM",
+    reason: "Authentic Lunch: Return for a home-cooked Egyptian meal (Roasted Duck or local specialties)."
+  },
+  {
+    item: "04:30 PM",
+    reason: "Sunset Experience: Felucca ride on Lake Qarun at sunset or Horseback riding through the farms."
+  },
+  {
+    item: "06:00 PM",
+    reason: "Art & Departure: Free tour of the Caricature Museum followed by the return journey."
+  }
+],
+duration:"10hrs",
     description: "Visit the famous pottery village and local art workshops."
   },
   {
@@ -756,17 +986,31 @@ moreDetails: [
     image: "/images/itinerary/wadi-el-rayan.jpg",
       price: 25,
   currency: "€",
-  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
-  highlights: [
-    "2-hours on Orange Island",
-    "2-Snorkeling stops",
-    "Water sports: banana & sofa boat",
-    "2-hours on Orange Island",
-    "2-Snorkeling stops",
-    "Water sports: banana & sofa boat"
-    
-    
-  ],
+  pickupTimes: ["8:00 am"],
+  duration:"10hrs",
+  moreDetails: [
+  {
+    item: "Waterfalls Visit",
+    reason: "Sports Shoes & Comfy Clothes"
+  },
+  {
+    item: "Jabal al-Mudawarra (Hiking)",
+    reason: "Sunglasses & Cap"
+  },
+  {
+    item: "Sandboarding",
+    reason: "Sunblock"
+  },
+  {
+    item: "4x4 Safari & Lake Felucca",
+    reason: "Extra Water"
+  },
+  {
+    item: "Tunis Village & Lunch",
+    reason: "Cash for shopping"
+  }
+],
+
     description: "Waterfalls, sandboarding, and desert safari adventure."
   }
 ]
@@ -824,35 +1068,67 @@ moreDetails: [
     image: "/images/itinerary/shali-fortress.jpg",
       price: 45,
   currency: "€",
-  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
+  pickupTimes: [""],
   highlights: [
-    "2-hours on Orange Island",
-    "2-Snorkeling stops",
-    "Water sports: banana & sofa boat",
-    "2-hours on Orange Island",
-    "2-Snorkeling stops",
-    "Water sports: banana & sofa boat"
-    
-    
-  ],
-    description: "Explore ancient ruins and tombs."
+  "Day 1: Heritage Discovery - Tour of Shali Fortress with panoramic view of the oasis.",
+  "Day 2: Wellness & Adventure - Explore history at Mountain of the Dead and the Temple of the Oracle.",
+  "Day 3: Relaxation & Memories - Tour of Dakrur Mountain, the icon of sand therapy."
+],
+
+moreDetails: [
+  {
+    item: "Day 1",
+    reason: "Heritage Discovery: Shali Fortress panoramic views."
+  },
+  {
+    item: "Day 2",
+    reason: "Wellness & Adventure: Mountain of the Dead and Temple of the Oracle exploration."
+  },
+  {
+    item: "Day 3",
+    reason: "Relaxation & Memories: Dakrur Mountain visit for sand therapy experience."
+  }
+],
+
+    description: "Make sure to bring comfortable clothing and suitable shoes for walking over fortresses and sand dunes"
   },
   {
     title: "Salt Lakes & Cleopatra’s Bath",
     image: "/images/itinerary/salt-lake.webp",
       price: 40,
   currency: "€",
-  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
-  highlights: [
-    "2-hours on Orange Island",
-    "2-Snorkeling stops",
-    "Water sports: banana & sofa boat",
-    "2-hours on Orange Island",
-    "2-Snorkeling stops",
-    "Water sports: banana & sofa boat"
-    
-    
-  ],
+  pickupTimes: [""],
+ highlights: [
+  "Cleopatra's Spring - Swimming & Cafes.",
+  "Siwan Lunch - Traditional Meal (Mandi).",
+  "Salt Lakes - Floating in Salt Mines.",
+  "Fatnas Island.",
+  "Sunset & Palm Groves."
+],
+
+moreDetails: [
+  {
+    item: "Cleopatra's Spring",
+    reason: "Visit before Salt Lakes to rinse off the salt later; enjoy swimming and cafes."
+  },
+  {
+    item: "Siwan Lunch",
+    reason: "Experience a traditional meal (Mandi)."
+  },
+  {
+    item: "Salt Lakes",
+    reason: "Float effortlessly in the mineral-rich salt waters."
+  },
+  {
+    item: "Fatnas Island",
+    reason: "Explore the serene island surroundings."
+  },
+  {
+    item: "Sunset & Palm Groves",
+    reason: "End the day with a beautiful sunset among palm groves."
+  }
+],
+
     description: "Relax in therapeutic salt lakes and Cleopatra’s Pool."
   },
   {
@@ -1036,7 +1312,92 @@ included:["Live tour guide" ,"" , "English",  "Pickup: All guest will be contact
     duration: "3 hrs",
        price: 320,
   currency: "€",
-  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
+  highlights: [
+  "Morning Activity",
+  "Evening Experience",
+  "Arrival & Resort Check-in",
+  "Welcome Sunset Dinner",
+  "Island Exploration & Swimming",
+  "Beachside Yoga Session",
+  "Coral Reef Snorkeling Trip",
+  "Outdoor Movie Night",
+  "Luxury Spa & Wellness Treatment",
+  "Private In-Villa Dining",
+  "Kayaking & Paddle Boarding",
+  "Beach BBQ Party",
+  "Relaxation & Free Leisure Time",
+  "Lounge Music & Cocktails",
+  "Farewell Breakfast",
+  "Checkout & Departure"
+],
+
+moreDetails: [
+  {
+    item: "Morning Activity",
+    reason: "Start your day with curated morning experiences."
+  },
+  {
+    item: "Evening Experience",
+    reason: "Enjoy relaxing evening activities and entertainment."
+  },
+  {
+    item: "Arrival & Resort Check-in",
+    reason: "Settle into your resort upon arrival."
+  },
+  {
+    item: "Welcome Sunset Dinner",
+    reason: "Dine while watching a beautiful sunset."
+  },
+  {
+    item: "Island Exploration & Swimming",
+    reason: "Explore the island and enjoy swimming sessions."
+  },
+  {
+    item: "Beachside Yoga Session",
+    reason: "Participate in a relaxing yoga session by the beach."
+  },
+  {
+    item: "Coral Reef Snorkeling Trip",
+    reason: "Discover vibrant marine life while snorkeling."
+  },
+  {
+    item: "Outdoor Movie Night",
+    reason: "Enjoy a cinematic experience under the stars."
+  },
+  {
+    item: "Luxury Spa & Wellness Treatment",
+    reason: "Indulge in wellness and spa therapies."
+  },
+  {
+    item: "Private In-Villa Dining",
+    reason: "Savor exclusive dining within your villa."
+  },
+  {
+    item: "Kayaking & Paddle Boarding",
+    reason: "Engage in water sports and active exploration."
+  },
+  {
+    item: "Beach BBQ Party",
+    reason: "Enjoy a lively BBQ party by the beach."
+  },
+  {
+    item: "Relaxation & Free Leisure Time",
+    reason: "Unwind with free time at your own pace."
+  },
+  {
+    item: "Lounge Music & Cocktails",
+    reason: "Experience evening music with cocktails."
+  },
+  {
+    item: "Farewell Breakfast",
+    reason: "Conclude your stay with a memorable breakfast."
+  },
+  {
+    item: "Checkout & Departure",
+    reason: "Check out from the resort and depart."
+  }
+],
+
     description: "Luxury island day experience."
   },
   {
@@ -1044,8 +1405,38 @@ included:["Live tour guide" ,"" , "English",  "Pickup: All guest will be contact
     image: "/images/itinerary/hula.jpg",
        price: 23,
   currency: "€",
-  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
-    
+  pickupTimes: ["9:00 am"],
+  included: [
+  "Hotel Transfers",
+  "Island Permits",
+  "Snorkeling Guide",
+  "Water Sports (Banana & Cobra)",
+  "Lunch & Drinks (on Yacht)",
+  "Beach Chairs",
+  "Diving Equipment"
+],
+excluded: [
+  "Professional Photographer",
+  "Island Drinks",
+  "Transfers from Makadi, Sahl Hasheesh, El Gouna, Soma Bay"
+],
+
+highlights: [
+  "Timing - 9:00 AM to 4:00 PM.",
+  "Mandatory Items - ID/Passport, Comfortable Clothes, Swimwear, Sunscreen, Sunglasses."
+],
+
+moreDetails: [
+  {
+    item: "Timing",
+    reason: "Tour runs from 9:00 AM to 4:00 PM."
+  },
+  {
+    item: "Mandatory Items",
+    reason: "Bring ID/Passport, Comfortable Clothes, Swimwear, Sunscreen, Sunglasses."
+  }
+],
+
     description: "Snorkeling and beach relaxation."
   },
   {
@@ -1061,26 +1452,77 @@ included:["Live tour guide" ,"" , "English",  "Pickup: All guest will be contact
     image: "/images/itinerary/orange-bay.jpg",
        price:25 ,
   currency: "€",
-  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
+ pickupTimes: ["9:00 am"],
+  included: [
+  "Hotel Transfers",
+  "Island Permits",
+  "Snorkeling Guide",
+  "Water Sports (Banana & Cobra)",
+  "Lunch & Drinks (on Yacht)",
+  "Beach Chairs",
+  "Diving Equipment"
+],
+excluded: [
+  "Professional Photographer",
+  "Island Drinks",
+  "Transfers from Makadi, Sahl Hasheesh, El Gouna, Soma Bay"
+],
+
+highlights: [
+  "Timing - 9:00 AM to 4:00 PM.",
+  "Mandatory Items - ID/Passport, Comfortable Clothes, Swimwear, Sunscreen, Sunglasses."
+],
+
+moreDetails: [
+  {
+    item: "Timing",
+    reason: "Tour runs from 9:00 AM to 4:00 PM."
+  },
+  {
+    item: "Mandatory Items",
+    reason: "Bring ID/Passport, Comfortable Clothes, Swimwear, Sunscreen, Sunglasses."
+  }
+],
     description: "Relax on sandy beaches and swim."
   },
   {
-    // === POPULATED WITH EXACT POPUP DATA FOR PREVIEW === //
+  
     title: "Paradise Island",
     image: "/images/itinerary/paradise.jpg",
     price: 50,
     infantPrice: "",
-    extraInfo: ["5 Euro for natural park"],
-    duration: "approx. 3 hours",
-    currency: "€",
-    pickupTimes: ["8:00 am"],
-    returnTime: "4:00 pm",
-    highlights: [
-      "3-hours in the Paradise island",
-      "1 stop for snorkelling",
-      "Snorkeling Equipment",
-      "Get your lunch in the island open buffet"
-    ],
+   pickupTimes: ["9:00 am"],
+  included: [
+  "Hotel Transfers",
+  "Island Permits",
+  "Snorkeling Guide",
+  "Water Sports (Banana & Cobra)",
+  "Lunch & Drinks (on Yacht)",
+  "Beach Chairs",
+  "Diving Equipment"
+],
+excluded: [
+  "Professional Photographer",
+  "Island Drinks",
+  "Transfers from Makadi, Sahl Hasheesh, El Gouna, Soma Bay"
+],
+
+highlights: [
+  "Timing - 9:00 AM to 4:00 PM.",
+  "Mandatory Items - ID/Passport, Comfortable Clothes, Swimwear, Sunscreen, Sunglasses."
+],
+
+moreDetails: [
+  {
+    item: "Timing",
+    reason: "Tour runs from 9:00 AM to 4:00 PM."
+  },
+  {
+    item: "Mandatory Items",
+    reason: "Bring ID/Passport, Comfortable Clothes, Swimwear, Sunscreen, Sunglasses."
+  }
+],
+
     description: "Boat trip with snorkeling."
   },
   {
@@ -1088,7 +1530,35 @@ included:["Live tour guide" ,"" , "English",  "Pickup: All guest will be contact
     image: "/images/itinerary/sharm.jpg",
     price:35 ,
   currency: "€",
-  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
+  pickupTimes:["8:00am"],
+  highlights: [
+  "Schedule - 08:00 AM to 04:30 PM.",
+  "Requirements - ID/Passport, Sunglasses, Swimwear, Sunscreen."
+],
+
+moreDetails: [
+  {
+    item: "Schedule",
+    reason: "Tour runs from 08:00 AM to 04:30 PM."
+  },
+  {
+    item: "Requirements",
+    reason: "Bring ID/Passport, Sunglasses, Swimwear, Sunscreen."
+  }
+],
+
+included: [
+  "Diving gear",
+  "Drinks (Yacht)",
+  "Beach Lunch & BBQ",
+  "Snorkeling guide",
+  "Transfers"
+],
+
+excluded: [
+  "Photography"
+],
+
     description: "Snorkeling beach day."
   },
   {
@@ -1096,7 +1566,41 @@ included:["Live tour guide" ,"" , "English",  "Pickup: All guest will be contact
     image: "/images/itinerary/sinbad.jpg",
     price:22 ,
   currency: "€",
-  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
+ highlights: [
+  "Availability - Daily (All week)",
+  "Duration - 60 minutes underwater",
+  "Depth - Up to 25 meters deep",
+  "Highlights - Small Marine Museum, Coral Reefs, & Colorful Fish"
+],
+
+moreDetails: [
+  {
+    item: "Availability",
+    reason: "Activity is available daily throughout the week."
+  },
+  {
+    item: "Duration",
+    reason: "Experience 60 minutes underwater."
+  },
+  {
+    item: "Depth",
+    reason: "Dive up to 25 meters deep."
+  },
+  {
+    item: "Highlights",
+    reason: "Explore Small Marine Museum, Coral Reefs, & Colorful Fish."
+  }
+],
+
+included: [
+  "Submarine tour",
+  "Museum entry"
+],
+
+excluded: [
+  "Hotel transfers (Transportation)"
+],
+
     description: "Underwater viewing experience."
   },
   {
@@ -1104,7 +1608,42 @@ included:["Live tour guide" ,"" , "English",  "Pickup: All guest will be contact
     image: "/images/itinerary/parasailing.jpg",
     price:20 ,
   currency: "€",
-  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
+  highlights: [
+ 
+  "Optional - Double Flight: Max weight 150 kg (for 2 people)",
+  "Add-ons - Transportation can be added (extra charge)",
+  "Kids - Not suitable for children",
+  "Essentials - Swimwear, Sunglasses, and a Towel"
+],
+
+moreDetails: [
+ 
+  {
+    item: "Optional",
+    reason: "Double Flight option available for up to 150 kg (2 people)."
+  },
+  {
+    item: "Add-ons",
+    reason: "Transportation can be added for an extra charge."
+  },
+  {
+    item: "Kids",
+    reason: "Activity is not suitable for children."
+  },
+  {
+    item: "Essentials",
+    reason: "Bring Swimwear, Sunglasses, and a Towel."
+  }
+],
+
+included: [
+  "10-minute flight"
+],
+
+excluded: [
+  "Transportation"
+],
+
     description: "Fly over the Red Sea."
   },
   {
@@ -1112,7 +1651,40 @@ included:["Live tour guide" ,"" , "English",  "Pickup: All guest will be contact
     image: "/images/itinerary/hurghada- aquarium.jpg",
     price:30 ,
   currency: "€",
-  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
+  infantPrice:"Not suitable for children.",
+  highlights: [
+  "Optional - Double Flight: Max weight 150 kg (for 2 people)",
+  "Add-ons - Transportation can be added (extra charge)",
+  "Kids - Not suitable for children",
+  "Essentials - Swimwear, Sunglasses, and a Towel"
+],
+
+moreDetails: [
+ 
+  {
+    item: "Optional",
+    reason: "Double Flight available for up to 150 kg (2 people)."
+  },
+  {
+    item: "Add-ons",
+    reason: "Transportation can be added for an extra charge."
+  },
+
+  {
+    item: "Essentials",
+    reason: "Bring Swimwear, Sunglasses, and a Towel."
+  }
+],
+
+included: [
+  "10-minute flight"
+],
+
+excluded: [
+  "Transportation"
+],
+
+  
     description: "Marine life exhibition."
   },
   {
@@ -1120,7 +1692,47 @@ included:["Live tour guide" ,"" , "English",  "Pickup: All guest will be contact
     image: "/images/itinerary/speedboat.jpg",
     price:110 ,
   currency: "€",
-  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
+   
+ highlights: [
+  "Dolphin Trip (Abu Minqar) OR Island Trip (Orange / Eden / Paradise)",
+  "Per Boat Pricing (No hidden fees / No upselling)",
+  "Payment on trip day (Cash any currency or Card in EGP)",
+  "Island Entry €10 Adults / €5 Children (For Option 2)"
+],
+
+moreDetails: [
+  {
+    item: "Tours",
+    reason: "Dolphin Trip (Abu Minqar) OR Island Trip (Orange / Eden / Paradise)"
+  },
+  {
+    item: "Transport",
+    reason: "Hotel Transfers included"
+  },
+  {
+    item: "Pricing",
+    reason: "Per Boat (No hidden fees / No upselling)"
+  },
+  {
+    item: "Payment",
+    reason: "On trip day (Cash in any currency or Card in EGP)"
+  },
+  {
+    item: "Island Entry",
+    reason: "€10 Adults / €5 Children (For Option 2)"
+  }
+],
+
+included: [
+  "Snorkeling gear",
+  "Private Guide",
+  "Lunch",
+  "Drinks & Snacks",
+  "Hotel Transfers"
+],
+
+infantPrice:"€5",
+
     description: "Private sea tour."
   },
   {
@@ -1128,7 +1740,48 @@ included:["Live tour guide" ,"" , "English",  "Pickup: All guest will be contact
     image: "/images/itinerary/fishing.jpg",
     price:100 ,
   currency: "€",
-  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
+  highlights: [
+  "Hurghada, Red Sea",
+  "Grady White (Well-equipped)",
+  "12+ Years Experience",
+  "Child Friendly Policy",
+  "Keep your catch"
+],
+
+moreDetails: [
+  {
+    item: "Location",
+    reason: "Hurghada, Red Sea"
+  },
+  {
+    item: "Boat",
+    reason: "Grady White (Well-equipped)"
+  },
+  {
+    item: "Experience",
+    reason: "12+ Years"
+  },
+  {
+    item: "Fees",
+    reason: "Taxes & Fuel included"
+  },
+  {
+    item: "Policies",
+    reason: "Child Friendly. Keep your catch. No pickup"
+  }
+],
+
+included: [
+  "Tackle",
+  "Bait",
+  "License",
+  "Drinks & Snacks"
+],
+
+excluded: [
+  "Pickup"
+],
+
     description: "Sea fishing experience."
   },
   {
@@ -1136,7 +1789,59 @@ included:["Live tour guide" ,"" , "English",  "Pickup: All guest will be contact
     image: "/images/itinerary/scuba-diving2.jpg",
     price:27 ,
   currency: "€",
-  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
+  highlights: [
+  "Beginner-friendly (No prior experience required)",
+  "Guided step-by-step by friendly instructors",
+  "Hurghada, Red Sea",
+  "2 Diving stops (15-20 minutes each)",
+  "Free Hotel Pickup & Drop-off (Within Hurghada)",
+  "Full Scuba equipment included",
+  "Lunch on board and unlimited soft drinks"
+],
+
+moreDetails: [
+  {
+    item: "Experience Level",
+    reason: "Beginner-friendly, no prior experience required"
+  },
+  {
+    item: "Service Style",
+    reason: "Guided step-by-step by friendly instructors"
+  },
+  {
+    item: "Location",
+    reason: "Hurghada, Red Sea"
+  },
+  {
+    item: "Diving Sessions",
+    reason: "2 diving stops (15-20 minutes each)"
+  },
+  {
+    item: "Transport",
+    reason: "Free Hotel Pickup & Drop-off within Hurghada"
+  },
+  {
+    item: "Equipment",
+    reason: "Full Scuba equipment included"
+  },
+  {
+    item: "Food & Drinks",
+    reason: "Lunch on board and unlimited soft drinks"
+  }
+],
+
+included: [
+  "Full Scuba equipment",
+  "Lunch on board",
+  "Unlimited soft drinks",
+  "Hotel Pickup & Drop-off within Hurghada"
+],
+
+excluded: [
+  "Underwater photography",
+  "National park fee (€7.00 per person)"
+],
+
     description: "Certified diving session."
   },
   {
@@ -1144,7 +1849,42 @@ included:["Live tour guide" ,"" , "English",  "Pickup: All guest will be contact
     image: "/images/itinerary/horse.jpg",
     price:20 ,
   currency: "€",
-  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
+  highlights: [
+  "Horseback Riding (Makadi Bay)",
+  "Duration: 3 Hours",
+  "Rating: 4.6 (450 reviews)",
+  "Free Cancellation & Mobile Tickets"
+],
+
+moreDetails: [
+  {
+    item: "Activity",
+    reason: "Horseback Riding (Makadi Bay)"
+  },
+  {
+    item: "Duration",
+    reason: "3 Hours"
+  },
+  {
+    item: "Rating",
+    reason: "4.6 (450 reviews)"
+  },
+  {
+    item: "Benefits",
+    reason: "Free Cancellation & Mobile Tickets"
+  }
+],
+
+included: [
+  "Horse",
+  "Expert Guide",
+  "Water"
+],
+
+excluded: [
+  "Not specified"
+],
+
     description: "Beach or desert horse ride."
   },
   {
@@ -1152,9 +1892,41 @@ included:["Live tour guide" ,"" , "English",  "Pickup: All guest will be contact
     image: "/images/itinerary/dolphin-house2.jpg",
     price:25 ,
   currency: "€",
-  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
+  extraInfo:["Free Cancellation: Cancel up 72hrs in advance for full refund", "Reserve now & pay later: Keep your travel plans flexble- book your spot and pay nothing today"
+     ], 
+  highlights: [
+  "1-Hour Dolphin and Walruses Show",
+  "Instant Confirmation",
+  "Hotel Pickup & Drop-off Included",
+  "Free Cancellation (72 Hours in Advance)"
+],
+duration:"1hr",
+
+moreDetails: [
+ 
+  {
+    item: "Confirmation",
+    reason: "Mobile E-ticket with QR code to scan at the gates"
+  },
+  
+  
+],
+infantPrice:"Children less than 6 years old are FREE of charge",
+included: [
+  "1-Hour Dolphin and Walruses Show",
+  "Hotel pickup and drop-off (Hurghada, Makadi Bay)",
+  "Swimming with Dolphins (Optional - if package selected)",
+  "Family Swimming with Dolphins (Optional - if package selected)"
+],
+
+excluded: [
+  "Food and Drinks (Unless option selected during checkout)",
+  "Pickup from El Gouna, Soma Bay, Safaga (Extra cost)"
+],
+
     description: "Snorkel with dolphins."
   },
+
   {
     title: "Kite Surf",
     image: "/images/itinerary/night-surf.jpg",
@@ -1168,7 +1940,50 @@ included:["Live tour guide" ,"" , "English",  "Pickup: All guest will be contact
     image: "/images/itinerary/safari-hurghada.jpg",
     price:35 ,
   currency: "€",
-  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
+  duration:"8/10hrs",
+  highlights: [
+  "Moderate difficulty",
+  "Group Size: 2-50 people",
+  "Meeting Point: Hotel pickup",
+  "Food & Drinks: Arabic welcome drink and BBQ buffet"
+],
+
+moreDetails: [
+  {
+    item: "Difficulty",
+    reason: "Moderate"
+  },
+  {
+    item: "Group Size",
+    reason: "2-50 people"
+  },
+  {
+    item: "Meeting Point",
+    reason: "Hotel pickup"
+  },
+  {
+    item: "Activities Included",
+    reason: "Quad bike rental, 4x4 Jeep safari, Spider car buggy ride, Camel ride, Folklore show, Arabic welcome drink, BBQ buffet"
+  },
+  {
+    item: "Food & Drinks",
+    reason: "Arabic welcome drink and BBQ buffet"
+  }
+],
+  included: [
+  "Professional English-speaking guide",
+  "Hotel pickup/drop-off",
+  "Bedouin village entrance fee",
+  "Safety equipment"
+],
+
+excluded: [
+  "Travel insurance",
+  "Tips/gratuities",
+  "Personal photo printing",
+  "Alcoholic beverages"
+],
+
     description: "Evening water sports."
   }
   ,
@@ -1177,7 +1992,64 @@ included:["Live tour guide" ,"" , "English",  "Pickup: All guest will be contact
     image: "/images/itinerary/city.jpg",
     price:15 ,
   currency: "€",
-  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
+  highlights: [
+  "City Tour Hurghada (4:00 PM - 9:00 PM)",
+  "Old Sheraton Panorama - Sea view",
+  "Hurghada Marina - Stroll among luxurious yachts",
+  "Fish Market - Experience live local marine life",
+  "El Mina Mosque - Islamic architectural masterpiece",
+  "The Old Town (El Dahar) - Explore the charm of the past",
+  "Saint Shenouda Church - Historical landmarks",
+  "Fruit & Vegetable Market - Traditional local market tour",
+  "Safe and comfortable journey with skilled driver"
+],
+
+moreDetails: [
+  {
+    item: "Old Sheraton Panorama",
+    reason: "Enjoy the most beautiful sea view"
+  },
+  {
+    item: "Hurghada Marina",
+    reason: "A stroll among luxurious yachts"
+  },
+  {
+    item: "Fish Market",
+    reason: "Experience live local marine life"
+  },
+  {
+    item: "El Mina Mosque",
+    reason: "Visit this Islamic architectural masterpiece"
+  },
+  {
+    item: "The Old Town (El Dahar)",
+    reason: "Explore the charm of the past"
+  },
+  {
+    item: "Saint Shenouda Church",
+    reason: "Visit historical landmarks of El Dahar"
+  },
+  {
+    item: "Fruit & Vegetable Market",
+    reason: "Tour of the traditional local market with a knowledgeable guide"
+  },
+  {
+    item: "Journey",
+    reason: "A skilled driver familiar with the roads; safe, enjoyable, and comfortable"
+  }
+],
+
+included: [
+  "Professional guide",
+  "Skilled driver",
+  "City tour transportation"
+],
+
+excluded: [
+  "Personal expenses",
+  "Food & drinks"
+],
+
     description: "Evening water sports."
   },
    {
@@ -1185,7 +2057,53 @@ included:["Live tour guide" ,"" , "English",  "Pickup: All guest will be contact
     image: "/images/itinerary/golf.jpg",
     price:55 ,
   currency: "€",
-  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
+ extraInfo: [
+  "Free Cancellation: Cancel up to 24 hours in advance for a full refund.",
+  "Reserve now & pay later: Keep your travel plans flexible — book your spot and pay nothing today."
+],
+highlights: [
+  "Reserve now, pay later",
+  "Duration: 3 hours",
+  "Group Size: Max 6 (English/Arabic)",
+  "Minimum Handicap (HCP) 36",
+  "Not suitable for Pregnancy / Over 95 years old"
+],
+
+moreDetails: [
+  {
+    item: "Payment",
+    reason: "Reserve now, pay later"
+  },
+  {
+    item: "Duration",
+    reason: "3 hours"
+  },
+  {
+    item: "Group Size",
+    reason: "Max 6 (English/Arabic)"
+  },
+  {
+    item: "Requirement",
+    reason: "Minimum Handicap (HCP) 36"
+  },
+  {
+    item: "Not Suitable For",
+    reason: "Pregnancy / Over 95 years old"
+  }
+],
+
+included: [
+  "9 or 18 holes",
+  "Range token",
+  "Free trolley"
+],
+
+excluded: [
+  "Transport",
+  "Golf carts",
+  "Food/drinks"
+],
+
     description: "Evening water sports."
   },
   {
@@ -1193,7 +2111,55 @@ included:["Live tour guide" ,"" , "English",  "Pickup: All guest will be contact
     image: "/images/itinerary/spa.jpg",
     price:40 ,
   currency: "€",
-  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
+  duration:"2hrs",
+  highlights: [
+  "Hurghada Hammam & Massage",
+  "Main Services: Steam, Jacuzzi, Exfoliation, & 45-min Massage",
+  "Private Group Only",
+  "Not Wheelchair Accessible"
+],
+
+moreDetails: [
+  {
+    item: "Main Services",
+    reason: "Steam, Jacuzzi, Exfoliation, & 45-min Massage"
+  },
+  {
+    item: "Type",
+    reason: "Private Group Only"
+  },
+  {
+    item: "Note",
+    reason: "Not Wheelchair Accessible"
+  },
+  {
+    item: "Full Body Exfoliation",
+    reason: "Traditional Hammam"
+  },
+  
+  {
+    item: "Relaxing Massage",
+    reason: "45 Minutes"
+  },
+  {
+    item: "Steam Bath",
+    reason: "Spa Access"
+  },
+ 
+  {
+    item: "Sauna",
+    reason: "Spa Access"
+  }
+],
+
+included: [
+  "Hotel Transfers"
+],
+
+excluded: [
+  "Not Wheelchair Accessible"
+],
+
     description: "Evening water sports."
   },
   {
@@ -1201,7 +2167,33 @@ included:["Live tour guide" ,"" , "English",  "Pickup: All guest will be contact
     image: "/images/itinerary/tattoo.jpg",
     price:28 ,
   currency: "€",
-  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
+  highlights: [
+  "Strict adherence to highest international hygiene and sterilization standards",
+  "Handpicked elite guest artists specializing in creative Arabic calligraphy and Oriental symbolism",
+  "Premium 'Aftercare Kit' with natural desert-inspired oils for tattoo healing"
+],
+
+moreDetails: [
+  {
+    item: "Safety First",
+    reason: "We strictly adhere to the highest international hygiene and sterilization standards"
+  },
+  {
+    item: "Curation",
+    reason: "Handpicked elite guest artists specializing in creative Arabic calligraphy and Oriental symbolism"
+  },
+  {
+    item: "Exclusive Gear",
+    reason: "Every client receives a premium 'Aftercare Kit' with natural desert-inspired oils for optimal tattoo healing"
+  }
+],
+
+included: [
+  "Premium Aftercare Kit"
+],
+
+
+
     description: "Evening water sports."
   },
    {
@@ -1209,18 +2201,112 @@ included:["Live tour guide" ,"" , "English",  "Pickup: All guest will be contact
     image: "/images/itinerary/limouse.jpg",
     price:15 ,
   currency: "€",
-  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
+  highlights: [
+  "Professional representative with personalized sign and luggage assistance",
+  "100% On-time guarantee; drivers arrive 15 minutes early",
+  "Modern, fully air-conditioned vehicles (Standard Sedan, Family Van, Luxury Business Class)",
+  "Complimentary High-speed Wi-Fi, bottled mineral water, and mobile charging ports",
+  "Professional, multilingual drivers",
+  "Transparent all-inclusive rates (Tolls and Parking included)"
+],
+
+moreDetails: [
+  {
+    item: "Meet & Greet",
+    reason: "A professional representative awaits you with a personalized sign and full luggage assistance"
+  },
+  {
+    item: "Punctuality",
+    reason: "100% On-time guarantee; drivers arrive 15 minutes before scheduled pickup"
+  },
+  {
+    item: "Premium Fleet",
+    reason: "Modern, fully air-conditioned vehicles (Standard Sedan, Family Van, Luxury Business Class)"
+  },
+  {
+    item: "Onboard Comfort",
+    reason: "Complimentary High-speed Wi-Fi, bottled mineral water, and mobile charging ports"
+  },
+  {
+    item: "Expert Drivers",
+    reason: "Professional, multilingual drivers with deep knowledge of Egypt's safest and fastest routes"
+  },
+  {
+    item: "Fixed Pricing",
+    reason: "Transparent, all-inclusive rates (Tolls and Parking included) with no hidden fees"
+  }
+],
+
+included: [
+  "Personalized Meet & Greet",
+  "Full luggage assistance",
+  "Air-conditioned vehicle",
+  "High-speed Wi-Fi",
+  "Bottled mineral water",
+  "Mobile charging ports"
+],
+
+
+
     description: "Evening water sports."
   },
 
 
 
-   {
-    title: "Airport Transfer",
-    image: "/images/itinerary/airport.jpg",
-    description: "Evening water sports."
-  }
+    {
+    title: "Limousine + Taxi",
+    image: "/images/itinerary/limouse.jpg",
+    price:15 ,
+  currency: "€",
+  highlights: [
+  "Professional representative with personalized sign and luggage assistance",
+  "100% On-time guarantee; drivers arrive 15 minutes early",
+  "Modern, fully air-conditioned vehicles (Standard Sedan, Family Van, Luxury Business Class)",
+  "Complimentary High-speed Wi-Fi, bottled mineral water, and mobile charging ports",
+  "Professional, multilingual drivers",
+  "Transparent all-inclusive rates (Tolls and Parking included)"
+],
 
+moreDetails: [
+  {
+    item: "Meet & Greet",
+    reason: "A professional representative awaits you with a personalized sign and full luggage assistance"
+  },
+  {
+    item: "Punctuality",
+    reason: "100% On-time guarantee; drivers arrive 15 minutes before scheduled pickup"
+  },
+  {
+    item: "Premium Fleet",
+    reason: "Modern, fully air-conditioned vehicles (Standard Sedan, Family Van, Luxury Business Class)"
+  },
+  {
+    item: "Onboard Comfort",
+    reason: "Complimentary High-speed Wi-Fi, bottled mineral water, and mobile charging ports"
+  },
+  {
+    item: "Expert Drivers",
+    reason: "Professional, multilingual drivers with deep knowledge of Egypt's safest and fastest routes"
+  },
+  {
+    item: "Fixed Pricing",
+    reason: "Transparent, all-inclusive rates (Tolls and Parking included) with no hidden fees"
+  }
+],
+
+included: [
+  "Personalized Meet & Greet",
+  "Full luggage assistance",
+  "Air-conditioned vehicle",
+  "High-speed Wi-Fi",
+  "Bottled mineral water",
+  "Mobile charging ports"
+],
+
+
+
+    description: "Evening water sports."
+  },
 ]
 ,
 
