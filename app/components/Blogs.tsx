@@ -74,13 +74,28 @@ export default function BlogSection() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
         {blogPosts.map((post) => (
           <article key={post.id} className="hover:scale-[1.02] transition">
-            <div className="relative h-72 rounded-2xl overflow-hidden">
+            <div className="relative h-72 rounded-2xl overflow-hidden group-hover:scale-110 group">
               <Image
                 src={post.image}
                 alt={post.title}
                 fill
                 className="object-cover transition-transform duration-700 hover:scale-110"
               />
+              {/* Shine Effect (Top → Bottom) */}
+<div className="absolute inset-0 pointer-events-none overflow-hidden">
+  <div
+    className="
+      absolute inset-0
+      bg-gradient-to-b from-transparent via-white/25 to-transparent
+      translate-y-[-100%]
+      group-hover:translate-y-[100%]
+      transition-transform
+      duration-1000
+      ease-out
+    "
+  />
+</div>
+
             </div>
 
             <div className="pt-6">

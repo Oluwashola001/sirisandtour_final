@@ -60,16 +60,33 @@ export default function PopularDestinationsSlider() {
           <SwiperSlide key={index}>
             <div className="group bg-white rounded-3xl border border-gray-200 overflow-hidden shadow-sm flex flex-col h-full">
               {/* IMAGE */}
-              <div className="relative w-full h-100 overflow-hidden">
+              <div className="relative w-full h-100 overflow-hidden bg-gray-100">
+
                 <Image
                   src={tour.heroImage}
                   alt={tour.cardTitle || "Tour image"}
 
                   fill
                   sizes="(max-width: 768px) 90vw, (max-width: 1024px) 50vw, 33vw"
-                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                 className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+
                   priority
                 />
+                {/* Shine Effect (Top → Bottom) */}
+<div className="absolute inset-0 pointer-events-none overflow-hidden">
+  <div
+    className="
+      absolute inset-0
+      bg-gradient-to-b from-transparent via-white/25 to-transparent
+      translate-y-[-100%]
+      group-hover:translate-y-[100%]
+      transition-transform
+      duration-1000
+      ease-out
+    "
+  />
+</div>
+
               </div>
 
               {/* CONTENT */}

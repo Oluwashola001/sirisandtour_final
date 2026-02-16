@@ -40,7 +40,7 @@ type PolaroidProps = {
   aspect?: 'portrait' | 'square' | 'landscape';
 };
 
-/* ---------------- TAPE ---------------- */
+
 
 const Tape: React.FC<TapeProps> = ({ color, className }) => (
   <div

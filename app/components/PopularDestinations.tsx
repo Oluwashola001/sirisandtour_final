@@ -34,19 +34,38 @@ export default function PopularDestinationsSlider() {
       >
         {tours.slice(0, 8).map((tour, index) => (
           <SwiperSlide key={index}>
-            <div className="group bg-white rounded-3xl border border-gray-200 overflow-hidden shadow-sm flex flex-col h-full">
-              <div className="relative w-full h-100 overflow-hidden">
-                <Image
-                  src={tour.heroImage}
-                  alt={tour.cardTitle || "Tour image"}
-                  fill
-                  sizes="(max-width: 768px) 90vw, (max-width: 1024px) 50vw, 33vw"
-                  className="object-cover transition-transform duration-500 group-hover:scale-110"
-                  priority
-                />
+           <div className="group bg-white rounded-3xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full">
 
-                
-              </div>
+           <div className="relative w-full h-100 overflow-hidden">
+  <Image
+    src={tour.heroImage}
+    alt={tour.cardTitle || "Tour image"}
+    fill
+    sizes="(max-width: 768px) 90vw, (max-width: 1024px) 50vw, 33vw"
+   className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+
+    priority
+  />
+
+ {/* Shine Effect */}
+<div className="absolute inset-0 pointer-events-none overflow-hidden">
+  <div
+    className="
+      absolute inset-0
+      bg-gradient-to-b from-transparent via-white/30 to-transparent
+      translate-y-[-100%]
+      group-hover:translate-y-[100%]
+      transition-transform
+      duration-1000
+      ease-out
+    "
+  />
+</div>
+
+
+</div>
+
+              
 
               <div className="p-6 flex flex-col flex-1">
                 <Link href={`/tours/${tour.slug}`}>
@@ -92,6 +111,7 @@ export default function PopularDestinationsSlider() {
 <div
   className="
     block md:hidden
+    relative
     mt-16
     mx-auto
     -ml-3
@@ -103,15 +123,24 @@ export default function PopularDestinationsSlider() {
     shadow-lg
   "
 >
+  {/* FALLBACK IMAGE */}
+  <div
+    className="absolute inset-0 bg-cover bg-center scale-105"
+    style={{ backgroundImage: "url('/hero-poster2.jpg')" }}
+  />
+
+  {/* VIDEO */}
   <video
     src="/images/tours/video2.mp4"
     autoPlay
     muted
     loop
     playsInline
-    className="w-full h-full object-cover"
+    className="absolute inset-0 w-full h-full object-cover"
   />
 </div>
+
+
 
     </section>
   );

@@ -106,7 +106,7 @@ export default function DestinationCarousel() {
               style={{ zIndex: 10 - distance }}
             >
               <div style={{ width: cardWidth }}>
-                <div className="relative rounded-[32px] overflow-hidden shadow-2xl bg-white">
+                <div className="relative rounded-[32px] overflow-hidden shadow-2xl bg-gray-100 group">
                   <Image
                     src={`/images/tours/${dest.image}`}
                     alt={dest.title}
@@ -115,6 +115,21 @@ export default function DestinationCarousel() {
                     priority={distance === 0}
                     className="object-cover transition-transform duration-700 hover:scale-110"
                   />
+                  {/* Shine Effect (Top → Bottom) */}
+<div className="absolute inset-0 pointer-events-none overflow-hidden">
+  <div
+    className="
+      absolute inset-0
+      bg-gradient-to-b from-transparent via-white/25 to-transparent
+      translate-y-[-100%]
+      group-hover:translate-y-[100%]
+      transition-transform
+      duration-1000
+      ease-out
+    "
+  />
+</div>
+
                 </div>
 
                 <div className="mt-4 text-center">

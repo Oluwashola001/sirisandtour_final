@@ -29,7 +29,7 @@ export default function AboutUs() {
          At Siri Sand Tours, we don't just organize trips; we welcome you as part of our extended family.   </span>
 <span className="block mt-5">          Our Story and Spirit: Our company didn't start in closed offices. It began with our passion for the desert and the sea, and our desire to share this magic in a way that transforms your soul. We believe that Egypt is more than just pyramids and museums; its tranquil sandy beaches, hidden oases, and starry skies make time seem endless. In our world, time slows down, giving you the chance to connect with yourselves and your loved ones.
             </span>
-<span className="block mt-5">              Why are we a "family"?
+<span className="block mt-5 font-bold">              Why are we a "Family"?
             </span>
 <span className="block mt-5">Attention to the smallest details: Every detail matters to us, from the moment we meet you until the moment we say goodbye, so that your adventure becomes a story we cherish as well.                                                 Why is Siri Sand Tours the best?
           </span>
@@ -131,7 +131,7 @@ SIRISANDTOURS " sky to sea "          <br /> your next adventure is calling...
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="order-2 -mt-5 lg:-mt-180 lg:order-1 w-full flex flex-col gap-6"
+          className="order-2 mt-20 lg:-mt-40 lg:order-1 w-full flex flex-col gap-6"
         >
           {/* TOP IMAGE */}
           <div
@@ -146,6 +146,20 @@ src="/images/gallery/7.jpg"
             />
           </div>
 
+  {/* middle IMAGE */}
+          <div
+            className="hidden sm:block
+  relative w-full h-[220px] sm:h-[380px] lg:h-[520px] overflow-hidden rounded-[40px]"
+          >
+            <Image
+src="/images/gallery/4.jpg"
+              alt="Tour Group"
+              fill
+              sizes="(max-width: 768px) 90vw, 40vw"
+              className="object-cover"
+            />
+          </div>
+          
           {/* BOTTOM IMAGE (Animated) */}
           <motion.div
             className="

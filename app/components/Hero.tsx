@@ -40,6 +40,12 @@ export default function Hero() {
 
   return (
     <section className="relative lg:h-200 h-screen w-screen overflow-hidden">
+      {/* FALLBACK IMAGE (shows before video loads) */}
+<div
+  className="absolute inset-0 bg-cover bg-center scale-105"
+  style={{ backgroundImage: "url('/hero-poster.png')" }}
+/>
+
       {/* VIDEO BACKGROUND */}
       <video
         suppressHydrationWarning

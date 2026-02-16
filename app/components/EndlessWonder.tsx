@@ -87,6 +87,7 @@ export default function EndlessWonder() {
               key={`top-${i}`}
             className="
               group
+              relative
               w-[calc(30vw-12px)]
               sm:w-[280px]
               lg:w-[200px]      /* narrower */
@@ -96,7 +97,7 @@ export default function EndlessWonder() {
               rounded-[28px]
               overflow-hidden
               shadow-lg lg:shadow-md
-            "
+            bg-gray-100 "
 
 
             >
@@ -108,6 +109,22 @@ export default function EndlessWonder() {
                 className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                 priority={i < 2}
               />
+
+              {/* Shine Effect */}
+<div className="absolute inset-0 pointer-events-none overflow-hidden">
+  <div
+    className="
+      absolute inset-0
+      bg-gradient-to-b from-transparent via-white/30 to-transparent
+      translate-y-[-120%]
+      group-hover:translate-y-[120%]
+      transition-transform
+      duration-1000
+      ease-out
+    "
+  />
+</div>
+
             </div>
           ))}
         </motion.div>
@@ -129,7 +146,8 @@ export default function EndlessWonder() {
             <div
               key={`bottom-${i}`}
                className="
-                group
+                 group 
+                 relative
                 w-[calc(30vw-12px)]
                 sm:w-[280px]
                 lg:w-[200px]      /* narrower */
@@ -148,6 +166,20 @@ export default function EndlessWonder() {
                 height={300}
                 className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
               />
+ {/* Shine Effect */}
+<div className="absolute inset-0 pointer-events-none overflow-hidden">
+  <div
+    className="
+      absolute inset-0
+      bg-gradient-to-b from-transparent via-white/30 to-transparent
+      translate-y-[-120%]
+      group-hover:translate-y-[120%]
+      transition-transform
+      duration-1000
+      ease-out
+    "
+  />
+</div>
             </div>
           ))}
         </motion.div>

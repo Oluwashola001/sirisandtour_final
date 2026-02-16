@@ -185,12 +185,19 @@ src="/images/gallery/8.jpg"
     overflow-hidden
     border border-gray-200
     shadow-lg
+    relative
   "
 >
+   {/* FALLBACK IMAGE */}
+  <div
+    className="absolute inset-0 bg-cover bg-center scale-105"
+    style={{ backgroundImage: "url('/hero-poster1.jpg')" }}
+  />
   <video
     src="/images/tours/video1.mp4"
     autoPlay
     muted
+      poster="/hero-poster1.jpg"
     loop
     playsInline
     className="w-full h-full object-cover"
