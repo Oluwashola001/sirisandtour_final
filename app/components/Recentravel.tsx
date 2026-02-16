@@ -16,10 +16,10 @@ const images = [
   '/images/Recenttravel/8.jpg',
   '/images/Recenttravel/9.jpg',
   '/images/Recenttravel/10.jpg',
-  '/images/Recenttravel/11.jpg',
-  '/images/Recenttravel/12.jpg',
-  '/images/Recenttravel/13.jpg',
-  '/images/Recenttravel/14.jpg',
+  '/images/gallery/11.jpg',
+  '/images/gallery/12.jpg',
+  '/images/gallery/13.jpg',
+  '/images/gallery/14.jpg',
 ];
 
 /* ---------------- TYPES ---------------- */
