@@ -1495,7 +1495,6 @@ moreDetails: [
     price: 50,
     pickupTimes:["8:15am - 8:45am"],
     infantPrice: "",
-   pickupTimes: ["9:00 am"],
   included: [
   "Hotel Transfers",
   "Island Permits",
