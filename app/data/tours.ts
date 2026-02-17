@@ -1455,7 +1455,7 @@ moreDetails: [
        price:25 ,
     pickupTimes:["8:15am - 8:45am"],
   currency: "€",
- pickupTimes: ["9:00 am"],
+
   included: [
   "Hotel Transfers",
   "Island Permits",
