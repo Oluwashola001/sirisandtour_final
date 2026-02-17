@@ -51,9 +51,7 @@ export default function TourPage({
       label: `Discover ${tour.cardTitle || tour.title}`,
     },
     { id: "overview", label: "Trip Overview" },
-    
-    { id: "included", label: "What's Included" },
-    { id: "excluded", label: "What's Not Included" },
+  
     { id: "reviews", label: "Traveler Reviews" },
   ];
 
@@ -299,21 +297,7 @@ const [openDescriptionIndex, setOpenDescriptionIndex] = useState<number | null>(
           </ul>
         )}
 
-                  {tab.id === "included" && (
-                    <ul className="list-disc ml-5 space-y-2">
-                      {tour.included.map((item, i) => (
-                        <li key={i}>{item}</li>
-                      ))}
-                    </ul>
-                  )}
-
-                  {tab.id === "excluded" && (
-                    <ul className="list-disc ml-5 space-y-2">
-                      {tour.excluded.map((item, i) => (
-                        <li key={i}>{item}</li>
-                      ))}
-                    </ul>
-                  )}
+                  
 
                   {tab.id === "reviews" && (
                     <ReviewTestimonial testimonials={tour.testimonials} />
@@ -513,21 +497,7 @@ const [openDescriptionIndex, setOpenDescriptionIndex] = useState<number | null>(
 
 
 
-            {activeTab === "included" && (
-              <ul className="list-disc ml-5 space-y-2">
-                {tour.included.map((item, i) => (
-                  <li key={i}>{item}</li>
-                ))}
-              </ul>
-            )}
-
-            {activeTab === "excluded" && (
-              <ul className="list-disc ml-5 space-y-2">
-                {tour.excluded.map((item, i) => (
-                  <li key={i}>{item}</li>
-                ))}
-              </ul>
-            )}
+            
 
             {activeTab === "reviews" && (
               <ReviewTestimonial testimonials={tour.testimonials} />
