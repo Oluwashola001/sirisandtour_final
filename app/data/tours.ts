@@ -1534,7 +1534,7 @@ moreDetails: [
     price:35 ,
     pickupTimes:["8:30am - 9:00am"],
   currency: "€",
-  pickupTimes:["8:00am"],
+  
   highlights: [
   "Schedule - 08:00 AM to 04:30 PM.",
   "Requirements - ID/Passport, Sunglasses, Swimwear, Sunscreen."
