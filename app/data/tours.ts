@@ -212,7 +212,7 @@ included:["Live tour guide" ,":" , "Arabic, English, German, Spanish, French"],
     image: "/images/itinerary/pirate-boat.jpg",
       price: 120,
   currency: "€",
-  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
+  pickupTimes: ["Private / On demand (Upon Request)"],
   highlights: [
     "2-hours on Orange Island",
     "2-Snorkeling stops",
@@ -1698,7 +1698,7 @@ excluded: [
     title: "Private Speedboat",
     image: "/images/itinerary/speedboat.jpg",
     price:110 ,
-    pickupTimes:["Flexible On Request"],
+    pickupTimes:["Flexible / On Request"],
   currency: "€",
    
  highlights: [
