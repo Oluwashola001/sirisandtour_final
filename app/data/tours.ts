@@ -73,7 +73,7 @@ export const tours: Tour[] = [
     duration: "3 hrs",
       price: 75,
   currency: "€",
-  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
+  pickupTimes: ["3:30 am from Hurghada"],
   highlights: [
     "2-hours on Orange Island",
     "2-Snorkeling stops",
@@ -91,10 +91,9 @@ export const tours: Tour[] = [
   {
     title: "Balloon – Hot Air Balloon Ride",
     image: "/images/itinerary/balloon.jpg",
-     duration: "3hrs" ,
      price: 70,
   currency: "€",
-  pickupTimes: ["8:00 am"],
+  pickupTimes: ["24:00 from Hurghada"],
  highlights: [
   "Experience the thrill of soaring above fairy chimneys and rock-cut churches",
   "Fuel up with complimentary tea, coffee, and a pastry before your take-off",
@@ -145,7 +144,7 @@ export const tours: Tour[] = [
     image: "/images/itinerary/nile-cruise.jpg",
          price: 90,
   currency: "€",
-  pickupTimes: ["8:00 am"],
+  pickupTimes: ["Depends Where You Are"],
        duration: "5hrs" ,
  highlights: [
   "Covers all must-do experiences in Luxor & Aswan in one epic journey",
@@ -230,8 +229,8 @@ included:["Live tour guide" ,":" , "Arabic, English, German, Spanish, French"],
     title: "Sea Trip – Ras Mohammed",
     image: "/images/itinerary/ras-mohammed.jpg",
       price: 28,
+    pickupTimes:["8:00am - 4:00pmm"],
   currency: "€",
-  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
   highlights: [
     "2-hours on Orange Island",
     "2-Snorkeling stops",
@@ -248,8 +247,9 @@ included:["Live tour guide" ,":" , "Arabic, English, German, Spanish, French"],
     title: "Sea Trip – Tiran Island",
     image: "/images/itinerary/tiran-island.jpg",
       price: 25,
+    
   currency: "€",
-  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
+  pickupTimes: ["8:00 am -4:30pm"],
   highlights: [
     "2-hours on Orange Island",
     "2-Snorkeling stops",
@@ -267,7 +267,7 @@ included:["Live tour guide" ,":" , "Arabic, English, German, Spanish, French"],
     image: "/images/itinerary/submarin.jpg",
       price: 22,
   currency: "€",
-  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
+  pickupTimes: ["Periodic (Every two hours from 9AM)"],
   highlights: [
     "2-hours on Orange Island",
     "2-Snorkeling stops",
@@ -285,7 +285,7 @@ included:["Live tour guide" ,":" , "Arabic, English, German, Spanish, French"],
     image: "/images/itinerary/siwa-safari.jpg",
       price: 25,
   currency: "€",
-  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
+  pickupTimes: ["Sunrise (4:00 Am) or Sunset (3:00PM)"],
   highlights: [
     "2-hours on Orange Island",
     "2-Snorkeling stops",
@@ -303,6 +303,7 @@ included:["Live tour guide" ,":" , "Arabic, English, German, Spanish, French"],
     image: "/images/itinerary/limouse2.jpg",
     price:15 ,
   currency: "€",
+       pickupTimes:["On Request (24/7)"],
   highlights: [
   "Professional representative with personalized sign and luggage assistance",
   "100% On-time guarantee; drivers arrive 15 minutes early",
@@ -495,7 +496,7 @@ moreDetails: [
     image: "/images/trending/5.jpg",
      price: 65,
   currency: "€",
-  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
+  pickupTimes: ["8:00 am"],
   highlights: [
     "2-hours on Orange Island",
     "2-Snorkeling stops",
@@ -561,6 +562,7 @@ moreDetails: [
     image: "/images/itinerary/limouse.jpg",
     price:15 ,
   currency: "€",
+    pickupTimes:["On Request (24/7)"],
   highlights: [
   "Professional representative with personalized sign and luggage assistance",
   "100% On-time guarantee; drivers arrive 15 minutes early",
@@ -1404,6 +1406,7 @@ moreDetails: [
     title: "Hula Hula Island",
     image: "/images/itinerary/hula.jpg",
        price: 23,
+    pickupTimes:["8:15am - 8:45am"],
   currency: "€",
   pickupTimes: ["9:00 am"],
   included: [
@@ -1451,6 +1454,7 @@ moreDetails: [
     title: "Orange Bay Island",
     image: "/images/itinerary/orange-bay.jpg",
        price:25 ,
+    pickupTimes:["8:15am - 8:45am"],
   currency: "€",
  pickupTimes: ["9:00 am"],
   included: [
@@ -1490,6 +1494,7 @@ moreDetails: [
     title: "Paradise Island",
     image: "/images/itinerary/paradise.jpg",
     price: 50,
+    pickupTimes:["8:15am - 8:45am"],
     infantPrice: "",
    pickupTimes: ["9:00 am"],
   included: [
@@ -1529,6 +1534,7 @@ moreDetails: [
     title: "Sharm El Naga Beach",
     image: "/images/itinerary/sharm.jpg",
     price:35 ,
+    pickupTimes:["8:30am - 9:00am"],
   currency: "€",
   pickupTimes:["8:00am"],
   highlights: [
@@ -1565,6 +1571,7 @@ excluded: [
     title: "Sinbad Submarine",
     image: "/images/itinerary/sinbad.jpg",
     price:22 ,
+    pickupTimes:["Slots:9:00am, 11:00am, 1:00pm"],
   currency: "€",
  highlights: [
   "Availability - Daily (All week)",
@@ -1607,6 +1614,7 @@ excluded: [
     title: "Parasailing",
     image: "/images/itinerary/parasailing.jpg",
     price:20 ,
+    pickupTimes:["Flexible (Morning or Afternoon)"],
   currency: "€",
   highlights: [
  
@@ -1650,6 +1658,7 @@ excluded: [
     title: "Hurghada Aquarium",
     image: "/images/itinerary/hurghada- aquarium.jpg",
     price:30 ,
+    pickupTimes:["10:00am or 2:00pm"],
   currency: "€",
   infantPrice:"Not suitable for children.",
   highlights: [
@@ -1691,6 +1700,7 @@ excluded: [
     title: "Private Speedboat",
     image: "/images/itinerary/speedboat.jpg",
     price:110 ,
+    pickupTimes:["Flexible On Request"],
   currency: "€",
    
  highlights: [
@@ -1739,6 +1749,7 @@ infantPrice:"€5",
     title: "Fishing Trip",
     image: "/images/itinerary/fishing.jpg",
     price:100 ,
+    pickupTimes:["8:00am"],
   currency: "€",
   highlights: [
   "Hurghada, Red Sea",
@@ -1788,6 +1799,7 @@ excluded: [
     title: "Scuba Diving",
     image: "/images/itinerary/scuba-diving2.jpg",
     price:27 ,
+    pickupTimes:["8:00am-8:30am"],
   currency: "€",
   highlights: [
   "Beginner-friendly (No prior experience required)",
@@ -1848,6 +1860,7 @@ excluded: [
     title: "Horse Riding",
     image: "/images/itinerary/horse.jpg",
     price:20 ,
+    pickupTimes:["Sunrise (6:00am) or Sunset (4:00pm)"],
   currency: "€",
   highlights: [
   "Horseback Riding (Makadi Bay)",
@@ -1891,6 +1904,7 @@ excluded: [
     title: "Dolphin House",
     image: "/images/itinerary/dolphin-house2.jpg",
     price:25 ,
+    pickupTimes:["1:30pm"],
   currency: "€",
   extraInfo:["Free Cancellation: Cancel up 72hrs in advance for full refund", "Reserve now & pay later: Keep your travel plans flexble- book your spot and pay nothing today"
      ], 
@@ -1932,13 +1946,14 @@ excluded: [
     image: "/images/itinerary/night-surf.jpg",
     price:160 ,
   currency: "€",
-  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
+  pickupTimes: ["8:30 am"],
     description: "Evening water sports."
   },
    {
     title: "Safari Hurghada",
     image: "/images/itinerary/safari-hurghada.jpg",
     price:35 ,
+     pickupTimes:["11:30AM-12:30PM"],
   currency: "€",
   duration:"8/10hrs",
   highlights: [
@@ -1991,6 +2006,7 @@ excluded: [
     title: "City Tours",
     image: "/images/itinerary/city.jpg",
     price:15 ,
+     pickupTimes:["3:00PM-4:00pm"],
   currency: "€",
   highlights: [
   "City Tour Hurghada (4:00 PM - 9:00 PM)",
@@ -2056,6 +2072,7 @@ excluded: [
     title: "Golf",
     image: "/images/itinerary/golf.jpg",
     price:55 ,
+     pickupTimes:["10:00am"],
   currency: "€",
  extraInfo: [
   "Free Cancellation: Cancel up to 24 hours in advance for a full refund.",
@@ -2110,6 +2127,7 @@ excluded: [
     title: "Massage + spa",
     image: "/images/itinerary/spa.jpg",
     price:40 ,
+    pickupTimes:["Based On Appointment"],
   currency: "€",
   duration:"2hrs",
   highlights: [
@@ -2166,6 +2184,7 @@ excluded: [
     title: "Tattoo",
     image: "/images/itinerary/tattoo.jpg",
     price:28 ,
+    pickupTimes:["Based On Oppointment"],
   currency: "€",
   highlights: [
   "Strict adherence to highest international hygiene and sterilization standards",
@@ -2200,6 +2219,7 @@ included: [
     title: "Limousine + Taxi",
     image: "/images/itinerary/limouse.jpg",
     price:15 ,
+     pickupTimes:["On Request (24/7)"],
   currency: "€",
   highlights: [
   "Professional representative with personalized sign and luggage assistance",
