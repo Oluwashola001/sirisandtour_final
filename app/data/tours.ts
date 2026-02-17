@@ -749,8 +749,8 @@ moreDetails: [
     image: "/images/itinerary/super-safari.jpg",
       price: 40,
   currency: "€",
- pickupTimes: ["12:30 PM"],
-
+ pickupTimes: ["Sunrise (4am) or Sunset (3pm)"],
+extraInfo: ["It's recommended to confirm your pickup time 24hrs in advance to ensure transportation from your hotel"],
 included: [
   "4x4 Jeep Cars",
   "Bedouin Party",
