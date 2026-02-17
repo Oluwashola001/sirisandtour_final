@@ -1447,7 +1447,7 @@ moreDetails: [
     image: "/images/itinerary/eden.jpg",
        price: 40,
   currency: "€",
-  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
+  pickupTimes:["8:15am - 8:45am"],
     description: "Island escape with coral reefs."
   },
   {
