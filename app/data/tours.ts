@@ -229,7 +229,7 @@ included:["Live tour guide" ,":" , "Arabic, English, German, Spanish, French"],
     title: "Sea Trip – Ras Mohammed",
     image: "/images/itinerary/ras-mohammed.jpg",
       price: 28,
-    pickupTimes:["8:00am - 4:00pmm"],
+    pickupTimes:["8:00am - 4:00pm"],
   currency: "€",
   highlights: [
     "2-hours on Orange Island",
