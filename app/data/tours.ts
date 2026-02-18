@@ -698,7 +698,7 @@ moreDetails: [
     image: "/images/itinerary/Nefertari.jpg",
       price: 40,
   currency: "€",
- pickupTimes: ["09:00 AM"],
+ pickupTimes: ["09:00 AM / 02:00 PM"],
 duration: "10hrs",
 included: [
   "Soft drinks and mineral water",
