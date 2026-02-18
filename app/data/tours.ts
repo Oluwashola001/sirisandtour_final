@@ -980,9 +980,17 @@ moreDetails: [
     reason: "Art & Departure: Free tour of the Caricature Museum followed by the return journey."
   }
 ],
-duration:"10hrs",
-    description: "Visit the famous pottery village and local art workshops."
-  },
+description: `A "piece of Europe" with an authentic Egyptian spirit, this charming village sits on a hill overlooking Lake Qarun.
+
+What's it famous for?
+It is a world-renowned center for pottery and ceramics, founded by the Swiss craftswoman Eveline Porret.
+
+The atmosphere:
+It is characterized by rustic houses with white and blue domes, and tranquil, green streets.
+
+Activities:
+You can try your hand at pottery making, go horseback riding, or enjoy a traditional Egyptian breakfast (feteer and meshaltet) with a panoramic view of the lake.`
+},
   {
     title: "Wadi El Rayan & Sandboarding",
     image: "/images/itinerary/wadi-el-rayan.jpg",
