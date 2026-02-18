@@ -954,6 +954,15 @@ moreDetails: [
       price: 70,
   currency: "€",
   pickupTimes: ["8:00 am"],
+    highlights: [
+  "A \"piece of Europe\" with an authentic Egyptian spirit, this charming village sits on a hill overlooking Lake Qarun.",
+
+  "What's it famous for? It is a world-renowned center for pottery and ceramics, founded by the Swiss craftswoman Eveline Porret.",
+
+  "The atmosphere: It is characterized by rustic houses with white and blue domes, and tranquil, green streets.",
+
+  "Activities: You can try your hand at pottery making, go horseback riding, or enjoy a traditional Egyptian breakfast (feteer and meshaltet) with a panoramic view of the lake."
+],
   moreDetails: [
   {
     item: "08:00 AM",
@@ -998,6 +1007,15 @@ You can try your hand at pottery making, go horseback riding, or enjoy a traditi
   currency: "€",
   pickupTimes: ["8:00 am"],
   duration:"10hrs",
+    highlights: [
+  "One of the most beautiful nature reserves in Egypt, it consists of two lakes (upper and lower) connected by a waterfall.",
+
+  "What is it famous for?: It boasts the only waterfalls in Egypt and is an area rich in wildlife and stunning desert scenery.",
+
+  "Nearby attractions: These include Jabal Al-Mudawara (an ideal spot for camping and stargazing) and the Magic Lake, whose waters change color with the sunlight.",
+
+  "Activities: Sandboarding, riding wooden boats on the lake, and taking memorable photos at the waterfalls."
+],
   moreDetails: [
   {
     item: "Waterfalls Visit",
@@ -1020,9 +1038,14 @@ You can try your hand at pottery making, go horseback riding, or enjoy a traditi
     reason: "Cash for shopping"
   }
 ],
+description: `One of the most beautiful nature reserves in Egypt, it consists of two lakes (upper and lower) connected by a waterfall.
 
-    description: "Waterfalls, sandboarding, and desert safari adventure."
-  }
+What is it famous for?: It boasts the only waterfalls in Egypt and is an area rich in wildlife and stunning desert scenery.
+
+Nearby attractions: These include Jabal Al-Mudawara (an ideal spot for camping and stargazing) and the Magic Lake, whose waters change color with the sunlight.
+
+Activities: Sandboarding, riding wooden boats on the lake, and taking memorable photos at the waterfalls.`
+},
 ]
 ,
     included: ["Hotel", "Guide", "Meals"],
