@@ -340,18 +340,7 @@ const [openDescriptionIndex, setOpenDescriptionIndex] = useState<number | null>(
             className="relative w-full max-h-48 sm:h-64 overflow-hidden"
             onClick={() => setSelectedItinerary(item)}
           >
-            {/* Duration */}
-            {item.duration && (
-              <div
-                className="absolute top-3 left-3 z-10 text-white text-xs sm:text-sm px-3 py-2 rounded-full  border-2 border-white  font-semibold shadow-md"
-                style={{ backgroundColor: BRAND }}
-              >
-
-                
-                <span className="">approx.</span>
-   <span>{item.duration}</span>
-              </div>
-            )}
+            
 
             {/* Dynamic Price */}
             {item.price && item.currency && (
