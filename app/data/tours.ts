@@ -808,7 +808,7 @@ moreDetails: [
   currency: "€",
   duration: "10 Hours",
 
-pickupTimes: ["07:30 AM"],
+pickupTimes: ["08:00 AM"],
 
 included: [
   "Snorkeling gear",
@@ -835,6 +835,7 @@ moreDetails: [
     title: "Satyah Turtle Bay",
     image: "/images/itinerary/turtle-bay.jpg",
       price: 35,
+    pickupTimes: [ "9:00 Am"],
   currency: "€",
  included: [
   "Professional snorkeling guide",
@@ -876,7 +877,7 @@ moreDetails: [
     image: "/images/itinerary/scuba-diving.jpg",
       price: 45,
   currency: "€",
-  pickupTimes: ["8:00 am"],
+  pickupTimes: ["8:30 AM"],
   included:["Permit"],
   excluded:["Photographer"],
   duration:"7hrs",
