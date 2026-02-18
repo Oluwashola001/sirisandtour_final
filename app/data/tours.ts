@@ -420,7 +420,7 @@ included: [
     image: "/images/itinerary/20.jpg",
      price: 120,
   currency: "€",
-  pickupTimes: ["8:00 am"],
+  pickupTimes: ["5:30 am"],
 included:["Private group", "Host or Greeter : English, Arabic"],
     infantPrice: "",
     extraInfo:["Free Cancellation: Cancel up 24hrs in advance for full refund", "Reserve now & pay later: Keep your travel plans flexble- book your spot and pay nothing today"
@@ -451,7 +451,7 @@ description: "Experience Cairo like never before. Take off on a private helicopt
     image: "/images/itinerary/23.jpg",
       price: 40,
   currency: "€",
-  pickupTimes: ["8:00 am",],
+  pickupTimes: ["2:30 am",],
 included:["Private group", "Host or Greeter : English, Arabic"],
     infantPrice: "",
     extraInfo:["Free Cancellation: Cancel up 24hrs in advance for full refund", "Reserve now & pay later: Keep your travel plans flexble- book your spot and pay nothing today"
@@ -496,7 +496,7 @@ moreDetails: [
     image: "/images/trending/5.jpg",
      price: 65,
   currency: "€",
-  pickupTimes: ["8:00 am"],
+  pickupTimes: ["3:00 am"],
   highlights: [
     "2-hours on Orange Island",
     "2-Snorkeling stops",
@@ -514,7 +514,8 @@ moreDetails: [
     image: "/images/itinerary/24.jpg",
       price: 65,
   currency: "€",
-  pickupTimes: ["8:00 am",],
+  pickupTimes: ["3:00 AM"],
+    extraInfo: ["Pick-up Time : Your exact pick-up time may vary by 30 minutes depending on your hotel location in hurghada"],
  highlights: [
   "Purpose Reason 1. Modest clothing in respect for the sanctity of the places and houses of worship.",
   "Professional camera. The ancient Coptic icons and inlaid wood details (the altar veil) are worth documenting.",
