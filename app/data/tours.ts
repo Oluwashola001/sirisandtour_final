@@ -953,7 +953,7 @@ moreDetails: [
     image: "/images/itinerary/tunis-village.jpg",
       price: 70,
   currency: "€",
-  pickupTimes: ["8:00 am"],
+  pickupTimes: ["12 noon"],
     highlights: [
   "A \"piece of Europe\" with an authentic Egyptian spirit, this charming village sits on a hill overlooking Lake Qarun.",
 
@@ -1005,7 +1005,7 @@ You can try your hand at pottery making, go horseback riding, or enjoy a traditi
     image: "/images/itinerary/wadi-el-rayan.jpg",
       price: 25,
   currency: "€",
-  pickupTimes: ["8:00 am"],
+  pickupTimes: ["10:00 am"],
   duration:"10hrs",
     highlights: [
   "One of the most beautiful nature reserves in Egypt, it consists of two lakes (upper and lower) connected by a waterfall.",
