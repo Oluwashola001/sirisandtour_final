@@ -51,7 +51,8 @@ export default function TourPage({
       label: `Discover ${tour.cardTitle || tour.title}`,
     },
     { id: "overview", label: "Trip Overview" },
-  
+    
+   
     { id: "reviews", label: "Traveler Reviews" },
   ];
 
@@ -158,7 +159,16 @@ const [openDescriptionIndex, setOpenDescriptionIndex] = useState<number | null>(
                     className="relative w-full h-40 sm:h-48 cursor-pointer"
                     onClick={() => setSelectedItinerary(item)}
                   >
-                  
+                    {/* Duration */}
+                    {item.duration && (
+                      <div
+                        className="absolute top-2 left-2 z-10 text-white text-[10px] sm:text-xs px-2 py-1 rounded-full font-semibold shadow-md  border-2 border-white shadow-lg"
+                        style={{ backgroundColor: BRAND }}
+                      >
+                        <span className="">approx.</span>
+   <span>{item.duration}</span>
+                      </div>
+                    )}
 
                     {/* Price */}
                     {item.price && item.currency && (
@@ -286,9 +296,7 @@ const [openDescriptionIndex, setOpenDescriptionIndex] = useState<number | null>(
               );
             })}
           </ul>
-        )}
-
-                  
+        )}       
 
                   {tab.id === "reviews" && (
                     <ReviewTestimonial testimonials={tour.testimonials} />
@@ -340,7 +348,18 @@ const [openDescriptionIndex, setOpenDescriptionIndex] = useState<number | null>(
             className="relative w-full max-h-48 sm:h-64 overflow-hidden"
             onClick={() => setSelectedItinerary(item)}
           >
-            
+            {/* Duration */}
+            {item.duration && (
+              <div
+                className="absolute top-3 left-3 z-10 text-white text-xs sm:text-sm px-3 py-2 rounded-full  border-2 border-white  font-semibold shadow-md"
+                style={{ backgroundColor: BRAND }}
+              >
+
+                
+                <span className="">approx.</span>
+   <span>{item.duration}</span>
+              </div>
+            )}
 
             {/* Dynamic Price */}
             {item.price && item.currency && (
@@ -477,7 +496,21 @@ const [openDescriptionIndex, setOpenDescriptionIndex] = useState<number | null>(
 
 
 
-            
+            {activeTab === "included" && (
+              <ul className="list-disc ml-5 space-y-2">
+                {tour.included.map((item, i) => (
+                  <li key={i}>{item}</li>
+                ))}
+              </ul>
+            )}
+
+            {activeTab === "excluded" && (
+              <ul className="list-disc ml-5 space-y-2">
+                {tour.excluded.map((item, i) => (
+                  <li key={i}>{item}</li>
+                ))}
+              </ul>
+            )}
 
             {activeTab === "reviews" && (
               <ReviewTestimonial testimonials={tour.testimonials} />
