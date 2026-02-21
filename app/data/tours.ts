@@ -593,11 +593,68 @@ moreDetails: [
 },
   {
   title: "Islamic Cario Mosques",
-  image: "/images/itinerary/5.jpg",
+  image: "/images/trending/5.jpg",
   price: 65,
   currency: "€",
-  pickupTimes: ["3:00 AM"],
-  
+  pickupTimes: ["1:30 Am - 2:30 AM"],
+  highlights: [
+  "Visit Saladin Citadel, Al-Ababaster Mosque, and Al-Azhar Mosque",
+  "Guided walking tour through Moez Street and Khan El-Khalili bazaar",
+  "Enjoy lunch at a quality restaurant in Old Cairo",
+  "Round-trip transfers from Hurghada in an air-conditioned tourist bus",
+  "Learn from an Egyptologist specializing in Islamic history"
+],
+
+included: [
+  "Entrance fees for Saladin Citadel, Al-Ababaster Mosque, and Al-Azhar Mosque",
+  "Lunch at a quality restaurant in Old Cairo",
+  "Security permits for tour bus passage",
+  "Pickup from Hurghada (usually between 1:30 AM – 2:30 AM depending on hotel location)",
+  "Round-trip transfers to and from your hotel in Hurghada",
+  "Professional Egyptologist guide explaining Islamic Cairo sights"
+],
+
+excluded: [
+  "Any additional drinks during lunch",
+  "Optional activities (e.g., Nile Felucca or horse carriage ride)",
+  "Personal expenses (buying souvenirs or shopping at Khan El-Khalili)",
+  "Tipping for guide or driver (optional)"
+],
+
+infantPrice: "Contact us for child pricing details",
+
+extraInfo: [
+  "Pickup time is usually between 1:30 AM – 2:30 AM depending on hotel location",
+  "Tipping for the guide or driver is optional",
+  "Personal expenses include souvenirs or shopping at Khan El-Khalili"
+],
+
+moreDetails: [
+  {
+    item: "Departure Time",
+    reason: "Pickup from Hurghada is usually between 1:30 AM – 2:30 AM (depending on hotel location)"
+  },
+  {
+    item: "Lunch",
+    reason: "Served at a quality restaurant in Old Cairo"
+  },
+  {
+    item: "Entrance Fees",
+    reason: "Includes fees for Saladin Citadel, Al-Ababaster Mosque, and Al-Azhar Mosque"
+  },
+  {
+    item: "Transfers",
+    reason: "Round-trip transfers from your hotel in Hurghada"
+  },
+  {
+    item: "Tour Guide",
+    reason: "Professional Egyptologist specializing in Islamic history"
+  },
+  {
+    item: "Security Permits",
+    reason: "Required for tour bus passage"
+  }
+],
   description: "Visit the Citadel, Mohamed Ali Mosque, Al-Azhar and Ibn Tulun Mosque."
   },
   {
