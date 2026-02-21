@@ -437,7 +437,7 @@ moreDetails: [
 "Perfect for couples, families, or VIP guests seeking a luxurious experience"
 ,
 "Private aerial flight over the Pyramids of Giza and the Great Sphinx",
-  "Unforgettable bird’s-eye views of Egypt’s most iconic ancient wonders"
+  "Unforgettable bird’s-eye views of Egypt’s most iconic ancient wonders",
 
 "exclusive landing at the Pyramids for a truly unforgettable adventure!"  
   ],
