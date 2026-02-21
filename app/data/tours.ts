@@ -75,15 +75,64 @@ export const tours: Tour[] = [
   currency: "€",
   pickupTimes: ["3:30 am from Hurghada"],
   highlights: [
-    "2-hours on Orange Island",
-    "2-Snorkeling stops",
-    "Water sports: banana & sofa boat",
-    "2-hours on Orange Island",
-    "2-Snorkeling stops",
-    "Water sports: banana & sofa boat"
-    
-    
-  ],
+  "Visit Karnak Temple, Valley of the Kings, and Hatshepsut Temple",
+  "Explore the most famous ancient sites in Luxor with a professional guide",
+  "Enjoy lunch at a restaurant overlooking the Nile or near the temples",
+  "Comfortable round-trip transfers from your hotel in Hurghada",
+  "Early morning departure to make the most of your day trip"
+],
+
+included: [
+  "Basic entrance tickets for Karnak, Valley of the Kings, and Hatshepsut Temple",
+  "Lunch at a local restaurant",
+  "Security permits for tour bus passage",
+  "Pickup from Hurghada (4:00 AM – 5:30 AM depending on hotel location)",
+  "Transfers to and from your hotel in Hurghada",
+  "Professional tour guide in your language"
+],
+
+excluded: [
+  "Drinks during lunch",
+  "Special tombs entry tickets (e.g., King Tutankhamun’s tomb)",
+  "Optional activities (e.g., Felucca ride or Banana Island visit)",
+  "Personal expenses (souvenirs or photos)",
+  "Tipping for guide or driver (optional)"
+],
+
+infantPrice: "Contact us for child pricing details",
+
+extraInfo: [
+  "Pickup time is usually between 4:00 AM – 5:30 AM depending on hotel location",
+  "Tipping for the guide or driver is optional",
+  "Special tombs require additional tickets"
+],
+
+moreDetails: [
+  {
+    item: "Departure Time",
+    reason: "Pickup from Hurghada is usually between 4:00 AM – 5:30 AM (depending on hotel location)"
+  },
+  {
+    item: "Lunch",
+    reason: "Served at a restaurant overlooking the Nile or near the temples"
+  },
+  {
+    item: "Entrance Fees",
+    reason: "Includes basic tickets for Karnak, Valley of the Kings, and Hatshepsut Temple"
+  },
+  {
+    item: "Transfers",
+    reason: "Round-trip transfers from your hotel in Hurghada"
+  },
+  {
+    item: "Tour Guide",
+    reason: "Professional guide available in your language"
+  },
+  {
+    item: "Security Permits",
+    reason: "Required for tour bus passage"
+  }
+],
 
     description:
       "Visit the massive Karnak Temple complex, explore the Valley of the Kings, see the Colossi of Memnon, and admire Queen Hatshepsut’s temple.",
