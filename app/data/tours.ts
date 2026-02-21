@@ -454,7 +454,7 @@ included: [
     
       price: 80,
   currency: "€",
-  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
+  pickupTimes: ["1:30 Am - 2:30 Am"],
 highlights: [
   "Visit the Giza Pyramids area, Sphinx, and the Grand Egyptian Museum (GEM)",
   "Explore the ancient Egyptian sites with a professional Egyptologist guide",
@@ -592,22 +592,13 @@ moreDetails: [
     description: "A walk through the heart of Old Cairo; enjoy shopping at the historic bazaar and admire the medieval Islamic architecture of Al-Muizz Street. A Note from SIRI SAND TOURS: We pay attention to every detail to ensure you have an unforgettable journey through history."
 },
   {
-  title: "Coptic Cairo Churches",
-  image: "/images/itinerary/24.jpg",
+  title: "Islamic Cario Mosques",
+  image: "/images/itinerary/5.jpg",
   price: 65,
   currency: "€",
   pickupTimes: ["3:00 AM"],
-  extraInfo: [
-    "Pick-up Time: Your exact pick-up time may vary by 30 minutes depending on your hotel location in Hurghada."
-  ],
-  highlights: [
-    "Modest clothing is recommended in respect for the sanctity of the churches and houses of worship.",
-    "Bring a professional or high-quality camera to capture ancient Coptic icons and inlaid wood altar details.",
-    "Hat and sunglasses are recommended for walking between outdoor church areas.",
-    "An information booklet or guide is helpful, as the area is rich in spiritual history and stories."
-          
-  ],
-    description: "Visit the Citadel, Mohamed Ali Mosque, Al-Azhar and Ibn Tulun Mosque."
+  
+  description: "Visit the Citadel, Mohamed Ali Mosque, Al-Azhar and Ibn Tulun Mosque."
   },
   {
     title: "Coptic Cairo Churches",
@@ -616,7 +607,14 @@ moreDetails: [
   currency: "€",
   pickupTimes: ["3:00 AM"],
     extraInfo: ["Pick-up Time : Your exact pick-up time may vary by 30 minutes depending on your hotel location in hurghada"],
- 
+ highlights: [
+    "Modest clothing is recommended in respect for the sanctity of the churches and houses of worship.",
+    "Bring a professional or high-quality camera to capture ancient Coptic icons and inlaid wood altar details.",
+    "Hat and sunglasses are recommended for walking between outdoor church areas.",
+    "An information booklet or guide is helpful, as the area is rich in spiritual history and stories."
+          
+  ],
+    
 
   moreDetails: [
   {
