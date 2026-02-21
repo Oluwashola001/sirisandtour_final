@@ -407,13 +407,11 @@ included: [
   currency: "€",
   pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
   highlights: [
-    "2-hours on Orange Island",
-    "2-Snorkeling stops",
-    "Water sports: banana & sofa boat",
-    "2-hours on Orange Island",
-    "2-Snorkeling stops",
-    "Water sports: banana & sofa boat"
-  ],description: "Visit the Great Pyramids, Sphinx, and the Grand Egyptian Museum."
+  "Explore the Great Pyramids of Giza and the Sphinx",
+  "Visit the Grand Egyptian Museum (GEM)",
+  "Discover the treasures of Ancient Egypt"
+]
+  ],description: "Explore the Great Pyramids of Giza and the Sphinx, followed by a visit to the Grand Egyptian Museum (GEM) to see the treasures of Ancient Egypt."
   },
   {
     title: "Scenic Flight Over Pyramids",
@@ -438,9 +436,8 @@ moreDetails: [
 
 "Perfect for couples, families, or VIP guests seeking a luxurious experience"
 ,
-"Enjoy breathtaking aerial views of Cairo and the Pyramids of Giza",
-
-"Capture breathtaking photos from the sky as you glide over ancient landmarks",
+"Private aerial flight over the Pyramids of Giza and the Great Sphinx",
+  "Unforgettable bird’s-eye views of Egypt’s most iconic ancient wonders"
 
 "exclusive landing at the Pyramids for a truly unforgettable adventure!"  
   ],
@@ -489,23 +486,24 @@ moreDetails: [
 "Stop 4: Heritage Break (El Fishawy Cafe),Relaxing at Cairo’s oldest cafe with traditional Egyptian tea",
 "Stop 5 : Tour Finale (Al-Hussein Area),Enjoying lunch or dinner at a restaurant with an ancient view"
   ],
-    description: "A Note from SIRI SAND TOURS: We pay attention to every detail to ensure you have an unforgettable journey through history."
+    description: "A walk through the heart of Old Cairo; enjoy shopping at the historic bazaar and admire the medieval Islamic architecture of Al-Muizz Street.",
+      "A Note from SIRI SAND TOURS: We pay attention to every detail to ensure you have an unforgettable journey through history."
   },
   {
-    title: "Islamic Cairo Mosques",
-    image: "/images/trending/5.jpg",
-     price: 65,
+  title: "Coptic Cairo Churches",
+  image: "/images/itinerary/24.jpg",
+  price: 65,
   currency: "€",
-  pickupTimes: ["3:00 am"],
+  pickupTimes: ["3:00 AM"],
+  extraInfo: [
+    "Pick-up Time: Your exact pick-up time may vary by 30 minutes depending on your hotel location in Hurghada."
+  ],
   highlights: [
-    "2-hours on Orange Island",
-    "2-Snorkeling stops",
-    "Water sports: banana & sofa boat",
-    "2-hours on Orange Island",
-    "2-Snorkeling stops",
-    "Water sports: banana & sofa boat"
-    
-    
+    "Modest clothing is recommended in respect for the sanctity of the churches and houses of worship.",
+    "Bring a professional or high-quality camera to capture ancient Coptic icons and inlaid wood altar details.",
+    "Hat and sunglasses are recommended for walking between outdoor church areas.",
+    "An information booklet or guide is helpful, as the area is rich in spiritual history and stories."
+          
   ],
     description: "Visit the Citadel, Mohamed Ali Mosque, Al-Azhar and Ibn Tulun Mosque."
   },
@@ -516,12 +514,7 @@ moreDetails: [
   currency: "€",
   pickupTimes: ["3:00 AM"],
     extraInfo: ["Pick-up Time : Your exact pick-up time may vary by 30 minutes depending on your hotel location in hurghada"],
- highlights: [
-  "Purpose Reason 1. Modest clothing in respect for the sanctity of the places and houses of worship.",
-  "Professional camera. The ancient Coptic icons and inlaid wood details (the altar veil) are worth documenting.",
-  "Hat and glasses for moving around the outdoor areas between churches.",
-  "An information booklet (or guide). The area is rich in spiritual stories that need explanation to understand its value."
-],
+ 
 
   moreDetails: [
   {
