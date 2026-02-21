@@ -455,10 +455,64 @@ included: [
       price: 80,
   currency: "€",
   pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
-  highlights: [
-  "Explore the Great Pyramids of Giza and the Sphinx",
-  "Visit the Grand Egyptian Museum (GEM)",
-  "Discover the treasures of Ancient Egypt"
+highlights: [
+  "Visit the Giza Pyramids area, Sphinx, and the Grand Egyptian Museum (GEM)",
+  "Explore the ancient Egyptian sites with a professional Egyptologist guide",
+  "Enjoy lunch at a quality restaurant in Cairo",
+  "Round-trip transfers from Hurghada in an air-conditioned tourist bus",
+  "Early morning departure to make the most of your day trip"
+],
+
+included: [
+  "Entrance fees for Giza Pyramids area, Sphinx, and the Grand Egyptian Museum (GEM)",
+  "Lunch at a quality restaurant in Cairo",
+  "Security permits for tour bus passage",
+  "Pickup from Hurghada (usually between 1:30 AM – 2:30 AM depending on hotel location)",
+  "Round-trip transfers to and from your hotel in Hurghada",
+  "Professional Egyptologist guide explaining the sights in your language"
+],
+
+excluded: [
+  "Any additional drinks during lunch",
+  "Entry ticket to go inside the Great Pyramid (Khufu)",
+  "Optional activities (e.g., Camel ride or Nile Felucca)",
+  "Personal expenses (souvenirs or professional photography)",
+  "Tipping for guide or driver (optional)"
+],
+
+infantPrice: "Contact us for child pricing details",
+
+extraInfo: [
+  "Pickup time is usually between 1:30 AM – 2:30 AM depending on hotel location",
+  "Tipping for the guide or driver is optional",
+  "Entry inside the Great Pyramid requires a separate ticket"
+],
+
+moreDetails: [
+  {
+    item: "Departure Time",
+    reason: "Pickup from Hurghada is usually between 1:30 AM – 2:30 AM (depending on hotel location)"
+  },
+  {
+    item: "Lunch",
+    reason: "Served at a quality restaurant in Cairo"
+  },
+  {
+    item: "Entrance Fees",
+    reason: "Includes fees for Giza Pyramids area, Sphinx, and the Grand Egyptian Museum (GEM)"
+  },
+  {
+    item: "Transfers",
+    reason: "Round-trip transfers from your hotel in Hurghada"
+  },
+  {
+    item: "Tour Guide",
+    reason: "Professional Egyptologist guide available in your language"
+  },
+  {
+    item: "Security Permits",
+    reason: "Required for tour bus passage"
+  }
 ],
     description: "Explore the Great Pyramids of Giza and the Sphinx, followed by a visit to the Grand Egyptian Museum (GEM) to see the treasures of Ancient Egypt."
   },
