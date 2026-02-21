@@ -262,17 +262,63 @@ included:["Live tour guide" ,":" , "Arabic, English, German, Spanish, French"],
       price: 120,
   currency: "€",
   pickupTimes: ["Private / On demand (Upon Request)"],
-  highlights: [
-    "2-hours on Orange Island",
-    "2-Snorkeling stops",
-    "Water sports: banana & sofa boat",
-    "2-hours on Orange Island",
-    "2-Snorkeling stops",
-    "Water sports: banana & sofa boat"
-    
-    
-  ],
-    description: "Full-day pirate-style boat cruise with snorkeling, swimming, and onboard entertainment."
+ highlights: [
+  "Private high-speed boat for your group only",
+  "Snorkeling at the best coral reefs or Dolphin watching",
+  "Flexible pickup time from your hotel",
+  "Professional licensed captain and guide"
+],
+
+included: [
+  "Private high-speed boat",
+  "Professional licensed captain and guide",
+  "Private round-trip transfers from your hotel in Sharm El Sheikh to the jetty",
+  "Life jackets and all safety equipment on board",
+  "Flexible pickup from your hotel (Usually between 9:00 AM – 3:00 PM)"
+],
+
+excluded: [
+  "Snorkeling gear (Mask, Fins, Life Jacket) unless requested",
+  "National Park Fees: Ras Mohammed entry fees (if applicable)",
+  "Any additional beverages not mentioned",
+  "Optional lunch (available at extra cost)",
+  "Personal expenses (professional photography or souvenirs)",
+  "Tipping for the captain or driver (optional)"
+],
+
+extraInfo: [
+  "Departure Time: Flexible pickup between 9:00 AM – 3:00 PM",
+  "Optional lunch can be arranged at extra cost",
+  "National Park Fees apply if visiting Ras Mohammed"
+],
+
+moreDetails: [
+  {
+    item: "Captain",
+    reason: "Professional licensed captain and guide"
+  },
+  {
+    item: "Activities",
+    reason: "Snorkeling at the best coral reefs or Dolphin watching"
+  },
+  {
+    item: "Transfers",
+    reason: "Private round-trip from your hotel in Sharm El Sheikh to the jetty"
+  },
+  {
+    item: "Safety",
+    reason: "Life jackets and all safety equipment on board"
+  },
+  {
+    item: "Private Boat",
+    reason: "High-speed boat for your group only"
+  },
+  {
+    item: "National Park Fees",
+    reason: "Ras Mohammed entry fees (if applicable)"
+  }
+],
+    description: "A private, high-speed sea tour offering flexibility and thrill while exploring coastal landmarks."
   },
   {
     title: "Sea Trip – Ras Mohammed",
@@ -280,17 +326,63 @@ included:["Live tour guide" ,":" , "Arabic, English, German, Spanish, French"],
       price: 28,
     pickupTimes:["8:00am - 4:00pm"],
   currency: "€",
-  highlights: [
-    "2-hours on Orange Island",
-    "2-Snorkeling stops",
-    "Water sports: banana & sofa boat",
-    "2-hours on Orange Island",
-    "2-Snorkeling stops",
-    "Water sports: banana & sofa boat"
-    
-    
-  ],
-    description: "Snorkeling and diving at Ras Mohammed National Park coral reefs."
+ highlights: [
+  "Visit the National Park, Magic Lake, and Mangroves",
+  "Snorkel at the best spots with a professional guide",
+  "Enjoy a buffet lunch served on the boat or at a local spot",
+  "Comfortable round-trip transfers from your hotel"
+],
+
+included: [
+  "Access to the National Park, Magic Lake, and Mangroves",
+  "Buffet lunch served on the boat or at a local spot",
+  "Round-trip by air-conditioned tourist vehicle",
+  "Professional guide to show the best snorkeling spots",
+  "Necessary security permits for entering the protected area",
+  "Pickup from your hotel between 8:00 AM – 9:00 AM"
+],
+
+excluded: [
+  "National Park entry fee for Ras Mohammed (if not pre-paid)",
+  "Renting snorkeling gear (Mask, Fins, Life Jacket)",
+  "Any beverages not included with lunch",
+  "Personal expenses (professional photography or souvenirs)",
+  "Tipping for the guide or driver (optional)"
+],
+
+extraInfo: [
+  "Departure Time: Pickup from your hotel between 8:00 AM – 9:00 AM",
+  "Security permits are required for entering the protected area",
+  "National Park entry fee applies if not pre-paid"
+],
+
+moreDetails: [
+  {
+    item: "Entrance Fees",
+    reason: "Access to the National Park, Magic Lake, and Mangroves"
+  },
+  {
+    item: "Transfers",
+    reason: "Round-trip by air-conditioned tourist vehicle"
+  },
+  {
+    item: "Lunch",
+    reason: "Buffet lunch served on the boat or at a local spot"
+  },
+  {
+    item: "Equipment",
+    reason: "Snorkeling gear available for rent (Mask, Fins, Life Jacket)"
+  },
+  {
+    item: "Tour Guide",
+    reason: "Professional guide to show the best snorkeling spots"
+  },
+  {
+    item: "Security Permits",
+    reason: "Necessary permits for entering the protected area"
+  }
+],
+    description: "A world-famous National Park renowned for its vibrant coral reefs and diverse marine life; ideal for snorkeling."
   },
   {
     title: "Sea Trip – Tiran Island",
@@ -298,18 +390,59 @@ included:["Live tour guide" ,":" , "Arabic, English, German, Spanish, French"],
       price: 25,
     
   currency: "€",
-  pickupTimes: ["8:00 am -4:30pm"],
-  highlights: [
-    "2-hours on Orange Island",
-    "2-Snorkeling stops",
-    "Water sports: banana & sofa boat",
-    "2-hours on Orange Island",
-    "2-Snorkeling stops",
-    "Water sports: banana & sofa boat"
-    
-    
-  ],
-    description: "Boat trip to Tiran Island with snorkeling in crystal-clear waters."
+  pickupTimes: ["8:00 am - 9:00pm"],
+ highlights: [
+  "Full day boat trip on a luxury boat with sun decks",
+  "Snorkeling with a professional guide on board",
+  "Open buffet lunch served on the boat",
+  "Water and soft drinks available all day"
+],
+
+included: [
+  "Full day on a luxury boat with sun decks",
+  "Professional snorkeling guide on board",
+  "Open buffet lunch prepared and served on the boat",
+  "Water and soft drinks available all day on the boat",
+  "Round-trip by air-conditioned tourist vehicle to the jetty",
+  "Pickup from your hotel between 8:00 AM – 9:00 AM"
+],
+
+excluded: [
+  "Renting snorkeling gear (Mask, Fins, Life Jacket)",
+  "Intro diving (extra cost if not pre-booked)",
+  "Any beverages not included with lunch",
+  "Personal expenses (professional photography or souvenirs)",
+  "Tipping for the boat crew or driver (optional)"
+],
+
+extraInfo: [
+  "Pickup from your hotel between 8:00 AM – 9:00 AM",
+  "Intro diving available at extra cost if not pre-booked"
+],
+
+moreDetails: [
+  {
+    item: "Boat Trip",
+    reason: "Full day on a luxury boat with sun decks"
+  },
+  {
+    item: "Tour Guide",
+    reason: "Professional snorkeling guide on board"
+  },
+  {
+    item: "Lunch",
+    reason: "Open buffet lunch prepared and served on the boat"
+  },
+  {
+    item: "Soft Drinks",
+    reason: "Water and soft drinks available all day on the boat"
+  },
+  {
+    item: "Transfers",
+    reason: "Round-trip by air-conditioned tourist vehicle to the jetty"
+  }
+],
+    description: "A relaxing boat trip to the crystal-clear waters surrounding Tiran Island, featuring multiple snorkeling stops."
   },
   {
     title: "Submarine – Semi Submarine",
@@ -317,17 +450,58 @@ included:["Live tour guide" ,":" , "Arabic, English, German, Spanish, French"],
       price: 22,
   currency: "€",
   pickupTimes: ["Periodic (Every two hours from 9AM)"],
-  highlights: [
-    "2-hours on Orange Island",
-    "2-Snorkeling stops",
-    "Water sports: banana & sofa boat",
-    "2-hours on Orange Island",
-    "2-Snorkeling stops",
-    "Water sports: banana & sofa boat"
-    
-    
-  ],
-    description: "Glass-bottom boat experience to explore marine life without diving."
+highlights: [
+  "Panoramic submarine underwater viewing deck experience",
+  "Guide to identify fish and coral reef species",
+  "Complimentary water or juice during the trip",
+  "Multiple daily departure shifts"
+],
+
+included: [
+  "Submarine ticket with entry to the panoramic underwater viewing deck",
+  "Guide to identify fish and coral reef species",
+  "Complimentary water or juice during the trip",
+  "Life jackets available for all passengers on board",
+  "Private or shared round-trip transfers from your hotel to the jetty",
+  "Multiple daily departure shifts (e.g., 9:00 AM, 11:00 AM, or 1:00 PM)"
+],
+
+excluded: [
+  "Snorkeling gear (unless part of a combined snorkeling trip)",
+  "Lunch (unless part of a longer combined sea trip)",
+  "Any beverages not mentioned in the tour",
+  "Personal expenses (professional photography or souvenirs)",
+  "Tipping for the boat crew or driver (optional)"
+],
+
+extraInfo: [
+  "Departure Time: Multiple shifts daily (9:00 AM, 11:00 AM, or 1:00 PM)",
+  "Life jackets are available for all passengers on board"
+],
+
+moreDetails: [
+  {
+    item: "Submarine Ticket",
+    reason: "Entry to the panoramic underwater viewing deck"
+  },
+  {
+    item: "Tour Guide",
+    reason: "Guide to identify fish and coral reef species"
+  },
+  {
+    item: "Transfers",
+    reason: "Private or shared round-trip from your hotel to the jetty"
+  },
+  {
+    item: "Soft Drinks",
+    reason: "Complimentary water or juice during the trip"
+  },
+  {
+    item: "Safety",
+    reason: "Life jackets available for all passengers on board"
+  }
+],
+    description: "A semi-submarine with large glass windows, allowing you to view underwater treasures without getting wet."
   },
   {
     title: "Safari – Desert Safari",
@@ -335,17 +509,55 @@ included:["Live tour guide" ,":" , "Arabic, English, German, Spanish, French"],
       price: 25,
   currency: "€",
   pickupTimes: ["Sunrise (4:00 Am) or Sunset (3:00PM)"],
+  
   highlights: [
-    "2-hours on Orange Island",
-    "2-Snorkeling stops",
-    "Water sports: banana & sofa boat",
-    "2-hours on Orange Island",
-    "2-Snorkeling stops",
-    "Water sports: banana & sofa boat"
-    
-    
-  ],
-    description: "Quad biking, camel riding, and Bedouin village visit in Sinai desert."
+  "Quad Biking (ATV), Spider Car (Buggy), and Camel ride",
+  "Oriental show (Belly dance, Tanoura, and Fire show)",
+  "Authentic Bedouin dinner served in a tent",
+  "Sunset desert trip experience"
+],
+
+included: [
+  "Pickup from your hotel between 3:30 PM – 4:30 PM (Sunset trip)",
+  "Round-trip by air-conditioned tourist vehicle",
+  "Quad Biking (ATV), Spider Car (Buggy), and Camel ride",
+  "Oriental show (Belly dance, Tanoura, and Fire show)",
+  "Traditional Bedouin tea in the desert camp",
+  "Authentic Bedouin dinner served in a Bedouin tent"
+],
+
+excluded: [
+  "Any beverages not included with dinner",
+  "Renting or buying a desert scarf (Shemagh)",
+  "Extra tours or additional activities not listed",
+  "Personal expenses (professional photography or souvenirs)",
+  "Tipping for the desert guide or driver (optional)"
+],
+
+extraInfo: [
+  "Departure Time: Pickup between 3:30 PM – 4:30 PM (Sunset trip)",
+  "Bedouin tea is served at the desert camp"
+],
+
+moreDetails: [
+  {
+    item: "Entertainment",
+    reason: "Oriental show (Belly dance, Tanoura, and Fire show)"
+  },
+  {
+    item: "Activities",
+    reason: "Quad Biking (ATV), Spider Car (Buggy), and Camel ride"
+  },
+  {
+    item: "Dinner",
+    reason: "Authentic Bedouin dinner served in a Bedouin tent"
+  },
+  {
+    item: "Transfers",
+    reason: "Round-trip by air-conditioned tourist vehicle"
+  }
+],
+    description: "A desert adventure biking, camel riding, and a traditional Bedouin dinner with live shows."
   },
      {
     title: "Limousine + Taxi",
@@ -655,7 +867,7 @@ moreDetails: [
     reason: "Required for tour bus passage"
   }
 ],
-  description: "Visit the Citadel, Mohamed Ali Mosque, Al-Azhar and Ibn Tulun Mosque."
+  description: "A specialized tour of Cairo's historic landmarks, including the Saladin Citadel, Mosque of Muhammad Ali, and the Sultan Hassan Mosque."
   },
   {
     title: "Coptic Cairo Churches",
@@ -1253,12 +1465,31 @@ Activities: Sandboarding, riding wooden boats on the lake, and taking memorable 
     image: "/images/itinerary/shali-fortress.jpg",
       price: 45,
   currency: "€",
-  pickupTimes: [""],
+  pickupTimes: ["9:00 AM - 10:00 AM"],
   highlights: [
   "Day 1: Heritage Discovery - Tour of Shali Fortress with panoramic view of the oasis.",
   "Day 2: Wellness & Adventure - Explore history at Mountain of the Dead and the Temple of the Oracle.",
   "Day 3: Relaxation & Memories - Tour of Dakrur Mountain, the icon of sand therapy."
 ],
+
+included: [
+  "Entrance fees for Shali Old City and the Salt Lake",
+  "Authentic Siwan lunch at a local restaurant",
+  "Local transfers within Siwa (4x4 Jeep or AC Van)",
+  "Professional local guide explaining the history of Shali and Siwa",
+  "Swim in the Salt Lake crystal blue pools",
+  "Security permits required for the oasis tour",
+  "Pickup from your hotel in Siwa (between 9:00 AM – 10:00 AM)"
+],
+
+excluded: [
+  "Any additional drinks during lunch",
+  "Personal expenses (Siwan dates, oils, salt lamps, or other souvenirs)",
+  "Tipping for guide or driver (optional)",
+  "Optional activities (e.g., Sandboarding session)",
+  "Any special government entrance fees not listed"
+],
+
 
 moreDetails: [
   {
@@ -1272,17 +1503,29 @@ moreDetails: [
   {
     item: "Day 3",
     reason: "Relaxation & Memories: Dakrur Mountain visit for sand therapy experience."
+  },
+    {
+    item: "Transfers",
+    reason: "Local transport by 4x4 Jeep or air-conditioned van within Siwa"
+  },
+  {
+    item: "Tour Guide",
+    reason: "Local expert explaining the history of Shali and Siwa"
+  },
+  {
+    item: "Security Permits",
+    reason: "Required permits arranged for the oasis tour"
   }
 ],
-
-    description: "Make sure to bring comfortable clothing and suitable shoes for walking over fortresses and sand dunes"
+duration:"10:00 AM – 4:00 PM",
+    description: "A natural sulfur spring surrounded by palm trees, famous for swimming and relaxation."
   },
   {
     title: "Salt Lakes & Cleopatra’s Bath",
     image: "/images/itinerary/salt-lake.webp",
       price: 40,
   currency: "€",
-  pickupTimes: [""],
+  pickupTimes: ["9:00 AM - 10:00 AM"],
  highlights: [
   "Cleopatra's Spring - Swimming & Cafes.",
   "Siwan Lunch - Traditional Meal (Mandi).",
@@ -1290,6 +1533,25 @@ moreDetails: [
   "Fatnas Island.",
   "Sunset & Palm Groves."
 ],
+
+included: [
+  "Entrance fees for Shali Old City and the Salt Lake",
+  "Authentic Siwan lunch at a local restaurant",
+  "Local transfers within Siwa (4x4 Jeep or AC Van)",
+  "Professional local guide explaining the history of Shali and Siwa",
+  "Swim in the Salt Lake crystal blue pools",
+  "Security permits required for the oasis tour",
+  "Pickup from your hotel in Siwa (between 9:00 AM – 10:00 AM)"
+],
+
+excluded: [
+  "Any additional drinks during lunch",
+  "Personal expenses (Siwan dates, oils, salt lamps, or other souvenirs)",
+  "Tipping for guide or driver (optional)",
+  "Optional activities (e.g., Sandboarding session)",
+  "Any special government entrance fees not listed"
+],
+
 
 moreDetails: [
   {
@@ -1314,25 +1576,75 @@ moreDetails: [
   }
 ],
 
-    description: "Relax in therapeutic salt lakes and Cleopatra’s Pool."
+    description: "A historic fortress made of Kershef (mud and salt), offering panoramic views of the oasis."
   },
   {
     title: "Great Sand Sea Safari",
     image: "/images/itinerary/great-sand-sea.webp",
       price: 60,
   currency: "€",
-  pickupTimes: ["8:00 am", "9:30 am", "11:00 am"],
-  highlights: [
-    "2-hours on Orange Island",
-    "2-Snorkeling stops",
-    "Water sports: banana & sofa boat",
-    "2-hours on Orange Island",
-    "2-Snorkeling stops",
-    "Water sports: banana & sofa boat"
-    
-    
-  ],
-    description: "4x4 desert safari with sand dunes and sunset views."
+  pickupTimes: ["2:00 PM – 3:00 PM depending on location"],
+ highlights: [
+  "Enjoy a breathtaking sunset in the Siwa Desert",
+  "Adventure through the dunes in a 4x4 Jeep Land Cruiser",
+  "Try sandboarding on the golden desert dunes",
+  "Swim in natural Cold and Hot Springs",
+  "Experience a traditional Siwan Bedouin dinner and tea in the desert"
+],
+
+included: [
+  "Pickup from Siwa between 2:00 PM – 3:00 PM (for sunset views)",
+  "4x4 Jeep Land Cruiser with professional desert driver",
+  "Desert expert and local Siwan guide",
+  "Sandboarding experience on the dunes",
+  "Swimming in Cold and Hot Springs",
+  "Traditional Siwan Bedouin dinner and tea in the desert",
+  "Desert entry permits and park fees (security permits)"
+],
+
+excluded: [
+  "Any additional drinks during lunch/dinner",
+  "Optional activities (e.g., Camel rides or Quad biking)",
+  "Personal expenses (souvenirs or professional photography)",
+  "Tipping for driver or guide (optional)",
+  "Any extra tickets for private or special areas"
+],
+
+infantPrice: "",
+
+extraInfo: [
+  "This tour is designed for sunset views in the desert",
+  "Tipping for the driver or guide is optional"
+],
+
+moreDetails: [
+  {
+    item: "Departure Time",
+    reason: "Pickup from Siwa between 2:00 PM – 3:00 PM for sunset experience"
+  },
+  {
+    item: "Transfers",
+    reason: "4x4 Jeep Land Cruiser with professional desert driver"
+  },
+  {
+    item: "Activities",
+    reason: "Sandboarding on dunes and swimming in natural Cold/Hot Springs"
+  },
+  {
+    item: "Meals",
+    reason: "Traditional Siwan Bedouin dinner and tea served in the desert"
+  },
+  {
+    item: "Tour Guide",
+    reason: "Desert expert and local Siwan guide"
+  },
+  {
+    item: "Security Permits",
+    reason: "Desert entry permits and park fees included"
+  }
+],
+duration:"2:00 PM - 6:00 PM",
+    description: "An off-road 4x4 journey into the Great Sand Sea, including sandboarding and cold lakes."
   },
   
 ]
@@ -1385,14 +1697,16 @@ moreDetails: [
   {
     title: "High Dam, Philae & Nubian Village",
     image: "/images/itinerary/philae.jpg",
+    
       price: 60,
   currency: "€",
+  
   duration:"6hrs"
   ,
     extraInfo:["Free Cancellation: Cancel up 24hrs in advance for full refund", "Reserve now & pay later: Keep your travel plans flexble- book your spot and pay nothing today"
      ], 
   included:["Live tour guide" ,":" , "Arabic, English, German, Spanish, French"],
-  pickupTimes: ["8:00 am"],
+  pickupTimes: ["08:00 AM - 04:00 PM"],
   highlights: [
   "Stand in awe at Philae Temple, rescued from the Nile's rising waters",
   "Enjoy the unique view of the Nile as it crosses Aswan High Dam",
@@ -1401,7 +1715,7 @@ moreDetails: [
   "Step into history, culture, and modern miracles in one unforgettable day"
 ]
 ,
-    description: "Visit High Dam, Philae Temple, Kalabsha Temple and Nubian Village."
+    description: "A stunning temple complex dedicated to the goddess Isis, accessible by a scenic short boat ride on the Nile."
   },
   {
     title: "Abu Simbel & Kom Ombo",
@@ -1411,7 +1725,7 @@ moreDetails: [
     extraInfo:["Free Cancellation: Cancel up 24hrs in advance for full refund", "Reserve now & pay later: Keep your travel plans flexble- book your spot and pay nothing today"
      ], 
      duration:"10hrs",
-  pickupTimes: ["8:00 am"],
+  pickupTimes: ["04:00 AM - 05:00 AM"],
   included:["Live tour guide" ,":" , "Arabic, English, German, Spanish, French"
     ,"Pickup: You will be picked up from your accomodation in aswan"
   ],
@@ -1421,7 +1735,7 @@ moreDetails: [
   "Enjoy a comfortable Pick up and drop off from your hotel"
 ]
 ,
-    description: "Full-day trip to Abu Simbel and Kom Ombo Temple."
+    description: "A day trip to the iconic rock-cut temples of Ramses II. The early start is essential to beat the desert heat."
   },
   {
     title: "Nile Cruise Aswan – Luxor",
@@ -1429,7 +1743,7 @@ moreDetails: [
       price: 90,
   currency: "€",
   
-  pickupTimes: ["8:00 am"],
+  pickupTimes: ["12:00 PM (Noon)"],
     extraInfo:["Free Cancellation: Cancel up 24hrs in advance for full refund", "Reserve now & pay later: Keep your travel plans flexble- book your spot and pay nothing today"
      ], 
      duration:"5hrs",
@@ -1441,7 +1755,7 @@ moreDetails: [
 ,
 included:["Live tour guide" ,"" , "English",  "Pickup: All guest will be contacted by the guide one day before their arrival"
 ],
-    description: "Relaxing Nile cruise between Aswan and Luxor."
+    description: "A floating hotel journey from Aswan to Luxor, including stops at the riverside temples of Kom Ombo and Edfu."
   }
 ]
 ,
@@ -1497,6 +1811,7 @@ included:["Live tour guide" ,"" , "English",  "Pickup: All guest will be contact
     duration: "3 hrs",
        price: 320,
   currency: "€",
+  pickupTimes:["customized Time"],
   highlights: [
   "Morning Activity",
   "Evening Experience",
@@ -1515,8 +1830,28 @@ included:["Live tour guide" ,"" , "English",  "Pickup: All guest will be contact
   "Farewell Breakfast",
   "Checkout & Departure"
 ],
+included: [
+  "Pickup from your hotel between 3:30 PM – 4:30 PM (Sunset trip)",
+  "Round-trip by air-conditioned tourist vehicle",
+  "Quad Biking (ATV), Spider Car (Buggy), and Camel ride",
+  "Oriental show (Belly dance, Tanoura, and Fire show)",
+  "Traditional Bedouin tea in the desert camp",
+  "Authentic Bedouin dinner served in a Bedouin tent"
+],
 
+excluded: [
+  "Any beverages not included with dinner",
+  "Renting or buying a desert scarf (Shemagh)",
+  "Extra tours or additional activities not listed",
+  "Personal expenses (professional photography or souvenirs)",
+  "Tipping for the desert guide or driver (optional)"
+],
 moreDetails: [
+{
+    item: "Departure Time",
+    reason: "Pickup from your location in Hurghada (Customized time.)"
+  },
+
   {
     item: "Morning Activity",
     reason: "Start your day with curated morning experiences."
@@ -1577,6 +1912,9 @@ moreDetails: [
     item: "Farewell Breakfast",
     reason: "Conclude your stay with a memorable breakfast."
   },
+
+
+
   {
     item: "Checkout & Departure",
     reason: "Check out from the resort and depart."
@@ -1630,6 +1968,58 @@ moreDetails: [
        price: 40,
   currency: "€",
   pickupTimes:["8:15am - 8:45am"],
+  highlights: [
+  "Access and stay at Eden Island beach",
+  "Comfortable boat trip to and from the island",
+  "Guided snorkeling stops at the best coral reefs nearby",
+  "Open buffet lunch served on the island or boat"
+],
+
+included: [
+  "Entrance fees and stay at Eden Island beach",
+  "Comfortable boat trip to and from the island",
+  "Guided snorkeling stops at the best coral reefs nearby",
+  "Open buffet lunch served on the island or boat",
+  "Round-trip by air-conditioned vehicle to the jetty",
+  "Necessary security permits for the boat passage",
+  "Pickup from your hotel between 8:00 AM – 9:00 AM"
+],
+
+excluded: [
+  "Any beverages not included with lunch",
+  "Renting snorkeling gear (Mask, Fins, Life Jacket)",
+  "Extra cost water sports (Banana Boat or Sofa)",
+  "Personal expenses (professional photography or souvenirs)",
+  "Tipping for the boat crew or driver (optional)"
+],
+
+extraInfo: [
+  "Departure Time: Pickup from your hotel between 8:00 AM – 9:00 AM",
+  "Security permits are necessary for the boat passage"
+],
+
+moreDetails: [
+  {
+    item: "Island Access",
+    reason: "Entrance fees and stay at Eden Island beach"
+  },
+  {
+    item: "Boat Trip",
+    reason: "Comfortable boat trip to and from the island"
+  },
+  {
+    item: "Snorkeling Stops",
+    reason: "Guided stops at the best coral reefs nearby"
+  },
+  {
+    item: "Lunch",
+    reason: "Open buffet lunch served on the island or boat"
+  },
+  {
+    item: "Transfers",
+    reason: "Round-trip by air-conditioned vehicle to the jetty"
+  }
+],
     description: "Island escape with coral reefs."
   },
   {
@@ -2128,6 +2518,62 @@ excluded: [
     price:160 ,
   currency: "€",
   pickupTimes: ["8:30 am"],
+  highlights: [
+  "Kite surfing session with certified instructor (if booked)",
+  "Safety monitored with helmet, impact vest, and rescue boat",
+  "Access to Kite lagoon beach and storage facilities",
+  "Pickup from your hotel for convenient transfers"
+],
+
+included: [
+  "Safety gear: Helmet and Impact Vest provided during the session",
+  "Access to Kite lagoon beach and storage use",
+  "Personal sports insurance",
+  "Safety boat monitoring and rescue service",
+  "Certified Kite instructor for lessons (if booked)",
+  "Round-trip transfers from your hotel to the Kite Center / Spot",
+  "Pickup from your hotel between 8:30 AM – 9:30 AM"
+],
+
+excluded: [
+  "Renting kite equipment (Kite, Board, Harness) if not booked",
+  "Lunch (unless part of a full-day kite safari)",
+  "Additional beverages outside of water/tea",
+  "Personal expenses (professional action photos or videos)",
+  "Tipping for instructors or driver (optional)"
+],
+
+extraInfo: [
+  "Pickup time: Between 8:30 AM – 9:30 AM",
+  "Safety gear and rescue boat included for monitoring and emergencies"
+],
+
+moreDetails: [
+  {
+    item: "Safety Gear",
+    reason: "Helmet and Impact Vest provided during the session"
+  },
+  {
+    item: "Beach Access",
+    reason: "Entry fees to the Kite lagoon and storage use"
+  },
+  {
+    item: "Insurance",
+    reason: "Personal sports insurance included"
+  },
+  {
+    item: "Rescue Boat",
+    reason: "Safety boat monitoring and rescue service available"
+  },
+  {
+    item: "Kite Instructor",
+    reason: "Certified instructor for lessons (if booked)"
+  },
+  {
+    item: "Transfers",
+    reason: "Round-trip from your hotel to the Kite Center / Spot"
+  }
+],
     description: "Evening water sports."
   },
    {
