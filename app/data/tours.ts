@@ -486,9 +486,8 @@ moreDetails: [
 "Stop 4: Heritage Break (El Fishawy Cafe),Relaxing at Cairo’s oldest cafe with traditional Egyptian tea",
 "Stop 5 : Tour Finale (Al-Hussein Area),Enjoying lunch or dinner at a restaurant with an ancient view"
   ],
-    description: "A walk through the heart of Old Cairo; enjoy shopping at the historic bazaar and admire the medieval Islamic architecture of Al-Muizz Street.",
-      "A Note from SIRI SAND TOURS: We pay attention to every detail to ensure you have an unforgettable journey through history."
-  },
+    description: "A walk through the heart of Old Cairo; enjoy shopping at the historic bazaar and admire the medieval Islamic architecture of Al-Muizz Street. A Note from SIRI SAND TOURS: We pay attention to every detail to ensure you have an unforgettable journey through history."
+},
   {
   title: "Coptic Cairo Churches",
   image: "/images/itinerary/24.jpg",
