@@ -410,8 +410,8 @@ included: [
   "Explore the Great Pyramids of Giza and the Sphinx",
   "Visit the Grand Egyptian Museum (GEM)",
   "Discover the treasures of Ancient Egypt"
-]
-  ],description: "Explore the Great Pyramids of Giza and the Sphinx, followed by a visit to the Grand Egyptian Museum (GEM) to see the treasures of Ancient Egypt."
+],
+    description: "Explore the Great Pyramids of Giza and the Sphinx, followed by a visit to the Grand Egyptian Museum (GEM) to see the treasures of Ancient Egypt."
   },
   {
     title: "Scenic Flight Over Pyramids",
