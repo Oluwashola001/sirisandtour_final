@@ -1927,25 +1927,39 @@ moreDetails: [
     title: "Hula Hula Island",
     image: "/images/itinerary/hula.jpg",
        price: 23,
-    pickupTimes:["8:15am - 8:45am"],
-  currency: "€",
-  included: [
-  "Hotel Transfers",
-  "Island Permits",
+  pickupTimes: ["8:00 AM - 9:00 AM"],
+
+currency: "€",
+
+included: [
+  "Hotel Transfers (Round-trip to the marina)",
+  "Boat Cruise to Hula Hula Island and back",
+  "Island Permits & Entry Fees",
+  "Access to umbrellas, beanbags & sunbeds",
   "Snorkeling Guide",
-  "Water Sports (Banana & Cobra)",
-  "Lunch & Drinks (on Yacht)",
+  "Snorkeling Gear (Mask, fins & life jacket)",
+  "Guided Snorkeling Stops at coral reefs",
+  "Water Sports (Banana & Cobra - if pre-booked)",
+  "Open Buffet Lunch (on boat or island restaurant)",
+  "Unlimited Water, Tea & Coffee on boat",
   "Beach Chairs",
-  "Diving Equipment"
+  "Access to tropical-themed photo spots & relaxation areas",
+  "Professional guides & lifeguards for safety"
 ],
+
 excluded: [
-  "Professional Photographer",
+  "Professional Photographer (Photo/Video sessions)",
   "Island Drinks",
-  "Transfers from Makadi, Sahl Hasheesh, El Gouna, Soma Bay"
+  "Canned sodas & Alcoholic beverages outside buffet",
+  "Extra Water Sports (e.g., Parasailing unless pre-booked)",
+  "Transfers from Makadi, Sahl Hasheesh, El Gouna, Soma Bay",
+  "Tipping for boat crew or driver (Optional)"
 ],
 
 highlights: [
   "Timing - 9:00 AM to 4:00 PM.",
+  "Pickup between 8:00 AM - 9:00 AM.",
+  "Boat cruise to Hula Hula Island with guided snorkeling stops.",
   "Mandatory Items - ID/Passport, Comfortable Clothes, Swimwear, Sunscreen, Sunglasses."
 ],
 
@@ -1953,6 +1967,18 @@ moreDetails: [
   {
     item: "Timing",
     reason: "Tour runs from 9:00 AM to 4:00 PM."
+  },
+  {
+    item: "Pickup",
+    reason: "Pickup from your hotel between 8:00 AM - 9:00 AM."
+  },
+  {
+    item: "Snorkeling Stops",
+    reason: "Guided swim stops at the best coral reef spots near the island."
+  },
+  {
+    item: "Safety",
+    reason: "Professional guides and lifeguards monitor all swimming activities."
   },
   {
     item: "Mandatory Items",
@@ -2026,26 +2052,36 @@ moreDetails: [
     title: "Orange Bay Island",
     image: "/images/itinerary/orange-bay.jpg",
        price:25 ,
-    pickupTimes:["8:15am - 8:45am"],
   currency: "€",
-
-  included: [
-  "Hotel Transfers",
-  "Island Permits",
+pickupTimes: ["8:00 AM - 9:00 AM"],
+included: [
+  "Round-trip Hotel Transfers to the Marina",
+  "Boat Cruise to Orange Bay Island & snorkeling spots",
+  "Island Entry Fees to Orange Bay private beach & wooden swings",
   "Snorkeling Guide",
-  "Water Sports (Banana & Cobra)",
-  "Lunch & Drinks (on Yacht)",
+  "Two Guided Snorkeling Stops at coral reefs",
+  "Snorkeling Gear (Mask, fins & life jacket)",
+  "Water Sports (Short Banana Boat or Quattro ride)",
+  "Open Buffet Lunch (on boat or island restaurant if booked)",
+  "Unlimited Water, Tea & Coffee on the boat",
   "Beach Chairs",
-  "Diving Equipment"
+  "Professional guides & rescue monitoring during swimming"
 ],
+
 excluded: [
-  "Professional Photographer",
+  "Professional Photographer (Action photos & videos)",
   "Island Drinks",
-  "Transfers from Makadi, Sahl Hasheesh, El Gouna, Soma Bay"
+  "Canned sodas or fresh juices outside water/tea buffet",
+  "Transfers from Makadi, Sahl Hasheesh, El Gouna, Soma Bay",
+  "Tipping for boat crew or driver (Optional)",
+  "Personal Expenses (Towels & souvenirs)"
 ],
 
 highlights: [
   "Timing - 9:00 AM to 4:00 PM.",
+  "Pickup between 8:00 AM - 9:00 AM.",
+  "Boat cruise to Orange Bay Island with two guided snorkeling stops.",
+  "Water sports included (Banana Boat or Quattro ride).",
   "Mandatory Items - ID/Passport, Comfortable Clothes, Swimwear, Sunscreen, Sunglasses."
 ],
 
@@ -2053,6 +2089,18 @@ moreDetails: [
   {
     item: "Timing",
     reason: "Tour runs from 9:00 AM to 4:00 PM."
+  },
+  {
+    item: "Departure Time",
+    reason: "Pickup from your hotel between 8:00 AM - 9:00 AM."
+  },
+  {
+    item: "Snorkeling",
+    reason: "Two guided snorkeling stops at the most beautiful coral reefs."
+  },
+  {
+    item: "Safety",
+    reason: "Professional guides and rescue team monitor all swimming activities."
   },
   {
     item: "Mandatory Items",
@@ -2062,260 +2110,398 @@ moreDetails: [
     description: "Relax on sandy beaches and swim."
   },
   {
-  
-    title: "Paradise Island",
-    image: "/images/itinerary/paradise.jpg",
-    price: 50,
-    pickupTimes:["8:15am - 8:45am"],
-    infantPrice: "",
+  title: "Paradise Island",
+  image: "/images/itinerary/paradise.jpg",
+  price: 50,
+  pickupTimes: ["8:00 AM - 9:00 AM"],
+  infantPrice: "",
+
   included: [
-  "Hotel Transfers",
-  "Island Permits",
-  "Snorkeling Guide",
-  "Water Sports (Banana & Cobra)",
-  "Lunch & Drinks (on Yacht)",
-  "Beach Chairs",
-  "Diving Equipment"
-],
-excluded: [
-  "Professional Photographer",
-  "Island Drinks",
-  "Transfers from Makadi, Sahl Hasheesh, El Gouna, Soma Bay"
-],
+    "Round-trip Hotel Transfers to the Marina (Air-conditioned vehicle)",
+    "Boat Cruise to Paradise Island",
+    "Island Entry Fees",
+    "Snorkeling Guide",
+    "Snorkeling Gear (Mask, fins & life jacket)",
+    "Guided Snorkeling Stops",
+    "Water Sports (Banana Boat & Cobra)",
+    "Parasailing Flight (Single, Double or Triple depending on weight)",
+    "Safety Gear (Harness & Life Jacket)",
+    "Professional Safety Briefing before takeoff",
+    "Speedboat ride for Parasailing takeoff",
+    "Open Buffet Lunch & Soft Drinks (on Yacht)",
+    "Beach Chairs",
+    "Experienced boat crew & modern equipment"
+  ],
 
-highlights: [
-  "Timing - 9:00 AM to 4:00 PM.",
-  "Mandatory Items - ID/Passport, Comfortable Clothes, Swimwear, Sunscreen, Sunglasses."
-],
+  excluded: [
+    "Professional Photographer (Boat or Drone photos/videos)",
+    "Island Drinks",
+    "Canned sodas or additional beverages at the pier",
+    "Transfers from Makadi, Sahl Hasheesh, El Gouna, Soma Bay",
+    "Meals during parasailing-only activity",
+    "Tipping for boat captain or driver (Optional)"
+  ],
 
-moreDetails: [
-  {
-    item: "Timing",
-    reason: "Tour runs from 9:00 AM to 4:00 PM."
-  },
-  {
-    item: "Mandatory Items",
-    reason: "Bring ID/Passport, Comfortable Clothes, Swimwear, Sunscreen, Sunglasses."
-  }
-],
-
-    description: "Boat trip with snorkeling."
-  },
-  {
-    title: "Sharm El Naga Beach",
-    image: "/images/itinerary/sharm.jpg",
-    price:35 ,
-    pickupTimes:["8:30am - 9:00am"],
-  currency: "€",
-  
   highlights: [
-  "Schedule - 08:00 AM to 04:30 PM.",
-  "Requirements - ID/Passport, Sunglasses, Swimwear, Sunscreen."
-],
+    "Timing - 9:00 AM to 4:00 PM.",
+    "Pickup between 8:00 AM - 9:00 AM.",
+    "Parasailing flight 30–50 meters above the Red Sea.",
+    "8–10 minutes flight time in the air.",
+    "Optional water splash experience before landing.",
+    "Mandatory Items - ID/Passport, Comfortable Clothes, Swimwear, Sunscreen, Sunglasses."
+  ],
 
-moreDetails: [
-  {
-    item: "Schedule",
-    reason: "Tour runs from 08:00 AM to 04:30 PM."
-  },
-  {
-    item: "Requirements",
-    reason: "Bring ID/Passport, Sunglasses, Swimwear, Sunscreen."
-  }
-],
+  moreDetails: [
+    {
+      item: "Flight Type",
+      reason: "Single, Double or Triple flight depending on total weight."
+    },
+    {
+      item: "Flight Height",
+      reason: "Fly at approximately 30 to 50 meters above sea level."
+    },
+    {
+      item: "Flight Duration",
+      reason: "Approximately 8 to 10 minutes in the air."
+    },
+    {
+      item: "Safety",
+      reason: "High-quality harness, life jacket, professional briefing, and experienced crew."
+    },
+    {
+      item: "Recovery",
+      reason: "Safe takeoff and landing directly from the boat platform."
+    },
+    {
+      item: "Timing",
+      reason: "Tour runs from 9:00 AM to 4:00 PM."
+    }
+  ],
 
-included: [
-  "Diving gear",
-  "Drinks (Yacht)",
-  "Beach Lunch & BBQ",
-  "Snorkeling guide",
-  "Transfers"
-],
-
-excluded: [
-  "Photography"
-],
-
-    description: "Snorkeling beach day."
-  },
-  {
-    title: "Sinbad Submarine",
-    image: "/images/itinerary/sinbad.jpg",
-    price:22 ,
-    pickupTimes:["Slots:9:00am, 11:00am, 1:00pm"],
+  description: "Full-day boat trip to Paradise Island including snorkeling, water sports, parasailing experience, buffet lunch, and professional safety supervision."
+},
+{
+  title: "Sharm El Naga Beach",
+  image: "/images/itinerary/sharm.jpg",
+  price: 35,
+  pickupTimes: ["8:30 AM - 9:30 AM"],
   currency: "€",
- highlights: [
-  "Availability - Daily (All week)",
-  "Duration - 60 minutes underwater",
-  "Depth - Up to 25 meters deep",
-  "Highlights - Small Marine Museum, Coral Reefs, & Colorful Fish"
-],
 
-moreDetails: [
-  {
-    item: "Availability",
-    reason: "Activity is available daily throughout the week."
-  },
-  {
-    item: "Duration",
-    reason: "Experience 60 minutes underwater."
-  },
-  {
-    item: "Depth",
-    reason: "Dive up to 25 meters deep."
-  },
-  {
-    item: "Highlights",
-    reason: "Explore Small Marine Museum, Coral Reefs, & Colorful Fish."
-  }
-],
-
-included: [
-  "Submarine tour",
-  "Museum entry"
-],
-
-excluded: [
-  "Hotel transfers (Transportation)"
-],
-
-    description: "Underwater viewing experience."
-  },
-  {
-    title: "Parasailing",
-    image: "/images/itinerary/parasailing.jpg",
-    price:20 ,
-    pickupTimes:["Flexible (Morning or Afternoon)"],
-  currency: "€",
   highlights: [
- 
-  "Optional - Double Flight: Max weight 150 kg (for 2 people)",
-  "Add-ons - Transportation can be added (extra charge)",
-  "Kids - Not suitable for children",
-  "Essentials - Swimwear, Sunglasses, and a Towel"
-],
+    "Schedule - 08:00 AM to 04:30 PM.",
+    "Direct shore snorkeling (No boat needed).",
+    "Open buffet lunch at the resort restaurant.",
+    "Access to umbrellas, sunbeds, showers & toilets.",
+    "Kids playground and shallow swimming areas.",
+    "Requirements - ID/Passport, Sunglasses, Swimwear, Sunscreen."
+  ],
 
-moreDetails: [
- 
-  {
-    item: "Optional",
-    reason: "Double Flight option available for up to 150 kg (2 people)."
-  },
-  {
-    item: "Add-ons",
-    reason: "Transportation can be added for an extra charge."
-  },
-  {
-    item: "Kids",
-    reason: "Activity is not suitable for children."
-  },
-  {
-    item: "Essentials",
-    reason: "Bring Swimwear, Sunglasses, and a Towel."
-  }
-],
+  moreDetails: [
+    {
+      item: "Schedule",
+      reason: "Tour runs from 08:00 AM to 04:30 PM."
+    },
+    {
+      item: "Departure Time",
+      reason: "Pickup from your hotel between 8:30 AM – 9:30 AM."
+    },
+    {
+      item: "Snorkeling",
+      reason: "Direct access to coral reefs from the shore (No boat required)."
+    },
+    {
+      item: "Beach Access",
+      reason: "Entry fees to the protected nature reserve and resort included."
+    },
+    {
+      item: "Facilities",
+      reason: "Use of umbrellas, sunbeds, showers, and toilets."
+    },
+    {
+      item: "Safety",
+      reason: "Professional lifeguards monitoring the shore and snorkeling area."
+    },
+    {
+      item: "Requirements",
+      reason: "Bring ID/Passport, Sunglasses, Swimwear, Sunscreen."
+    }
+  ],
 
-included: [
-  "10-minute flight"
-],
+  included: [
+    "Round-trip Transfers by air-conditioned vehicle to Safaga / Sharm El Naga",
+    "Entry Fees to the protected nature reserve",
+    "Shore Snorkeling Access",
+    "Snorkeling Gear (Mask, fins & life jacket)",
+    "Snorkeling Guide",
+    "Open Buffet Lunch at the resort restaurant",
+    "Water & Tea during lunch buffet",
+    "Access to umbrellas, sunbeds, showers & toilets",
+    "Kids playground & shallow swimming areas",
+    "Professional lifeguards on duty"
+  ],
 
-excluded: [
-  "Transportation"
-],
+  excluded: [
+    "Professional Photography (Photo or video sessions on the beach)",
+    "Extra bottled or canned drinks outside the buffet",
+    "Private pool access (if applicable)",
+    "Tipping for guides or driver (Optional)"
+  ],
 
-    description: "Fly over the Red Sea."
-  },
-  {
-    title: "Hurghada Aquarium",
-    image: "/images/itinerary/hurghada- aquarium.jpg",
-    price:30 ,
-    pickupTimes:["10:00am or 2:00pm"],
+  description: "Relaxing beach day at Sharm El Naga with direct shore snorkeling, open buffet lunch, full resort facilities, and professional lifeguard supervision."
+},
+{
+  title: "Sinbad Submarine",
+  image: "/images/itinerary/sinbad.jpg",
+  price: 22,
+  pickupTimes: ["9:00 AM", "11:00 AM", "1:00 PM"],
   currency: "€",
-  infantPrice:"Not suitable for children.",
+
   highlights: [
-  "Optional - Double Flight: Max weight 150 kg (for 2 people)",
-  "Add-ons - Transportation can be added (extra charge)",
-  "Kids - Not suitable for children",
-  "Essentials - Swimwear, Sunglasses, and a Towel"
-],
+    "Available daily with multiple departure slots.",
+    "Descend to 22 meters (72 feet) below sea level.",
+    "45–50 minutes underwater submarine experience.",
+    "Close-up views of coral reefs & Red Sea marine life.",
+    "Professional diver fish-feeding show."
+  ],
 
-moreDetails: [
- 
-  {
-    item: "Optional",
-    reason: "Double Flight available for up to 150 kg (2 people)."
-  },
-  {
-    item: "Add-ons",
-    reason: "Transportation can be added for an extra charge."
-  },
+  moreDetails: [
+    {
+      item: "Depth",
+      reason: "Descending to a depth of 22 meters (72 feet) below sea level."
+    },
+    {
+      item: "Duration",
+      reason: "Approximately 45 to 50 minutes underwater."
+    },
+    {
+      item: "Marine Life",
+      reason: "Close-up views of coral reefs and diverse Red Sea fish."
+    },
+    {
+      item: "Cabin Comfort",
+      reason: "Fully air-conditioned cabin with individual viewing windows."
+    },
+    {
+      item: "Safety",
+      reason: "Professional submarine pilots with constant surface contact."
+    },
+    {
+      item: "Diver Show",
+      reason: "A professional diver performs a fish-feeding show outside the submarine."
+    },
+    {
+      item: "Facilities",
+      reason: "Restrooms and waiting lounge available at the departure pier."
+    }
+  ],
 
-  {
-    item: "Essentials",
-    reason: "Bring Swimwear, Sunglasses, and a Towel."
-  }
-],
+  included: [
+    "Round-trip hotel transfers by air-conditioned vehicle to Sindbad Pier",
+    "Submarine dive experience",
+    "45–50 minutes underwater",
+    "Professional submarine pilots",
+    "Diver fish-feeding show",
+    "Museum entry at Sindbad Submarine pier",
+    "Access to waiting lounge facilities"
+  ],
 
-included: [
-  "10-minute flight"
-],
+  excluded: [
+    "Professional photography taken by onboard crew",
+    "Meals during the submarine activity",
+    "Canned sodas or snacks at the marina café",
+    "Tipping for submarine pilots or driver (Optional)"
+  ],
 
-excluded: [
-  "Transportation"
-],
-
-  
-    description: "Marine life exhibition."
-  },
-  {
-    title: "Private Speedboat",
-    image: "/images/itinerary/speedboat.jpg",
-    price:110 ,
-    pickupTimes:["Flexible / On Request"],
+  description: "Unique underwater submarine adventure descending 22 meters below the Red Sea, featuring coral reefs, colorful marine life, diver show, and full air-conditioned cabin comfort."
+},
+ {
+  title: "Parasailing",
+  image: "/images/itinerary/parasailing.jpg",
+  price: 20,
+  pickupTimes: ["Flexible (Morning or Afternoon)"],
   currency: "€",
-   
- highlights: [
-  "Dolphin Trip (Abu Minqar) OR Island Trip (Orange / Eden / Paradise)",
-  "Per Boat Pricing (No hidden fees / No upselling)",
-  "Payment on trip day (Cash any currency or Card in EGP)",
-  "Island Entry €10 Adults / €5 Children (For Option 2)"
-],
 
-moreDetails: [
-  {
-    item: "Tours",
-    reason: "Dolphin Trip (Abu Minqar) OR Island Trip (Orange / Eden / Paradise)"
-  },
-  {
-    item: "Transport",
-    reason: "Hotel Transfers included"
-  },
-  {
-    item: "Pricing",
-    reason: "Per Boat (No hidden fees / No upselling)"
-  },
-  {
-    item: "Payment",
-    reason: "On trip day (Cash in any currency or Card in EGP)"
-  },
-  {
-    item: "Island Entry",
-    reason: "€10 Adults / €5 Children (For Option 2)"
-  }
-],
+  description: "Fly over the Red Sea at an altitude of approximately 30 to 50 meters and enjoy breathtaking views.",
 
-included: [
-  "Snorkeling gear",
-  "Private Guide",
-  "Lunch",
-  "Drinks & Snacks",
-  "Hotel Transfers"
-],
+  highlights: [
+    "Single Flight: One person flying solo (up to weight limits)",
+    "Double/Triple Flight: Two or three people (depending on weight)",
+    "Height: Approximately 30 to 50 meters",
+    "Splash Option: Optional water dip before landing",
+    "Optional - Double Flight: Max weight 150 kg (for 2 people)",
+    "Add-ons - Transportation can be added (extra charge)",
+    "Kids - Not suitable for children",
+    "Essentials - Swimwear, Sunglasses, and a Towel"
+  ],
 
-infantPrice:"€5",
+  moreDetails: [
+    {
+      item: "Safety Gear",
+      reason: "High-quality harness and life jacket provided."
+    },
+    {
+      item: "Briefing",
+      reason: "Professional instructions on takeoff and landing."
+    },
+    {
+      item: "Safety",
+      reason: "Experienced boat crew and modern parasailing equipment."
+    },
+    {
+      item: "Recovery",
+      reason: "Safe takeoff and landing directly from the boat platform."
+    },
+    {
+      item: "Optional",
+      reason: "Double Flight option available for up to 150 kg (2 people)."
+    },
+    {
+      item: "Add-ons",
+      reason: "Transportation can be added for an extra charge."
+    },
+    {
+      item: "Kids",
+      reason: "Activity is not suitable for children."
+    },
+    {
+      item: "Essentials",
+      reason: "Bring Swimwear, Sunglasses, and a Towel."
+    }
+  ],
 
-    description: "Private sea tour."
-  },
+  included: [
+    "Hotel pickup (Flexible daily slots)",
+    "Round-trip air-conditioned transfers to the marina",
+    "Speedboat ride to takeoff point",
+    "Professional safety briefing",
+    "Life jacket and harness",
+    "8–10 minutes flight time"
+  ],
+
+  excluded: [
+    "Professional photos/videos (boat or drone)",
+    "Meals",
+    "Drinks",
+    "Tipping (optional)"
+  ]
+},
+ {
+  title: "Hurghada Aquarium",
+  image: "/images/itinerary/hurghada-aquarium.jpg",
+  price: 30,
+  pickupTimes: ["10:00am", "2:00pm"],
+  currency: "€",
+
+  description: "Explore marine life, rainforest habitats, and fascinating exhibits at Hurghada Aquarium.",
+
+  highlights: [
+    "Marine Life: Over 1,200 species including sharks, rays, and turtles",
+    "Mini Zoo: Crocodiles, monkeys, and birds",
+    "Rainforest: Simulated tropical jungle environment",
+    "Shark Feeding: Scheduled daily shows",
+    "Indoor Activity: Fully air-conditioned",
+    "Wheelchair & Stroller Accessible",
+    "Underwater Glass Tunnel Experience",
+    "Fossil Exhibit: 'Valley of the Whales' museum"
+  ],
+
+  moreDetails: [
+    {
+      item: "Accessibility",
+      reason: "Wheelchair and stroller-friendly pathways."
+    },
+    {
+      item: "Gift Shop",
+      reason: "On-site shop for marine-themed souvenirs."
+    },
+    {
+      item: "Guide",
+      reason: "Clear signage in English and Arabic throughout the park."
+    }
+  ],
+
+  included: [
+    "Round-trip air-conditioned transfers from hotel",
+    "Full entry ticket to Aquarium, Zoo, and Rainforest",
+    "Access to underwater glass tunnel",
+    "Entry to 'Valley of the Whales' fossil museum"
+  ],
+
+  excluded: [
+    "Professional photography fees",
+    "Meals and snacks (available onsite)",
+    "Special feeding experiences (extra fee may apply)",
+    "Tipping (optional)"
+  ]
+},
+ {
+  title: "Private Speedboat",
+  image: "/images/itinerary/speedboat.jpg",
+  price: 110,
+  pickupTimes: ["Flexible / On Request"],
+  currency: "€",
+
+  description: "Enjoy a fully private speedboat experience with customizable routes, snorkeling stops, and flexible timing.",
+
+  highlights: [
+    "Private Boat – Exclusive for your group",
+    "Tailored Route (Dolphin House, Magawish, Abu Ramada)",
+    "Flexible Duration (2, 4, or 8 hours)",
+    "Dolphin Spotting Opportunity",
+    "Snorkeling Stops at Coral Reefs",
+    "Sunshade Bimini Top for Comfort"
+  ],
+
+  moreDetails: [
+    {
+      item: "Pick-up & Drop-off",
+      reason: "Round-trip transfer from your hotel to the marina."
+    },
+    {
+      item: "Fuel & Captain",
+      reason: "Professional licensed captain and fuel costs included."
+    },
+    {
+      item: "Snorkeling Gear",
+      reason: "Clean masks, fins, and life jackets for all guests."
+    },
+    {
+      item: "Safety First",
+      reason: "GPS, life jackets, and first-aid kit onboard."
+    },
+    {
+      item: "Briefing",
+      reason: "Safety instructions before departure from the marina."
+    },
+    {
+      item: "Flexible Timing",
+      reason: "Choose your preferred start time and duration (2, 4, or 8 hours)."
+    },
+    {
+      item: "Capacity",
+      reason: "Different boat sizes available (usually 4–8 people)."
+    }
+  ],
+
+  included: [
+    "Private speedboat for your group",
+    "Round-trip hotel transfers",
+    "Licensed captain",
+    "Fuel costs",
+    "Snorkeling equipment",
+    "Life jackets",
+    "Bottled water and soft drinks"
+  ],
+
+  excluded: [
+    "Professional photography or drone service",
+    "Island entry fees (e.g., Orange / Paradise)",
+    "Lunch (snacks or sandwiches available for extra fee)",
+    "Tipping (optional)"
+  ],
+
+  infantPrice: "€5"
+},
   {
     title: "Fishing Trip",
     image: "/images/itinerary/fishing.jpg",
