@@ -7,7 +7,7 @@ export default function ContactSection() {
     <section className="w-full bg-white py-16">
       <div className="max-w-6xl mx-auto px-4">
         {/* Heading */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-10 lg:-mt-12">
           <p className={`${pacifico.className} text-4xl text-[#0A7BBE]`}>Get In Touch</p>
           <h2 className="text-5xl font-bold text-[#0a7bbe] mt-2">
             Our Contact Information

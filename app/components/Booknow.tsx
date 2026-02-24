@@ -60,7 +60,7 @@ ${comment}
   return (
     <div className="max-w-4xl mt-30 mx-auto p-6 bg-white rounded-2xl shadow-lg">
       <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 text-[#0A7BBE]">
-        Start your adventure – book today
+        Start Your Adventure – Book today
       </h2>
 
       <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-6 text-black">

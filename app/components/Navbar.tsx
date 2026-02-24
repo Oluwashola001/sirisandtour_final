@@ -15,22 +15,38 @@ const navLinks = [
   { label: "Contact", href: "/contact" },
 ];
 
+const languages = [
+  "English",
+  "Arabic",
+  "Russian",
+  "German",
+  "Spanish",
+  "Polish",
+  "Romanian",
+  "Italian",
+  "Czech",
+  "Belgian",
+];
+
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [menuVisible, setMenuVisible] = useState(false);
   const [shadowVisible, setShadowVisible] = useState(false);
   const [showNav, setShowNav] = useState(true);
 
+  const [selectedLanguage, setSelectedLanguage] = useState("English");
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+
+  const pathname = usePathname();
+
   // Hide navbar on scroll
   useEffect(() => {
-    const handleScroll = () => {
-      setShowNav(window.scrollY === 0);
-    };
+    const handleScroll = () => setShowNav(window.scrollY === 0);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Open/close sequence
+  // Open/close mobile menu
   useEffect(() => {
     if (mobileOpen) {
       setShadowVisible(true);
@@ -43,6 +59,31 @@ export default function Navbar() {
     }
   }, [mobileOpen]);
 
+  // Function to trigger Google Translate
+const translatePage = (lang: string) => {
+  const langMap: { [key: string]: string } = {
+    English: "en",
+    Arabic: "ar",
+    Russian: "ru",
+    German: "de",
+    Spanish: "es",
+    Polish: "pl",
+    Romanian: "ro",
+    Italian: "it",
+    Czech: "cs",
+    Belgian: "be",
+  };
+
+  const code = langMap[lang];
+  const select = document.querySelector(
+    ".goog-te-combo"
+  ) as HTMLSelectElement;
+
+  if (select) {
+    select.value = code;
+    select.dispatchEvent(new Event("change"));
+  }
+};
   if (!showNav) return null;
 
   return (
@@ -52,17 +93,9 @@ export default function Navbar() {
         initial={{ y: -20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-className="fixed inset-x-0 top-0 z-50 bg-transparent overflow-x-hidden"
+        className="fixed inset-x-0 top-0 z-50 bg-transparent overflow-x-hidden"
       >
-        <div
-          className="
-            mx-auto flex max-w-7xl items-center justify-between
-            px-6 -ml-13 lg:ml-5
-            -mt-22 pb-3 lg:-mt-27
-            md:py-4
-            lg:-mt-10
-          "
-        >
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 -ml-13 lg:ml-5 -mt-22 pb-3 lg:-mt-27 md:py-4 lg:-mt-10">
           {/* LOGO */}
           <Link href="/" className="flex items-center">
             <Image
@@ -81,6 +114,43 @@ className="fixed inset-x-0 top-0 z-50 bg-transparent overflow-x-hidden"
                 {link.label}
               </NavLink>
             ))}
+
+            {/* LANGUAGE DROPDOWN */}
+            <div className="relative">
+              <button
+                onClick={() => setDropdownOpen(!dropdownOpen)}
+                className="flex items-center gap-1 px-3 py-2 border rounded-md text-[#0A7BBE] hover:text-[#075E94] font-semibold"
+              >
+                {selectedLanguage}
+                <svg
+                  className={`w-4 h-4 transition-transform ${dropdownOpen ? "rotate-180" : ""}`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+
+              {dropdownOpen && (
+                <ul className="absolute right-0 mt-2 w-46 grid lg:grid-cols-2 bg-white shadow-lg rounded-md border z-50">
+                  {languages.map((lang) => (
+                    <li
+                      key={lang}
+                      onClick={() => {
+                        setSelectedLanguage(lang);
+                        setDropdownOpen(false);
+                        translatePage(lang);
+                      }}
+                      className="px-4 py-2 hover:bg-gray-100 cursor-pointer text-[#0A7BBE] font-medium"
+                    >
+                      {lang}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
           </div>
 
           {/* BOOK NOW BUTTON */}
@@ -111,11 +181,7 @@ className="fixed inset-x-0 top-0 z-50 bg-transparent overflow-x-hidden"
             initial={{ x: "-100vw", opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: "-100vw", opacity: 0 }}
-            transition={{
-              type: "spring",
-              stiffness: 200,
-              damping: 25,
-            }}
+            transition={{ type: "spring", stiffness: 200, damping: 25 }}
             className="fixed inset-0 z-40 bg-black/20 backdrop-blur-sm"
             onClick={() => setMobileOpen(false)}
           />
@@ -130,13 +196,8 @@ className="fixed inset-x-0 top-0 z-50 bg-transparent overflow-x-hidden"
             initial={{ x: "-100vw" }}
             animate={{ x: 0 }}
             exit={{ x: "-100vw" }}
-            transition={{
-              type: "spring",
-              stiffness: 220,
-              damping: 28,
-            }}
-           className="fixed left-0 top-0 z-50 h-full w-[92%] bg-white shadow-2xl overflow-x-hidden"
-
+            transition={{ type: "spring", stiffness: 220, damping: 28 }}
+            className="fixed left-0 top-0 z-50 h-full w-[92%] bg-white shadow-2xl overflow-x-hidden"
           >
             {/* CLOSE BUTTON */}
             <button
@@ -148,60 +209,82 @@ className="fixed inset-x-0 top-0 z-50 bg-transparent overflow-x-hidden"
 
             {/* LOGO */}
             <div className="flex justify-start pl-0 -ml-5 -mt-9">
-              <Image
-                src="/logo.webp"
-                alt="Siri Sand Tour Logo"
-                width={190}
-                height={80}
-              />
+              <Image src="/logo.webp" alt="Siri Sand Tour Logo" width={190} height={80} />
             </div>
 
-            {/* LINKS */}
+            {/* MOBILE LINKS */}
             <motion.nav
               initial="hidden"
               animate="visible"
               exit="hidden"
               variants={{
                 hidden: {},
-                visible: {
-                  transition: { staggerChildren: 0.2, delayChildren: 0.3 },
-                },
+                visible: { transition: { staggerChildren: 0.2, delayChildren: 0.3 } },
               }}
-              className="-mt-8 flex flex-col items-start pl-5 gap-6"
+              className="-mt-13 flex flex-col items-start pl-5 gap-6"
             >
               {navLinks.map((link) => (
                 <motion.div
                   key={link.href}
-                  variants={{
-                    hidden: { opacity: 0, y: 20 },
-                    visible: { opacity: 1, y: 0 },
-                  }}
+                  variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
                 >
-                  <Link
-                    href={link.href}
-                    onClick={() => setMobileOpen(false)}
-                    className="text-xl font-medium text-black hover:text-[#0A7BBE]"
-                  >
+                  <Link href={link.href} onClick={() => setMobileOpen(false)} className="text-xl font-medium text-black hover:text-[#0A7BBE]">
                     {link.label}
                   </Link>
                 </motion.div>
               ))}
+
+            
+                {/* MOBILE LANGUAGE DROPDOWN */}
+            <div className="relative">
+              <button
+                onClick={() => setDropdownOpen(!dropdownOpen)}
+                className="flex items-center gap-1 px-3 py-1.5 border rounded-md text-black hover:text-[#075E94] font-semibold"
+              >
+                {selectedLanguage}
+                <svg
+                  className={`w-4 h-4  transition-transform ${dropdownOpen ? "rotate-180" : ""}`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+
+              {dropdownOpen && (
+                <ul className="absolute right-0 mt-2 w-36 grid grid-cols-2 gap-3
+              z-50">
+                  {languages.map((lang) => (
+                    <li
+                      key={lang}
+                      onClick={() => {
+                        setSelectedLanguage(lang);
+                        setDropdownOpen(false);
+                        translatePage(lang);
+                      }}
+                      className="px-10 py-2 hover:bg-gray-100 cursor-pointer text-black font-medium"
+                    >
+                      {lang}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
             </motion.nav>
           </motion.aside>
         )}
       </AnimatePresence>
+
+      {/* HIDDEN GOOGLE TRANSLATE ELEMENT */}
+      <div id="google_translate_element" className="hidden" />
     </div>
   );
 }
 
-/* NAV LINK */
-function NavLink({
-  href,
-  children,
-}: {
-  href: string;
-  children: React.ReactNode;
-}) {
+/* NAV LINK COMPONENT */
+function NavLink({ href, children }: { href: string; children: React.ReactNode }) {
   const pathname = usePathname();
   const isHome = pathname === "/";
 
