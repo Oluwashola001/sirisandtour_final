@@ -149,11 +149,15 @@ const [openDescriptionIndex, setOpenDescriptionIndex] = useState<number | null>(
               const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
               return (
-                <li
-          key={i}
-          className="w-full max-w-2xl bg-[#f4f7f8] rounded-[28px] shadow-xl overflow-hidden 
-                    transform transition-transform duration-300 hover:scale-105"
-        >
+               <motion.li
+  key={i}
+  initial={{ opacity: 0, y: 60 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6, ease: "easeOut" }}
+  viewport={{ once: true, amount: 0.2 }}
+  className="w-full max-w-2xl bg-[#f4f7f8] rounded-[28px] shadow-xl overflow-hidden 
+             transform transition-transform duration-300 hover:scale-105"
+>
                   {/* IMAGE - CLICKABLE */}
                   <div 
                     className="relative w-full h-40 sm:h-48 cursor-pointer"
@@ -283,7 +287,7 @@ const [openDescriptionIndex, setOpenDescriptionIndex] = useState<number | null>(
                     </button>
 
                   </div>
-                </li>
+                </motion.li>
               );
             })}
           </ul>
@@ -315,7 +319,7 @@ const [openDescriptionIndex, setOpenDescriptionIndex] = useState<number | null>(
           <ul
           className="grid gap-6 px-4 sm:px-0"
           style={{
-            gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",     maxWidth: "1400px",
+            gridTemplateColumns: "repeat(3, 1fr)",     maxWidth: "1400px",
 
           }}
         >
@@ -328,11 +332,19 @@ const [openDescriptionIndex, setOpenDescriptionIndex] = useState<number | null>(
               const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
               return (
-            <li
-          key={i}
-          className="group w-full max-w-2xl bg-[#f4f7f8] rounded-[28px] shadow-xl overflow-hidden 
-                    transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
-        >
+            <motion.li
+  key={i}
+  initial={{ opacity: 0, y: 60 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true, amount: 0.2 }}
+  transition={{
+    duration: 0.6,
+    ease: "easeOut",
+    delay: i * 0.1, // nice stagger effect
+  }}
+  className="group w-full max-w-2xl bg-[#f4f7f8] rounded-[28px] shadow-xl overflow-hidden 
+             transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
+>
 
           {/* IMAGE - CLICKABLE */}
           <div 
@@ -358,6 +370,20 @@ const [openDescriptionIndex, setOpenDescriptionIndex] = useState<number | null>(
               fill
               className="object-cover transform transition-transform duration-500 group-hover:scale-110"
             />
+                     {/* Shine Effect (Top → Bottom) */}
+<div className="absolute inset-0 pointer-events-none overflow-hidden">
+  <div
+    className="
+      absolute inset-0
+      bg-gradient-to-b from-transparent via-white/25 to-transparent
+      translate-y-[-100%]
+      group-hover:translate-y-[100%]
+      transition-transform
+      duration-1000
+      ease-out
+    "
+  />
+</div>
           </div>
 
           {/* CONTENT */}
@@ -467,7 +493,7 @@ const [openDescriptionIndex, setOpenDescriptionIndex] = useState<number | null>(
 
 
           </div>
-        </li>
+        </motion.li>
 
               );
             })}

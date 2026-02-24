@@ -173,7 +173,7 @@ src="/images/gallery/8.jpg"
       </section>
 
       
-        {/* ================= MOBILE VIDEO (FIXED – NO SCROLL ZOOM) ================= */}
+        {/* ================= MOBILE VIDEO */}
 <div
   className="
     block md:hidden

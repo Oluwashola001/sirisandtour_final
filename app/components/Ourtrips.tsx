@@ -7,7 +7,7 @@ import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 
 import { useState, useRef } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { pacifico } from '@/app/fonts';
 import { tours } from '../data/tours';
 
@@ -15,19 +15,7 @@ export default function PopularDestinationsSlider() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const swiperRef = useRef<any>(null);
 
-  const videoRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: videoRef,
-    offset: ['start end', 'end start'],
-  });
 
-  const containerWidth = useTransform(
-    scrollYProgress,
-    [0, 1],
-    ['90%', '110vw']
-  );
-
-  const videoScale = useTransform(scrollYProgress, [0, 1], [1, 1.5]);
 
   return (
     <section className="px-6 lg:px-20 py-2 mt-15 relative">
@@ -130,22 +118,37 @@ export default function PopularDestinationsSlider() {
         ))}
       </div>
 
-      {/* MOBILE VIDEO */}
-      <motion.div
-        ref={videoRef}
-        style={{ width: containerWidth, x: '-50%' }}
-        className="block md:hidden mt-16 left-1/2 relative h-[750px] rounded-[32px] overflow-hidden border border-gray-200 shadow-lg"
-      >
-        <motion.video
-          src="/images/tours/video2.mp4"
-          autoPlay
-          muted
-          loop
-          playsInline
-          style={{ scale: videoScale }}
-          className="w-full h-full object-cover"
-        />
-      </motion.div>
+        {/* ================= MOBILE VIDEO */}
+<div
+  className="
+    block md:hidden
+    mt-16
+    mx-auto
+    h-[750px]
+    w-[105%]
+    -ml-2
+    rounded-[32px]
+    overflow-hidden
+    border border-gray-200
+    shadow-lg
+    relative
+  "
+>
+   {/* FALLBACK IMAGE */}
+  <div
+    className="absolute inset-0 bg-cover bg-center scale-105"
+    style={{ backgroundImage: "url('/hero-poster1.jpg')" }}
+  />
+  <video
+    src="/images/tours/video2.mp4"
+    autoPlay
+    muted
+      poster="/hero-poster1.jpg"
+    loop
+    playsInline
+    className="w-full h-full object-cover"
+  />
+</div>
     </section>
   );
 }

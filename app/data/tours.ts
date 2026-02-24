@@ -23,7 +23,7 @@ export type Tour = {
   heroImage: string;
   heroVideo?: string;
   gallery: string[];
-  overview: string;
+  overview: string [];
   included: string[];
   excluded: string[];
   reviews: string[];
@@ -64,8 +64,21 @@ export const tours: Tour[] = [
     heroImage: "/images/tours/1.jpg",
     heroVideo: "/videos/luxor.mp4",
     gallery: ["/images/tours/luxor.jpg", "/images/tours/luxor2.jpg"],
-    overview:
-      "Luxor is a living museum of ancient Egypt. This trip takes you through the city’s iconic temples, royal tombs, and historic sites along the Nile, offering a perfect blend of culture, history, and breathtaking landscapes.",
+    overview: [
+  "Luxor... Where history meets the SIRI SAND TOURS family.",
+
+  "In Luxor, every stone tells a story, and we at SIRI SAND TOURS are creating unforgettable family memories with you in the world's largest open-air museum.",
+
+  "Your family trip to the \"City of a Hundred Gates\": Among the temples, experience the grandeur of Karnak and the magic of Luxor Temple together as a family. 📜🛕",
+
+  "Valley of the Kings: Explore the secrets of the pharaohs and their royal tombs. 👑🏺",
+
+  "The Magic of the Nile: Enjoy a relaxing sunset cruise on a felucca in a peaceful and warm atmosphere. ⛵🌅",
+
+  "Hot Air Ballooning: See the city from the sky — an unforgettable adventure for all ages. 🎈🎈",
+
+  "Deir el-Medina and Medinet Habu: Discover the beauty of authentic ancient inscriptions and vibrant temple reliefs. ⛪🕌"
+],
     itinerary: [
   {
     title: "Day Tour – Karnak, Valley of the Kings, Memnon, Hatshepsut",
@@ -252,8 +265,21 @@ included:["Live tour guide" ,":" , "Arabic, English, German, Spanish, French"],
     heroImage: "/images/tours/2.jpg",
     heroVideo: "/videos/sham.mp4",
     gallery: ["/images/tours/16.jpg", "/images/tours/17.jpg"],
-    overview:
-      "Sharm El-Sheikh sea trips offer unforgettable marine experiences, from snorkeling over coral gardens to diving in famous Red Sea sites. Enjoy scenic boat rides and explore the underwater world of Egypt’s most popular coastal destination.",
+    overview: [
+  "Sharm El Sheikh... Where your family story begins with SIRI SAND TOURS. ✨",
+
+  "At SIRI SAND TOURS, we believe that travel is not just about visiting places, but about sharing warm moments with the ones you love. In Sharm El Sheikh, we are your extended family, opening the doors to beauty and adventure for you.",
+
+  "The Colors of the Sea: Dive into the breathtaking waters of Ras Mohammed, where you and your children will discover a divine masterpiece of vibrant coral reefs. 🐠🤿",
+
+  "The Serenity of the Soul: Enjoy a peaceful moment before the majestic architecture of Al-Sahaba Mosque and the unique beauty of the Heavenly Cathedral. 🕌⛪",
+
+  "The Magic of the Desert: Experience a warm Bedouin dinner under the stars, filled with stories, laughter, and unforgettable desert vibes. 🏜️✨",
+
+  "The Joy of the City: Explore Soho Square and Naama Bay, where modern attractions blend beautifully with the charm of the Red Sea coast. 🎡🛍️",
+
+  "We don’t just organize trips — we create family memories that stay etched in your heart. We are waiting for you in our second home, Sharm El Sheikh."
+],
     itinerary: [
       
   {
@@ -445,64 +471,101 @@ moreDetails: [
     description: "A relaxing boat trip to the crystal-clear waters surrounding Tiran Island, featuring multiple snorkeling stops."
   },
   {
-    title: "Submarine – Semi Submarine",
-    image: "/images/itinerary/submarin.jpg",
-      price: 22,
+  title: "Submarine – Semi Submarine",
+  image: "/images/itinerary/submarin.jpg",
+  price: 22,
   currency: "€",
   pickupTimes: ["Periodic (Every two hours from 9AM)"],
-highlights: [
-  "Panoramic submarine underwater viewing deck experience",
-  "Guide to identify fish and coral reef species",
-  "Complimentary water or juice during the trip",
-  "Multiple daily departure shifts"
-],
 
-included: [
-  "Submarine ticket with entry to the panoramic underwater viewing deck",
-  "Guide to identify fish and coral reef species",
-  "Complimentary water or juice during the trip",
-  "Life jackets available for all passengers on board",
-  "Private or shared round-trip transfers from your hotel to the jetty",
-  "Multiple daily departure shifts (e.g., 9:00 AM, 11:00 AM, or 1:00 PM)"
-],
+  highlights: [
+    "Panoramic submarine underwater viewing deck experience",
+    "Huge glass windows for clear underwater views",
+    "Guide to identify fish and coral reef species",
+    "Fish feeding experience to attract fish near the glass",
+    "Short snorkeling/swimming stop (approx. 30 mins)",
+    "Coral reef visit at shallow vibrant sites",
+    "Air-conditioned underwater observation deck",
+    "Upper sun deck for sea breeze & relaxation",
+    "Family friendly (ideal for toddlers, infants & non-swimmers)",
+    "Complimentary water or juice during the trip",
+    "Multiple daily departure shifts"
+  ],
 
-excluded: [
-  "Snorkeling gear (unless part of a combined snorkeling trip)",
-  "Lunch (unless part of a longer combined sea trip)",
-  "Any beverages not mentioned in the tour",
-  "Personal expenses (professional photography or souvenirs)",
-  "Tipping for the boat crew or driver (optional)"
-],
+  included: [
+    "Round-trip pickup and drop-off from your hotel",
+    "Submarine ticket with entry to the panoramic underwater viewing deck (1.5–2 meters depth)",
+    "Guide to identify fish and coral reef species",
+    "Short snorkeling/swimming stop (approx. 30 mins)",
+    "Life jackets provided (especially for snorkeling)",
+    "Huge panoramic glass windows for each passenger",
+    "Air-conditioned underwater deck",
+    "Access to upper sun deck",
+    "Clean restrooms onboard",
+    "Complimentary water or juice during the trip",
+    "Private or shared round-trip transfers from your hotel to the jetty",
+    "Multiple daily departure shifts (e.g., 9:00 AM, 11:00 AM, or 1:00 PM)"
+  ],
 
-extraInfo: [
-  "Departure Time: Multiple shifts daily (9:00 AM, 11:00 AM, or 1:00 PM)",
-  "Life jackets are available for all passengers on board"
-],
+  excluded: [
+    "Professional photography by the boat crew",
+    "Snorkeling gear (unless part of a combined snorkeling trip)",
+    "Lunch (trip duration is usually 1.5–2 hours)",
+    "Extra drinks outside the complimentary water/juice",
+    "Snacks or bar purchases onboard",
+    "Personal expenses (souvenirs, additional services)",
+    "Tipping for the boat crew or driver (optional)"
+  ],
 
-moreDetails: [
-  {
-    item: "Submarine Ticket",
-    reason: "Entry to the panoramic underwater viewing deck"
-  },
-  {
-    item: "Tour Guide",
-    reason: "Guide to identify fish and coral reef species"
-  },
-  {
-    item: "Transfers",
-    reason: "Private or shared round-trip from your hotel to the jetty"
-  },
-  {
-    item: "Soft Drinks",
-    reason: "Complimentary water or juice during the trip"
-  },
-  {
-    item: "Safety",
-    reason: "Life jackets available for all passengers on board"
-  }
-],
-    description: "A semi-submarine with large glass windows, allowing you to view underwater treasures without getting wet."
-  },
+  extraInfo: [
+    "Departure Time: Multiple shifts daily (9:00 AM, 11:00 AM, or 1:00 PM)",
+    "Duration: Approximately 1.5 to 2 hours",
+    "Life jackets are available for all passengers on board",
+    "Ideal for families and non-swimmers",
+    "Facilities include clean restrooms and a small onboard snack bar"
+  ],
+
+  moreDetails: [
+    {
+      item: "Underwater Viewing",
+      reason: "Large panoramic glass windows at approx. 1.5–2 meters depth for clear reef viewing"
+    },
+    {
+      item: "Coral Reefs",
+      reason: "Visit vibrant shallow reef areas with colorful marine life"
+    },
+    {
+      item: "Fish Feeding",
+      reason: "Crew feeds fish to bring them closer to the glass"
+    },
+    {
+      item: "Snorkeling Stop",
+      reason: "Short 30-minute swimming or snorkeling break"
+    },
+    {
+      item: "Comfort",
+      reason: "Air-conditioned observation deck with comfortable seating"
+    },
+    {
+      item: "Sun Deck",
+      reason: "Upper deck available for sunbathing and enjoying sea breeze"
+    },
+    {
+      item: "Safety",
+      reason: "Life jackets provided and crew supervision throughout the trip"
+    },
+    {
+      item: "Transfers",
+      reason: "Private or shared round-trip from your hotel to the jetty"
+    },
+    {
+      item: "Soft Drinks",
+      reason: "Complimentary water or juice served during the trip"
+    }
+  ],
+
+  description:
+    "Enjoy a semi-submarine adventure with panoramic glass windows to explore vibrant coral reefs and marine life without getting wet. A short, family-friendly Red Sea experience combining comfort, safety, and unforgettable underwater views."
+},
   {
     title: "Safari – Desert Safari",
     image: "/images/itinerary/siwa-safari.jpg",
@@ -559,61 +622,98 @@ moreDetails: [
 ],
     description: "A desert adventure biking, camel riding, and a traditional Bedouin dinner with live shows."
   },
-     {
-    title: "Limousine + Taxi",
-    image: "/images/itinerary/limouse2.jpg",
-    price:15 ,
+{
+  title: "Limousine + Taxi",
+  image: "/images/itinerary/limouse2.jpg",
+  price: 15,
   currency: "€",
-       pickupTimes:["On Request (24/7)"],
+  pickupTimes: ["On Request (24/7)"],
+
   highlights: [
-  "Professional representative with personalized sign and luggage assistance",
-  "100% On-time guarantee; drivers arrive 15 minutes early",
-  "Modern, fully air-conditioned vehicles (Standard Sedan, Family Van, Luxury Business Class)",
-  "Complimentary High-speed Wi-Fi, bottled mineral water, and mobile charging ports",
-  "Professional, multilingual drivers",
-  "Transparent all-inclusive rates (Tolls and Parking included)"
-],
+    "Professional representative with personalized sign and luggage assistance",
+    "100% On-time guarantee; drivers arrive 15 minutes early",
+    "Modern, fully air-conditioned vehicles (Standard Sedan, Family Van, Luxury Business Class)",
+    "City Taxi option (Classic Orange & Blue taxis for quick trips)",
+    "Airport transfers with extra luggage space",
+    "Pre-booking available for airport & long-distance trips",
+    "Intercity private travel (Cairo, Luxor, Marsa Alam)",
+    "Complimentary High-speed Wi-Fi, bottled mineral water, and mobile charging ports",
+    "Professional, multilingual licensed drivers",
+    "Monitored trips for safety and reliability",
+    "Transparent all-inclusive fixed rates (Tolls included)",
+    "24/7 customer support availability"
+  ],
 
-moreDetails: [
-  {
-    item: "Meet & Greet",
-    reason: "A professional representative awaits you with a personalized sign and full luggage assistance"
-  },
-  {
-    item: "Punctuality",
-    reason: "100% On-time guarantee; drivers arrive 15 minutes before scheduled pickup"
-  },
-  {
-    item: "Premium Fleet",
-    reason: "Modern, fully air-conditioned vehicles (Standard Sedan, Family Van, Luxury Business Class)"
-  },
-  {
-    item: "Onboard Comfort",
-    reason: "Complimentary High-speed Wi-Fi, bottled mineral water, and mobile charging ports"
-  },
-  {
-    item: "Expert Drivers",
-    reason: "Professional, multilingual drivers with deep knowledge of Egypt's safest and fastest routes"
-  },
-  {
-    item: "Fixed Pricing",
-    reason: "Transparent, all-inclusive rates (Tolls and Parking included) with no hidden fees"
-  }
-],
+  moreDetails: [
+    {
+      item: "Meet & Greet",
+      reason: "A professional representative awaits you with a personalized sign and full luggage assistance"
+    },
+    {
+      item: "Punctuality",
+      reason: "100% On-time guarantee; drivers arrive 15 minutes before scheduled pickup"
+    },
+    {
+      item: "Premium Fleet",
+      reason: "Modern, fully air-conditioned vehicles (Standard Sedan, Family Van, Luxury Business Class)"
+    },
+    {
+      item: "City Taxi",
+      reason: "Classic Orange & Blue taxis available for short and quick city trips"
+    },
+    {
+      item: "Airport Transfers",
+      reason: "Specialized service with extra luggage space and smooth airport pickup/drop-off"
+    },
+    {
+      item: "Intercity Travel",
+      reason: "Private long-distance trips to Cairo, Luxor, or Marsa Alam"
+    },
+    {
+      item: "Onboard Comfort",
+      reason: "Complimentary High-speed Wi-Fi, bottled mineral water, and mobile charging ports"
+    },
+    {
+      item: "Expert Drivers",
+      reason: "Licensed, multilingual drivers with knowledge of all city and intercity routes"
+    },
+    {
+      item: "Safety",
+      reason: "Monitored trips and professional driving standards"
+    },
+    {
+      item: "Fixed Pricing",
+      reason: "Pre-agreed, transparent all-inclusive rates with no hidden fees"
+    },
+    {
+      item: "Customer Support",
+      reason: "24/7 availability for assistance and bookings"
+    }
+  ],
 
-included: [
-  "Personalized Meet & Greet",
-  "Full luggage assistance",
-  "Air-conditioned vehicle",
-  "High-speed Wi-Fi",
-  "Bottled mineral water",
-  "Mobile charging ports"
-],
+  included: [
+    "Door-to-door pickup and drop-off",
+    "Personalized Meet & Greet",
+    "Full luggage assistance",
+    "Professional licensed driver",
+    "Air-conditioned vehicle",
+    "High-speed Wi-Fi",
+    "Bottled mineral water",
+    "Mobile charging ports",
+    "Pre-agreed fixed rates",
+    "Tolls included"
+  ],
 
+  excluded: [
+    "Extra unplanned stops during the trip (may incur additional fees)",
+    "Extended waiting time (e.g., malls, restaurants)",
+    "Specific parking fees at private marinas or malls",
+    "Optional tipping for the driver"
+  ],
 
-
-    description: "Evening water sports."
-  },
+  description:
+    "Reliable 24/7 limousine and taxi services offering airport transfers, city rides, and intercity travel with professional drivers, fixed transparent pricing, and premium onboard comfort."
+},
 ],
     included: [ "Airport Transfers", "Guide",],
     excluded: ["Drinks", "Tips"],
@@ -658,7 +758,19 @@ included: [
     heroImage: "/images/trending/3.jpg",
     heroVideo: "/videos/cario.mp4",
     gallery: ["/images/trending/4.jpg", "/images/trending/21.jpg"],
-    overview: "A perfect blend of history and modern Egypt, this Cairo trip covers the major archaeological sites and cultural highlights, giving you a deep insight into the country’s rich past.",
+    overview: [
+  "Cairo through the eyes of the SIRI SAND TOURS family... where your story begins. ✨",
+
+  "At SIRI SAND TOURS, we welcome you as family, not just as guests. We take you on a warm, family-friendly journey that beautifully combines history, spirituality, and togetherness.",
+
+  "The Grandeur of the Past: Discover the timeless Pyramids and the treasures of the Grand Egyptian Museum. 🏛️",
+
+  "The Tranquility of the Soul: Visit the Citadel, Al-Azhar Mosque, and the Hanging Church for moments of peace and reflection. 🕌⛪",
+
+  "The Joy of Togetherness: Enjoy a delightful stroll through Al-Muizz Street and Khan El-Khalili, filled with culture, charm, and local flavors. ☕🛍️",
+
+  "We care about your family, so you can experience the magic of Egypt with love, comfort, and complete peace of mind."
+],
     itinerary: [
   {
     title: "Giza Pyramids & Grand Egyptian Museum",
@@ -920,61 +1032,98 @@ moreDetails: [
 ,
     description: "🗺️ SIRI SAND TOURS' advice to our clients : This tour is located entirely within a safe pedestrian zone, making it ideal for families and seniors, as there is no need to use a car once you reach the entrance of the religious complex."
   },
-  {
-    title: "Limousine + Taxi",
-    image: "/images/itinerary/limouse.jpg",
-    price:15 ,
+{
+  title: "Limousine + Taxi",
+  image: "/images/itinerary/limouse.jpg",
+  price: 15,
   currency: "€",
-    pickupTimes:["On Request (24/7)"],
+  pickupTimes: ["On Request (24/7)"],
+
   highlights: [
-  "Professional representative with personalized sign and luggage assistance",
-  "100% On-time guarantee; drivers arrive 15 minutes early",
-  "Modern, fully air-conditioned vehicles (Standard Sedan, Family Van, Luxury Business Class)",
-  "Complimentary High-speed Wi-Fi, bottled mineral water, and mobile charging ports",
-  "Professional, multilingual drivers",
-  "Transparent all-inclusive rates (Tolls and Parking included)"
-],
+    "Professional representative with personalized sign and luggage assistance",
+    "100% On-time guarantee; drivers arrive 15 minutes early",
+    "Modern, fully air-conditioned vehicles (Standard Sedan, Family Van, Luxury Business Class)",
+    "City Taxi option (Classic Orange & Blue taxis for quick trips)",
+    "Airport transfers with extra luggage space",
+    "Pre-booking available for airport & long-distance trips",
+    "Intercity private travel (Cairo, Luxor, Marsa Alam)",
+    "Complimentary High-speed Wi-Fi, bottled mineral water, and mobile charging ports",
+    "Professional, multilingual licensed drivers",
+    "Monitored trips for safety and reliability",
+    "Transparent all-inclusive fixed rates (Tolls included)",
+    "24/7 customer support availability"
+  ],
 
-moreDetails: [
-  {
-    item: "Meet & Greet",
-    reason: "A professional representative awaits you with a personalized sign and full luggage assistance"
-  },
-  {
-    item: "Punctuality",
-    reason: "100% On-time guarantee; drivers arrive 15 minutes before scheduled pickup"
-  },
-  {
-    item: "Premium Fleet",
-    reason: "Modern, fully air-conditioned vehicles (Standard Sedan, Family Van, Luxury Business Class)"
-  },
-  {
-    item: "Onboard Comfort",
-    reason: "Complimentary High-speed Wi-Fi, bottled mineral water, and mobile charging ports"
-  },
-  {
-    item: "Expert Drivers",
-    reason: "Professional, multilingual drivers with deep knowledge of Egypt's safest and fastest routes"
-  },
-  {
-    item: "Fixed Pricing",
-    reason: "Transparent, all-inclusive rates (Tolls and Parking included) with no hidden fees"
-  }
-],
+  moreDetails: [
+    {
+      item: "Meet & Greet",
+      reason: "A professional representative awaits you with a personalized sign and full luggage assistance"
+    },
+    {
+      item: "Punctuality",
+      reason: "100% On-time guarantee; drivers arrive 15 minutes before scheduled pickup"
+    },
+    {
+      item: "Premium Fleet",
+      reason: "Modern, fully air-conditioned vehicles (Standard Sedan, Family Van, Luxury Business Class)"
+    },
+    {
+      item: "City Taxi",
+      reason: "Classic Orange & Blue taxis available for short and quick city trips"
+    },
+    {
+      item: "Airport Transfers",
+      reason: "Specialized service with extra luggage space and smooth airport pickup/drop-off"
+    },
+    {
+      item: "Intercity Travel",
+      reason: "Private long-distance trips to Cairo, Luxor, or Marsa Alam"
+    },
+    {
+      item: "Onboard Comfort",
+      reason: "Complimentary High-speed Wi-Fi, bottled mineral water, and mobile charging ports"
+    },
+    {
+      item: "Expert Drivers",
+      reason: "Licensed, multilingual drivers with knowledge of all city and intercity routes"
+    },
+    {
+      item: "Safety",
+      reason: "Monitored trips and professional driving standards"
+    },
+    {
+      item: "Fixed Pricing",
+      reason: "Pre-agreed, transparent all-inclusive rates with no hidden fees"
+    },
+    {
+      item: "Customer Support",
+      reason: "24/7 availability for assistance and bookings"
+    }
+  ],
 
-included: [
-  "Personalized Meet & Greet",
-  "Full luggage assistance",
-  "Air-conditioned vehicle",
-  "High-speed Wi-Fi",
-  "Bottled mineral water",
-  "Mobile charging ports"
-],
+  included: [
+    "Door-to-door pickup and drop-off",
+    "Personalized Meet & Greet",
+    "Full luggage assistance",
+    "Professional licensed driver",
+    "Air-conditioned vehicle",
+    "High-speed Wi-Fi",
+    "Bottled mineral water",
+    "Mobile charging ports",
+    "Pre-agreed fixed rates",
+    "Tolls included"
+  ],
 
+  excluded: [
+    "Extra unplanned stops during the trip (may incur additional fees)",
+    "Extended waiting time (e.g., malls, restaurants)",
+    "Specific parking fees at private marinas or malls",
+    "Optional tipping for the driver"
+  ],
 
-
-    description: "Evening water sports."
-  },
+  description:
+    "Reliable 24/7 limousine and taxi services offering airport transfers, city rides, and intercity travel with professional drivers, fixed transparent pricing, and premium onboard comfort."
+},
 
 ]
 ,
@@ -1021,7 +1170,21 @@ included: [
     heroImage: "/images/tours/4.jpg",
     heroVideo: "/videos/marsa.mp4",
     gallery: ["/images/tours/14.jpg", "/images/tours/15.jpg"],
-    overview: "Marsa Alam is ideal for those looking to escape the crowds. This plan highlights the Red Sea’s natural wonders, from colorful coral reefs to crystal-clear waters, making it perfect for eco-tourism and marine adventures.",
+   overview: [
+  "Marsa Alam... Discover paradise with the SIRI SAND TOURS family. ✨",
+
+  "At SIRI SAND TOURS, we believe the most beautiful moments are those shared with family in the heart of untouched nature.",
+
+  "Meeting the Sea’s Gentle Giants: Swim with dugongs and sea turtles in the crystal-clear waters of Abu Dabbab. 🐢🌊",
+
+  "The Maldives of Egypt: Enjoy an unforgettable family day on the pristine beaches of Sharm El Luli and El Neezak. 🏝️💎",
+
+  "The Magic of Wildlife: Explore Wadi El Gemal National Park and experience the peaceful beauty of the desert. 🐫🌿",
+
+  "Privacy and Security: Our warm, family-oriented approach ensures your comfort, safety, and complete peace of mind. 🤝❤️",
+
+  "In Marsa Alam, you’re not just tourists — you’re guests in the SIRI SAND TOURS family home."
+],
     itinerary: [
   {
     title: "Royal Sea Scope Submarine",
@@ -1310,7 +1473,21 @@ moreDetails: [
     heroImage: "/images/tours/5.jpg",
     heroVideo: "/videos/fayoum.mp4",
     gallery: ["/images/tours/18.jpg", "/images/tours/19.jpg"],
-    overview: "Fayoum is a peaceful oasis southwest of Cairo, known for its lakes, waterfalls, and protected natural areas. This itinerary includes visits to Wadi El-Rayan, Mudawara Mountain, and local villages, offering a perfect blend of nature and culture.",
+    overview: [
+  "Fayoum... An oasis of tranquility for your family with SIRI SAND TOURS. ✨",
+
+  "In Fayoum, nature speaks the language of peace, and we guide you on a journey back to simple, authentic beauty.",
+
+  "Wadi El-Hitan (Valley of the Whales): A breathtaking open-air museum and UNESCO World Heritage Site. 🐋⏳",
+
+  "Wadi El-Rayan Waterfalls: Family joy surrounded by the soothing sound of cascading water in the desert. 🌊🏜️",
+
+  "Lake Qarun and Tunis Village: Discover pottery art and creative workshops for your children in a charming countryside setting. 🏺🎨",
+
+  "Mount Al-Mudawara: Witness a magical sunset that brings your family together in serenity. 🌄✨",
+
+  "With SIRI SAND TOURS, Fayoum becomes a peaceful family retreat embraced by nature."
+],
     itinerary: [
   {
     title: "Tunis Village",
@@ -1458,7 +1635,23 @@ Activities: Sandboarding, riding wooden boats on the lake, and taking memorable 
       "/images/tours/21.jpg",
       "/images/tours/20.jpg"
     ],
-    overview: "Discover the magic of Siwa Oasis as you explore ancient ruins, relax in natural salt lakes, and experience thrilling desert safaris in Egypt’s western desert.",
+  overview: [
+  "Siwa... Your family’s dream oasis with SIRI SAND TOURS. ✨",
+
+  "In Siwa, time stands still and the soul finds peace. We invite you to experience refined simplicity with your loved ones.",
+
+  "Shali Fortress: Walk through the ruins of the ancient mud-brick city built from kershif and salt. 🏰🧱",
+
+  "Cleopatra’s Spring: Enjoy family moments in crystal-clear natural springs beneath the shade of palm trees. 🏊‍♂️🌴",
+
+  "Great Sand Sea: Experience safe safari adventures and sandboarding fun for all ages. 🏜️🏂",
+
+  "Salt Lakes: Float effortlessly in turquoise waters for a truly unique experience. 💎🌊",
+
+  "Temple of the Oracle: Stand where Alexander the Great once sought his destiny. 🏛️📜",
+
+  "With SIRI SAND TOURS, Siwa is not just a trip — it’s a soulful family journey."
+],
   itinerary: [
   {
     title: "Shali Fortress & Mountain of the Dead",
@@ -1692,7 +1885,21 @@ duration:"2:00 PM - 6:00 PM",
     heroImage: "/images/tours/8.jpg",
     heroVideo: "/videos/aswan.mp4",
     gallery: ["/images/tours/12.jpg", "/images/tours/13.jpg"],
-    overview: "Aswan is known for its peaceful Nile setting and rich Nubian heritage. This itinerary includes visits to iconic sites such as Philae Temple, the High Dam, and traditional Nubian villages, offering a perfect mix of history and relaxation.",
+   overview: [
+  "Aswan... The magic of the Nile and the warmth of the SIRI SAND TOURS family. ✨",
+
+  "In Aswan, time slows down as you savor precious moments with your family surrounded by serene landscapes and Nubian charm.",
+
+  "The Majesty of the Temples: Visit the magnificent Abu Simbel and the enchanting Philae Temple rising from the Nile. 🏛️💧",
+
+  "The Nubian Village: Share laughter, colors, and warm hospitality in authentic Nubian homes. 🏡🌈",
+
+  "Nature and History: Discover the Botanical Garden and the secrets of ancient craftsmanship at the Unfinished Obelisk. 🌴🗿",
+
+  "The Nile Sunset: Enjoy a peaceful felucca ride around Elephantine Island as the sun paints the sky. ⛵🌅",
+
+  "With SIRI SAND TOURS, you’re not just visitors in Aswan — you’re welcomed into the heart of the Nile."
+],
     itinerary: [
   {
     title: "High Dam, Philae & Nubian Village",
@@ -1802,8 +2009,21 @@ included:["Live tour guide" ,"" , "English",  "Pickup: All guest will be contact
     heroImage: "/images/tours/9.jpg",
     heroVideo: "/videos/hurghada.mp4",
     gallery: ["/images/tours/10.jpeg", "/images/tours/11.jpg"],
-    overview:
-      "Learn about Egypt’s traditions, monuments, and culture.",
+  overview: [
+  "Your family is always welcome at SIRI SAND TOURS in Hurghada. ✨",
+
+  "Hurghada is more than just the sea — it’s about creating unforgettable memories with your loved ones. At SIRI SAND TOURS, we take you on a heartfelt journey filled with adventure, comfort, and togetherness.",
+
+  "The Depths of Magic: Enjoy snorkeling and diving tours to discover the most beautiful coral reefs alongside your children. 🐠🤿",
+
+  "The Mystery of the Desert: Experience thrilling safari trips and a warm Bedouin dinner under the stars of Hurghada. 🏜️✨",
+
+  "The Spirit of the City: Explore Hurghada Marina, the Grand Mosque, and St. Shenouda Church, where culture and beauty meet. 🕌⛪",
+
+  "Luxury and Comfort: Our family-oriented planning ensures your safety, relaxation, and enjoyment every step of the way. 🤝❤️",
+
+  "With SIRI SAND TOURS, you’re not just tourists — you’re part of our extended family."
+],
     itinerary: [
   {
     title: "Tawila Island Resort (VVIP)",
@@ -2502,644 +2722,966 @@ moreDetails: [
 
   infantPrice: "€5"
 },
-  {
-    title: "Fishing Trip",
-    image: "/images/itinerary/fishing.jpg",
-    price:100 ,
-    pickupTimes:["8:00am"],
+ {
+  title: "Fishing Trip",
+  image: "/images/itinerary/fishing.jpg",
+  price: 100,
+  pickupTimes: ["8:00am"],
   currency: "€",
+
   highlights: [
-  "Hurghada, Red Sea",
-  "Grady White (Well-equipped)",
-  "12+ Years Experience",
-  "Child Friendly Policy",
-  "Keep your catch"
-],
+    "Hurghada, Red Sea",
+    "Grady White (Well-equipped)",
+    "12+ Years Experience",
+    "Child Friendly Policy",
+    "Keep your catch",
+    "2–3 Prime Fishing Stops",
+    "Freshly Prepared Buffet Lunch Onboard",
+    "Snorkeling & Swimming Breaks",
+    "Unlimited Soft Drinks",
+    "Experienced Crew Assistance"
+  ],
 
-moreDetails: [
-  {
-    item: "Location",
-    reason: "Hurghada, Red Sea"
-  },
-  {
-    item: "Boat",
-    reason: "Grady White (Well-equipped)"
-  },
-  {
-    item: "Experience",
-    reason: "12+ Years"
-  },
-  {
-    item: "Fees",
-    reason: "Taxes & Fuel included"
-  },
-  {
-    item: "Policies",
-    reason: "Child Friendly. Keep your catch. No pickup"
-  }
-],
-
-included: [
-  "Tackle",
-  "Bait",
-  "License",
-  "Drinks & Snacks"
-],
-
-excluded: [
-  "Pickup"
-],
-
-    description: "Sea fishing experience."
-  },
-  {
-    title: "Scuba Diving",
-    image: "/images/itinerary/scuba-diving2.jpg",
-    price:27 ,
-    pickupTimes:["8:00am-8:30am"],
-  currency: "€",
-  highlights: [
-  "Beginner-friendly (No prior experience required)",
-  "Guided step-by-step by friendly instructors",
-  "Hurghada, Red Sea",
-  "2 Diving stops (15-20 minutes each)",
-  "Free Hotel Pickup & Drop-off (Within Hurghada)",
-  "Full Scuba equipment included",
-  "Lunch on board and unlimited soft drinks"
-],
-
-moreDetails: [
-  {
-    item: "Experience Level",
-    reason: "Beginner-friendly, no prior experience required"
-  },
-  {
-    item: "Service Style",
-    reason: "Guided step-by-step by friendly instructors"
-  },
-  {
-    item: "Location",
-    reason: "Hurghada, Red Sea"
-  },
-  {
-    item: "Diving Sessions",
-    reason: "2 diving stops (15-20 minutes each)"
-  },
-  {
-    item: "Transport",
-    reason: "Free Hotel Pickup & Drop-off within Hurghada"
-  },
-  {
-    item: "Equipment",
-    reason: "Full Scuba equipment included"
-  },
-  {
-    item: "Food & Drinks",
-    reason: "Lunch on board and unlimited soft drinks"
-  }
-],
-
-included: [
-  "Full Scuba equipment",
-  "Lunch on board",
-  "Unlimited soft drinks",
-  "Hotel Pickup & Drop-off within Hurghada"
-],
-
-excluded: [
-  "Underwater photography",
-  "National park fee (€7.00 per person)"
-],
-
-    description: "Certified diving session."
-  },
-  {
-    title: "Horse Riding",
-    image: "/images/itinerary/horse.jpg",
-    price:20 ,
-    pickupTimes:["Sunrise (6:00am) or Sunset (4:00pm)"],
-  currency: "€",
-  highlights: [
-  "Horseback Riding (Makadi Bay)",
-  "Duration: 3 Hours",
-  "Rating: 4.6 (450 reviews)",
-  "Free Cancellation & Mobile Tickets"
-],
-
-moreDetails: [
-  {
-    item: "Activity",
-    reason: "Horseback Riding (Makadi Bay)"
-  },
-  {
-    item: "Duration",
-    reason: "3 Hours"
-  },
-  {
-    item: "Rating",
-    reason: "4.6 (450 reviews)"
-  },
-  {
-    item: "Benefits",
-    reason: "Free Cancellation & Mobile Tickets"
-  }
-],
-
-included: [
-  "Horse",
-  "Expert Guide",
-  "Water"
-],
-
-excluded: [
-  "Not specified"
-],
-
-    description: "Beach or desert horse ride."
-  },
-  {
-    title: "Dolphin House",
-    image: "/images/itinerary/dolphin-house2.jpg",
-    price:25 ,
-    pickupTimes:["1:30pm"],
-  currency: "€",
-  extraInfo:["Free Cancellation: Cancel up 72hrs in advance for full refund", "Reserve now & pay later: Keep your travel plans flexble- book your spot and pay nothing today"
-     ], 
-  highlights: [
-  "1-Hour Dolphin and Walruses Show",
-  "Instant Confirmation",
-  "Hotel Pickup & Drop-off Included",
-  "Free Cancellation (72 Hours in Advance)"
-],
-duration:"1hr",
-
-moreDetails: [
- 
-  {
-    item: "Confirmation",
-    reason: "Mobile E-ticket with QR code to scan at the gates"
-  },
-  
-  
-],
-infantPrice:"Children less than 6 years old are FREE of charge",
-included: [
-  "1-Hour Dolphin and Walruses Show",
-  "Hotel pickup and drop-off (Hurghada, Makadi Bay)",
-  "Swimming with Dolphins (Optional - if package selected)",
-  "Family Swimming with Dolphins (Optional - if package selected)"
-],
-
-excluded: [
-  "Food and Drinks (Unless option selected during checkout)",
-  "Pickup from El Gouna, Soma Bay, Safaga (Extra cost)"
-],
-
-    description: "Snorkel with dolphins."
-  },
-
-  {
-    title: "Kite Surf",
-    image: "/images/itinerary/night-surf.jpg",
-    price:160 ,
-  currency: "€",
-  pickupTimes: ["8:30 am"],
-  highlights: [
-  "Kite surfing session with certified instructor (if booked)",
-  "Safety monitored with helmet, impact vest, and rescue boat",
-  "Access to Kite lagoon beach and storage facilities",
-  "Pickup from your hotel for convenient transfers"
-],
-
-included: [
-  "Safety gear: Helmet and Impact Vest provided during the session",
-  "Access to Kite lagoon beach and storage use",
-  "Personal sports insurance",
-  "Safety boat monitoring and rescue service",
-  "Certified Kite instructor for lessons (if booked)",
-  "Round-trip transfers from your hotel to the Kite Center / Spot",
-  "Pickup from your hotel between 8:30 AM – 9:30 AM"
-],
-
-excluded: [
-  "Renting kite equipment (Kite, Board, Harness) if not booked",
-  "Lunch (unless part of a full-day kite safari)",
-  "Additional beverages outside of water/tea",
-  "Personal expenses (professional action photos or videos)",
-  "Tipping for instructors or driver (optional)"
-],
-
-extraInfo: [
-  "Pickup time: Between 8:30 AM – 9:30 AM",
-  "Safety gear and rescue boat included for monitoring and emergencies"
-],
-
-moreDetails: [
-  {
-    item: "Safety Gear",
-    reason: "Helmet and Impact Vest provided during the session"
-  },
-  {
-    item: "Beach Access",
-    reason: "Entry fees to the Kite lagoon and storage use"
-  },
-  {
-    item: "Insurance",
-    reason: "Personal sports insurance included"
-  },
-  {
-    item: "Rescue Boat",
-    reason: "Safety boat monitoring and rescue service available"
-  },
-  {
-    item: "Kite Instructor",
-    reason: "Certified instructor for lessons (if booked)"
-  },
-  {
-    item: "Transfers",
-    reason: "Round-trip from your hotel to the Kite Center / Spot"
-  }
-],
-    description: "Evening water sports."
-  },
-   {
-    title: "Safari Hurghada",
-    image: "/images/itinerary/safari-hurghada.jpg",
-    price:35 ,
-     pickupTimes:["11:30AM-12:30PM"],
-  currency: "€",
-  duration:"8/10hrs",
-  highlights: [
-  "Moderate difficulty",
-  "Group Size: 2-50 people",
-  "Meeting Point: Hotel pickup",
-  "Food & Drinks: Arabic welcome drink and BBQ buffet"
-],
-
-moreDetails: [
-  {
-    item: "Difficulty",
-    reason: "Moderate"
-  },
-  {
-    item: "Group Size",
-    reason: "2-50 people"
-  },
-  {
-    item: "Meeting Point",
-    reason: "Hotel pickup"
-  },
-  {
-    item: "Activities Included",
-    reason: "Quad bike rental, 4x4 Jeep safari, Spider car buggy ride, Camel ride, Folklore show, Arabic welcome drink, BBQ buffet"
-  },
-  {
-    item: "Food & Drinks",
-    reason: "Arabic welcome drink and BBQ buffet"
-  }
-],
-  included: [
-  "Professional English-speaking guide",
-  "Hotel pickup/drop-off",
-  "Bedouin village entrance fee",
-  "Safety equipment"
-],
-
-excluded: [
-  "Travel insurance",
-  "Tips/gratuities",
-  "Personal photo printing",
-  "Alcoholic beverages"
-],
-
-    description: "Evening water sports."
-  }
-  ,
-   {
-    title: "City Tours",
-    image: "/images/itinerary/city.jpg",
-    price:15 ,
-     pickupTimes:["3:00PM-4:00pm"],
-  currency: "€",
-  highlights: [
-  "City Tour Hurghada (4:00 PM - 9:00 PM)",
-  "Old Sheraton Panorama - Sea view",
-  "Hurghada Marina - Stroll among luxurious yachts",
-  "Fish Market - Experience live local marine life",
-  "El Mina Mosque - Islamic architectural masterpiece",
-  "The Old Town (El Dahar) - Explore the charm of the past",
-  "Saint Shenouda Church - Historical landmarks",
-  "Fruit & Vegetable Market - Traditional local market tour",
-  "Safe and comfortable journey with skilled driver"
-],
-
-moreDetails: [
-  {
-    item: "Old Sheraton Panorama",
-    reason: "Enjoy the most beautiful sea view"
-  },
-  {
-    item: "Hurghada Marina",
-    reason: "A stroll among luxurious yachts"
-  },
-  {
-    item: "Fish Market",
-    reason: "Experience live local marine life"
-  },
-  {
-    item: "El Mina Mosque",
-    reason: "Visit this Islamic architectural masterpiece"
-  },
-  {
-    item: "The Old Town (El Dahar)",
-    reason: "Explore the charm of the past"
-  },
-  {
-    item: "Saint Shenouda Church",
-    reason: "Visit historical landmarks of El Dahar"
-  },
-  {
-    item: "Fruit & Vegetable Market",
-    reason: "Tour of the traditional local market with a knowledgeable guide"
-  },
-  {
-    item: "Journey",
-    reason: "A skilled driver familiar with the roads; safe, enjoyable, and comfortable"
-  }
-],
-
-included: [
-  "Professional guide",
-  "Skilled driver",
-  "City tour transportation"
-],
-
-excluded: [
-  "Personal expenses",
-  "Food & drinks"
-],
-
-    description: "Evening water sports."
-  },
-   {
-    title: "Golf",
-    image: "/images/itinerary/golf.jpg",
-    price:55 ,
-     pickupTimes:["10:00am"],
-  currency: "€",
- extraInfo: [
-  "Free Cancellation: Cancel up to 24 hours in advance for a full refund.",
-  "Reserve now & pay later: Keep your travel plans flexible — book your spot and pay nothing today."
-],
-highlights: [
-  "Reserve now, pay later",
-  "Duration: 3 hours",
-  "Group Size: Max 6 (English/Arabic)",
-  "Minimum Handicap (HCP) 36",
-  "Not suitable for Pregnancy / Over 95 years old"
-],
-
-moreDetails: [
-  {
-    item: "Payment",
-    reason: "Reserve now, pay later"
-  },
-  {
-    item: "Duration",
-    reason: "3 hours"
-  },
-  {
-    item: "Group Size",
-    reason: "Max 6 (English/Arabic)"
-  },
-  {
-    item: "Requirement",
-    reason: "Minimum Handicap (HCP) 36"
-  },
-  {
-    item: "Not Suitable For",
-    reason: "Pregnancy / Over 95 years old"
-  }
-],
-
-included: [
-  "9 or 18 holes",
-  "Range token",
-  "Free trolley"
-],
-
-excluded: [
-  "Transport",
-  "Golf carts",
-  "Food/drinks"
-],
-
-    description: "Evening water sports."
-  },
-  {
-    title: "Massage + spa",
-    image: "/images/itinerary/spa.jpg",
-    price:40 ,
-    pickupTimes:["Based On Appointment"],
-  currency: "€",
-  duration:"2hrs",
-  highlights: [
-  "Hurghada Hammam & Massage",
-  "Main Services: Steam, Jacuzzi, Exfoliation, & 45-min Massage",
-  "Private Group Only",
-  "Not Wheelchair Accessible"
-],
-
-moreDetails: [
-  {
-    item: "Main Services",
-    reason: "Steam, Jacuzzi, Exfoliation, & 45-min Massage"
-  },
-  {
-    item: "Type",
-    reason: "Private Group Only"
-  },
-  {
-    item: "Note",
-    reason: "Not Wheelchair Accessible"
-  },
-  {
-    item: "Full Body Exfoliation",
-    reason: "Traditional Hammam"
-  },
-  
-  {
-    item: "Relaxing Massage",
-    reason: "45 Minutes"
-  },
-  {
-    item: "Steam Bath",
-    reason: "Spa Access"
-  },
- 
-  {
-    item: "Sauna",
-    reason: "Spa Access"
-  }
-],
-
-included: [
-  "Hotel Transfers"
-],
-
-excluded: [
-  "Not Wheelchair Accessible"
-],
-
-    description: "Evening water sports."
-  },
-  {
-    title: "Tattoo",
-    image: "/images/itinerary/tattoo.jpg",
-    price:28 ,
-    pickupTimes:["Based On Oppointment"],
-  currency: "€",
-  highlights: [
-  "Strict adherence to highest international hygiene and sterilization standards",
-  "Handpicked elite guest artists specializing in creative Arabic calligraphy and Oriental symbolism",
-  "Premium 'Aftercare Kit' with natural desert-inspired oils for tattoo healing"
-],
-
-moreDetails: [
-  {
-    item: "Safety First",
-    reason: "We strictly adhere to the highest international hygiene and sterilization standards"
-  },
-  {
-    item: "Curation",
-    reason: "Handpicked elite guest artists specializing in creative Arabic calligraphy and Oriental symbolism"
-  },
-  {
-    item: "Exclusive Gear",
-    reason: "Every client receives a premium 'Aftercare Kit' with natural desert-inspired oils for optimal tattoo healing"
-  }
-],
-
-included: [
-  "Premium Aftercare Kit"
-],
-
-
-
-    description: "Evening water sports."
-  },
-   {
-    title: "Limousine + Taxi",
-    image: "/images/itinerary/limouse.jpg",
-    price:15 ,
-     pickupTimes:["On Request (24/7)"],
-  currency: "€",
-  highlights: [
-  "Professional representative with personalized sign and luggage assistance",
-  "100% On-time guarantee; drivers arrive 15 minutes early",
-  "Modern, fully air-conditioned vehicles (Standard Sedan, Family Van, Luxury Business Class)",
-  "Complimentary High-speed Wi-Fi, bottled mineral water, and mobile charging ports",
-  "Professional, multilingual drivers",
-  "Transparent all-inclusive rates (Tolls and Parking included)"
-],
-
-moreDetails: [
-  {
-    item: "Meet & Greet",
-    reason: "A professional representative awaits you with a personalized sign and full luggage assistance"
-  },
-  {
-    item: "Punctuality",
-    reason: "100% On-time guarantee; drivers arrive 15 minutes before scheduled pickup"
-  },
-  {
-    item: "Premium Fleet",
-    reason: "Modern, fully air-conditioned vehicles (Standard Sedan, Family Van, Luxury Business Class)"
-  },
-  {
-    item: "Onboard Comfort",
-    reason: "Complimentary High-speed Wi-Fi, bottled mineral water, and mobile charging ports"
-  },
-  {
-    item: "Expert Drivers",
-    reason: "Professional, multilingual drivers with deep knowledge of Egypt's safest and fastest routes"
-  },
-  {
-    item: "Fixed Pricing",
-    reason: "Transparent, all-inclusive rates (Tolls and Parking included) with no hidden fees"
-  }
-],
-
-included: [
-  "Personalized Meet & Greet",
-  "Full luggage assistance",
-  "Air-conditioned vehicle",
-  "High-speed Wi-Fi",
-  "Bottled mineral water",
-  "Mobile charging ports"
-],
-
-
-
-    description: "Evening water sports."
-  },
-
-
-
+  moreDetails: [
     {
-    title: "Limousine + Taxi",
-    image: "/images/itinerary/limouse.jpg",
-    price:15 ,
+      item: "Location",
+      reason: "Hurghada, Red Sea"
+    },
+    {
+      item: "Boat",
+      reason: "Grady White (Well-equipped)"
+    },
+    {
+      item: "Experience",
+      reason: "12+ Years"
+    },
+    {
+      item: "Fishing Spots",
+      reason: "Two or three different stops at prime fishing locations"
+    },
+    {
+      item: "Lunch",
+      reason: "Freshly prepared open buffet lunch served on the boat"
+    },
+    {
+      item: "Drinks",
+      reason: "Unlimited water, tea, coffee, and soft drinks all day"
+    },
+    {
+      item: "Snorkeling",
+      reason: "Swimming breaks in clear water while the boat is anchored"
+    },
+    {
+      item: "Safety",
+      reason: "Life jackets, first-aid kits, and experienced crew onboard"
+    },
+    {
+      item: "Facilities",
+      reason: "Sun deck for tanning and shaded relaxing area"
+    },
+    {
+      item: "Fees",
+      reason: "Taxes & Fuel included"
+    },
+    {
+      item: "Policies",
+      reason: "Child Friendly. Keep your catch"
+    }
+  ],
+
+  included: [
+    "Fishing rods",
+    "Lines & hooks",
+    "Fresh bait",
+    "Snorkeling gear (mask, fins, life jacket)",
+    "Full-day boat trip",
+    "Round-trip hotel transfers",
+    "Open buffet lunch",
+    "Unlimited water, tea, coffee & soft drinks",
+    "Crew assistance",
+    "Life jackets & first-aid",
+    "Fishing license"
+  ],
+
+  excluded: [
+    "Professional photography",
+    "Personal deep-sea trolling equipment (if not specified)",
+    "Alcoholic drinks",
+    "Crew & captain tipping (optional)"
+  ],
+
+  description: "Enjoy a full-day sea fishing adventure in Hurghada with multiple fishing stops, snorkeling breaks, freshly prepared buffet lunch onboard, unlimited soft drinks, and full equipment included."
+},
+{
+  title: "Scuba Diving",
+  image: "/images/itinerary/scuba-diving2.jpg",
+  price: 27,
+  pickupTimes: ["8:00am-8:30am"],
   currency: "€",
+
   highlights: [
-  "Professional representative with personalized sign and luggage assistance",
-  "100% On-time guarantee; drivers arrive 15 minutes early",
-  "Modern, fully air-conditioned vehicles (Standard Sedan, Family Van, Luxury Business Class)",
-  "Complimentary High-speed Wi-Fi, bottled mineral water, and mobile charging ports",
-  "Professional, multilingual drivers",
-  "Transparent all-inclusive rates (Tolls and Parking included)"
-],
+    "Beginner-friendly (No prior experience required)",
+    "Guided step-by-step by certified instructors",
+    "Hurghada, Red Sea",
+    "2 Diving stops (15-20 minutes each, 5–8m depth)",
+    "Free Hotel Pickup & Drop-off (Within Hurghada)",
+    "Full scuba equipment included",
+    "Snorkeling access between dives",
+    "Open buffet lunch onboard",
+    "Unlimited water, tea, coffee & soft drinks",
+    "Standard diving insurance included"
+  ],
 
-moreDetails: [
-  {
-    item: "Meet & Greet",
-    reason: "A professional representative awaits you with a personalized sign and full luggage assistance"
-  },
-  {
-    item: "Punctuality",
-    reason: "100% On-time guarantee; drivers arrive 15 minutes before scheduled pickup"
-  },
-  {
-    item: "Premium Fleet",
-    reason: "Modern, fully air-conditioned vehicles (Standard Sedan, Family Van, Luxury Business Class)"
-  },
-  {
-    item: "Onboard Comfort",
-    reason: "Complimentary High-speed Wi-Fi, bottled mineral water, and mobile charging ports"
-  },
-  {
-    item: "Expert Drivers",
-    reason: "Professional, multilingual drivers with deep knowledge of Egypt's safest and fastest routes"
-  },
-  {
-    item: "Fixed Pricing",
-    reason: "Transparent, all-inclusive rates (Tolls and Parking included) with no hidden fees"
-  }
-],
+  moreDetails: [
+    {
+      item: "Experience Level",
+      reason: "Beginner-friendly, no prior experience required"
+    },
+    {
+      item: "Dive Duration",
+      reason: "15–20 minutes underwater per dive (Depth: 5–8 meters)"
+    },
+    {
+      item: "Diving Stops",
+      reason: "Two separate dive locations"
+    },
+    {
+      item: "Briefing",
+      reason: "Detailed safety and underwater sign instructions before diving"
+    },
+    {
+      item: "Instructor Ratio",
+      reason: "Certified diving instructor for every 2–3 divers"
+    },
+    {
+      item: "Snorkeling",
+      reason: "Access to snorkeling gear between or after diving sessions"
+    },
+    {
+      item: "Safety",
+      reason: "Oxygen tanks, first-aid kits, and emergency equipment onboard"
+    },
+    {
+      item: "Boat Facilities",
+      reason: "Sun deck, shaded lounge area, and clean restrooms"
+    },
+    {
+      item: "Insurance",
+      reason: "Standard diving insurance provided by the center"
+    },
+    {
+      item: "Transport",
+      reason: "Round-trip hotel pickup and drop-off within Hurghada"
+    }
+  ],
 
-included: [
-  "Personalized Meet & Greet",
-  "Full luggage assistance",
-  "Air-conditioned vehicle",
-  "High-speed Wi-Fi",
-  "Bottled mineral water",
-  "Mobile charging ports"
-],
+  included: [
+    "Round-trip hotel transfers",
+    "Full diving gear (wet suit, BCD, regulator, mask, fins)",
+    "2 guided dives",
+    "Certified diving instructor",
+    "Snorkeling gear",
+    "Open buffet lunch",
+    "Unlimited water, tea, coffee & soft drinks",
+    "Standard diving insurance"
+  ],
+
+  excluded: [
+    "Underwater photos & videos (extra fee)",
+    "Diving courses (PADI/CMAS certification unless pre-booked)",
+    "Personal expenses (towels, souvenirs)",
+    "Crew & instructor tipping (optional)",
+    "National park fee (€7.00 per person)"
+  ],
+
+  description: "Enjoy a beginner-friendly scuba diving experience in Hurghada with two guided dives (5–8m depth), full equipment, professional instructors, buffet lunch onboard, unlimited drinks, snorkeling access, and full safety support."
+},
+ {
+  title: "Horse Riding",
+  image: "/images/itinerary/horse.jpg",
+  price: 20,
+  pickupTimes: ["Sunrise (6:00am)", "Sunset (4:00pm)"],
+  currency: "€",
+
+  highlights: [
+    "Beach or Desert Scenic Routes",
+    "Swim with Horses in the Sea",
+    "Suitable for Beginners to Experts",
+    "Well-trained Arabian & Mixed-breed Horses",
+    "Photo Stops at Scenic Viewpoints",
+    "Stable Visit Before Ride",
+    "Professional Guide Escort",
+    "Free Hotel Pickup & Drop-off"
+  ],
+
+  moreDetails: [
+    {
+      item: "Route Options",
+      reason: "Scenic desert trails or beautiful shoreline rides"
+    },
+    {
+      item: "Sea Experience",
+      reason: "Unique opportunity to swim with horses in the sea"
+    },
+    {
+      item: "Skill Level",
+      reason: "Suitable for absolute beginners to experienced riders"
+    },
+    {
+      item: "Horse Welfare",
+      reason: "Well-trained, healthy, calm Arabian or mixed-breed horses"
+    },
+    {
+      item: "Photo Stops",
+      reason: "Breaks at the best viewpoints to capture scenery"
+    },
+    {
+      item: "Briefing",
+      reason: "Basic instructions on how to steer and stop the horse safely"
+    },
+    {
+      item: "Stable Visit",
+      reason: "Meet and interact with the horses before the ride"
+    },
+    {
+      item: "Safety",
+      reason: "Constant supervision by professional stable hands"
+    },
+    {
+      item: "Ride Duration",
+      reason: "1 or 2 hours of riding (depending on booking)"
+    }
+  ],
+
+  included: [
+    "Round-trip hotel transfers",
+    "Professional riding guide",
+    "Riding helmet (safety gear)",
+    "Horse",
+    "Water"
+  ],
+
+  excluded: [
+    "Professional photography or videos",
+    "Tips for stable guides or driver (optional)",
+    "Snacks or refreshments at the stable cafe",
+    "Personal wear (long pants & closed shoes recommended)"
+  ],
+
+  description: "Enjoy a scenic horse riding experience along the beach or through the desert, including optional sea swimming with horses, professional guidance, safety equipment, and hotel transfers."
+},
+{
+  title: "Dolphin House",
+  image: "/images/itinerary/dolphin-house2.jpg",
+  price: 25,
+  pickupTimes: ["Morning (Exact time confirmed after booking)"],
+  currency: "€",
+
+  description: "Full-day boat trip to Dolphin House reefs with snorkeling, dolphin encounters, buffet lunch, and water sports.",
+
+  duration: "Full Day",
+
+  highlights: [
+    "Swim with wild dolphins in their natural habitat",
+    "2–3 snorkeling stops at coral reefs",
+    "Full-day boat cruise to Dolphin House",
+    "Open buffet lunch served onboard",
+    "Unlimited water, tea, coffee & soft drinks",
+    "Banana Boat or Quattro water sports",
+    "Relaxing sun deck & shaded lounge areas"
+  ],
+
+  moreDetails: [
+    {
+      item: "Dolphin Interaction",
+      reason: "Chance to swim with wild dolphins in their natural environment."
+    },
+    {
+      item: "Snorkeling Stops",
+      reason: "2–3 stops at vibrant coral reefs with colorful fish."
+    },
+    {
+      item: "Professional Guides",
+      reason: "Experienced snorkeling guides help you find the best spots."
+    },
+    {
+      item: "Safety",
+      reason: "Constant monitoring by guides and life jackets for all levels."
+    },
+    {
+      item: "Facilities",
+      reason: "Shaded areas, indoor lounge, and clean restrooms onboard."
+    }
+  ],
+
+  included: [
+    "Round-trip hotel transfers",
+    "Full-day boat trip to Dolphin House",
+    "Snorkeling equipment (mask, fins, life jacket)",
+    "Open buffet lunch",
+    "Unlimited water, tea, coffee & soft drinks",
+    "Banana Boat or Quattro ride",
+    "Professional snorkeling guides"
+  ],
+
+  excluded: [
+    "Professional underwater/on-deck photography",
+    "Personal towels and swimwear",
+    "Canned drinks & fresh juices (outside buffet)",
+    "Tipping (optional)"
+  ],
+
+  infantPrice: "Children under 6 years are free"
+},
+{
+  title: "Kite Surf",
+  image: "/images/itinerary/night-surf.jpg",
+  price: 160,
+  currency: "€",
+  pickupTimes: ["8:30 AM – 9:30 AM"],
+
+  highlights: [
+    "Kite surfing session with certified instructor (if booked)",
+    "Safety monitored with helmet, impact vest, and rescue boat",
+    "Access to Kite Lagoon beach, facilities, and storage",
+    "Round-trip hotel transfers included",
+    "Fresh lunch included (unless full-day Kite Safari)"
+  ],
+
+  included: [
+    "Pickup from your hotel between 8:30 AM – 9:30 AM",
+    "Round-trip transportation from hotel to Kite Spot",
+    "Certified kite instructor for lessons (if booked)",
+    "Helmet and Impact Vest during the session",
+    "Rescue boat monitoring and safety service",
+    "Entry fees to the Kite Lagoon and private beach area",
+    "Use of storage facilities for personal gear",
+    "Access to showers, changing rooms, and chill-out areas",
+    "Fresh lunch included (unless full-day Kite Safari)",
+    "Water and tea",
+    "Compressor use for pumping kites"
+  ],
+
+  excluded: [
+    "Rental of kite equipment (Kite, Board, Harness) if not pre-booked",
+    "Additional beverages or snacks outside of water/tea",
+    "Professional action photos or drone video footage",
+    "Personal sports/accident insurance (highly recommended)",
+    "Tipping for instructors or driver (optional)"
+  ],
+
+  extraInfo: [
+    "Wind briefing provided (wind direction, speed, and spot hazards)",
+    "Safety gear and rescue boat included for monitoring and emergencies",
+    "Personal sports/accident insurance is highly recommended"
+  ],
+
+  moreDetails: [
+    {
+      item: "Departure Time",
+      reason: "Pickup from your hotel between 8:30 AM – 9:30 AM"
+    },
+    {
+      item: "Full Equipment",
+      reason: "Rental of Kite, Board, and Harness available if not pre-booked"
+    },
+    {
+      item: "Transfers",
+      reason: "Round-trip transportation from hotel to Kite Spot"
+    },
+    {
+      item: "Safety Gear",
+      reason: "Helmet and Impact Vest provided during the session"
+    },
+    {
+      item: "Rescue Boat",
+      reason: "Constant safety boat monitoring and rescue service"
+    },
+    {
+      item: "Beach Access",
+      reason: "Entry fees to Kite Lagoon and private beach area"
+    },
+    {
+      item: "Facilities",
+      reason: "Access to showers, changing rooms, and chill-out areas"
+    },
+    {
+      item: "Wind Briefing",
+      reason: "Information on wind direction, speed, and spot hazards"
+    },
+    {
+      item: "Meals",
+      reason: "Fresh lunch included (unless it’s a full-day Kite Safari)"
+    },
+    {
+      item: "Air",
+      reason: "Compressor use for pumping kites"
+    }
+  ],
+
+  description: "Enjoy an exciting kite surfing experience with professional supervision, full safety support, beach access, lunch, and convenient hotel transfers."
+},
+  {
+  title: "Safari Hurghada",
+  image: "/images/itinerary/safari-hurghada.jpg",
+  price: 35,
+  currency: "€",
+  duration: "8–10 hrs",
+  pickupTimes: ["11:30 AM – 12:30 PM"],
+
+  highlights: [
+    "Round-trip 4x4 Jeep transfers from your hotel",
+    "45-minute Quad Bike (ATV) self-driving experience",
+    "Spider Car desert buggy ride",
+    "Jeep safari through the dunes to a Bedouin village",
+    "Camel ride and sunset view from the mountains",
+    "BBQ open buffet dinner with evening folklore show",
+    "Unlimited water and soft drinks during the evening program"
+  ],
+
+  included: [
+    "Round-trip transfers by 4x4 Jeep from hotel to desert base",
+    "Approximately 45 minutes Quad Bike (ATV) ride",
+    "Spider Car buggy experience",
+    "Jeep safari through the desert dunes",
+    "Visit to traditional Bedouin village",
+    "Short camel ride",
+    "Sunset view from a high point in the mountains",
+    "Bedouin BBQ open buffet dinner under the stars",
+    "Unlimited water and soft drinks during evening program",
+    "Tanoura dance, belly dancing, and fire show performance",
+    "Professional desert guides leading all driving convoys",
+    "Helmets provided for Quad Bike session"
+  ],
+
+  excluded: [
+    "Professional photos or videos",
+    "Traditional desert scarf & protective goggles",
+    "Shisha (available for extra fee)",
+    "Tipping for desert guides or driver (optional)",
+    "Travel/personal insurance"
+  ],
+
+  moreDetails: [
+    {
+      item: "Transfers",
+      reason: "Round-trip by 4x4 Jeep from hotel to desert base"
+    },
+    {
+      item: "Quad Bike",
+      reason: "Approximately 45 minutes of self-driving (ATV)"
+    },
+    {
+      item: "Spider Car",
+      reason: "Short thrilling desert buggy session"
+    },
+    {
+      item: "Jeep Safari",
+      reason: "Desert driving through dunes to the Bedouin village"
+    },
+    {
+      item: "Bedouin Village",
+      reason: "Visit traditional camp to learn about Bedouin lifestyle"
+    },
+    {
+      item: "Camel Ride",
+      reason: "Short traditional camel ride through the desert"
+    },
+    {
+      item: "Sunset View",
+      reason: "Watch the sunset from a panoramic mountain viewpoint"
+    },
+    {
+      item: "Dinner",
+      reason: "Bedouin BBQ open buffet served under the stars"
+    },
+    {
+      item: "Drinks",
+      reason: "Unlimited water and soft drinks during evening program"
+    },
+    {
+      item: "Evening Show",
+      reason: "Tanoura dance, belly dancing, and fire show performance"
+    },
+    {
+      item: "Safety",
+      reason: "Professional desert guides lead all driving convoys"
+    },
+    {
+      item: "Equipment",
+      reason: "Helmets provided for the Quad Bike session"
+    }
+  ],
+
+  description:
+    "Experience an unforgettable desert adventure in Hurghada featuring quad biking, Jeep safari, camel ride, Bedouin village visit, sunset views, BBQ dinner, and live entertainment under the stars."
+},
+ {
+  title: "City Tours",
+  image: "/images/itinerary/city.jpg",
+  price: 15,
+  pickupTimes: ["3:00PM-4:00pm"],
+  currency: "€",
+
+  highlights: [
+    "City Tour Hurghada (4:00 PM - 9:00 PM)",
+    "Panoramic View - Visit the highest point in Hurghada for photos",
+    "Old Sheraton Panorama - Sea view",
+    "Hurghada Marina - Stroll among luxurious yachts",
+    "Fish Market - Experience live local marine life",
+    "El Mina Mosque - Islamic architectural masterpiece",
+    "The Old Town (El Dahar) - Explore the charm of the past",
+    "Saint Shenouda Church - Historical landmarks",
+    "Fruit & Vegetable Market - Traditional local market tour",
+    "Learn the history of Hurghada from fishing village to city",
+    "Safe and comfortable journey with skilled driver"
+  ],
+
+  moreDetails: [
+    {
+      item: "Panoramic View",
+      reason: "Visit the highest point in Hurghada for stunning photos"
+    },
+    {
+      item: "Old Sheraton Panorama",
+      reason: "Enjoy the most beautiful sea view"
+    },
+    {
+      item: "Hurghada Marina",
+      reason: "A relaxing walk among luxurious yachts"
+    },
+    {
+      item: "Fish Market",
+      reason: "Visit the bustling local fish market by the port"
+    },
+    {
+      item: "El Mina Mosque",
+      reason: "Visit the largest and most beautiful mosque in the city"
+    },
+    {
+      item: "Coptic Church (Saint Shenouda)",
+      reason: "Explore the stunning architecture of St. Shenouda Church"
+    },
+    {
+      item: "The Old Town (El Dahar)",
+      reason: "Experience the traditional fruit & vegetable market"
+    },
+    {
+      item: "History",
+      reason: "Learn how Hurghada grew from a fishing village into a modern city"
+    },
+    {
+      item: "Shopping Stops",
+      reason: "Quality time at authorized papyrus and perfume galleries"
+    },
+    {
+      item: "Journey",
+      reason: "Air-conditioned vehicle with professional driver all day"
+    }
+  ],
+
+  included: [
+    "Pick-up & Drop-off (Round-trip transfer from your hotel)",
+    "Professional guide",
+    "Skilled driver",
+    "Air-conditioned vehicle",
+    "Entry to El Mina Mosque",
+    "Entry to Coptic Church",
+    "Panoramic photo stop",
+    "City tour transportation"
+  ],
+
+  excluded: [
+    "Personal shopping (souvenirs, spices, clothing)",
+    "Meals (Lunch or Dinner - can be added upon request)",
+    "Extra museum fees (Sand City or Mini Egypt if not in route)",
+    "Tipping / gratuities (optional)",
+    "Personal expenses",
+    "Food & drinks"
+  ],
+
+  description: "Discover the beauty, history, and culture of Hurghada on this guided evening city tour including marina, mosque, church, markets, panoramic views, and Old Town exploration."
+},
+ {
+  title: "Golf",
+  image: "/images/itinerary/golf.jpg",
+  price: 55,
+  pickupTimes: ["10:00am"],
+  currency: "€",
+
+  extraInfo: [
+    "Free Cancellation: Cancel up to 24 hours in advance for a full refund.",
+    "Reserve now & pay later: Keep your travel plans flexible — book your spot and pay nothing today."
+  ],
+
+  highlights: [
+    "Reserve now, pay later",
+    "Duration: 3 hours",
+    "Group Size: Max 6 (English/Arabic)",
+    "Minimum Handicap (HCP) 36",
+    "Pre-booked tee times for smooth flow of play",
+    "World-class championship courses (e.g., Steigenberger or El Gouna)",
+    "Scenic views of green fairways and blue lagoons",
+    "Suitable for all skill levels (High-handicappers & Pros)",
+    "Professional staff & marshals monitoring the course",
+    "Clubhouse access (lounge & restaurant areas)",
+    "Water & refreshments available on course",
+    "Dress code required (Collar shirts & golf shoes/sneakers)",
+    "Not suitable for Pregnancy / Over 95 years old"
+  ],
+
+  moreDetails: [
+    {
+      item: "Payment",
+      reason: "Reserve now, pay later"
+    },
+    {
+      item: "Duration",
+      reason: "3 hours"
+    },
+    {
+      item: "Group Size",
+      reason: "Max 6 (English/Arabic)"
+    },
+    {
+      item: "Requirement",
+      reason: "Minimum Handicap (HCP) 36"
+    },
+    {
+      item: "Tee Time",
+      reason: "Pre-booked slots to ensure a smooth flow of play"
+    },
+    {
+      item: "Courses",
+      reason: "World-class courses designed by international architects (Steigenberger or El Gouna)"
+    },
+    {
+      item: "Scenic Views",
+      reason: "Stunning landscapes combining green fairways and blue lagoons"
+    },
+    {
+      item: "Skill Levels",
+      reason: "Suitable for both high-handicappers and professional players"
+    },
+    {
+      item: "Safety",
+      reason: "Professional staff and marshals monitoring the course"
+    },
+    {
+      item: "Clubhouse Access",
+      reason: "Entry to lounge and restaurant areas"
+    },
+    {
+      item: "Dress Code",
+      reason: "Strict golf attire required (Collar shirts and golf shoes/sneakers)"
+    },
+    {
+      item: "Not Suitable For",
+      reason: "Pregnancy / Over 95 years old"
+    }
+  ],
+
+  included: [
+    "Round-trip hotel transfers",
+    "Green fees (9-hole or 18-hole championship course)",
+    "Access to practice driving range",
+    "Range token",
+    "Free trolley",
+    "Locker rooms (showers & lockers)",
+    "Clubhouse access"
+  ],
+
+  excluded: [
+    "Equipment rental (clubs & professional sets available for rent)",
+    "Golf cart / personal caddy services",
+    "Private pro lessons (PGA professional)",
+    "Tipping (optional)",
+    "Food & drinks",
+    "Transport"
+  ],
+
+  description:
+    "Enjoy a premium golf experience at a world-class championship course with scenic lagoon views, professional supervision, and full clubhouse access. Perfect for both experienced golfers and improving players."
+},
+{
+  title: "Massage + spa",
+  image: "/images/itinerary/spa.jpg",
+  price: 40,
+  pickupTimes: ["Based On Appointment"],
+  currency: "€",
+  duration: "2hrs",
+
+  highlights: [
+    "Hurghada Hammam & Massage",
+    "Main Services: Steam, Jacuzzi, Exfoliation, & 45-min Massage",
+    "Choice of Aromatherapy, Thai, or Swedish massage",
+    "Turkish Bath (Steam, Sauna & Hammam)",
+    "Peeling & Foam traditional body scrub",
+    "Private Group Only",
+    "Certified male & female therapists",
+    "High hygiene standards & fresh towels provided",
+    "Not Wheelchair Accessible"
+  ],
+
+  moreDetails: [
+    {
+      item: "Main Services",
+      reason: "Steam, Jacuzzi, Exfoliation, & 45-min Massage"
+    },
+    {
+      item: "Massage Types",
+      reason: "Choice of Aromatherapy, Thai, or Swedish massage"
+    },
+    {
+      item: "Turkish Bath",
+      reason: "Access to Steam room, Sauna, and Hammam"
+    },
+    {
+      item: "Peeling & Foam",
+      reason: "Traditional body scrub and foam massage"
+    },
+    {
+      item: "Sauna & Jacuzzi",
+      reason: "Full access to hot tub and relaxation zones"
+    },
+    {
+      item: "Skin Care",
+      reason: "Face mask and specialized treatments included in some packages"
+    },
+    {
+      item: "Expert Therapists",
+      reason: "Certified male and female massage professionals"
+    },
+    {
+      item: "Welcome Drink",
+      reason: "Herbal tea or refreshments served upon arrival"
+    },
+    {
+      item: "Privacy",
+      reason: "Dedicated rooms for couples or private female/male sections"
+    },
+    {
+      item: "Ambience",
+      reason: "Calming music, aromatic scents, and professional environment"
+    },
+    {
+      item: "Safety",
+      reason: "High hygiene standards and fresh towels provided"
+    },
+    {
+      item: "Type",
+      reason: "Private Group Only"
+    },
+    {
+      item: "Accessibility",
+      reason: "Not Wheelchair Accessible"
+    }
+  ],
+
+  included: [
+    "Round-trip hotel transfers",
+    "Turkish Bath (Steam, Sauna, Hammam)",
+    "Full body massage (45–60 minutes)",
+    "Peeling & foam treatment",
+    "Jacuzzi access",
+    "Locker rooms & towels",
+    "Welcome drink"
+  ],
+
+  excluded: [
+    "Extra medical or beauty treatments (e.g., Botox)",
+    "Take-home products (oils, creams, skincare)",
+    "Personal items (swimwear must be brought by guest)",
+    "Tipping (optional)",
+    "Not Wheelchair Accessible"
+  ],
+
+  description:
+    "Relax and rejuvenate with a complete Hurghada Hammam & Spa experience including Turkish bath, peeling & foam, Jacuzzi, and professional full-body massage in a calm and private environment."
+},
+  {
+  title: "Tattoo",
+  image: "/images/itinerary/tattoo.jpg",
+  price: 28,
+  pickupTimes: ["Based On Oppointment"],
+  currency: "€",
+
+  highlights: [
+    "Strict adherence to highest international hygiene and sterilization standards",
+    "Handpicked elite guest artists specializing in creative Arabic calligraphy and Oriental symbolism",
+    "Custom design consultation before tattoo session",
+    "Permanent, Semi-Permanent, or Temporary Henna options",
+    "Internationally certified, skin-safe pigments",
+    "Professional stencil design preparation",
+    "Pain management guidance for maximum comfort",
+    "Cover-up service for old tattoos",
+    "Premium 'Aftercare Kit' with natural desert-inspired oils for tattoo healing"
+  ],
+
+  moreDetails: [
+    {
+      item: "Consultation",
+      reason: "Meeting with the artist to discuss design, size, and placement"
+    },
+    {
+      item: "Tattoo Types",
+      reason: "Permanent, Semi-Permanent, or Temporary Henna options available"
+    },
+    {
+      item: "Custom Designs",
+      reason: "Ability to create a unique piece based on your idea"
+    },
+    {
+      item: "Design Preparation",
+      reason: "Printing and applying stencil professionally to the skin"
+    },
+    {
+      item: "Artist Expertise",
+      reason: "Talented artists specializing in fine line, realism, Arabic calligraphy, and more"
+    },
+    {
+      item: "Inks",
+      reason: "Use of internationally certified, skin-safe pigments"
+    },
+    {
+      item: "Sterile Equipment",
+      reason: "High-quality, single-use needles and inks"
+    },
+    {
+      item: "Hygiene",
+      reason: "Strict sterilization and clean professional studio environment"
+    },
+    {
+      item: "Pain Management",
+      reason: "Guidance throughout the process to ensure maximum comfort"
+    },
+    {
+      item: "Safety Briefing",
+      reason: "Instructions on how to properly care for your new tattoo"
+    },
+    {
+      item: "Aftercare Guide",
+      reason: "Detailed list of Dos and Don'ts for proper healing"
+    },
+    {
+      item: "Touch-ups",
+      reason: "Future color refresh sessions available (usually extra cost)"
+    }
+  ],
+
+  included: [
+    "Consultation with artist",
+    "Custom stencil design preparation",
+    "Use of sterile single-use equipment",
+    "Certified skin-safe pigments",
+    "Premium Aftercare Kit",
+    "Aftercare instructions guide"
+  ],
+
+  excluded: [
+    "Studio transfers (unless arranged as VIP service)",
+    "Future touch-up sessions",
+    "Optional tipping for the artist"
+  ],
+
+  description:
+    "Get a professionally designed tattoo in a sterile studio environment with certified artists, custom designs, premium inks, and full aftercare support for a safe and unforgettable experience."
+},
 
 
 
-    description: "Evening water sports."
-  },
+  {
+  title: "Limousine + Taxi",
+  image: "/images/itinerary/limouse.jpg",
+  price: 15,
+  currency: "€",
+  pickupTimes: ["On Request (24/7)"],
+
+  highlights: [
+    "Professional representative with personalized sign and luggage assistance",
+    "100% On-time guarantee; drivers arrive 15 minutes early",
+    "Modern, fully air-conditioned vehicles (Standard Sedan, Family Van, Luxury Business Class)",
+    "City Taxi option (Classic Orange & Blue taxis for quick trips)",
+    "Airport transfers with extra luggage space",
+    "Pre-booking available for airport & long-distance trips",
+    "Intercity private travel (Cairo, Luxor, Marsa Alam)",
+    "Complimentary High-speed Wi-Fi, bottled mineral water, and mobile charging ports",
+    "Professional, multilingual licensed drivers",
+    "Monitored trips for safety and reliability",
+    "Transparent all-inclusive fixed rates (Tolls included)",
+    "24/7 customer support availability"
+  ],
+
+  moreDetails: [
+    {
+      item: "Meet & Greet",
+      reason: "A professional representative awaits you with a personalized sign and full luggage assistance"
+    },
+    {
+      item: "Punctuality",
+      reason: "100% On-time guarantee; drivers arrive 15 minutes before scheduled pickup"
+    },
+    {
+      item: "Premium Fleet",
+      reason: "Modern, fully air-conditioned vehicles (Standard Sedan, Family Van, Luxury Business Class)"
+    },
+    {
+      item: "City Taxi",
+      reason: "Classic Orange & Blue taxis available for short and quick city trips"
+    },
+    {
+      item: "Airport Transfers",
+      reason: "Specialized service with extra luggage space and smooth airport pickup/drop-off"
+    },
+    {
+      item: "Intercity Travel",
+      reason: "Private long-distance trips to Cairo, Luxor, or Marsa Alam"
+    },
+    {
+      item: "Onboard Comfort",
+      reason: "Complimentary High-speed Wi-Fi, bottled mineral water, and mobile charging ports"
+    },
+    {
+      item: "Expert Drivers",
+      reason: "Licensed, multilingual drivers with knowledge of all city and intercity routes"
+    },
+    {
+      item: "Safety",
+      reason: "Monitored trips and professional driving standards"
+    },
+    {
+      item: "Fixed Pricing",
+      reason: "Pre-agreed, transparent all-inclusive rates with no hidden fees"
+    },
+    {
+      item: "Customer Support",
+      reason: "24/7 availability for assistance and bookings"
+    }
+  ],
+
+  included: [
+    "Door-to-door pickup and drop-off",
+    "Personalized Meet & Greet",
+    "Full luggage assistance",
+    "Professional licensed driver",
+    "Air-conditioned vehicle",
+    "High-speed Wi-Fi",
+    "Bottled mineral water",
+    "Mobile charging ports",
+    "Pre-agreed fixed rates",
+    "Tolls included"
+  ],
+
+  excluded: [
+    "Extra unplanned stops during the trip (may incur additional fees)",
+    "Extended waiting time (e.g., malls, restaurants)",
+    "Specific parking fees at private marinas or malls",
+    "Optional tipping for the driver"
+  ],
+
+  description:
+    "Reliable 24/7 limousine and taxi services offering airport transfers, city rides, and intercity travel with professional drivers, fixed transparent pricing, and premium onboard comfort."
+},
 ]
 ,
 
