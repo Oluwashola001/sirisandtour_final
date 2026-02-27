@@ -2002,7 +2002,7 @@ included:["Live tour guide" ,"" , "English",  "Pickup: All guest will be contact
   },
 
   {
-    title: "SIRI SAND TOURS presents your personalized Hurghada city tour program, tailored to your preferences, from 4:00 PM to 9:00 PM:",
+    title: "Don't just be a tourist... be part of the family! SIRI SAND TOURS designs a city tour like you've never dreamed of (8:00 am - 9:00 pm)",
     cardTitle: "Hurghada",
     slug: makeSlug("Egypt Cultural Heritage Tour"),
     description: "Immerse yourself in Egypt’s history and culture.",

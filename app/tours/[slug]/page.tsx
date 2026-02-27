@@ -231,7 +231,7 @@ const [openDescriptionIndex, setOpenDescriptionIndex] = useState<number | null>(
                           {item.highlights?.map((point: string, index: number) => (
                             <li
                               key={index}
-                              className="flex items-start gap-2 text-gray-700 text-xs sm:text-sm"
+                             className="flex items-start gap-3 text-gray-800 text-base sm:text-lg font-medium leading-relaxed"
                             >
                               <span style={{ color: BRAND }}>✓</span>
                               {point}
@@ -425,19 +425,19 @@ const [openDescriptionIndex, setOpenDescriptionIndex] = useState<number | null>(
             Highlights :
           </h3>
 
-          <div className="max-h-[6.5rem] overflow-y-auto pr-3 custom-scroll">
-            <ul className="space-y-3">
-              {item.highlights?.map((point: string, index: number) => (
-                <li
-                  key={index}
-                  className="flex items-start gap-3 text-gray-700 text-xs sm:text-sm"
-                >
-                  <span style={{ color: BRAND }}>✓</span>
-                  {point}
-                </li>
-              ))}
-            </ul>
-          </div>
+        <div className="max-h-[6.5rem] overflow-y-auto pr-3 custom-scroll">
+  <ul className="space-y-4">
+    {item.highlights?.map((point: string, index: number) => (
+      <li
+        key={index}
+        className="flex items-start gap-3 text-gray-800 text-base sm:text-lg font-medium leading-relaxed"
+      >
+        <span style={{ color: BRAND }}>✓</span>
+        {point}
+      </li>
+    ))}
+  </ul>
+</div>
         </div>
 
             {/* DESCRIPTION DROPDOWN */}

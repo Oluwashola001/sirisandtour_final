@@ -37,7 +37,7 @@ export default function ComingSoonCards() {
         {destinations.map((item) => (
           <div
             key={item.id}
-            className="relative bg-white border-2 border-[#8c7455] rounded-3xl overflow-hidden shadow-sm"
+            className="relative bg-white border-2 border-[#0a7bbe] rounded-3xl overflow-hidden shadow-sm"
           >
             {/* IMAGE */}
             <div className="relative h-57 w-full">
@@ -49,14 +49,14 @@ export default function ComingSoonCards() {
               />
 
               {/* BADGE */}
-              <div className="absolute top-6 right-6 bg-[#8c7455] text-white px-6 py-2 rounded-full font-semibold tracking-wider">
+              <div className="absolute top-2 right-2 bg-[#0a7bbe] text-white px-6 py-2 rounded-full font-semibold tracking-wider">
                 COMING SOON
               </div>
             </div>
 
             {/* CONTENT */}
             <div className="p-8">
-              <h2 className="text-3xl font-serif font-bold text-[#3b2f23] mb-4">
+              <h2 className="text-3xl font-serif font-bold text-[#0a7bbe] mb-1 -mt-5">
                 {item.title}
               </h2>
 
@@ -64,7 +64,8 @@ export default function ComingSoonCards() {
                 {item.description}
               </p>
 
-              <h3 className="text-4xl font-bold text-[#8c7455] mb-4">
+              <h3 className="text-4xl font-bold text-[#0a7bbe] mb-3 -mt-4
+            ">
                 Coming Soon
               </h3>
 
@@ -73,14 +74,14 @@ export default function ComingSoonCards() {
                 <span>{item.launch}</span>
               </div>
 
-              <button className="w-full bg-[#b7a58a] hover:bg-[#a08d72] transition text-white py-4 rounded-xl text-xl font-semibold">
+              <button className="w-full bg-[#0a7bbe] hover:bg-[#0a7bbe] transition text-white py-4 rounded-xl text-xl font-semibold -mt-3"  >
                 Coming Soon
               </button>
             </div>
 
             {/* FLOATING ARROW */}
-            <div className="absolute bottom-24 right-6">
-              <button className="bg-[#8c7455] text-white p-4 rounded-full shadow-lg hover:scale-105 transition">
+            <div className="absolute bottom-28 right-6">
+              <button className="bg-[#0a7bbe] text-white p-4 rounded-full shadow-lg hover:scale-105 transition">
                 <ArrowUp size={20} />
               </button>
             </div>

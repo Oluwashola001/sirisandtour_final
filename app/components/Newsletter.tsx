@@ -47,11 +47,15 @@ export default function NewsletterSection() {
           
           {/* Coming Soon Badge */}
           <div className="inline-flex items-center gap-2 bg-[#0A7BBE]/10 text-[#0A7BBE] px-4 py-2 rounded-full text-sm font-medium mb-6">
-            <motion.div variants={floatingIcon} animate="visible">
-              <Rocket size={16} />
-            </motion.div>
-            Coming Soon
-          </div>
+  <motion.span
+    variants={floatingIcon}
+    animate="visible"
+    className="text-base"
+  >
+    ⚡
+  </motion.span>
+  Coming Soon
+</div>
 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0A7BBE] leading-tight mb-4">
             Subscribe To Our <br /> Newsletter
@@ -75,9 +79,9 @@ export default function NewsletterSection() {
           />
           <button
             disabled
-            className="bg-gray-400 text-white rounded-full px-8 py-4 text-sm sm:text-base flex items-center justify-center cursor-not-allowed"
+            className="bg-[#0a7bbe] text-white rounded-full px-8 py-4 text-sm sm:text-base flex items-center justify-center cursor-not-allowed"
           >
-            Launching Soon 🚀
+            Launching Soon ⚡
           </button>
         </motion.div>
       </motion.div>
