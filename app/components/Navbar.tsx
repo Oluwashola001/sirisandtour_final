@@ -16,16 +16,16 @@ const navLinks = [
 ];
 
 const languages = [
-  "English",
-  "Arabic",
-  "Russian",
-  "German",
-  "Spanish",
-  "Polish",
-  "Romanian",
-  "Italian",
-  "Czech",
-  "Belgian",
+  { name: "English", flag: "🇬🇧" },
+  { name: "Arabic", flag: "🇪🇬" },
+  { name: "Russian", flag: "🇷🇺" },
+  { name: "German", flag: "🇩🇪" },
+  { name: "Spanish", flag: "🇪🇸" },
+  { name: "Polish", flag: "🇵🇱" },
+  { name: "Romanian", flag: "🇷🇴" },
+  { name: "Italian", flag: "🇮🇹" },
+  { name: "Czech", flag: "🇨🇿" },
+  { name: "Belgian", flag: "🇧🇪" },
 ];
 
 export default function Navbar() {
@@ -135,17 +135,17 @@ const translatePage = (lang: string) => {
 
               {dropdownOpen && (
                 <ul className="absolute right-0 mt-2 w-46 grid lg:grid-cols-2 bg-white shadow-lg rounded-md border z-50">
-                  {languages.map((lang) => (
+                 {languages.map((lang) => (
                     <li
-                      key={lang}
+                      key={lang.name}
                       onClick={() => {
-                        setSelectedLanguage(lang);
+                        setSelectedLanguage(lang.name);
                         setDropdownOpen(false);
-                        translatePage(lang);
+                        translatePage(lang.name);
                       }}
                       className="px-4 py-2 hover:bg-gray-100 cursor-pointer text-[#0A7BBE] font-medium"
                     >
-                      {lang}
+                      {lang.flag}
                     </li>
                   ))}
                 </ul>
@@ -163,13 +163,44 @@ const translatePage = (lang: string) => {
             </Link>
           </div>
 
-          {/* MOBILE MENU BUTTON */}
-          <button
-            className="text-4xl text-black md:hidden"
-            onClick={() => setMobileOpen(true)}
+        <div className="flex items-center gap-3 md:hidden">
+  
+  {/* MOBILE LANGUAGE BUTTON */}
+  <div className="relative">
+    <button
+      onClick={() => setDropdownOpen(!dropdownOpen)}
+      className="flex items-center gap-1 px-2 py-1 border rounded-md text-black font-semibold text-sm"
+    >
+      🌍 {selectedLanguage}
+    </button>
+
+    {dropdownOpen && (
+      <ul className="absolute right-0 mt-2 w-36 bg-white shadow-lg rounded-md border z-50">
+        {languages.map((lang) => (
+          <li
+            key={lang.name}
+            onClick={() => {
+              setSelectedLanguage(lang.name);
+              setDropdownOpen(false);
+              translatePage(lang.name);
+            }}
+            className="px-3 py-2 hover:bg-gray-100 cursor-pointer text-black text-sm"
           >
-            <HiOutlineMenu />
-          </button>
+            {lang.flag}
+          </li>
+        ))}
+      </ul>
+    )}
+  </div>
+
+  {/* HAMBURGER */}
+  <button
+    className="text-4xl text-black"
+    onClick={() => setMobileOpen(true)}
+  >
+    <HiOutlineMenu />
+  </button>
+</div>
         </div>
       </motion.nav>
 
@@ -235,43 +266,7 @@ const translatePage = (lang: string) => {
               ))}
 
             
-                {/* MOBILE LANGUAGE DROPDOWN */}
-            <div className="relative">
-              <button
-                onClick={() => setDropdownOpen(!dropdownOpen)}
-                className="flex items-center gap-1 px-3 py-1.5 border rounded-md text-black hover:text-[#075E94] font-semibold"
-              >
-                {selectedLanguage}
-                <svg
-                  className={`w-4 h-4  transition-transform ${dropdownOpen ? "rotate-180" : ""}`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-
-              {dropdownOpen && (
-                <ul className="absolute right-0 mt-2 w-36 grid grid-cols-2 gap-3
-              z-50">
-                  {languages.map((lang) => (
-                    <li
-                      key={lang}
-                      onClick={() => {
-                        setSelectedLanguage(lang);
-                        setDropdownOpen(false);
-                        translatePage(lang);
-                      }}
-                      className="px-10 py-2 hover:bg-gray-100 cursor-pointer text-black font-medium"
-                    >
-                      {lang}
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </div>
+                
             </motion.nav>
           </motion.aside>
         )}

@@ -10,6 +10,7 @@ import { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { pacifico } from '@/app/fonts';
 import { tours } from '../data/tours';
+import ComingSoon from './ComingSoon'
 
 export default function PopularDestinationsSlider() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -149,6 +150,7 @@ export default function PopularDestinationsSlider() {
     className="w-full h-full object-cover"
   />
 </div>
+<ComingSoon />
     </section>
   );
 }
