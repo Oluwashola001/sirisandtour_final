@@ -32,7 +32,8 @@ export default function Footer() {
           </div>
 
           <p className="text-gray-600 leading-relaxed -mt-20 mb-6">
-            From golden deserts to vibrant cultural landmarks, we bring you the authentic experiences that make Egypt truly unforgettable.
+            Siri Sand Tours :_
+" From our ancient sands to our enchanting seas... your family is the hero of the story "
           </p>
 
           {/* Social Icons */}
@@ -41,7 +42,10 @@ export default function Footer() {
               { Icon: FaFacebookF, href: "https://www.facebook.com/share/1GSg2bFn1Z/" },
               { Icon: FaYoutube, href: "https://youtube.com/@sirisandtours?si=sGpI_SpxQ8JeD2Rq" },
               { Icon: FaTiktok, href: "https://www.tiktok.com/@siri.sand.tours?_r=1&_t=ZS-93QFhoDBpmm" },
-              { Icon: FaWhatsapp, href: "https://wa.me/234XXXXXXXXXX" },
+             {
+  Icon: FaWhatsapp,
+  href: "https://wa.me/201288062555?text=Hello%20I%20want%20to%20book%20a%20tour"
+},
               { Icon: FaInstagram, href: "https://www.instagram.com/sirisandtours?igsh=emltNHVlejE4ZnBl" },
             ].map((item, i) => (
               <a

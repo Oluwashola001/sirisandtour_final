@@ -86,7 +86,7 @@ export const tours: Tour[] = [
     duration: "3 hrs",
       price: 75,
   currency: "€",
-  pickupTimes: ["3:30 am from Hurghada"],
+  pickupTimes: ["4:00 AM from Hurghada"],
   highlights: [
   "Visit Karnak Temple, Valley of the Kings, and Hatshepsut Temple",
   "Explore the most famous ancient sites in Luxor with a professional guide",
@@ -173,10 +173,7 @@ moreDetails: [
     item: "Flight Time",
     reason: "45 minutes"
   },
-  {
-    item: "Snorkeling Stops",
-    reason: "2 stops"
-  },
+  
   {
     item: "Transportation",
     reason: "Hotel/Cruise pick-up & drop-off (A/C vehicles)"
@@ -201,24 +198,70 @@ moreDetails: [
 
   },
 
-  {
-    title: "Nile Cruise – Luxor to Aswan",
-    image: "/images/itinerary/nile-cruise.jpg",
-         price: 90,
-  currency: "€",
+ {
+  title: "Nile Cruise – Luxor to Aswan",
+  image: "/images/itinerary/nile-cruise.jpg",
+  price: 90,
   pickupTimes: ["Depends Where You Are"],
-       duration: "5hrs" ,
- highlights: [
-  "Covers all must-do experiences in Luxor & Aswan in one epic journey",
-  "Soar over Luxor on an unforgettable hot air balloon ride",
-  "Walk in the footsteps of pharaohs at Karnak & the Valley of the Kings",
-  "Cruise the Nile in style with guided stops at Egypt’s top temples",
-  "Witness the awe-inspiring Abu Simbel Temples"
-],
-included:["Live tour guide" ,":" , "Arabic, English, German, Spanish, French"],
-    description:
-      "Relax on a scenic Nile cruise from Luxor to Aswan, stopping at historic temples along the way."
-  }
+  currency: "€",
+
+  highlights: [
+    "Covers all must-do experiences in Luxor & Aswan in one epic journey",
+    "Soar over Luxor on an unforgettable hot air balloon ride",
+    "Walk in the footsteps of pharaohs at Karnak & the Valley of the Kings",
+    "Cruise the Nile in style with guided stops at Egypt’s top temples",
+    "Witness the awe-inspiring Abu Simbel Temples",
+    "Valley of the Kings, Karnak Temple, Edfu, Kom Ombo, and Philae Temple"
+  ],
+
+  moreDetails: [
+    {
+      item: "Duration",
+      reason: "4 Nights (Luxor to Aswan) or 3 Nights (Aswan to Luxor)"
+    },
+    {
+      item: "Accommodation",
+      reason: "Stay in a 5-Star Floating Hotel (Private cabin with Nile view)"
+    },
+    {
+      item: "Languages",
+      reason: "Live tour guide speaking Arabic, English, German, Spanish, and French"
+    },
+    {
+      item: "Sightseeing",
+      reason: "Professional Egyptologist guides all temple visits and excursions"
+    },
+    {
+      item: "Entertainment",
+      reason: "Nightly entertainment including Galabeya Party, Belly Dance, and Nubian Show"
+    },
+    {
+      item: "Meals",
+      reason: "Full Board: Breakfast, Lunch, and Dinner (Open Buffet)"
+    },
+    {
+      item: "Transport",
+      reason: "All pickups and drop-offs via air-conditioned vehicles"
+    }
+  ],
+
+  included: [
+    "Live tour guide in multiple languages",
+    "Professional Egyptologist for all sightseeing",
+    "All pickups and drop-offs via air-conditioned vehicles",
+    "Nightly entertainment (Galabeya Party, Belly Dance, Nubian Show)",
+    "Full Board: Breakfast, Lunch, and Dinner (Open Buffet)"
+  ],
+
+  excluded: [
+    "Drinks: All beverages (Water, Soda, Coffee, etc.) are extra",
+    "Optional Tours: Hot Air Balloon (Luxor) & Abu Simbel Temple (Aswan)",
+    "Entry Tickets: Entrance fees to the archaeological sites",
+    "Personal Expenses: Laundry, Spa services, and Tipping (Gratuity)"
+  ],
+
+  description: "Relax on a scenic Nile cruise from Luxor to Aswan, stopping at historic temples along the way."
+}
 ],
 
     included: ["Hotel Pickup", "Professional Guide",],
@@ -283,8 +326,8 @@ included:["Live tour guide" ,":" , "Arabic, English, German, Spanish, French"],
     itinerary: [
       
   {
-    title: "Sea Trip – Pirate Boat",
-    image: "/images/itinerary/pirate-boat.jpg",
+    title: "Sea Trip – Private Boat",
+    image: "/images/itinerary/ras-mohammed.jpg",
       price: 120,
   currency: "€",
   pickupTimes: ["Private / On demand (Upon Request)"],
@@ -348,7 +391,7 @@ moreDetails: [
   },
   {
     title: "Sea Trip – Ras Mohammed",
-    image: "/images/itinerary/ras-mohammed.jpg",
+    image: "/images/itinerary/pirate-boat.jpg",
       price: 28,
     pickupTimes:["8:00am - 4:00pm"],
   currency: "€",
@@ -958,46 +1001,7 @@ moreDetails: [
     item: "Departure Time",
     reason: "Pickup from Hurghada is usually between 1:30 AM – 2:30 AM (depending on hotel location)"
   },
-  {
-    item: "Lunch",
-    reason: "Served at a quality restaurant in Old Cairo"
-  },
-  {
-    item: "Entrance Fees",
-    reason: "Includes fees for Saladin Citadel, Al-Ababaster Mosque, and Al-Azhar Mosque"
-  },
-  {
-    item: "Transfers",
-    reason: "Round-trip transfers from your hotel in Hurghada"
-  },
-  {
-    item: "Tour Guide",
-    reason: "Professional Egyptologist specializing in Islamic history"
-  },
-  {
-    item: "Security Permits",
-    reason: "Required for tour bus passage"
-  }
-],
-  description: "A specialized tour of Cairo's historic landmarks, including the Saladin Citadel, Mosque of Muhammad Ali, and the Sultan Hassan Mosque."
-  },
-  {
-    title: "Coptic Cairo Churches",
-    image: "/images/itinerary/24.jpg",
-      price: 65,
-  currency: "€",
-  pickupTimes: ["3:00 AM"],
-    extraInfo: ["Pick-up Time : Your exact pick-up time may vary by 30 minutes depending on your hotel location in hurghada"],
- highlights: [
-    "Modest clothing is recommended in respect for the sanctity of the churches and houses of worship.",
-    "Bring a professional or high-quality camera to capture ancient Coptic icons and inlaid wood altar details.",
-    "Hat and sunglasses are recommended for walking between outdoor church areas.",
-    "An information booklet or guide is helpful, as the area is rich in spiritual history and stories."
-          
-  ],
-    
 
-  moreDetails: [
   {
     item: "9:00 AM – Muhammad Ali Mosque (Marble Mosque)",
     reason:
@@ -1023,15 +1027,88 @@ moreDetails: [
     reason:
       "The oldest mosque preserved in its original state, famous for its unique spiral minaret and vast courtyard. Located in Sayyida Zainab."
   },
+
   {
-    item: "2:30 PM – Lunch & Relaxation",
-    reason:
-      "Enjoy an oriental lunch at a restaurant overlooking the historic landmarks of Old Cairo in the Citadel / Al-Azhar area."
-  }
-]
-,
-    description: "🗺️ SIRI SAND TOURS' advice to our clients : This tour is located entirely within a safe pedestrian zone, making it ideal for families and seniors, as there is no need to use a car once you reach the entrance of the religious complex."
+    item: "Lunch",
+    reason: "Served at a quality restaurant in Old Cairo"
   },
+  {
+    item: "Entrance Fees",
+    reason: "Includes fees for Saladin Citadel, Al-Ababaster Mosque, and Al-Azhar Mosque"
+  },
+  {
+    item: "Transfers",
+    reason: "Round-trip transfers from your hotel in Hurghada"
+  },
+  {
+    item: "Tour Guide",
+    reason: "Professional Egyptologist specializing in Islamic history"
+  },
+  {
+    item: "Security Permits",
+    reason: "Required for tour bus passage"
+  }
+],
+  description: "A specialized tour of Cairo's historic landmarks, including the Saladin Citadel, Mosque of Muhammad Ali, and the Sultan Hassan Mosque."
+  },
+ {
+  title: "Coptic Cairo Churches",
+  image: "/images/itinerary/24.jpg",
+  price: 65,
+  currency: "€",
+
+  duration: "Full Day (Approx. 15 Hours)",
+
+  extraInfo: [
+    "Pick-up Time: Your exact pick-up time may vary by 30 minutes depending on your hotel location in Hurghada",
+    "Safe pedestrian zones: No need to use a car once you reach the entrance, ideal for families and seniors"
+  ],
+
+  pickupTimes: ["03:00 AM"],
+
+  highlights: [
+    "Visit the Hanging Church, Abu Serga, St. Barbara, and St. George Monastery",
+    "Modest clothing is recommended in respect for the sanctity of the churches",
+    "Bring a professional or high-quality camera to capture ancient Coptic icons and inlaid wood altar details",
+    "Hat and sunglasses recommended for walking between outdoor church areas",
+    "An information booklet or guide is helpful, as the area is rich in spiritual history and stories"
+  ],
+
+  moreDetails: [
+    {
+      item: "Start Time",
+      reason: "Tour begins at 3:00 AM from your hotel in Hurghada"
+    },
+    {
+      item: "Main Sites",
+      reason: "Hanging Church, Abu Serga, St. Barbara, St. George Monastery"
+    },
+    {
+      item: "Lunch & Relaxation",
+      reason: "2:30 PM – Enjoy an oriental lunch at a restaurant overlooking Old Cairo landmarks (Citadel / Al-Azhar area)"
+    },
+    {
+      item: "Total Duration",
+      reason: "Approx. 15 hours including travel and guided tour"
+    }
+  ],
+
+  included: [
+    "A/C Transfers from/to hotel",
+    "Professional guide",
+    "Entrance fees to all churches",
+    "Lunch",
+    "Bottled water"
+  ],
+
+  excluded: [
+    "Tips (Gratuity)",
+    "Lunch drinks",
+    "Personal expenses"
+  ],
+
+  description: "🗺️ SIRI SAND TOURS' advice: This tour is fully within pedestrian zones, making it easy and safe to explore Coptic Cairo on foot. Perfect for families, seniors, and anyone interested in religious history and architecture."
+},
 {
   title: "Limousine + Taxi",
   image: "/images/itinerary/limouse.jpg",
@@ -1186,45 +1263,61 @@ moreDetails: [
   "In Marsa Alam, you’re not just tourists — you’re guests in the SIRI SAND TOURS family home."
 ],
     itinerary: [
-  {
-    title: "Royal Sea Scope Submarine",
-    image: "/images/itinerary/royal-seascope.jpg",
-      price: 35,
+ {
+  title: "Royal Sea Scope Submarine",
+  image: "/images/itinerary/royal-seascope.jpg",
+  price: 35,
   currency: "€",
   pickupTimes: ["9:00 am"],
-  
-moreDetails: [
-  {
-    item: "Morning Trip(1)",
-    reason: "09:00AM- 11:00AM"
-  },
- {
-    item: "Morning Trip (2)",
-    reason: "11:00AM- 1:00PM"
-  },
- {
-    item: "afternoon Trip(3)",
-    reason: "03:00AM- 5:00PM"
-  },
-],
- duration: "8hrs" ,
 
- highlights: [
-  "Underwater Viewing: Descend to a depth of 3 meters inside the Sea Scope submarine.",
-  "Enjoy 45 minutes of viewing diverse marine life through specialized glass windows.",
-  "Snorkeling Stop: 45 minutes stop to explore vibrant coral reefs on the sea floor."
-],
+  duration: "",
 
-  included:["Complimentary Gear: Full", "snorkeling equipment (Life jackets, masks, and fins) provided for free." ,"Refreshments: Free mineral water available from the dispenser throughout the trip."],
-    description: "Submarine tour to explore coral reefs and fish."
-  },
+  moreDetails: [
+    {
+      item: "Morning Trip (1)",
+      reason: "09:00 AM – 11:00 AM"
+    },
+    {
+      item: "Morning Trip (2)",
+      reason: "11:00 AM – 01:00 PM"
+    },
+    {
+      item: "Afternoon Trip (3)",
+      reason: "03:00 PM – 05:00 PM"
+    }
+  ],
+
+  highlights: [
+    "Underwater viewing at a depth of 3 meters inside the Sea Scope submarine.",
+    "45 minutes of marine life viewing through panoramic glass windows.",
+    "Snorkeling stop: 45 minutes to explore vibrant coral reefs."
+  ],
+
+  included: [
+    "Hotel pickup & drop-off",
+    "Submarine entrance ticket",
+    "Multilingual guide",
+    "Welcome drink",
+    "Complimentary snorkeling gear (life jackets, masks & fins)",
+    "Free mineral water from dispenser during the trip"
+  ],
+
+  excluded: [
+    "Professional photos or videos",
+    "Personal snacks & meals",
+    "Extra drinks from the bar",
+    "Staff gratuities (tipping)"
+  ],
+
+  description: "Enjoy a Royal Sea Scope submarine experience with underwater viewing, snorkeling stop, professional guidance, and hotel transfers included."
+},
   {
     title: "Nefertari Submarine",
     image: "/images/itinerary/Nefertari.jpg",
       price: 40,
   currency: "€",
  pickupTimes: ["09:00 AM / 02:00 PM"],
-duration: "10hrs",
+duration: "",
 included: [
   "Soft drinks and mineral water",
   "Life jacket",
@@ -1379,55 +1472,104 @@ excluded: [
 ],
     description: "Snorkeling with turtles and colorful fish."
   },
-  {
-    title: "Wadi El Gemal National Park",
-    image: "/images/itinerary/wadi-el-gemal.jpg",
-      price: 28,
+ {
+  title: "Wadi El Gemal National Park",
+  image: "/images/itinerary/wadi-el-gemal.jpg",
+  price: 28,
   currency: "€",
-  duration:"8hrs",
-highlights:["Pickup time set upon booking"],
-excluded: [
-  "Professional Photographer", "personal expenses"
-],
-moreDetails: [
-  {
-    item: "Essentials",
-    reason: "Comfortable clothings & shoes sunscreen, sunglasses, ID/Passport."
-  }
-],
-    description: "Nature reserve visit with mangroves and wildlife."
-  },
-  {
-    title: "Scuba Diving Trip",
-    image: "/images/itinerary/scuba-diving.jpg",
-      price: 45,
+  duration: "6–8 hours",
+
+  highlights: [
+    "Full-day nature experience in Wadi El Gemal National Park",
+    "Visit Hankorab Beach (Sharm El Luli)",
+    "Explore Qulaan Mangrove area",
+    "Snorkeling in crystal-clear waters",
+    "Bird watching and desert safari experience",
+    "Pickup time set upon booking"
+  ],
+
+  moreDetails: [
+    {
+      item: "Duration",
+      reason: "Full-day trip lasting approximately 6 to 8 hours."
+    },
+    {
+      item: "Top Sites",
+      reason: "Hankorab Beach (Sharm El Luli) & Qulaan Mangrove."
+    },
+    {
+      item: "Activities",
+      reason: "Snorkeling, bird watching, and desert safari."
+    },
+    {
+      item: "Essentials",
+      reason: "Comfortable clothing & shoes, sunscreen, sunglasses, ID/Passport."
+    }
+  ],
+
+  included: [
+    "Round-trip transfers",
+    "National park entry fees",
+    "Lunch",
+    "Soft drinks",
+    "Guided tours"
+  ],
+
+  excluded: [
+    "Snorkeling gear rental (mask & fins)",
+    "Professional photos & videos",
+    "Personal expenses & souvenirs",
+    "Gratuities (tipping)"
+  ],
+
+  description: "Discover the natural beauty of Wadi El Gemal National Park with pristine beaches, mangrove forests, snorkeling, wildlife spotting, and a guided full-day adventure."
+},
+{
+  title: "Scuba Diving Trip",
+  image: "/images/itinerary/scuba-diving.jpg",
+  price: 45,
   currency: "€",
   pickupTimes: ["8:30 AM"],
-  included:["Permit"],
-  excluded:["Photographer"],
-  duration:"7hrs",
+  duration: "Half-day (1 dive) or Full-day (2 dives)",
+  included: [
+    "Diving Gear (Tank, BCD, Regulator)",
+    "Professional Dive Instructor",
+    "Underwater Photos/GoPro Videos",
+    "Boat Trip & Lunch (for full-day)",
+    "Soft Drinks & Water",
+    "Permit",
+    "Transfers (Hotel pick-up & drop-off)"
+  ],
+  excluded: [
+    "Diving Computer (Additional rental)",
+    "National Park Fees (varies by site)",
+    "Staff Gratuities (Tipping)",
+    "Photographer"
+  ],
   moreDetails: [
-  {
-    item: "Requirements",
-    reason: "ID/Passport, Sunglasses, Sunscreen, Swimwear"},
-    
-  {
-    item: "Transfers",
-    reason: " Included (Hotel pick-up & drop-off)"
-  },
-  {
-    item: "Equipment",
-    reason: "Included (Diving & Snorkeling gear)"
-  },
-  {
-    item: "Food & Drinks",
-    reason: "Included (Open buffet lunch, Water, Soft drinks)"
-  },
-  
-],
-  
-    description: "Full-day diving excursion with professional instructors."
-  }
+    {
+      item: "Requirements",
+      reason: "ID/Passport, Sunglasses, Sunscreen, Swimwear"
+    },
+    {
+      item: "Encounters",
+      reason: "Sea Cows (Dugong), Dolphins, and Sharks"
+    },
+    {
+      item: "Famous Sites",
+      reason: "Marsa Mubarak, Elphinstone, Samadai Reef"
+    },
+    {
+      item: "Equipment",
+      reason: "Included (Diving & Snorkeling gear)"
+    },
+    {
+      item: "Food & Drinks",
+      reason: "Included (Open buffet lunch, Water, Soft drinks)"
+    }
+  ],
+  description: "Full-day or half-day diving excursion with professional instructors, exploring famous reefs and encountering dugongs, dolphins, and sharks."
+}
 ]
 ,
     included: ["Taxi", "Guide", "Limousine"],
@@ -1489,104 +1631,140 @@ moreDetails: [
   "With SIRI SAND TOURS, Fayoum becomes a peaceful family retreat embraced by nature."
 ],
     itinerary: [
-  {
-    title: "Tunis Village",
-    image: "/images/itinerary/tunis-village.jpg",
-      price: 70,
+{
+  title: "Tunis Village",
+  image: "/images/itinerary/tunis-village.jpg",
+  price: 70,
   currency: "€",
   pickupTimes: ["12 noon"],
-    highlights: [
-  "A \"piece of Europe\" with an authentic Egyptian spirit, this charming village sits on a hill overlooking Lake Qarun.",
-
-  "What's it famous for? It is a world-renowned center for pottery and ceramics, founded by the Swiss craftswoman Eveline Porret.",
-
-  "The atmosphere: It is characterized by rustic houses with white and blue domes, and tranquil, green streets.",
-
-  "Activities: You can try your hand at pottery making, go horseback riding, or enjoy a traditional Egyptian breakfast (feteer and meshaltet) with a panoramic view of the lake."
-],
+  highlights: [
+    "A \"piece of Europe\" with an authentic Egyptian spirit, this charming village sits on a hill overlooking Lake Qarun.",
+    "What's it famous for? It is a world-renowned center for pottery and ceramics, founded by the Swiss craftswoman Eveline Porret.",
+    "The atmosphere: Rustic houses with white and blue domes, and tranquil, green streets.",
+    "Activities: Try your hand at pottery making, go horseback riding, or enjoy a traditional Egyptian breakfast (feteer and meshaltet) with a panoramic view of the lake."
+  ],
+  included: [
+    "Village Entry & Walk",
+    
+    "Lake Qarun Viewpoints",
+    
+    "Visit to the Caricature Museum",
+    "Local Guide (if pre-booked)",
+    
+  ],
+  excluded: [
+    "Horseback Riding (Optional)",
+    "Pottery Classes Fees",
+    "Boat Rides on the Lake",
+    "Lunch & Traditional Meals"
+  ],
   moreDetails: [
-  {
-    item: "08:00 AM",
-    reason: "Traditional Breakfast: Arrive at the village for a rural breakfast (Feteer & Honey) overlooking the lake."
-  },
-  {
-    item: "10:00 AM",
-    reason: "Pottery School: Tour the workshops, try hand-making pottery, or shop for unique handicrafts."
-  },
-  {
-    item: "12:00 PM",
-    reason: "4x4 Safari: Visit Wadi El Rayan, the Waterfalls, and Mudawarra Mountain with Sandboarding."
-  },
-  {
-    item: "03:00 PM",
-    reason: "Authentic Lunch: Return for a home-cooked Egyptian meal (Roasted Duck or local specialties)."
-  },
-  {
-    item: "04:30 PM",
-    reason: "Sunset Experience: Felucca ride on Lake Qarun at sunset or Horseback riding through the farms."
-  },
-  {
-    item: "06:00 PM",
-    reason: "Art & Departure: Free tour of the Caricature Museum followed by the return journey."
-  }
-],
-description: `A "piece of Europe" with an authentic Egyptian spirit, this charming village sits on a hill overlooking Lake Qarun.
+    {
+      item: "08:00 AM",
+      reason: "Traditional Breakfast: Arrive at the village for a rural breakfast (Feteer & Honey) overlooking the lake."
+    },
+    {
+      item: "10:00 AM",
+      reason: "Pottery School: Tour the workshops, try hand-making pottery, or shop for unique handicrafts."
+    },
+    {
+      item: "12:00 PM",
+      reason: "4x4 Safari: Visit Wadi El Rayan, the Waterfalls, and Mudawarra Mountain with Sandboarding."
+    },
+    {
+      item: "03:00 PM",
+      reason: "Authentic Lunch: Return for a home-cooked Egyptian meal (Roasted Duck or local specialties)."
+    },
+    {
+      item: "04:30 PM",
+      reason: "Sunset Experience: Felucca ride on Lake Qarun at sunset or Horseback riding through the farms."
+    },
+    {
+      item: "06:00 PM",
+      reason: "Art & Departure: Free tour of the Caricature Museum followed by the return journey."
+    }
+  ],
+  description: `A "piece of Europe" with an authentic Egyptian spirit, this charming village sits on a hill overlooking Lake Qarun.
 
 What's it famous for?
 It is a world-renowned center for pottery and ceramics, founded by the Swiss craftswoman Eveline Porret.
 
 The atmosphere:
-It is characterized by rustic houses with white and blue domes, and tranquil, green streets.
+Rustic houses with white and blue domes, and tranquil, green streets.
 
 Activities:
-You can try your hand at pottery making, go horseback riding, or enjoy a traditional Egyptian breakfast (feteer and meshaltet) with a panoramic view of the lake.`
+Try your hand at pottery making, go horseback riding, or enjoy a traditional Egyptian breakfast (feteer and meshaltet) with a panoramic view of the lake.`
 },
-  {
-    title: "Wadi El Rayan & Sandboarding",
-    image: "/images/itinerary/wadi-el-rayan.jpg",
-      price: 25,
+ {
+  title: "Wadi El Rayan & Sandboarding",
+  image: "/images/itinerary/wadi-el-rayan.jpg",
+  price: 25,
   currency: "€",
   pickupTimes: ["10:00 am"],
-  duration:"10hrs",
-    highlights: [
-  "One of the most beautiful nature reserves in Egypt, it consists of two lakes (upper and lower) connected by a waterfall.",
+  duration: "10hrs",
 
-  "What is it famous for?: It boasts the only waterfalls in Egypt and is an area rich in wildlife and stunning desert scenery.",
+  highlights: [
+    "One of the most beautiful nature reserves in Egypt, consisting of two lakes (upper and lower) connected by Egypt’s only waterfalls.",
+    "What's it famous for? It boasts the only waterfalls in Egypt and offers rich wildlife, dramatic desert scenery, and stunning natural landscapes.",
+    "Experience: Desert landscapes, waterfalls, and thrilling sandboarding adventures.",
+    "Top Sites: The Waterfalls, Magic Lake, and Wadi El Hitan (Whale Valley)."
+  ],
 
-  "Nearby attractions: These include Jabal Al-Mudawara (an ideal spot for camping and stargazing) and the Magic Lake, whose waters change color with the sunlight.",
+  included: [
+    "National Park Entry Fees",
+    "Visit to the Waterfalls",
+    "Basic Guided Tour",
+    "Group Transport (if pre-booked)"
+  ],
 
-  "Activities: Sandboarding, riding wooden boats on the lake, and taking memorable photos at the waterfalls."
-],
+  excluded: [
+    "Sandboarding Gear Rental",
+    "Magic Lake Safari (4x4 Jeep)",
+    "Traditional Bedouin Lunch",
+    "Boat Rides in the Lake"
+  ],
+
   moreDetails: [
-  {
-    item: "Waterfalls Visit",
-    reason: "Sports Shoes & Comfy Clothes"
-  },
-  {
-    item: "Jabal al-Mudawarra (Hiking)",
-    reason: "Sunglasses & Cap"
-  },
-  {
-    item: "Sandboarding",
-    reason: "Sunblock"
-  },
-  {
-    item: "4x4 Safari & Lake Felucca",
-    reason: "Extra Water"
-  },
-  {
-    item: "Tunis Village & Lunch",
-    reason: "Cash for shopping"
-  }
-],
-description: `One of the most beautiful nature reserves in Egypt, it consists of two lakes (upper and lower) connected by a waterfall.
+    {
+      item: "10:00 AM",
+      reason: "Departure from Cairo or Giza towards Wadi El Rayan Nature Reserve."
+    },
+    {
+      item: "12:00 PM",
+      reason: "Waterfalls Visit: Explore Egypt’s only waterfalls and enjoy photo stops."
+    },
+    {
+      item: "01:30 PM",
+      reason: "Sandboarding Experience: Enjoy sliding down the desert dunes near Magic Lake."
+    },
+    {
+      item: "02:30 PM",
+      reason: "Magic Lake Stop: Relax by the lake whose waters change color with sunlight."
+    },
+    {
+      item: "03:30 PM",
+      reason: "Optional Activities: 4x4 Safari ride, boat ride on the lake, or Traditional Bedouin lunch."
+    },
+    {
+      item: "05:00 PM",
+      reason: "Return trip to Cairo or Giza (Full-day experience)."
+    }
+  ],
 
-What is it famous for?: It boasts the only waterfalls in Egypt and is an area rich in wildlife and stunning desert scenery.
+  description: `One of the most beautiful nature reserves in Egypt, Wadi El Rayan consists of two lakes (upper and lower) connected by Egypt’s only waterfalls.
 
-Nearby attractions: These include Jabal Al-Mudawara (an ideal spot for camping and stargazing) and the Magic Lake, whose waters change color with the sunlight.
+What's it famous for?
+It boasts the only waterfalls in Egypt and is an area rich in wildlife and stunning desert scenery.
 
-Activities: Sandboarding, riding wooden boats on the lake, and taking memorable photos at the waterfalls.`
-},
+Experience:
+Desert landscapes, waterfalls, and sandboarding adventures make it a perfect full-day escape from Cairo or Giza.
+
+Top Sites:
+The Waterfalls, Magic Lake, and Wadi El Hitan (Whale Valley).
+
+Activities:
+Sandboarding, 4x4 desert safari, boat rides on the lake, and memorable photo stops across the reserve.`
+}
 ]
 ,
     included: ["Hotel", "Guide", "Meals"],
@@ -1773,7 +1951,7 @@ moreDetails: [
   },
   {
     title: "Great Sand Sea Safari",
-    image: "/images/itinerary/great-sand-sea.webp",
+    image: "/images/itinerary/sand-sea.jpg",
       price: 60,
   currency: "€",
   pickupTimes: ["2:00 PM – 3:00 PM depending on location"],
@@ -1901,69 +2079,177 @@ duration:"2:00 PM - 6:00 PM",
   "With SIRI SAND TOURS, you’re not just visitors in Aswan — you’re welcomed into the heart of the Nile."
 ],
     itinerary: [
-  {
-    title: "High Dam, Philae & Nubian Village",
-    image: "/images/itinerary/philae.jpg",
-    
-      price: 60,
+{ 
+  title: "High Dam, Philae & Nubian Village",
+  image: "/images/itinerary/philae.jpg",
+  
+  price: 60,
   currency: "€",
   
-  duration:"6hrs"
-  ,
-    extraInfo:["Free Cancellation: Cancel up 24hrs in advance for full refund", "Reserve now & pay later: Keep your travel plans flexble- book your spot and pay nothing today"
-     ], 
-  included:["Live tour guide" ,":" , "Arabic, English, German, Spanish, French"],
+  duration: "6hrs",
+
+  extraInfo: [
+    "Free Cancellation: Cancel up 24hrs in advance for full refund",
+    "Reserve now & pay later: Keep your travel plans flexible - book your spot and pay nothing today"
+  ], 
+
   pickupTimes: ["08:00 AM - 04:00 PM"],
+
   highlights: [
-  "Stand in awe at Philae Temple, rescued from the Nile's rising waters",
-  "Enjoy the unique view of the Nile as it crosses Aswan High Dam",
-  "Find out the secrets and the story behind the Unfinished Obelisk",
-  "Discover the vibrant Nubian Village and its painted alleyways",
-  "Step into history, culture, and modern miracles in one unforgettable day"
-]
-,
-    description: "A stunning temple complex dedicated to the goddess Isis, accessible by a scenic short boat ride on the Nile."
-  },
-  {
-    title: "Abu Simbel & Kom Ombo",
-    image: "/images/itinerary/abu-simbel.jpg",
-      price: 80,
-  currency: "€",
-    extraInfo:["Free Cancellation: Cancel up 24hrs in advance for full refund", "Reserve now & pay later: Keep your travel plans flexble- book your spot and pay nothing today"
-     ], 
-     duration:"10hrs",
-  pickupTimes: ["04:00 AM - 05:00 AM"],
-  included:["Live tour guide" ,":" , "Arabic, English, German, Spanish, French"
-    ,"Pickup: You will be picked up from your accomodation in aswan"
+    "Stand in awe at Philae Temple, rescued from the Nile's rising waters",
+    "Enjoy the unique view of the Nile as it crosses Aswan High Dam",
+    "Find out the secrets and the story behind the Unfinished Obelisk",
+    "Discover the vibrant Nubian Village and its painted alleyways",
+    "Step into history, culture, and modern miracles in one unforgettable day"
   ],
- highlights: [
-  "Enjoy a full day tour exploring Abu Simbel temple",
-  "Enjoy visiting Abu Simbel temple (one of UNESCO site)",
-  "Enjoy a comfortable Pick up and drop off from your hotel"
-]
-,
-    description: "A day trip to the iconic rock-cut temples of Ramses II. The early start is essential to beat the desert heat."
-  },
-  {
-    title: "Nile Cruise Aswan – Luxor",
-    image: "/images/itinerary/nile-cruise2.jpg",
-      price: 90,
+
+  included: [
+    "Hotel Pickup & Drop-off",
+    "Motorboat to Philae Island",
+    "Licensed Tour Guide",
+    "Scenic Nile boat trip",
+    "Village walking tour",
+    "Traditional welcome drink",
+    "Live tour guide (Arabic, English, German, Spanish, French)"
+  ],
+
+  excluded: [
+    "Entry Tickets (Bank Card Only)",
+    "Personal expenses",
+    "Lunch (Optional)",
+    "Camel rides",
+    "Tipping (Drivers/Boatmen)"
+  ],
+
+  description: "A stunning temple complex dedicated to the goddess Isis, accessible by a scenic short boat ride on the Nile."
+},
+{
+  title: "Abu Simbel & Kom Ombo",
+  image: "/images/itinerary/abu-simbel.jpg",
+  price: 80,
   currency: "€",
-  
+
+  duration: "8–9 Hours",
+
+  extraInfo: [
+    "Free Cancellation: Cancel up 24hrs in advance for full refund",
+    "Reserve now & pay later: Keep your travel plans flexible - book your spot and pay nothing today"
+  ],
+
+  pickupTimes: ["04:00 AM - 05:00 AM"],
+
+  highlights: [
+    "Explore the magnificent Abu Simbel Temples",
+    "Marvel at the Great Temple of Ramses II",
+    "Visit the Temple of Queen Nefertari",
+    "Enjoy comfortable pickup and drop-off from your hotel in Aswan"
+  ],
+
+  moreDetails: [
+    {
+      item: "Start Time",
+      reason: "Usually between 4:00 AM – 5:00 AM (3-hour drive each way)."
+    },
+    {
+      item: "Total Duration",
+      reason: "8 to 9 hours including travel and guided tour."
+    },
+    {
+      item: "Main Highlights",
+      reason: "Great Temple of Ramses II & Temple of Queen Nefertari."
+    }
+  ],
+
+  included: [
+    "Transportation: Private or Shared Air-Conditioned vehicle",
+    "Pickup: From your Hotel or Nile Cruise in Aswan",
+    "Professional Egyptologist guide (depending on booking option)",
+    "Drop-off: Back to your location in Aswan"
+  ],
+
+  excluded: [
+    "Entry Tickets: Purchased at the gate (strictly by Bank Card)",
+    "Meals: Breakfast box (usually requested from your hotel)",
+    "Drinks: Any beverages during the trip"
+  ],
+
+  description: "A day trip to the iconic rock-cut temples of Ramses II. The early start is essential to beat the desert heat."
+},
+{
+  title: "Nile Cruise Aswan – Luxor",
+  image: "/images/itinerary/nile-cruise2.jpg",
+  price: 90,
+  currency: "€",
+
+  duration: "4 Days / 3 Nights",
+
   pickupTimes: ["12:00 PM (Noon)"],
-    extraInfo:["Free Cancellation: Cancel up 24hrs in advance for full refund", "Reserve now & pay later: Keep your travel plans flexble- book your spot and pay nothing today"
-     ], 
-     duration:"5hrs",
- highlights: [
-  "Explore the temples of Philae, Kom Ombo, Edfu, Luxor, and Karnak",
-  "Discover.. Cruise the Nile with overnights in Aswan, Edfu, and Luxor",
-  "Visit the majestic Abu Simbel Temples with an Egyptologist guide"
-]
-,
-included:["Live tour guide" ,"" , "English",  "Pickup: All guest will be contacted by the guide one day before their arrival"
-],
-    description: "A floating hotel journey from Aswan to Luxor, including stops at the riverside temples of Kom Ombo and Edfu."
-  }
+
+  extraInfo: [
+    "Free Cancellation: Cancel up 24hrs in advance for full refund",
+    "Reserve now & pay later: Keep your travel plans flexible - book your spot and pay nothing today"
+  ],
+
+  highlights: [
+    "Explore the temples of Philae, Kom Ombo, Edfu, Luxor, and Karnak",
+    "Cruise the Nile with overnights in Aswan, Edfu, and Luxor",
+    "Visit the Valley of the Kings and Hatshepsut Temple",
+    "Optional visit to Abu Simbel or Hot Air Balloon in Luxor"
+  ],
+
+  moreDetails: [
+    {
+      item: "Day 1",
+      reason: "Arrival in Aswan, visit Philae Temple & High Dam, then check-in on the cruise."
+    },
+    {
+      item: "Day 2",
+      reason: "Sailing to Kom Ombo (visit the temple) then continue to Edfu."
+    },
+    {
+      item: "Day 3",
+      reason: "Visit Edfu Temple, cross Esna Lock, and arrive in Luxor to visit Karnak & Luxor Temples."
+    },
+    {
+      item: "Day 4",
+      reason: "Check-out, visit Valley of the Kings, Hatshepsut Temple, and Colossi of Memnon."
+    },
+    {
+      item: "Accommodation",
+      reason: "3 Nights on a 5-star cruise ship."
+    },
+    {
+      item: "Meals",
+      reason: "Full Board (Breakfast, Lunch, and Dinner)."
+    },
+    {
+      item: "Tours",
+      reason: "All mentioned sightseeing with a professional Egyptologist guide."
+    },
+    {
+      item: "Transfers",
+      reason: "Pickup in Aswan and drop-off in Luxor."
+    }
+  ],
+
+  included: [
+    "Accommodation: 3 Nights on a 5-star cruise ship",
+    "Meals: Full Board (Breakfast, Lunch, and Dinner)",
+    "All mentioned sightseeing tours with a professional Egyptologist guide",
+    "Transfers: Pickup in Aswan and drop-off in Luxor",
+    "Guide speaks English (other languages upon request)",
+    "Guest contact one day before arrival for coordination"
+  ],
+
+  excluded: [
+    "Entrance Fees: Tickets to the temples (paid via bank card)",
+    "Drinks: Beverages (Soda, Water, etc.) at the restaurant or bar",
+    "Tips: Gratuity for the boat crew and drivers",
+    "Optional Tours: Abu Simbel Temples or Hot Air Balloon in Luxor"
+  ],
+
+  description: "A floating 5-star cruise journey from Aswan to Luxor, visiting Egypt’s most iconic Nile-side temples with full-board accommodation and guided excursions."
+}
 ]
 ,
     included: ["Hotel", "Guide", "Meals", "Transport"],

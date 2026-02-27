@@ -171,7 +171,7 @@ const translatePage = (lang: string) => {
       onClick={() => setDropdownOpen(!dropdownOpen)}
       className="flex items-center gap-1 px-2 py-1 border rounded-md text-black font-semibold text-sm"
     >
-      🌍 {selectedLanguage}
+       {selectedLanguage}
     </button>
 
     {dropdownOpen && (

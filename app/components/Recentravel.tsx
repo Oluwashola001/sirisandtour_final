@@ -198,7 +198,7 @@ export default function RecentTravelMoments() {
         {/* 6. LEFT FLANK (Hidden on Mobile) */}
         <Polaroid
           src={images[5]}
-          index={5}
+          index={14}
           onOpen={(i) => { setCurrent(i); setOpen(true); }}
           className="hidden md:block left-[-2%] md:left-[-6%] top-[38%] w-[35%] md:w-[28%] z-15"
           rotate={-12}
@@ -209,7 +209,7 @@ export default function RecentTravelMoments() {
 
         {/* 7. RIGHT FLANK (Hidden on Mobile) */}
         <Polaroid
-          src={images[6]}
+          src={images[13]}
           index={6}
           onOpen={(i) => { setCurrent(i); setOpen(true); }}
           className="hidden md:block right-[-2%] md:right-[-6%] top-[35%] w-[35%] md:w-[28%] z-15"
@@ -239,7 +239,7 @@ export default function RecentTravelMoments() {
 
         {/* 2. TOP RIGHT */}
         <Polaroid
-          src={images[8]}
+          src={images[6]}
           index={8}
           onOpen={(i) => { setCurrent(i); setOpen(true); }}
           className="right-[5%] top-[5%] w-[35%] md:w-[30%] z-10"
@@ -263,7 +263,7 @@ export default function RecentTravelMoments() {
 
         {/* 4. BOTTOM LEFT */}
         <Polaroid
-          src={images[10]}
+          src={images[5]}
           index={10}
           onOpen={(i) => { setCurrent(i); setOpen(true); }}
           className="left-[5%] bottom-0 w-[38%] md:w-[32%] z-30"
