@@ -61,14 +61,15 @@ export default function Navbar() {
         className="notranslate fixed inset-x-0 top-0 z-50 bg-transparent overflow-x-hidden"
         translate="no"
       >
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 -ml-13 lg:ml-5 -mt-22 pb-3 lg:-mt-27 md:py-4 lg:-mt-10">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-5 -ml-17 lg:ml-5 -mt-22 pb-3 lg:-mt-27 md:py-4 lg:-mt-10">
         
           {/* LOGO - Added notranslate to prevent logo duplication/corruption */}
-          <Link href="/" className="flex items-center notranslate lg:mt-1 mt-7">
+
+          <Link href="/" className="flex items-center notranslate lg:mt-1 mt-3">
             <Image
               src="/logo.webp"
               alt="Siri Sand Tour Logo"
-              width={290}
+              width={275}
               height={100}
               priority
             />
@@ -97,8 +98,8 @@ export default function Navbar() {
             </Link>
           </div>
 
-          <div className="flex items-center gap-3 md:hidden mt-10">
-            {/* MOBILE LANGUAGE BUTTON */}
+          <div className="flex items-center gap-3 md:hidden -mt-2   -mr-2">
+           
       
 
             {/* HAMBURGER */}
