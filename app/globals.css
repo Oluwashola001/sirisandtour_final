@@ -261,3 +261,11 @@ body {
   background: none !important;
   box-shadow: none !important;
 }
+
+.notranslate {
+  translate: no;
+}
+
+.skiptranslate {
+  display: none !important;
+}

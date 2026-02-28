@@ -4,14 +4,19 @@ import Navbar from './components/Navbar';
 import WhatsAppButton from "./components/WhatsAppButton";
 import ScrollToTop from "./components/ScrollToTop";
 import Footer from './components/Footer';
-
+import GoogleTranslate from "./components/GoogleTranslate";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body className="min-h-screen overflow-x-hidden flex flex-col">
-       
         <Navbar />
+
+        {/* Google Translate top-right */}
+        <div className="fixed top-6 right-6 z-[9999]">
+          <GoogleTranslate />
+        </div>
+
         <WhatsAppButton />
         <ScrollToTop />
 

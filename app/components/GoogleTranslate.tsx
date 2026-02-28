@@ -1,99 +1,43 @@
 "use client";
+import { useState } from "react";
 
-import { useEffect } from "react";
+const LANGUAGES = [
+  { code: "en", label: "English" },
+  { code: "es", label: "Spanish" },
+  { code: "fr", label: "French" },
+  { code: "de", label: "German" },
+  { code: "ar", label: "Arabic" },
+];
 
-declare global {
-  interface Window {
-    googleTranslateElementInit: () => void;
-    google: any;
-  }
-}
+export default function TranslateDropdown() {
+  const [selected, setSelected] = useState("en");
 
-export default function GoogleTranslate() {
-  useEffect(() => {
-    // 1. Initialize the Google Translate Element
-    window.googleTranslateElementInit = () => {
-      new window.google.translate.TranslateElement(
-        {
-          pageLanguage: "en",
-          autoDisplay: false,
-          includedLanguages: "en,ar,ru,de,es,pl,ro,it,cs,be",
-        },
-        "google_translate_element"
-      );
-    };
+  const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const lang = e.target.value;
+    setSelected(lang);
 
-    // 2. Load the Google Translate Script
-    if (!document.querySelector('script[src*="translate_a/element.js"]')) {
-      const script = document.createElement("script");
-      script.src = "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
-      script.async = true;
-      document.body.appendChild(script);
+    // Redirect page to Google Translate version of your site
+    const url = encodeURIComponent(window.location.href);
+    if (lang === "en") {
+      window.location.href = window.location.href; // reset to default
+    } else {
+      window.location.href = `https://translate.google.com/translate?sl=en&tl=${lang}&u=${url}`;
     }
+  };
 
-    // 3. Inject Ultra-Aggressive CSS
-    const style = document.createElement("style");
-    style.innerHTML = `
-      /* Hide the translation banner, tooltips, and frames */
-      .goog-te-banner-frame,
-      .goog-te-banner-frame.skiptranslate,
-      .goog-te-gadget-simple,
-      .goog-te-menu-value,
-      .goog-tooltip,
-      .goog-tooltip:hover,
-      .goog-text-highlight,
-      #goog-gt-tt,
-      .goog-te-balloon-frame,
-      iframe.goog-te-banner-frame,
-      iframe.skiptranslate {
-        display: none !important;
-        visibility: hidden !important;
-      }
-
-      /* Force the page back to the top (prevents the white gap) */
-      body, html {
-        top: 0px !important;
-        position: static !important;
-      }
-
-      /* Removes the "Translated to..." popup on hover */
-      #goog-gt- {
-        display: none !important;
-      }
-      
-      .skiptranslate {
-        display: none !important;
-      }
-    `;
-    document.head.appendChild(style);
-
-    // 4. Advanced Observer to fight Google's automatic layout shifting
-    const fixLayout = () => {
-      // Google Translate often targets both html and body styles
-      if (document.body.style.top !== "0px") document.body.style.top = "0px";
-      if (document.documentElement.style.top !== "0px") document.documentElement.style.top = "0px";
-      
-      // Look for the specific iframe and remove it from the DOM entirely if it appears
-      const banner = document.querySelector(".goog-te-banner-frame") as HTMLElement;
-      if (banner) {
-        banner.remove(); 
-      }
-    };
-
-    const observer = new MutationObserver(fixLayout);
-    observer.observe(document.documentElement, { attributes: true, attributeFilter: ["style"] });
-    observer.observe(document.body, { attributes: true, attributeFilter: ["style"] });
-
-    const interval = setInterval(fixLayout, 200);
-
-    return () => {
-      observer.disconnect();
-      clearInterval(interval);
-      if (style.parentNode) {
-        style.parentNode.removeChild(style);
-      }
-    };
-  }, []);
-
-  return <div id="google_translate_element" style={{ display: "none" }} />;
+  return (
+  <div className="fixed top-8 right-45 z-[9999] bg-white border border-gray-300 rounded p-2 shadow-md">
+  <select
+    value={selected}
+    onChange={handleChange}
+    className="bg-white outline-none text-black"
+  >
+    {LANGUAGES.map((lang) => (
+      <option key={lang.code} value={lang.code} className="text-black">
+        {lang.label}
+      </option>
+    ))}
+  </select>
+</div>
+  );
 }
