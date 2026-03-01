@@ -13,6 +13,7 @@ import Explore from './components/Explore'
 import Animation from './components/Animation'
 import Newsletter from './components/Newsletter'
 import Testimonials from "./components/Testimonials";
+import ComingSoon from './ComingSoon'
 
 export default function HomePage() {
   return (
@@ -26,6 +27,7 @@ export default function HomePage() {
       <Professionalguide/>
       <BackgroundSection />
             <PopularDestinations/>
+      <ComingSoon />
       <Recentravel/>
       <StatsCircles/>
         <Testimonials />
