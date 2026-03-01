@@ -15,7 +15,7 @@ const LANGUAGES = [
   { code: "ro", label: "Romanian", flag: "/images/flags/ro.webp" },
   { code: "it", label: "Italian", flag: "/images/flags/it.webp" },
   { code: "cs", label: "Czech", flag: "/images/flags/cz.webp" },
-  { code: "nl", label: "Belgian (Dutch)", flag: "/images/flags/be.webp" },
+  { code: "nl", label: "Belgian", flag: "/images/flags/be.webp" },
 ];
 
 export default function GoogleTranslate() {
