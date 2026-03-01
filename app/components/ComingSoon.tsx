@@ -39,7 +39,7 @@ export default function ComingSoonCards() {
         {destinations.map((item) => (
           <div
             key={item.id}
-            className="relative flex flex-col -ml-7 w-80  bg-white border-2 border-[#0a7bbe] rounded-3xl overflow-hidden shadow-sm"
+            className="relative flex flex-col -ml-5 w-80  bg-white border-2 border-[#0a7bbe] rounded-3xl overflow-hidden shadow-sm"
           >
             {/* IMAGE */}
         
