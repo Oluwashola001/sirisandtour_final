@@ -2294,7 +2294,7 @@ duration:"2:00 PM - 6:00 PM",
     description: "Immerse yourself in Egypt’s history and culture.",
     heroImage: "/images/tours/9.jpg",
     heroVideo: "/videos/hurghada.mp4",
-    gallery: ["/images/tours/10.jpeg", "/images/tours/11.jpg"],
+    gallery: ["/images/tours/10.jpg", "/images/tours/11.jpg"],
   overview: [
   "Your family is always welcome at SIRI SAND TOURS in Hurghada. ✨",
 
