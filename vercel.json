@@ -1,9 +1,0 @@
-{
-  "redirects": [
-    {
-  "source": "/ourtrip",
-  "destination": "/",
-  "permanent": true
-}
- ]
-}
