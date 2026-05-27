@@ -1,7 +1,8 @@
 'use client'
 
 import Image from "next/image"
-import { ArrowUp } from "lucide-react"
+import { ArrowUpRight, Clock3 } from "lucide-react"
+import { useEffect, useRef } from "react"
 
 const destinations = [
   {
@@ -10,7 +11,7 @@ const destinations = [
     image: "/soon/Turkye.jpg",
     description:
       "Where East meets West. Explore the history of Istanbul, the hot air balloons of Cappadocia, and the beaches of Antalya. An unforgettable journey of shopping and world-class cuisine.",
-    launch: "Launching Soon",
+    tag: "Türkiye",
   },
   {
     id: 2,
@@ -18,82 +19,158 @@ const destinations = [
     image: "/soon/italy.jpg",
     description:
       "The soul of art and taste. Explore the history of Rome, the canals of Venice, and the art of Florence. A perfect blend of culture, romance, and breathtaking scenery.",
-    launch: "Launching Soon",
+    tag: "Italy",
   },
   {
     id: 3,
     title: "Morocco",
     image: "/soon/morocco.jpg",
     description:
-      "An oasis of culture. Explore the souks of Marrakech, the blue streets of Chefchaouen, and the desert dunes. Legendary hospitality, authentic Berber heritage, and world-class cuisine.",
-    launch: "Launching Soon",
+      "An oasis of culture. Explore the souks of Marrakech, the blue streets of Chefchaouen, and the desert dunes. Legendary hospitality and world-class cuisine.",
+    tag: "Morocco",
   },
 ]
 
 export default function ComingSoonCards() {
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([])
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("card-visible")
+            observer.unobserve(entry.target)
+          }
+        })
+      },
+      { threshold: 0.12 }
+    )
+    cardRefs.current.forEach((el) => { if (el) observer.observe(el) })
+    return () => observer.disconnect()
+  }, [])
+
   return (
     <section className="py-24 bg-white">
-      {/* Increased width cleanly */}
-      <div className="mx-auto max-w-[1700px] px-6 lg:px-16 grid md:grid-cols-2 lg:grid-cols-3 gap-12">
-        
-        {destinations.map((item) => (
-          <div
-            key={item.id}
-            className="relative flex flex-col -ml-2 w-80  bg-white border-2 border-[#0a7bbe] rounded-3xl overflow-hidden shadow-sm"
-          >
-            {/* IMAGE */}
-        
-<div className="relative h-64 w-full">
-  <Image
-    src={item.image}
-    alt={item.title}
-    fill
-    
-    style={{ objectFit: "cover" }}
-  />
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap');
 
-  {/* BADGE */}
-  <div className="absolute top-4 right-4 bg-[#0a7bbe] text-white px-5 py-2 rounded-full text-sm font-semibold tracking-wider">
-    COMING SOON
-  </div>
-</div>
+        .card-reveal {
+          opacity: 0;
+          transform: translateY(32px);
+          transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .card-reveal.card-visible { opacity: 1; transform: translateY(0); }
+        .card-reveal:nth-child(2) { transition-delay: 0.12s; }
+        .card-reveal:nth-child(3) { transition-delay: 0.24s; }
 
-            {/* CONTENT */}
-            <div className="flex flex-col flex-1 p-8">
-              <h2 className="text-3xl font-serif font-bold text-[#0a7bbe] mb-3">
-                {item.title}
-              </h2>
+        .dest-card {
+          transition: box-shadow 0.35s ease, transform 0.35s cubic-bezier(0.25,0.46,0.45,0.94);
+        }
+        @media (hover: hover) {
+          .dest-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 24px 48px -10px rgba(10,123,190,0.15), 0 6px 16px -4px rgba(0,0,0,0.06);
+          }
+          .dest-card:hover .card-img {
+            transform: scale(1.05);
+          }
+          .dest-card:hover .arrow-btn {
+            background: #0867a1;
+            transform: rotate(45deg) scale(1.08);
+          }
+        }
 
-              <p className="text-gray-600 leading-relaxed mb-6">
-                {item.description}
-              </p>
+        .card-img {
+          transition: transform 0.55s cubic-bezier(0.25,0.46,0.45,0.94);
+        }
+        .arrow-btn {
+          transition: background 0.25s ease, transform 0.3s ease;
+        }
 
-              {/* Push bottom content evenly */}
-              <div className="mt-auto">
-                <h3 className="text-4xl font-bold text-[#0a7bbe] mb-4">
-                  Coming Soon
-                </h3>
+        .dest-title { font-family: 'Cormorant Garamond', serif; }
+        .dest-body  { font-family: 'DM Sans', sans-serif; }
 
-                <div className="flex items-center gap-2 text-gray-600 mb-6">
-                  <span className="text-lg">📅</span>
-                  <span>{item.launch}</span>
-                </div>
+        .shimmer-bar {
+          background: linear-gradient(90deg, #0a7bbe18 0%, #0a7bbe40 50%, #0a7bbe18 100%);
+          background-size: 200% 100%;
+          animation: shimmer 2.4s ease-in-out infinite;
+        }
+        @keyframes shimmer {
+          0%   { background-position: -200% 0; }
+          100% { background-position:  200% 0; }
+        }
+      `}</style>
 
-                <button className="w-full bg-[#0a7bbe] hover:bg-[#0867a1] transition text-white py-4 rounded-xl text-lg font-semibold">
-                  Coming Soon
+      <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+
+          {destinations.map((item, index) => (
+            <div
+              key={item.id}
+              ref={(el) => { cardRefs.current[index] = el }}
+              className="card-reveal dest-card dest-body relative flex flex-col w-full bg-white rounded-2xl overflow-hidden shadow-[0_2px_16px_-4px_rgba(0,0,0,0.08)]"
+            >
+              {/* IMAGE */}
+              <div className="relative h-60 w-full overflow-hidden">
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  fill
+                  className="card-img"
+                  style={{ objectFit: "cover" }}
+                />
+
+                {/* Gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+
+                {/* Tag — bottom-left over image */}
+                <span className="absolute bottom-4 left-4 dest-body text-xs font-medium tracking-widest uppercase text-white/90 bg-white/15 backdrop-blur-sm px-3 py-1 rounded-full border border-white/20">
+                  {item.tag}
+                </span>
+
+                {/* Arrow CTA — bottom-right */}
+                <button className="arrow-btn absolute bottom-4 right-4 bg-[#0a7bbe] text-white p-2.5 rounded-full shadow-md">
+                  <ArrowUpRight size={16} strokeWidth={2.5} />
                 </button>
               </div>
-            </div>
 
-            {/* FLOATING ARROW — perfectly aligned */}
-            <div className="absolute bottom-36 right-4 -mb-10">
-              <button className="bg-[#0a7bbe] text-white p-4 rounded-full shadow-lg hover:scale-105 transition">
-                <ArrowUp size={20} />
-              </button>
-            </div>
+              {/* CONTENT */}
+              <div className="flex flex-col flex-1 p-6">
 
-          </div>
-        ))}
+                {/* Shimmer "launching soon" indicator */}
+                <div className="flex items-center gap-2 mb-4">
+                  <div className="shimmer-bar h-[3px] w-8 rounded-full" />
+                  <span className="dest-body text-[11px] font-500 tracking-[0.18em] uppercase text-[#0a7bbe]/70">
+                    Launching Soon
+                  </span>
+                </div>
+
+                <h2 className="dest-title text-[2.2rem] font-bold leading-none text-gray-900 mb-3">
+                  {item.title}
+                </h2>
+
+                <p className="text-[0.875rem] text-gray-800 leading-relaxed flex-1">
+                  {item.description}
+                </p>
+
+                {/* Footer row */}
+                <div className="mt-5 pt-5 border-t border-gray-100 flex items-center justify-between">
+                  <div className="flex items-center gap-1.5 text-gray-400">
+                    <Clock3 size={13} strokeWidth={1.8} />
+                    <span className="text-xs tracking-wide">Available soon</span>
+                  </div>
+
+                  <button className="dest-body text-xs font-medium text-[#0a7bbe] bg-[#0a7bbe]/8 hover:bg-[#0a7bbe]/15 transition-colors px-4 py-2 rounded-full">
+                    Anticipate
+                  </button>
+                </div>
+
+              </div>
+            </div>
+          ))}
+
+        </div>
       </div>
     </section>
   )

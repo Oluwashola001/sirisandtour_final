@@ -269,3 +269,12 @@ body {
 .skiptranslate {
   display: none !important;
 }
+
+@media (max-width: 768px) {
+  .eapps-widget-toolbar,
+  [class*="elfsight"] {
+    bottom: 80px !important; /* adjust as needed */
+    right: 12px !important;
+    left: auto !important;
+  }
+}

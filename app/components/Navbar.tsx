@@ -16,26 +16,20 @@ const navLinks = [
   { label: "Contact", href: "/contact" },
 ];
 
-
-
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [menuVisible, setMenuVisible] = useState(false);
   const [shadowVisible, setShadowVisible] = useState(false);
   const [showNav, setShowNav] = useState(true);
 
- 
-
   const pathname = usePathname();
 
-  // Hide navbar on scroll
   useEffect(() => {
     const handleScroll = () => setShowNav(window.scrollY === 0);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Open/close mobile menu
   useEffect(() => {
     if (mobileOpen) {
       setShadowVisible(true);
@@ -48,7 +42,6 @@ export default function Navbar() {
     }
   }, [mobileOpen]);
 
- 
   if (!showNav) return null;
 
   return (
@@ -62,9 +55,6 @@ export default function Navbar() {
         translate="no"
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between px-5 -ml-17 lg:ml-5 -mt-22 pb-3 lg:-mt-27 md:py-4 lg:-mt-10">
-        
-          {/* LOGO - Added notranslate to prevent logo duplication/corruption */}
-
           <Link href="/" className="flex items-center notranslate lg:mt-1 mt-3">
             <Image
               src="/logo.webp"
@@ -82,10 +72,7 @@ export default function Navbar() {
                 {link.label}
               </NavLink>
             ))}
-<div className="hidden md:block">
- 
-</div>
-            
+            <div className="hidden md:block" />
           </div>
 
           {/* BOOK NOW BUTTON */}
@@ -98,11 +85,7 @@ export default function Navbar() {
             </Link>
           </div>
 
-          <div className="flex items-center gap-3 md:hidden -mt-2   -mr-2">
-           
-      
-
-            {/* HAMBURGER */}
+          <div className="flex items-center gap-3 md:hidden -mt-2 -mr-2">
             <button
               className="text-4xl text-black"
               onClick={() => setMobileOpen(true)}
@@ -139,9 +122,8 @@ export default function Navbar() {
             transition={{ type: "spring", stiffness: 220, damping: 28 }}
             className="fixed left-0 top-0 z-50 h-full w-[92%] bg-white shadow-2xl overflow-x-hidden"
           >
-           
             <button
-              className="absolute right-5 top-8 text-4xl text-black"
+              className="absolute right-0 top-9 text-4xl text-black"
               onClick={() => setMobileOpen(false)}
             >
               <HiOutlineX />
@@ -151,23 +133,42 @@ export default function Navbar() {
               <Image src="/logo.webp" alt="Siri Sand Tour Logo" width={190} height={80} />
             </div>
 
+            {/* MOBILE NAV LINKS — restyled */}
             <motion.nav
               initial="hidden"
               animate="visible"
               exit="hidden"
               variants={{
                 hidden: {},
-                visible: { transition: { staggerChildren: 0.1, delayChildren: 0.2 } },
+                visible: { transition: { staggerChildren: 0.08, delayChildren: 0.15 } },
               }}
-              className="-mt-17 flex flex-col items-start pl-5 gap-6"
+              className="mt-6 flex flex-col items-start pl-6 gap-1"
             >
-              {navLinks.map((link) => (
+              {navLinks.map((link, index) => (
                 <motion.div
                   key={link.href}
-                  variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
+                  variants={{
+                    hidden: { clipPath: "inset(0 0 100% 0)", opacity: 0 },
+                    visible: {
+                      clipPath: "inset(0 0 0% 0)",
+                      opacity: 1,
+                      transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] },
+                    },
+                  }}
+                  className="w-full border-b border-gray-100 py-4"
                 >
-                  <Link href={link.href} onClick={() => setMobileOpen(false)} className="text-xl font-medium text-black hover:text-[#0A7BBE]">
-                    {link.label}
+                  <Link
+                    href={link.href}
+                    onClick={() => setMobileOpen(false)}
+                    className="group flex items-baseline gap-3"
+                  >
+                  
+                    <span
+                      className="text-[2rem] font-semibold leading-tight tracking-tight text-gray-900 transition-colors duration-200 group-hover:text-[#0A7BBE]"
+                      style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+                    >
+                      {link.label}
+                    </span>
                   </Link>
                 </motion.div>
               ))}
@@ -176,13 +177,12 @@ export default function Navbar() {
         )}
       </AnimatePresence>
 
-      {/* HIDDEN GOOGLE TRANSLATE ELEMENT - Wrapped in skiptranslate to be extra safe */}
       <div id="google_translate_element" className="hidden skiptranslate" />
 
       <Script
-  src="https://apps.elfsight.com/p/platform.js"
-  strategy="afterInteractive"
-/>
+        src="https://apps.elfsight.com/p/platform.js"
+        strategy="afterInteractive"
+      />
     </div>
   );
 }
