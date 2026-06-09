@@ -10,7 +10,6 @@ import NewsletterSection from "../../components/Newsletter";
 import { ChevronDown, ChevronUp, X, Calendar, Clock, Tag, User, Baby, Info, ArrowUp, ArrowDown, Check } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 
-
 function useMediaQuery(query: string) {
   const [matches, setMatches] = useState(false);
 
@@ -45,14 +44,11 @@ export default function TourPage({
 
   /* ✅ TABS INSIDE COMPONENT */
   const tabs = [
-  
-  {
+    {
       id: "itinerary",
       label: `Discover ${tour.cardTitle || tour.title}`,
     },
     { id: "overview", label: "Trip Overview" },
-    
-   
     { id: "reviews", label: "Traveler Reviews" },
   ];
 
@@ -60,10 +56,8 @@ export default function TourPage({
   const [activeTab, setActiveTab] = useState<string | null>("itinerary");
   const isMobile = useMediaQuery("(max-width: 768px)");
 
- const [openPickupIndex, setOpenPickupIndex] = useState<number | null>(null);
-const [openDescriptionIndex, setOpenDescriptionIndex] = useState<number | null>(null);
-
-
+  const [openPickupIndex, setOpenPickupIndex] = useState<number | null>(null);
+  const [openDescriptionIndex, setOpenDescriptionIndex] = useState<number | null>(null);
 
   const handleTabClick = (id: string) => {
     if (activeTab === id) {
@@ -72,6 +66,13 @@ const [openDescriptionIndex, setOpenDescriptionIndex] = useState<number | null>(
       setActiveTab(id);
     }
   };
+
+  // Safely normalize the overview content into an array of strings
+  const overviewParagraphs: string[] = Array.isArray(tour.overview) 
+    ? tour.overview 
+    : typeof tour.overview === "string" 
+      ? (tour.overview as unknown as string).split("\n") 
+      : [];
 
   return (
     <section className="w-full -ml-2 px-4 md:px-12 py-14 mt-35 relative">
@@ -100,7 +101,7 @@ const [openDescriptionIndex, setOpenDescriptionIndex] = useState<number | null>(
 
           {/* IMAGES RIGHT */}
           <div className="flex flex-col w-full lg:w-100 -ml-2 lg:ml-35 md:w-80 gap-2 pr-8 lg:pr-10">
-            {tour.gallery.slice(0, 2).map((img, i) => (
+            {tour.gallery.slice(0, 2).map((img: string, i: number) => (
               <div
                 key={i}
                 className="overflow-hidden rounded-[30px] relative w-full h-[165px] md:h-[180px] lg:h-[250px]"
@@ -139,159 +140,183 @@ const [openDescriptionIndex, setOpenDescriptionIndex] = useState<number | null>(
                   transition={{ duration: 0.25 }}
                   className="bg-white text-black rounded-b-3xl p-6 shadow"
                 >
-                  {tab.id === "overview" && <p>{tour.overview}</p>}
-        {activeTab === "itinerary" && (
-          <ul className="flex flex-col items-center space-y-8 px-2 sm:px-0">
-            {tour.itinerary.map((item, i) => {
-
-              const whatsappNumber = "201288062555";
-              const message = `Hello, I'm interested in ${item.title}`;
-              const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-
-              return (
-               <motion.li
-  key={i}
-  initial={{ opacity: 0, y: 60 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.6, ease: "easeOut" }}
-  viewport={{ once: true, amount: 0.2 }}
-  className="w-full max-w-2xl bg-[#f4f7f8] rounded-[28px] shadow-xl overflow-hidden 
-             transform transition-transform duration-300 hover:scale-105"
->
-                  {/* IMAGE - CLICKABLE */}
-                  <div 
-                    className="relative w-full h-40 sm:h-48 cursor-pointer"
-                    onClick={() => setSelectedItinerary(item)}
-                  >
-                    
-
-                    {/* Price */}
-                    {item.price && item.currency && (
-                    <div
-          className="absolute top-2 right-2 z-10 text-white text-[10px] sm:text-xs px-2 py-1 rounded-full font-semibold shadow-md  border-2 border-white shadow-lg"
-          style={{ backgroundColor: BRAND }}
-        >
-          {item.currency} {item.price}
-        </div>
-
-                    )}
-
-                    <Image
-                      src={item.image}
-                      alt={item.title}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-
-                  {/* CONTENT */}
-                  <div className="px-3 sm:px-6 py-3 sm:py-4 text-center">
-
-                    {/* TITLE - CLICKABLE */}
-                    <h2
-                      className="text-base sm:text-lg font-semibold mb-1 cursor-pointer hover:underline"
-                      style={{ color: BRAND }}
-                      onClick={() => setSelectedItinerary(item)}
-                    >
-                      {item.title}
-                    </h2>
-
-                    <p className="text-gray-600 text-xs sm:text-sm mb-2">
-                      Every day
-                    </p>
-
-                    {/* PICKUP DROPDOWN */}
-      
-{item.pickupTimes && item.pickupTimes.length > 0 && (
-  <div className="mt-3 mb-6">
-    <div
-      className="text-sm sm:text-base font-medium mb-2"
-      style={{ color: BRAND }}
-    >
-      Pickup:
-    </div>
-
-    <div className="text-black">
-      {item.pickupTimes.map((time, index) => (
-        <p key={index}>{time}</p>
-      ))}
-    </div>
-  </div>
-)}
-
-
-                    {/* HIGHLIGHTS */}
-                    <div className="text-left mb-4">
-                      <h3 className="text-sm sm:text-base font-semibold mb-2 text-center">
-                        Highlights:
-                      </h3>
-
-                      <div className="max-h-24 overflow-y-auto pr-2 custom-scroll">
-                        <ul className="space-y-1">
-                          {item.highlights?.map((point: string, index: number) => (
-                            <li
-                              key={index}
-                             className="flex items-start gap-3 text-gray-800 text-base sm:text-lg font-medium leading-relaxed"
-                            >
-                              <span style={{ color: BRAND }}>✓</span>
-                              {point}
-                            </li>
-                          ))}
-                        </ul>
+                  
+                  {/* BEAUTIFIED MOBILE OVERVIEW */}
+                  {tab.id === "overview" && (
+                    <div className="py-2">
+                      <h2 
+                        className="text-2xl font-extrabold text-[#0A7BBE] mb-5 text-center" 
+                        style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+                      >
+                        The Experience
+                      </h2>
+                      <div className="space-y-4">
+                        {overviewParagraphs.map((paragraph: string, idx: number) => (
+                          paragraph.trim() ? (
+                            <p key={idx} className="text-sm text-gray-700 leading-relaxed font-medium text-justify">
+                              {/* Drop cap for the first paragraph */}
+                              {idx === 0 && (
+                                <span 
+                                  className="float-left text-5xl text-[#0A7BBE] font-bold pr-2 pt-1 leading-none" 
+                                  style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+                                >
+                                  {paragraph.charAt(0)}
+                                </span>
+                              )}
+                              {idx === 0 ? paragraph.substring(1) : paragraph}
+                            </p>
+                          ) : null
+                        ))}
                       </div>
                     </div>
+                  )}
 
-                    {/* DESCRIPTION DROPDOWN */}
-                    <div className="mb-4">
-                      <button
-                        
-                        onClick={() =>
- setOpenDescriptionIndex(openDescriptionIndex === i ? null : i)
-}
-                        className="flex items-center justify-center gap-1 font-semibold w-full text-xs sm:text-sm"
-                        style={{ color: BRAND }}
-                      >
-                       Full Description
-                        {openDescriptionIndex === i ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
-                      </button>
+                  {activeTab === "itinerary" && (
+                    <ul className="flex flex-col items-center space-y-8 px-2 sm:px-0">
+                      {tour.itinerary.map((item: any, i: number) => {
+                        const whatsappNumber = "201288062555";
+                        const message = `Hello, I'm interested in ${item.title}`;
+                        const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
-                      {openDescriptionIndex === i && (
-                        <p className="mt-2 text-gray-600 text-xs sm:text-sm leading-relaxed">
-                          {item.description}
-                        </p>
-                      )}
-                    </div>
+                        return (
+                          <motion.li
+                            key={i}
+                            initial={{ opacity: 0, y: 60 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6, ease: "easeOut" }}
+                            viewport={{ once: true, amount: 0.2 }}
+                            className="w-full max-w-2xl bg-[#f4f7f8] rounded-[28px] shadow-xl overflow-hidden 
+                                       transform transition-transform duration-300 hover:scale-105"
+                          >
+                            {/* IMAGE - CLICKABLE */}
+                            <div 
+                              className="relative w-full h-40 sm:h-48 cursor-pointer"
+                              onClick={() => setSelectedItinerary(item)}
+                            >
+                              {/* Price */}
+                              {item.price && item.currency && (
+                                <div
+                                  className="absolute top-2 right-2 z-10 text-white text-[10px] sm:text-xs px-2 py-1 rounded-full font-semibold shadow-lg border-2 border-white"
+                                  style={{ backgroundColor: BRAND }}
+                                >
+                                  {item.currency} {item.price}
+                                </div>
+                              )}
 
-                    {/* WHATSAPP BUTTON */}
-                    <a
-                      href={whatsappLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-full py-2 sm:py-3 rounded-xl font-semibold text-white text-xs sm:text-sm flex items-center justify-center gap-2 mb-2 transition shadow-md"
-                      style={{ backgroundColor: BRAND }}
-                    >
-                      <FaWhatsapp className="text-xl sm:text-2xl" />
-                      Contact Now
-                    </a>
+                              <Image
+                                src={item.image}
+                                alt={item.title}
+                                fill
+                                className="object-cover"
+                              />
+                            </div>
 
-                    {/* DETAILS BUTTON - CLICKABLE */}
-                    <button
-                      onClick={() => setSelectedItinerary(item)}
-                      className="w-full border-2 py-2 sm:py-3 rounded-xl font-semibold text-xs sm:text-sm transition"
-                      style={{
-                        borderColor: BRAND,
-                        color: BRAND
-                      }}
-                    >
-                      ℹ Details
-                    </button>
+                            {/* CONTENT */}
+                            <div className="px-3 sm:px-6 py-3 sm:py-4 text-center">
 
-                  </div>
-                </motion.li>
-              );
-            })}
-          </ul>
-        )}       
+                              {/* TITLE - CLICKABLE */}
+                              <h2
+                                className="text-base sm:text-lg font-semibold mb-1 cursor-pointer hover:underline"
+                                style={{ color: BRAND }}
+                                onClick={() => setSelectedItinerary(item)}
+                              >
+                                {item.title}
+                              </h2>
+
+                              <p className="text-gray-600 text-xs sm:text-sm mb-2">
+                                Every day
+                              </p>
+
+                              {/* PICKUP DROPDOWN */}
+                              {item.pickupTimes && item.pickupTimes.length > 0 && (
+                                <div className="mt-3 mb-6">
+                                  <div
+                                    className="text-sm sm:text-base font-medium mb-2"
+                                    style={{ color: BRAND }}
+                                  >
+                                    Pickup:
+                                  </div>
+
+                                  <div className="text-black">
+                                    {item.pickupTimes.map((time: string, index: number) => (
+                                      <p key={index}>{time}</p>
+                                    ))}
+                                  </div>
+                                </div>
+                              )}
+
+
+                              {/* HIGHLIGHTS */}
+                              <div className="text-left mb-4">
+                                <h3 className="text-sm sm:text-base font-semibold mb-2 text-center">
+                                  Highlights:
+                                </h3>
+
+                                <div className="max-h-24 overflow-y-auto pr-2 custom-scroll">
+                                  <ul className="space-y-1">
+                                    {item.highlights?.map((point: string, index: number) => (
+                                      <li
+                                        key={index}
+                                        className="flex items-start gap-3 text-gray-800 text-base sm:text-lg font-medium leading-relaxed"
+                                      >
+                                        <span style={{ color: BRAND }}>✓</span>
+                                        {point}
+                                      </li>
+                                    ))}
+                                  </ul>
+                                </div>
+                              </div>
+
+                              {/* DESCRIPTION DROPDOWN */}
+                              <div className="mb-4">
+                                <button
+                                  onClick={() =>
+                                    setOpenDescriptionIndex(openDescriptionIndex === i ? null : i)
+                                  }
+                                  className="flex items-center justify-center gap-1 font-semibold w-full text-xs sm:text-sm"
+                                  style={{ color: BRAND }}
+                                >
+                                  Full Description
+                                  {openDescriptionIndex === i ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+                                </button>
+
+                                {openDescriptionIndex === i && (
+                                  <p className="mt-2 text-gray-600 text-xs sm:text-sm leading-relaxed">
+                                    {item.description}
+                                  </p>
+                                )}
+                              </div>
+
+                              {/* WHATSAPP BUTTON */}
+                              <a
+                                href={whatsappLink}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="w-full py-2 sm:py-3 rounded-xl font-semibold text-white text-xs sm:text-sm flex items-center justify-center gap-2 mb-2 transition shadow-md"
+                                style={{ backgroundColor: BRAND }}
+                              >
+                                <FaWhatsapp className="text-xl sm:text-2xl" />
+                                Contact Now
+                              </a>
+
+                              {/* DETAILS BUTTON - CLICKABLE */}
+                              <button
+                                onClick={() => setSelectedItinerary(item)}
+                                className="w-full border-2 py-2 sm:py-3 rounded-xl font-semibold text-xs sm:text-sm transition"
+                                style={{
+                                  borderColor: BRAND,
+                                  color: BRAND
+                                }}
+                              >
+                                ℹ Details
+                              </button>
+
+                            </div>
+                          </motion.li>
+                        );
+                      })}
+                    </ul>
+                  )}       
 
                   {tab.id === "reviews" && (
                     <ReviewTestimonial testimonials={tour.testimonials} />
@@ -312,199 +337,216 @@ const [openDescriptionIndex, setOpenDescriptionIndex] = useState<number | null>(
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.35 }}
-            className="mx-auto mt-8 bg-white text-black  p-6 shadow"
-          >
-            {activeTab === "overview" && <p>{tour.overview}</p>}
-        {activeTab === "itinerary" && (
-          <ul
-          className="grid gap-6 px-4 sm:px-0"
-          style={{
-            gridTemplateColumns: "repeat(3, 1fr)",     maxWidth: "1400px",
-
-          }}
-        >
-
-
-            {tour.itinerary.map((item, i) => {
-
-              const whatsappNumber = "201288062555";
-              const message = `Hello, I'm interested in ${item.title}`;
-              const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-
-              return (
-            <motion.li
-  key={i}
-  initial={{ opacity: 0, y: 60 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={{ once: true, amount: 0.2 }}
-  transition={{
-    duration: 0.6,
-    ease: "easeOut",
-    delay: i * 0.1, // nice stagger effect
-  }}
-  className="group w-full max-w-2xl bg-[#f4f7f8] rounded-[28px] shadow-xl overflow-hidden 
-             transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
->
-
-          {/* IMAGE - CLICKABLE */}
-          <div 
-            className="relative w-full max-h-48 sm:h-64 overflow-hidden"
-            onClick={() => setSelectedItinerary(item)}
+            className="mx-auto mt-8 bg-white text-black p-6 shadow"
           >
             
-
-            {/* Dynamic Price */}
-            {item.price && item.currency && (
-              <div
-                className="absolute top-2 right-2 z-10 text-white text-xs sm:text-sm font-semibold px-4 py-1.5 rounded-full border-2 border-white shadow-lg flex items-center gap-1.5"
-                style={{ backgroundColor: BRAND }}
-              >
-                {item.currency} {item.price}
+            {/* BEAUTIFIED DESKTOP OVERVIEW */}
+            {activeTab === "overview" && (
+              <div className="max-w-4xl mx-auto py-10 px-8 sm:px-14 bg-gradient-to-b from-white to-[#f4f7f8] rounded-[32px] border border-gray-100 shadow-sm">
+                <h2 
+                  className="text-4xl font-extrabold text-[#0A7BBE] mb-8 text-center" 
+                  style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+                >
+                  The Experience
+                </h2>
+                <div className="space-y-6">
+                  {overviewParagraphs.map((paragraph: string, idx: number) => (
+                    paragraph.trim() ? (
+                      <p key={idx} className="text-base sm:text-lg text-gray-700 leading-8 font-medium">
+                        {/* Elegant drop cap for the first paragraph */}
+                        {idx === 0 && (
+                          <span 
+                            className="float-left text-6xl text-[#0A7BBE] font-bold pr-4 pt-1 leading-none" 
+                            style={{ fontFamily: "'Playfair Display', Georgia, serif", textShadow: "2px 2px 0px rgba(10,123,190,0.1)" }}
+                          >
+                            {paragraph.charAt(0)}
+                          </span>
+                        )}
+                        {idx === 0 ? paragraph.substring(1) : paragraph}
+                      </p>
+                    ) : null
+                  ))}
+                </div>
               </div>
             )}
 
-            {/* Image */}
-            <Image
-              src={item.image}
-              alt={item.title}
-              fill
-              className="object-cover transform transition-transform duration-500 group-hover:scale-110"
-            />
-                     {/* Shine Effect (Top → Bottom) */}
-<div className="absolute inset-0 pointer-events-none overflow-hidden">
-  <div
-    className="
-      absolute inset-0
-      bg-gradient-to-b from-transparent via-white/25 to-transparent
-      translate-y-[-100%]
-      group-hover:translate-y-[100%]
-      transition-transform
-      duration-1000
-      ease-out
-    "
-  />
-</div>
-          </div>
-
-          {/* CONTENT */}
-          <div className="px-4 sm:px-6 py-4 sm:py-6 text-center">
-
-            {/* TITLE - CLICKABLE */}
-            <h2
-              className="text-lg sm:text-xl font-semibold mb-2 hover:underline"
-              style={{ color: BRAND }}
-              onClick={() => setSelectedItinerary(item)}
-            >
-              {item.title}
-            </h2>
-
-            <p className="text-gray-600 text-xs sm:text-sm">
-              Every day
-            </p>
-
-            {/* PICKUP DROPDOWN */}
-           <div className="mt-3 mb-6">
-  <div
-    className="text-sm sm:text-base font-medium mb-2"
-    style={{ color: BRAND }}
-  >
-    Pickup:
-  </div>
-
-  <div className="bg-white rounded-lg shadow p-3 text-sm space-y-2">
-    {item.pickupTimes?.map((time, index) => (
-      <p key={index}>{time}</p>
-    ))}
-  </div>
-</div>
-
-
-            {/* HIGHLIGHTS WITH SCROLL */}
-          <div className="text-left mb-6">
-          <h3 className="text-base sm:text-lg font-semibold mb-4 text-center">
-            Highlights :
-          </h3>
-
-        <div className="max-h-[6.5rem] overflow-y-auto pr-3 custom-scroll">
-  <ul className="space-y-4">
-    {item.highlights?.map((point: string, index: number) => (
-      <li
-        key={index}
-        className="flex items-start gap-3 text-gray-800 text-base sm:text-lg font-medium leading-relaxed"
-      >
-        <span style={{ color: BRAND }}>✓</span>
-        {point}
-      </li>
-    ))}
-  </ul>
-</div>
-        </div>
-
-            {/* DESCRIPTION DROPDOWN */}
-            <div className="mb-6">
-              <button
-                onClick={() =>
-                  setOpenDescriptionIndex(openDescriptionIndex === i ? null : i)
-                }
-                className="flex items-center justify-center gap-2 font-semibold w-full"
-                style={{ color: BRAND }}
+            {activeTab === "itinerary" && (
+              <ul
+                className="grid gap-6 px-4 sm:px-0"
+                style={{
+                  gridTemplateColumns: "repeat(3, 1fr)",    
+                  maxWidth: "1400px",
+                }}
               >
-               Full Description
-                {openDescriptionIndex === i ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
-              </button>
+                {tour.itinerary.map((item: any, i: number) => {
+                  const whatsappNumber = "201288062555";
+                  const message = `Hello, I'm interested in ${item.title}`;
+                  const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
-              {openDescriptionIndex === i && (
-                <p className="mt-4 text-gray-600 text-xs sm:text-sm leading-relaxed">
-                  {item.description}
-                </p>
-              )}
-            </div>
+                  return (
+                    <motion.li
+                      key={i}
+                      initial={{ opacity: 0, y: 60 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true, amount: 0.2 }}
+                      transition={{
+                        duration: 0.6,
+                        ease: "easeOut",
+                        delay: i * 0.1, // nice stagger effect
+                      }}
+                      className="group w-full max-w-2xl bg-[#f4f7f8] rounded-[28px] shadow-xl overflow-hidden 
+                                 transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
+                    >
 
-            {/* buttons */}
-   <div className="flex flex-row gap-3">
-  {/* WHATSAPP BUTTON */}
-  <a
-  href={whatsappLink}
-  target="_blank"
-  rel="noopener noreferrer"
-  className="flex-1 py-2 sm:py-2.5 rounded-xl font-semibold text-xs sm:text-sm flex items-center justify-center gap-2 transition 
-             hover:bg-[#075E94] hover:text-white"
-  style={{ 
-    backgroundColor: BRAND, 
-    color: 'white'
-  }}
->
-  <FaWhatsapp className="text-xl sm:text-xl ml-2" />
-  Contact Now
-</a>
+                      {/* IMAGE - CLICKABLE */}
+                      <div 
+                        className="relative w-full max-h-48 sm:h-64 overflow-hidden"
+                        onClick={() => setSelectedItinerary(item)}
+                      >
+                        {/* Dynamic Price */}
+                        {item.price && item.currency && (
+                          <div
+                            className="absolute top-2 right-2 z-10 text-white text-xs sm:text-sm font-semibold px-4 py-1.5 rounded-full border-2 border-white shadow-lg flex items-center gap-1.5"
+                            style={{ backgroundColor: BRAND }}
+                          >
+                            {item.currency} {item.price}
+                          </div>
+                        )}
 
+                        {/* Image */}
+                        <Image
+                          src={item.image}
+                          alt={item.title}
+                          fill
+                          className="object-cover transform transition-transform duration-500 group-hover:scale-110"
+                        />
+                        {/* Shine Effect (Top → Bottom) */}
+                        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+                          <div
+                            className="
+                              absolute inset-0
+                              bg-gradient-to-b from-transparent via-white/25 to-transparent
+                              translate-y-[-100%]
+                              group-hover:translate-y-[100%]
+                              transition-transform
+                              duration-1000
+                              ease-out
+                            "
+                          />
+                        </div>
+                      </div>
 
-  {/* DETAILS BUTTON - CLICKABLE */}
-  <button
-    onClick={() => setSelectedItinerary(item)}
-    className={`flex-1 border-2 py-2 sm:py-2.5 rounded-xl font-semibold text-xs sm:text-sm transition 
-      border-[#0A7BBE] text-[#0A7BBE]
-                hover:bg-[#075E94] hover:text-white hover:border-[#075E94] border-[${BRAND}] text-[${BRAND}]`}
-  >
-    ℹ Details
-  </button>
-</div>
+                      {/* CONTENT */}
+                      <div className="px-4 sm:px-6 py-4 sm:py-6 text-center">
 
+                        {/* TITLE - CLICKABLE */}
+                        <h2
+                          className="text-lg sm:text-xl font-semibold mb-2 hover:underline"
+                          style={{ color: BRAND }}
+                          onClick={() => setSelectedItinerary(item)}
+                        >
+                          {item.title}
+                        </h2>
 
+                        <p className="text-gray-600 text-xs sm:text-sm">
+                          Every day
+                        </p>
 
-          </div>
-        </motion.li>
+                        {/* PICKUP DROPDOWN */}
+                        <div className="mt-3 mb-6">
+                          <div
+                            className="text-sm sm:text-base font-medium mb-2"
+                            style={{ color: BRAND }}
+                          >
+                            Pickup:
+                          </div>
 
-              );
-            })}
-          </ul>
-        )}
+                          <div className="bg-white rounded-lg shadow p-3 text-sm space-y-2">
+                            {item.pickupTimes?.map((time: string, index: number) => (
+                              <p key={index}>{time}</p>
+                            ))}
+                          </div>
+                        </div>
 
+                        {/* HIGHLIGHTS WITH SCROLL */}
+                        <div className="text-left mb-6">
+                          <h3 className="text-base sm:text-lg font-semibold mb-4 text-center">
+                            Highlights :
+                          </h3>
 
+                          <div className="max-h-[6.5rem] overflow-y-auto pr-3 custom-scroll">
+                            <ul className="space-y-4">
+                              {item.highlights?.map((point: string, index: number) => (
+                                <li
+                                  key={index}
+                                  className="flex items-start gap-3 text-gray-800 text-base sm:text-lg font-medium leading-relaxed"
+                                >
+                                  <span style={{ color: BRAND }}>✓</span>
+                                  {point}
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        </div>
+
+                        {/* DESCRIPTION DROPDOWN */}
+                        <div className="mb-6">
+                          <button
+                            onClick={() =>
+                              setOpenDescriptionIndex(openDescriptionIndex === i ? null : i)
+                            }
+                            className="flex items-center justify-center gap-2 font-semibold w-full"
+                            style={{ color: BRAND }}
+                          >
+                            Full Description
+                            {openDescriptionIndex === i ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
+                          </button>
+
+                          {openDescriptionIndex === i && (
+                            <p className="mt-4 text-gray-600 text-xs sm:text-sm leading-relaxed">
+                              {item.description}
+                            </p>
+                          )}
+                        </div>
+
+                        {/* buttons */}
+                        <div className="flex flex-row gap-3">
+                          {/* WHATSAPP BUTTON */}
+                          <a
+                            href={whatsappLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex-1 py-2 sm:py-2.5 rounded-xl font-semibold text-xs sm:text-sm flex items-center justify-center gap-2 transition hover:bg-[#075E94] hover:text-white"
+                            style={{ 
+                              backgroundColor: BRAND, 
+                              color: 'white'
+                            }}
+                          >
+                            <FaWhatsapp className="text-xl sm:text-xl ml-2" />
+                            Contact Now
+                          </a>
+
+                          {/* DETAILS BUTTON - CLICKABLE */}
+                          <button
+                            onClick={() => setSelectedItinerary(item)}
+                            className={`flex-1 border-2 py-2 sm:py-2.5 rounded-xl font-semibold text-xs sm:text-sm transition 
+                              border-[#0A7BBE] text-[#0A7BBE]
+                              hover:bg-[#075E94] hover:text-white hover:border-[#075E94]`}
+                          >
+                            ℹ Details
+                          </button>
+                        </div>
+
+                      </div>
+                    </motion.li>
+                  );
+                })}
+              </ul>
+            )}
 
             {activeTab === "included" && (
               <ul className="list-disc ml-5 space-y-2">
-                {tour.included.map((item, i) => (
+                {tour.included.map((item: string, i: number) => (
                   <li key={i}>{item}</li>
                 ))}
               </ul>
@@ -512,7 +554,7 @@ const [openDescriptionIndex, setOpenDescriptionIndex] = useState<number | null>(
 
             {activeTab === "excluded" && (
               <ul className="list-disc ml-5 space-y-2">
-                {tour.excluded.map((item, i) => (
+                {tour.excluded.map((item: string, i: number) => (
                   <li key={i}>{item}</li>
                 ))}
               </ul>
@@ -525,7 +567,6 @@ const [openDescriptionIndex, setOpenDescriptionIndex] = useState<number | null>(
         </AnimatePresence>
       )}
 
-      
       <NewsletterSection />
 
       {/* ===== POPUP MODAL ===== */}
@@ -575,191 +616,181 @@ const [openDescriptionIndex, setOpenDescriptionIndex] = useState<number | null>(
                 </div>
               </div>
 
-         {/* Body */}
-<div className="p-6 md:p-8 space-y-12">
+              {/* Body */}
+              <div className="p-6 md:p-8 space-y-12">
 
-  {/* ===== OVERVIEW ===== */}
-  <div>
-    <h3 className="text-[#0A7BBE] text-xl font-semibold flex items-center gap-2 mb-8">
-      <Tag size={18} />
-      Overview
-    </h3>
+                {/* ===== OVERVIEW ===== */}
+                <div>
+                  <h3 className="text-[#0A7BBE] text-xl font-semibold flex items-center gap-2 mb-8">
+                    <Tag size={18} />
+                    Overview
+                  </h3>
 
-    <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
 
-      {/* Adult */}
-      <div className="bg-white border border-gray-100 rounded-2xl p-6 text-center shadow-sm hover:shadow-lg transition">
-        <div className="w-14 h-14 bg-[#0A7BBE]/10 rounded-full mx-auto flex items-center justify-center text-[#0A7BBE] mb-4">
-          <User size={24} />
-        </div>
-        <p className="text-sm text-gray-500 mb-1">Price</p>
-        <p className="text-2xl font-semibold text-[#0A7BBE]">
-          € {selectedItinerary.price}
-        </p>
-        <p className="text-xs text-gray-400 mt-1">Per person</p>
-      </div>
+                    {/* Adult */}
+                    <div className="bg-white border border-gray-100 rounded-2xl p-6 text-center shadow-sm hover:shadow-lg transition">
+                      <div className="w-14 h-14 bg-[#0A7BBE]/10 rounded-full mx-auto flex items-center justify-center text-[#0A7BBE] mb-4">
+                        <User size={24} />
+                      </div>
+                      <p className="text-sm text-gray-500 mb-1">Price</p>
+                      <p className="text-2xl font-semibold text-[#0A7BBE]">
+                        € {selectedItinerary.price}
+                      </p>
+                      <p className="text-xs text-gray-400 mt-1">Per person</p>
+                    </div>
 
-      {/* Duration */}
-      <div className="bg-white border border-gray-100 rounded-2xl p-6 text-center shadow-sm hover:shadow-lg transition">
-        <div className="w-14 h-14 bg-[#0a2340]/10 rounded-full mx-auto flex items-center justify-center text-[#0a2340] mb-4">
-          <Clock size={22} />
-        </div>
-        <p className="text-sm text-gray-500 mb-1">Duration</p>
-        <p className="text-lg font-semibold text-[#0a2340]">
-          {selectedItinerary.duration}
-        </p>
-      </div>
+                    {/* Duration */}
+                    <div className="bg-white border border-gray-100 rounded-2xl p-6 text-center shadow-sm hover:shadow-lg transition">
+                      <div className="w-14 h-14 bg-[#0a2340]/10 rounded-full mx-auto flex items-center justify-center text-[#0a2340] mb-4">
+                        <Clock size={22} />
+                      </div>
+                      <p className="text-sm text-gray-500 mb-1">Duration</p>
+                      <p className="text-lg font-semibold text-[#0a2340]">
+                        {selectedItinerary.duration}
+                      </p>
+                    </div>
 
-      {/* Infant */}
-      <div className="bg-white border border-gray-100 rounded-2xl p-6 text-center shadow-sm hover:shadow-lg transition">
-        <div className="w-14 h-14 bg-cyan-100 rounded-full mx-auto flex items-center justify-center text-[#0a2340] mb-4">
-          <Baby size={24} />
-        </div>
-        <p className="text-sm text-gray-500 mb-1">Infants</p>
-        <p className="text-2xl font-semibold text-[#0a2340]">
-          {selectedItinerary.infantPrice || ""}
-        </p>
-      </div>
+                    {/* Infant */}
+                    <div className="bg-white border border-gray-100 rounded-2xl p-6 text-center shadow-sm hover:shadow-lg transition">
+                      <div className="w-14 h-14 bg-cyan-100 rounded-full mx-auto flex items-center justify-center text-[#0a2340] mb-4">
+                        <Baby size={24} />
+                      </div>
+                      <p className="text-sm text-gray-500 mb-1">Infants</p>
+                      <p className="text-2xl font-semibold text-[#0a2340]">
+                        {selectedItinerary.infantPrice || ""}
+                      </p>
+                    </div>
 
-    </div>
-  </div>
+                  </div>
+                </div>
 
+                {/* ===== TOUR SCHEDULE (TIMELINE STYLE) ===== */}
+                {selectedItinerary.moreDetails?.length > 0 && (
+                  <div>
+                    <h3 className="text-[#0A7BBE] text-xl font-semibold mb-8">
+                      Trip Details
+                    </h3>
 
-  {/* ===== TOUR SCHEDULE (TIMELINE STYLE) ===== */}
-  {selectedItinerary.moreDetails?.length > 0 && (
-    <div>
-      <h3 className="text-[#0A7BBE] text-xl font-semibold mb-8">
-        Trip Details
-      </h3>
+                    <div className="relative border-l-2 border-[#0A7BBE]/30 pl-6 space-y-10">
 
-      <div className="relative border-l-2 border-[#0A7BBE]/30 pl-6 space-y-10">
+                      {selectedItinerary.moreDetails.map((detail: any, i: number) => (
+                        <div key={i} className="relative">
 
-        {selectedItinerary.moreDetails.map((detail: any, i: number) => (
-          <div key={i} className="relative">
+                          {/* Timeline Dot */}
+                          <span className="absolute -left-[9px] top-1 w-4 h-4 bg-[#0A7BBE] rounded-full border-4 border-white shadow"></span>
 
-            {/* Timeline Dot */}
-            <span className="absolute -left-[9px] top-1 w-4 h-4 bg-[#0A7BBE] rounded-full border-4 border-white shadow"></span>
+                          <div className="bg-gray-50 rounded-xl p-5 shadow-sm border border-gray-100">
+                            <p className="font-semibold text-[#0A7BBE] mb-2 text-base">
+                              {detail.item}
+                            </p>
+                            <p className="text-sm text-gray-600 leading-relaxed">
+                              {detail.reason}
+                            </p>
+                          </div>
 
-            <div className="bg-gray-50 rounded-xl p-5 shadow-sm border border-gray-100">
+                        </div>
+                      ))}
 
-              <p className="font-semibold text-[#0A7BBE] mb-2 text-base">
-                {detail.item}
-              </p>
+                    </div>
+                  </div>
+                )}
 
-              <p className="text-sm text-gray-600 leading-relaxed">
-                {detail.reason}
-              </p>
+                {/* ===== EXTRA INFO ===== */}
+                {selectedItinerary.extraInfo && (
+                  <div className="bg-[#fff9c4] text-[#856404] px-4 py-3 rounded-lg flex items-start gap-2 text-sm font-semibold border-l-4 border-[#ffeb3b]">
+                    <Info size={18} className="mt-0.5 shrink-0"/> 
+                    <div className="space-y-1">
+                      {selectedItinerary.extraInfo.map((info: string, i: number) => (
+                        <p key={i}>{info}</p>
+                      ))}
+                    </div>
+                  </div>
+                )}
 
-            </div>
+                {/* ===== PICKUP & RETURN ===== */}
+                <div className="space-y-4">
 
-          </div>
-        ))}
+                  {selectedItinerary.pickupTimes?.length > 0 && (
+                    <div className="bg-cyan-50 p-4 rounded-xl flex items-center gap-4 border border-cyan-100">
+                      <ArrowUp size={18} className="text-cyan-600" />
+                      <div>
+                        <p className="text-xs text-gray-500 font-bold uppercase tracking-wider">
+                          Hotel Pickup
+                        </p>
+                        <p className="font-semibold text-gray-800 text-sm">
+                          {selectedItinerary.pickupTimes[0]}
+                        </p>
+                      </div>
+                    </div>
+                  )}
 
-      </div>
-    </div>
-  )}
+                  {selectedItinerary.returnTime && (
+                    <div className="bg-cyan-50 p-4 rounded-xl flex items-center gap-4 border border-cyan-100">
+                      <ArrowDown size={18} className="text-cyan-600" />
+                      <div>
+                        <p className="text-xs text-gray-500 font-bold uppercase tracking-wider">
+                          Hotel Return
+                        </p>
+                        <p className="font-semibold text-gray-800 text-sm">
+                          {selectedItinerary.returnTime}
+                        </p>
+                      </div>
+                    </div>
+                  )}
 
+                </div>
 
-  {/* ===== EXTRA INFO ===== */}
-  {selectedItinerary.extraInfo && (
-    <div className="bg-[#fff9c4] text-[#856404] px-4 py-3 rounded-lg flex items-start gap-2 text-sm font-semibold border-l-4 border-[#ffeb3b]">
-      <Info size={18} className="mt-0.5 shrink-0"/> 
-      <div className="space-y-1">
-        {selectedItinerary.extraInfo.map((info: string, i: number) => (
-          <p key={i}>{info}</p>
-        ))}
-      </div>
-    </div>
-  )}
+                {/* ===== INCLUDED ===== */}
+                {selectedItinerary.included?.length > 0 && (
+                  <div>
+                    <h3 className="font-bold text-lg mb-4 text-[#0a7bbe]">
+                      What's Included
+                    </h3>
+                    <ul className="space-y-3">
+                      {selectedItinerary.included.map((item: string, idx: number) => (
+                        <li key={idx} className="flex items-start gap-3 text-sm text-gray-600 font-medium">
+                          <Check className="text-cyan-500 mt-0.5" size={16} />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
 
+                {/* ===== EXCLUDED ===== */}
+                {selectedItinerary.excluded?.length > 0 && (
+                  <div>
+                    <h3 className="font-bold text-lg mb-4 text-[#0a7bbe]">
+                      Exclude
+                    </h3>
+                    <ul className="space-y-3">
+                      {selectedItinerary.excluded.map((item: string, idx: number) => (
+                        <li key={idx} className="flex items-start gap-3 text-sm text-gray-600 font-medium">
+                          <Check className="text-red-400 mt-0.5" size={16} />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
 
-  {/* ===== PICKUP & RETURN ===== */}
-  <div className="space-y-4">
+                {/* ===== CONTACT BUTTON ===== */}
+                <div className="pt-4">
+                  <a
+                    href={`https://wa.me/201288062555?text=${encodeURIComponent(`Hello, I'm interested in ${selectedItinerary.title}`)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full sm:w-1/2 mx-auto py-3 rounded-xl font-bold text-white text-center transition hover:opacity-90 shadow-lg"
+                    style={{ backgroundColor: '#0A7BBE' }}
+                  >
+                    <span className="flex items-center justify-center gap-2">
+                      <FaWhatsapp className="text-xl" /> Contact Now
+                    </span>
+                  </a>
+                </div>
 
-    {selectedItinerary.pickupTimes?.length > 0 && (
-      <div className="bg-cyan-50 p-4 rounded-xl flex items-center gap-4 border border-cyan-100">
-        <ArrowUp size={18} className="text-cyan-600" />
-        <div>
-          <p className="text-xs text-gray-500 font-bold uppercase tracking-wider">
-            Hotel Pickup
-          </p>
-          <p className="font-semibold text-gray-800 text-sm">
-            {selectedItinerary.pickupTimes[0]}
-          </p>
-        </div>
-      </div>
-    )}
-
-    {selectedItinerary.returnTime && (
-      <div className="bg-cyan-50 p-4 rounded-xl flex items-center gap-4 border border-cyan-100">
-        <ArrowDown size={18} className="text-cyan-600" />
-        <div>
-          <p className="text-xs text-gray-500 font-bold uppercase tracking-wider">
-            Hotel Return
-          </p>
-          <p className="font-semibold text-gray-800 text-sm">
-            {selectedItinerary.returnTime}
-          </p>
-        </div>
-      </div>
-    )}
-
-  </div>
-
-
-  {/* ===== INCLUDED ===== */}
-  {selectedItinerary.included?.length > 0 && (
-    <div>
-      <h3 className="font-bold text-lg mb-4 text-[#0a7bbe]">
-        What's Included
-      </h3>
-      <ul className="space-y-3">
-        {selectedItinerary.included.map((item: string, idx: number) => (
-          <li key={idx} className="flex items-start gap-3 text-sm text-gray-600 font-medium">
-            <Check className="text-cyan-500 mt-0.5" size={16} />
-            <span>{item}</span>
-          </li>
-        ))}
-      </ul>
-    </div>
-  )}
-
-
-  {/* ===== EXCLUDED ===== */}
-  {selectedItinerary.excluded?.length > 0 && (
-    <div>
-      <h3 className="font-bold text-lg mb-4 text-[#0a7bbe]">
-        Exclude
-      </h3>
-      <ul className="space-y-3">
-        {selectedItinerary.excluded.map((item: string, idx: number) => (
-          <li key={idx} className="flex items-start gap-3 text-sm text-gray-600 font-medium">
-            <Check className="text-red-400 mt-0.5" size={16} />
-            <span>{item}</span>
-          </li>
-        ))}
-      </ul>
-    </div>
-  )}
-
-
-  {/* ===== CONTACT BUTTON ===== */}
-  <div className="pt-4">
-    <a
-      href={`https://wa.me/201288062555?text=${encodeURIComponent(`Hello, I'm interested in ${selectedItinerary.title}`)}`}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="block w-full sm:w-1/2 mx-auto py-3 rounded-xl font-bold text-white text-center transition hover:opacity-90 shadow-lg"
-      style={{ backgroundColor: '#0A7BBE' }}
-    >
-      <span className="flex items-center justify-center gap-2">
-        <FaWhatsapp className="text-xl" /> Contact Now
-      </span>
-    </a>
-  </div>
-
-</div>
-
+              </div>
             </motion.div>
           </motion.div>
         )}
