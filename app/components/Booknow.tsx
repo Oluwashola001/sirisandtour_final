@@ -33,7 +33,7 @@ const handleSubmit = (e: React.FormEvent) => {
 
   if (hasError) return;
 
-  const subject = "New Booking Request – Siris & Tours";
+  const subject = "New Booking Request – Koky · Hurghada trips";
 
   const body = `
 Full Name: ${FullName}
