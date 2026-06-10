@@ -26,7 +26,7 @@ export default function ContactSection() {
                 Our Address
               </h3>
               <p className="mt-2 text-lg text-gray-700">
-                Hurghada _ Red Sea _ Egypt,
+                Hurghada, Red Sea, Egypt.
                 <br />
                 
               </p>
@@ -58,7 +58,7 @@ export default function ContactSection() {
                 Email
               </h3>
               <p className="mt-2 text-lg text-gray-700">
-               sirisand tours <br /> @gmail.com
+               kokyhurghadatrips <br /> @gmail.com
               </p>
             </div>
           </div>

@@ -78,8 +78,11 @@ export default function TourPage({
     <section className="w-full -ml-2 px-4 md:px-12 py-14 mt-35 relative">
 
       {/* ===== TITLE SECTION ===== */}
-      <div className="w-full mb-10 flex justify-center -mt-10 items-center">
-        <h1 className="text-1xl md:text-3xl lg:text-2xl font-bold text-[#0A7BBE] break-words text-center">
+      <div className="w-full mb-12 flex justify-center -mt-6 items-center max-w-6xl mx-auto">
+        <h1 
+          className="text-2xl md:text-4xl lg:text-5xl font-extrabold text-[#0A7BBE] break-words text-center leading-tight tracking-tight drop-shadow-sm px-2"
+          style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+        >
           {tour.title}
         </h1>
       </div>
@@ -121,7 +124,7 @@ export default function TourPage({
 
               <button
                 onClick={() => handleTabClick(tab.id)}
-                className={`w-full md:w-auto px-6 py-3 rounded-t-3xl h-15 transition-all text-black
+                className={`w-full md:w-auto px-6 py-3 rounded-t-3xl h-15 transition-all text-black font-medium
                   ${
                     activeTab === tab.id
                       ? "bg-[#0a7bbe] text-white"
@@ -138,12 +141,13 @@ export default function TourPage({
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
                   transition={{ duration: 0.25 }}
-                  className="bg-white text-black rounded-b-3xl p-6 shadow"
+                  /* Reduced padding here (p-3 instead of p-6) to let cards take up more width */
+                  className="bg-white text-black rounded-b-3xl p-3 sm:p-6 shadow"
                 >
                   
                   {/* BEAUTIFIED MOBILE OVERVIEW */}
                   {tab.id === "overview" && (
-                    <div className="py-2">
+                    <div className="py-4 px-2">
                       <h2 
                         className="text-2xl font-extrabold text-[#0A7BBE] mb-5 text-center" 
                         style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
@@ -172,7 +176,7 @@ export default function TourPage({
                   )}
 
                   {activeTab === "itinerary" && (
-                    <ul className="flex flex-col items-center space-y-8 px-2 sm:px-0">
+                    <ul className="flex flex-col items-center space-y-6 pt-2">
                       {tour.itinerary.map((item: any, i: number) => {
                         const whatsappNumber = "201288062555";
                         const message = `Hello, I'm interested in ${item.title}`;
@@ -181,22 +185,22 @@ export default function TourPage({
                         return (
                           <motion.li
                             key={i}
-                            initial={{ opacity: 0, y: 60 }}
+                            initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6, ease: "easeOut" }}
-                            viewport={{ once: true, amount: 0.2 }}
-                            className="w-full max-w-2xl bg-[#f4f7f8] rounded-[28px] shadow-xl overflow-hidden 
-                                       transform transition-transform duration-300 hover:scale-105"
+                            transition={{ duration: 0.4, ease: "easeOut" }}
+                            viewport={{ once: true, amount: 0.1 }}
+                            className="w-full max-w-2xl bg-[#f4f7f8] rounded-[28px] shadow-lg overflow-hidden border border-gray-100"
                           >
                             {/* IMAGE - CLICKABLE */}
                             <div 
-                              className="relative w-full h-40 sm:h-48 cursor-pointer"
+                              /* Increased mobile height (h-56) so it doesn't look slim */
+                              className="relative w-full h-56 sm:h-64 cursor-pointer"
                               onClick={() => setSelectedItinerary(item)}
                             >
                               {/* Price */}
                               {item.price && item.currency && (
                                 <div
-                                  className="absolute top-2 right-2 z-10 text-white text-[10px] sm:text-xs px-2 py-1 rounded-full font-semibold shadow-lg border-2 border-white"
+                                  className="absolute top-3 right-3 z-10 text-white text-xs sm:text-sm px-3 py-1.5 rounded-full font-bold shadow-md border-2 border-white/50 backdrop-blur-sm"
                                   style={{ backgroundColor: BRAND }}
                                 >
                                   {item.currency} {item.price}
@@ -212,32 +216,31 @@ export default function TourPage({
                             </div>
 
                             {/* CONTENT */}
-                            <div className="px-3 sm:px-6 py-3 sm:py-4 text-center">
+                            <div className="p-5 sm:p-6 text-center">
 
                               {/* TITLE - CLICKABLE */}
                               <h2
-                                className="text-base sm:text-lg font-semibold mb-1 cursor-pointer hover:underline"
+                                className="text-[1.1rem] sm:text-lg font-bold mb-1.5 cursor-pointer hover:underline leading-tight"
                                 style={{ color: BRAND }}
                                 onClick={() => setSelectedItinerary(item)}
                               >
                                 {item.title}
                               </h2>
 
-                              <p className="text-gray-600 text-xs sm:text-sm mb-2">
-                                Every day
+                              <p className="text-gray-500 text-xs font-medium mb-3">
+                                Available Every Day
                               </p>
 
                               {/* PICKUP DROPDOWN */}
                               {item.pickupTimes && item.pickupTimes.length > 0 && (
-                                <div className="mt-3 mb-6">
+                                <div className="mt-3 mb-5 bg-white rounded-xl p-3 shadow-sm border border-gray-100">
                                   <div
-                                    className="text-sm sm:text-base font-medium mb-2"
+                                    className="text-xs sm:text-sm font-bold mb-1.5 uppercase tracking-wide"
                                     style={{ color: BRAND }}
                                   >
-                                    Pickup:
+                                    Pickup Times
                                   </div>
-
-                                  <div className="text-black">
+                                  <div className="text-gray-700 text-sm font-medium">
                                     {item.pickupTimes.map((time: string, index: number) => (
                                       <p key={index}>{time}</p>
                                     ))}
@@ -245,21 +248,20 @@ export default function TourPage({
                                 </div>
                               )}
 
-
                               {/* HIGHLIGHTS */}
-                              <div className="text-left mb-4">
-                                <h3 className="text-sm sm:text-base font-semibold mb-2 text-center">
-                                  Highlights:
+                              <div className="text-left mb-5">
+                                <h3 className="text-sm font-bold mb-3 text-center text-gray-800 uppercase tracking-wide">
+                                  Key Highlights
                                 </h3>
 
-                                <div className="max-h-24 overflow-y-auto pr-2 custom-scroll">
-                                  <ul className="space-y-1">
+                                <div className="max-h-28 overflow-y-auto pr-2 custom-scroll">
+                                  <ul className="space-y-2">
                                     {item.highlights?.map((point: string, index: number) => (
                                       <li
                                         key={index}
-                                        className="flex items-start gap-3 text-gray-800 text-base sm:text-lg font-medium leading-relaxed"
+                                        className="flex items-start gap-2.5 text-gray-700 text-sm font-medium leading-relaxed"
                                       >
-                                        <span style={{ color: BRAND }}>✓</span>
+                                        <span className="mt-0.5 font-bold" style={{ color: BRAND }}>✓</span>
                                         {point}
                                       </li>
                                     ))}
@@ -268,48 +270,51 @@ export default function TourPage({
                               </div>
 
                               {/* DESCRIPTION DROPDOWN */}
-                              <div className="mb-4">
+                              <div className="mb-5">
                                 <button
                                   onClick={() =>
                                     setOpenDescriptionIndex(openDescriptionIndex === i ? null : i)
                                   }
-                                  className="flex items-center justify-center gap-1 font-semibold w-full text-xs sm:text-sm"
+                                  className="flex items-center justify-center gap-1.5 font-bold w-full text-xs uppercase tracking-wide bg-gray-100 py-2 rounded-lg transition active:bg-gray-200"
                                   style={{ color: BRAND }}
                                 >
-                                  Full Description
+                                  Read Full Description
                                   {openDescriptionIndex === i ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
                                 </button>
 
                                 {openDescriptionIndex === i && (
-                                  <p className="mt-2 text-gray-600 text-xs sm:text-sm leading-relaxed">
+                                  <p className="mt-3 text-gray-600 text-sm leading-relaxed text-justify px-1">
                                     {item.description}
                                   </p>
                                 )}
                               </div>
 
-                              {/* WHATSAPP BUTTON */}
-                              <a
-                                href={whatsappLink}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="w-full py-2 sm:py-3 rounded-xl font-semibold text-white text-xs sm:text-sm flex items-center justify-center gap-2 mb-2 transition shadow-md"
-                                style={{ backgroundColor: BRAND }}
-                              >
-                                <FaWhatsapp className="text-xl sm:text-2xl" />
-                                Contact Now
-                              </a>
+                              {/* BUTTONS CONTAINER */}
+                              <div className="flex flex-col gap-2.5">
+                                {/* WHATSAPP BUTTON */}
+                                <a
+                                  href={whatsappLink}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="w-full py-3 rounded-xl font-bold text-white text-sm flex items-center justify-center gap-2 shadow-md active:scale-[0.98] transition-transform"
+                                  style={{ backgroundColor: BRAND }}
+                                >
+                                  <FaWhatsapp className="text-xl" />
+                                  Contact via WhatsApp
+                                </a>
 
-                              {/* DETAILS BUTTON - CLICKABLE */}
-                              <button
-                                onClick={() => setSelectedItinerary(item)}
-                                className="w-full border-2 py-2 sm:py-3 rounded-xl font-semibold text-xs sm:text-sm transition"
-                                style={{
-                                  borderColor: BRAND,
-                                  color: BRAND
-                                }}
-                              >
-                                ℹ Details
-                              </button>
+                                {/* DETAILS BUTTON */}
+                                <button
+                                  onClick={() => setSelectedItinerary(item)}
+                                  className="w-full border-2 py-2.5 rounded-xl font-bold text-sm bg-white active:bg-gray-50 transition-colors"
+                                  style={{
+                                    borderColor: BRAND,
+                                    color: BRAND
+                                  }}
+                                >
+                                  ℹ View All Details
+                                </button>
+                              </div>
 
                             </div>
                           </motion.li>
@@ -319,7 +324,9 @@ export default function TourPage({
                   )}       
 
                   {tab.id === "reviews" && (
-                    <ReviewTestimonial testimonials={tour.testimonials} />
+                    <div className="px-2">
+                      <ReviewTestimonial testimonials={tour.testimonials} />
+                    </div>
                   )}
                 </motion.div>
               )}
@@ -337,7 +344,7 @@ export default function TourPage({
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.35 }}
-            className="mx-auto mt-8 bg-white text-black p-6 shadow"
+            className="mx-auto mt-8 bg-white text-black p-6 shadow rounded-3xl"
           >
             
             {/* BEAUTIFIED DESKTOP OVERVIEW */}
@@ -400,13 +407,13 @@ export default function TourPage({
 
                       {/* IMAGE - CLICKABLE */}
                       <div 
-                        className="relative w-full max-h-48 sm:h-64 overflow-hidden"
+                        className="relative w-full h-48 sm:h-64 overflow-hidden"
                         onClick={() => setSelectedItinerary(item)}
                       >
                         {/* Dynamic Price */}
                         {item.price && item.currency && (
                           <div
-                            className="absolute top-2 right-2 z-10 text-white text-xs sm:text-sm font-semibold px-4 py-1.5 rounded-full border-2 border-white shadow-lg flex items-center gap-1.5"
+                            className="absolute top-3 right-3 z-10 text-white text-xs sm:text-sm font-bold px-4 py-1.5 rounded-full border-2 border-white/50 backdrop-blur-sm shadow-lg flex items-center gap-1.5"
                             style={{ backgroundColor: BRAND }}
                           >
                             {item.currency} {item.price}
@@ -441,27 +448,27 @@ export default function TourPage({
 
                         {/* TITLE - CLICKABLE */}
                         <h2
-                          className="text-lg sm:text-xl font-semibold mb-2 hover:underline"
+                          className="text-lg sm:text-xl font-bold mb-2 hover:underline leading-tight"
                           style={{ color: BRAND }}
                           onClick={() => setSelectedItinerary(item)}
                         >
                           {item.title}
                         </h2>
 
-                        <p className="text-gray-600 text-xs sm:text-sm">
-                          Every day
+                        <p className="text-gray-500 text-xs sm:text-sm font-medium mb-1">
+                          Available Every Day
                         </p>
 
                         {/* PICKUP DROPDOWN */}
-                        <div className="mt-3 mb-6">
+                        <div className="mt-4 mb-6">
                           <div
-                            className="text-sm sm:text-base font-medium mb-2"
+                            className="text-xs sm:text-sm font-bold mb-2 uppercase tracking-wide"
                             style={{ color: BRAND }}
                           >
-                            Pickup:
+                            Pickup Times
                           </div>
 
-                          <div className="bg-white rounded-lg shadow p-3 text-sm space-y-2">
+                          <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-3 text-sm font-medium text-gray-700 space-y-1.5">
                             {item.pickupTimes?.map((time: string, index: number) => (
                               <p key={index}>{time}</p>
                             ))}
@@ -470,18 +477,18 @@ export default function TourPage({
 
                         {/* HIGHLIGHTS WITH SCROLL */}
                         <div className="text-left mb-6">
-                          <h3 className="text-base sm:text-lg font-semibold mb-4 text-center">
-                            Highlights :
+                          <h3 className="text-sm sm:text-base font-bold mb-4 text-center uppercase tracking-wide text-gray-800">
+                            Key Highlights
                           </h3>
 
                           <div className="max-h-[6.5rem] overflow-y-auto pr-3 custom-scroll">
-                            <ul className="space-y-4">
+                            <ul className="space-y-3">
                               {item.highlights?.map((point: string, index: number) => (
                                 <li
                                   key={index}
-                                  className="flex items-start gap-3 text-gray-800 text-base sm:text-lg font-medium leading-relaxed"
+                                  className="flex items-start gap-3 text-gray-700 text-sm sm:text-base font-medium leading-relaxed"
                                 >
-                                  <span style={{ color: BRAND }}>✓</span>
+                                  <span className="font-bold mt-0.5" style={{ color: BRAND }}>✓</span>
                                   {point}
                                 </li>
                               ))}
@@ -495,15 +502,15 @@ export default function TourPage({
                             onClick={() =>
                               setOpenDescriptionIndex(openDescriptionIndex === i ? null : i)
                             }
-                            className="flex items-center justify-center gap-2 font-semibold w-full"
+                            className="flex items-center justify-center gap-2 font-bold w-full uppercase tracking-wide text-xs bg-gray-100 py-2.5 rounded-lg hover:bg-gray-200 transition"
                             style={{ color: BRAND }}
                           >
-                            Full Description
+                            Read Full Description
                             {openDescriptionIndex === i ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
                           </button>
 
                           {openDescriptionIndex === i && (
-                            <p className="mt-4 text-gray-600 text-xs sm:text-sm leading-relaxed">
+                            <p className="mt-4 text-gray-600 text-sm leading-relaxed text-justify px-2">
                               {item.description}
                             </p>
                           )}
@@ -516,24 +523,24 @@ export default function TourPage({
                             href={whatsappLink}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex-1 py-2 sm:py-2.5 rounded-xl font-semibold text-xs sm:text-sm flex items-center justify-center gap-2 transition hover:bg-[#075E94] hover:text-white"
+                            className="flex-1 py-2 sm:py-3 rounded-xl font-bold text-xs sm:text-sm flex items-center justify-center gap-2 transition hover:opacity-90 shadow-md"
                             style={{ 
                               backgroundColor: BRAND, 
                               color: 'white'
                             }}
                           >
-                            <FaWhatsapp className="text-xl sm:text-xl ml-2" />
-                            Contact Now
+                            <FaWhatsapp className="text-xl sm:text-xl" />
+                            WhatsApp
                           </a>
 
                           {/* DETAILS BUTTON - CLICKABLE */}
                           <button
                             onClick={() => setSelectedItinerary(item)}
-                            className={`flex-1 border-2 py-2 sm:py-2.5 rounded-xl font-semibold text-xs sm:text-sm transition 
+                            className={`flex-1 border-2 py-2 sm:py-3 rounded-xl font-bold text-xs sm:text-sm transition bg-white
                               border-[#0A7BBE] text-[#0A7BBE]
-                              hover:bg-[#075E94] hover:text-white hover:border-[#075E94]`}
+                              hover:bg-gray-50`}
                           >
-                            ℹ Details
+                            ℹ View Details
                           </button>
                         </div>
 
@@ -583,22 +590,22 @@ export default function TourPage({
               initial={{ scale: 0.95, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.95, opacity: 0 }}
-              className="bg-white w-full max-w-2xl rounded-2xl overflow-hidden shadow-2xl relative max-h-[90vh] overflow-y-auto"
+              className="bg-white w-full max-w-2xl rounded-3xl overflow-hidden shadow-2xl relative max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()} // Prevent close on modal click
             >
               
               {/* Header */}
-              <div className="p-6 text-white relative bg-gradient-to-r from-cyan-500 to-blue-600">
+              <div className="p-6 text-white relative bg-gradient-to-r from-[#075E94] to-[#0A7BBE]">
                 <button 
                   onClick={() => setSelectedItinerary(null)} 
                   className="absolute top-4 right-4 text-white/80 hover:text-white transition"
                 >
-                  <X size={24} />
+                  <X size={26} />
                 </button>
 
-                <div className="flex gap-4 items-center">
+                <div className="flex gap-4 items-center mt-2">
                    {/* Item Image as Thumbnail */}
-                  <div className="w-20 h-20 md:w-24 md:h-24 relative rounded-xl overflow-hidden border-2 border-white/30 shrink-0 shadow-sm">
+                  <div className="w-20 h-20 md:w-24 md:h-24 relative rounded-2xl overflow-hidden border-2 border-white/30 shrink-0 shadow-md">
                     <Image 
                       src={selectedItinerary.image} 
                       alt={selectedItinerary.title} 
@@ -607,58 +614,58 @@ export default function TourPage({
                     />
                   </div>
                   <div>
-                    <h2 className="text-xl md:text-2xl font-bold">{selectedItinerary.title}</h2>
-                    <div className="flex gap-4 mt-2 text-xs md:text-sm font-medium opacity-90">
-                      <span className="flex items-center gap-1"><Calendar size={14}/> Every day</span>
-                      <span className="flex items-center gap-1"><Clock size={14}/> {selectedItinerary.duration}</span>
+                    <h2 className="text-xl md:text-2xl font-bold leading-tight">{selectedItinerary.title}</h2>
+                    <div className="flex gap-4 mt-3 text-xs md:text-sm font-medium opacity-90">
+                      <span className="flex items-center gap-1.5"><Calendar size={16}/> Every day</span>
+                      <span className="flex items-center gap-1.5"><Clock size={16}/> {selectedItinerary.duration}</span>
                     </div>
                   </div>
                 </div>
               </div>
 
               {/* Body */}
-              <div className="p-6 md:p-8 space-y-12">
+              <div className="p-6 md:p-8 space-y-10">
 
                 {/* ===== OVERVIEW ===== */}
                 <div>
-                  <h3 className="text-[#0A7BBE] text-xl font-semibold flex items-center gap-2 mb-8">
-                    <Tag size={18} />
+                  <h3 className="text-[#0A7BBE] text-lg font-bold flex items-center gap-2 mb-5 uppercase tracking-wide">
+                    <Tag size={20} />
                     Overview
                   </h3>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
 
                     {/* Adult */}
-                    <div className="bg-white border border-gray-100 rounded-2xl p-6 text-center shadow-sm hover:shadow-lg transition">
-                      <div className="w-14 h-14 bg-[#0A7BBE]/10 rounded-full mx-auto flex items-center justify-center text-[#0A7BBE] mb-4">
-                        <User size={24} />
+                    <div className="bg-white border border-gray-100 rounded-2xl p-5 text-center shadow-sm hover:shadow-md transition">
+                      <div className="w-12 h-12 bg-[#0A7BBE]/10 rounded-full mx-auto flex items-center justify-center text-[#0A7BBE] mb-3">
+                        <User size={22} />
                       </div>
-                      <p className="text-sm text-gray-500 mb-1">Price</p>
-                      <p className="text-2xl font-semibold text-[#0A7BBE]">
+                      <p className="text-xs uppercase tracking-wide text-gray-400 font-bold mb-1">Price</p>
+                      <p className="text-xl font-bold text-[#0A7BBE]">
                         € {selectedItinerary.price}
                       </p>
-                      <p className="text-xs text-gray-400 mt-1">Per person</p>
+                      <p className="text-[10px] text-gray-400 mt-1 uppercase">Per person</p>
                     </div>
 
                     {/* Duration */}
-                    <div className="bg-white border border-gray-100 rounded-2xl p-6 text-center shadow-sm hover:shadow-lg transition">
-                      <div className="w-14 h-14 bg-[#0a2340]/10 rounded-full mx-auto flex items-center justify-center text-[#0a2340] mb-4">
+                    <div className="bg-white border border-gray-100 rounded-2xl p-5 text-center shadow-sm hover:shadow-md transition">
+                      <div className="w-12 h-12 bg-gray-100 rounded-full mx-auto flex items-center justify-center text-gray-700 mb-3">
                         <Clock size={22} />
                       </div>
-                      <p className="text-sm text-gray-500 mb-1">Duration</p>
-                      <p className="text-lg font-semibold text-[#0a2340]">
+                      <p className="text-xs uppercase tracking-wide text-gray-400 font-bold mb-1">Duration</p>
+                      <p className="text-lg font-bold text-gray-800">
                         {selectedItinerary.duration}
                       </p>
                     </div>
 
                     {/* Infant */}
-                    <div className="bg-white border border-gray-100 rounded-2xl p-6 text-center shadow-sm hover:shadow-lg transition">
-                      <div className="w-14 h-14 bg-cyan-100 rounded-full mx-auto flex items-center justify-center text-[#0a2340] mb-4">
-                        <Baby size={24} />
+                    <div className="bg-white border border-gray-100 rounded-2xl p-5 text-center shadow-sm hover:shadow-md transition">
+                      <div className="w-12 h-12 bg-[#0A7BBE]/10 rounded-full mx-auto flex items-center justify-center text-[#0A7BBE] mb-3">
+                        <Baby size={22} />
                       </div>
-                      <p className="text-sm text-gray-500 mb-1">Infants</p>
-                      <p className="text-2xl font-semibold text-[#0a2340]">
-                        {selectedItinerary.infantPrice || ""}
+                      <p className="text-xs uppercase tracking-wide text-gray-400 font-bold mb-1">Infants</p>
+                      <p className="text-lg font-bold text-gray-800">
+                        {selectedItinerary.infantPrice || "Contact Us"}
                       </p>
                     </div>
 
@@ -668,23 +675,23 @@ export default function TourPage({
                 {/* ===== TOUR SCHEDULE (TIMELINE STYLE) ===== */}
                 {selectedItinerary.moreDetails?.length > 0 && (
                   <div>
-                    <h3 className="text-[#0A7BBE] text-xl font-semibold mb-8">
+                    <h3 className="text-[#0A7BBE] text-lg font-bold mb-6 uppercase tracking-wide">
                       Trip Details
                     </h3>
 
-                    <div className="relative border-l-2 border-[#0A7BBE]/30 pl-6 space-y-10">
+                    <div className="relative border-l-[3px] border-[#0A7BBE]/20 pl-6 space-y-8">
 
                       {selectedItinerary.moreDetails.map((detail: any, i: number) => (
                         <div key={i} className="relative">
 
                           {/* Timeline Dot */}
-                          <span className="absolute -left-[9px] top-1 w-4 h-4 bg-[#0A7BBE] rounded-full border-4 border-white shadow"></span>
+                          <span className="absolute -left-[31px] top-1 w-4 h-4 bg-[#0A7BBE] rounded-full ring-4 ring-white shadow-sm"></span>
 
-                          <div className="bg-gray-50 rounded-xl p-5 shadow-sm border border-gray-100">
-                            <p className="font-semibold text-[#0A7BBE] mb-2 text-base">
+                          <div className="bg-gray-50 rounded-2xl p-5 shadow-sm border border-gray-100">
+                            <p className="font-bold text-[#0A7BBE] mb-2 text-sm uppercase tracking-wide">
                               {detail.item}
                             </p>
-                            <p className="text-sm text-gray-600 leading-relaxed">
+                            <p className="text-sm text-gray-700 font-medium leading-relaxed">
                               {detail.reason}
                             </p>
                           </div>
@@ -698,9 +705,9 @@ export default function TourPage({
 
                 {/* ===== EXTRA INFO ===== */}
                 {selectedItinerary.extraInfo && (
-                  <div className="bg-[#fff9c4] text-[#856404] px-4 py-3 rounded-lg flex items-start gap-2 text-sm font-semibold border-l-4 border-[#ffeb3b]">
-                    <Info size={18} className="mt-0.5 shrink-0"/> 
-                    <div className="space-y-1">
+                  <div className="bg-amber-50 text-amber-800 px-5 py-4 rounded-2xl flex items-start gap-3 text-sm font-semibold border border-amber-200 shadow-sm">
+                    <Info size={20} className="mt-0.5 shrink-0 text-amber-600"/> 
+                    <div className="space-y-1.5">
                       {selectedItinerary.extraInfo.map((info: string, i: number) => (
                         <p key={i}>{info}</p>
                       ))}
@@ -712,13 +719,15 @@ export default function TourPage({
                 <div className="space-y-4">
 
                   {selectedItinerary.pickupTimes?.length > 0 && (
-                    <div className="bg-cyan-50 p-4 rounded-xl flex items-center gap-4 border border-cyan-100">
-                      <ArrowUp size={18} className="text-cyan-600" />
+                    <div className="bg-[#f0f9ff] p-5 rounded-2xl flex items-center gap-4 border border-[#bae6fd]">
+                      <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-sm">
+                        <ArrowUp size={20} className="text-[#0A7BBE]" />
+                      </div>
                       <div>
-                        <p className="text-xs text-gray-500 font-bold uppercase tracking-wider">
+                        <p className="text-xs text-gray-500 font-bold uppercase tracking-wider mb-0.5">
                           Hotel Pickup
                         </p>
-                        <p className="font-semibold text-gray-800 text-sm">
+                        <p className="font-bold text-gray-800 text-sm">
                           {selectedItinerary.pickupTimes[0]}
                         </p>
                       </div>
@@ -726,13 +735,15 @@ export default function TourPage({
                   )}
 
                   {selectedItinerary.returnTime && (
-                    <div className="bg-cyan-50 p-4 rounded-xl flex items-center gap-4 border border-cyan-100">
-                      <ArrowDown size={18} className="text-cyan-600" />
+                    <div className="bg-[#f0f9ff] p-5 rounded-2xl flex items-center gap-4 border border-[#bae6fd]">
+                      <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-sm">
+                        <ArrowDown size={20} className="text-[#0A7BBE]" />
+                      </div>
                       <div>
-                        <p className="text-xs text-gray-500 font-bold uppercase tracking-wider">
+                        <p className="text-xs text-gray-500 font-bold uppercase tracking-wider mb-0.5">
                           Hotel Return
                         </p>
-                        <p className="font-semibold text-gray-800 text-sm">
+                        <p className="font-bold text-gray-800 text-sm">
                           {selectedItinerary.returnTime}
                         </p>
                       </div>
@@ -743,14 +754,14 @@ export default function TourPage({
 
                 {/* ===== INCLUDED ===== */}
                 {selectedItinerary.included?.length > 0 && (
-                  <div>
-                    <h3 className="font-bold text-lg mb-4 text-[#0a7bbe]">
+                  <div className="bg-green-50/50 p-6 rounded-3xl border border-green-100">
+                    <h3 className="font-bold text-lg mb-5 text-gray-800 uppercase tracking-wide">
                       What's Included
                     </h3>
                     <ul className="space-y-3">
                       {selectedItinerary.included.map((item: string, idx: number) => (
-                        <li key={idx} className="flex items-start gap-3 text-sm text-gray-600 font-medium">
-                          <Check className="text-cyan-500 mt-0.5" size={16} />
+                        <li key={idx} className="flex items-start gap-3 text-sm text-gray-700 font-medium">
+                          <Check className="text-green-500 mt-0.5 shrink-0" size={18} />
                           <span>{item}</span>
                         </li>
                       ))}
@@ -760,14 +771,14 @@ export default function TourPage({
 
                 {/* ===== EXCLUDED ===== */}
                 {selectedItinerary.excluded?.length > 0 && (
-                  <div>
-                    <h3 className="font-bold text-lg mb-4 text-[#0a7bbe]">
-                      Exclude
+                  <div className="bg-red-50/50 p-6 rounded-3xl border border-red-100">
+                    <h3 className="font-bold text-lg mb-5 text-gray-800 uppercase tracking-wide">
+                      Not Included
                     </h3>
                     <ul className="space-y-3">
                       {selectedItinerary.excluded.map((item: string, idx: number) => (
-                        <li key={idx} className="flex items-start gap-3 text-sm text-gray-600 font-medium">
-                          <Check className="text-red-400 mt-0.5" size={16} />
+                        <li key={idx} className="flex items-start gap-3 text-sm text-gray-700 font-medium">
+                          <X className="text-red-400 mt-0.5 shrink-0" size={18} />
                           <span>{item}</span>
                         </li>
                       ))}
@@ -776,17 +787,15 @@ export default function TourPage({
                 )}
 
                 {/* ===== CONTACT BUTTON ===== */}
-                <div className="pt-4">
+                <div className="pt-2">
                   <a
                     href={`https://wa.me/201288062555?text=${encodeURIComponent(`Hello, I'm interested in ${selectedItinerary.title}`)}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block w-full sm:w-1/2 mx-auto py-3 rounded-xl font-bold text-white text-center transition hover:opacity-90 shadow-lg"
+                    className="flex w-full sm:w-2/3 mx-auto py-4 rounded-2xl font-bold text-white text-base items-center justify-center gap-3 transition hover:opacity-90 shadow-xl active:scale-95"
                     style={{ backgroundColor: '#0A7BBE' }}
                   >
-                    <span className="flex items-center justify-center gap-2">
-                      <FaWhatsapp className="text-xl" /> Contact Now
-                    </span>
+                    <FaWhatsapp className="text-2xl" /> Book via WhatsApp
                   </a>
                 </div>
 

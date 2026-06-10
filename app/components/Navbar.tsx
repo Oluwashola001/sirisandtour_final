@@ -23,6 +23,7 @@ export default function Navbar() {
   const [showNav, setShowNav] = useState(true);
 
   const pathname = usePathname();
+  const isHome = pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => setShowNav(window.scrollY === 0);
@@ -56,22 +57,34 @@ export default function Navbar() {
       >
         <div className="mx-auto flex w-full max-w-[1440px] items-center justify-between px-6 py-4 lg:px-12">
           
-          {/* LOGO: Reduced slightly to h-[90px] to tighten the navbar's vertical spacing */}
-          <Link href="/" className="flex-shrink-0 flex items-center notranslate lg:ml-8">
+          {/* LOGO & BRAND NAME */}
+          <Link href="/" className="flex-shrink-0 flex items-center gap-3 notranslate lg:ml-8">
             <Image
               src="/logo.svg"
-              alt="Koky · Hurghada trips"
-              width={450} 
+              alt="Koky · Hurghada trips logo"
+              width={160} 
               height={160} 
               priority
-              className="h-20 lg:h-[90px] w-auto object-contain object-left" 
+              className="h-16 lg:h-[75px] w-auto object-contain object-left" 
             />
+            {/* Dynamic Color Brand Text */}
+            <div className={`flex flex-col justify-center transition-colors duration-300 ${isHome ? "text-white" : "text-[#0A7BBE]"}`}>
+              <span 
+                className="text-2xl lg:text-[2rem] font-bold leading-none tracking-tight" 
+                style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+              >
+                Koky
+              </span>
+              <span className="text-[9px] lg:text-[11px] font-bold tracking-[0.25em] mt-1 uppercase">
+                Hurghada Trips
+              </span>
+            </div>
           </Link>
 
           {/* DESKTOP LINKS */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
-              <NavLink key={link.href} href={link.href}>
+              <NavLink key={link.href} href={link.href} isHome={isHome}>
                 {link.label}
               </NavLink>
             ))}
@@ -80,11 +93,7 @@ export default function Navbar() {
           {/* ACTIONS: TRANSLATE & BOOK NOW BUTTON */}
           <div className="hidden md:flex items-center gap-6">
             
-            {/* TRANSLATE WIDGET WRAPPER: 
-              The Double-Wrapper Trick. The script hijacks the inner div, 
-              so we use 'pt-3' (padding-top) on a completely separate outer div 
-              that the script cannot touch. This acts like an invisible ceiling pushing it down.
-            */}
+            {/* TRANSLATE WIDGET WRAPPER */}
             <div className="flex items-center pt-3">
               <div id="google_translate_element" className="skiptranslate" />
             </div>
@@ -101,7 +110,7 @@ export default function Navbar() {
           {/* MOBILE MENU BUTTON */}
           <div className="flex items-center md:hidden">
             <button
-              className="text-4xl text-black"
+              className={`text-4xl transition-colors duration-300 ${isHome ? "text-white" : "text-black"}`}
               onClick={() => setMobileOpen(true)}
             >
               <HiOutlineMenu />
@@ -125,7 +134,7 @@ export default function Navbar() {
         )}
       </AnimatePresence>
 
-      {/* MOBILE MENU */}
+      {/* MOBILE MENU (FULL SCREEN) */}
       <AnimatePresence>
         {menuVisible && (
           <motion.aside
@@ -134,23 +143,37 @@ export default function Navbar() {
             animate={{ x: 0 }}
             exit={{ x: "-100vw" }}
             transition={{ type: "spring", stiffness: 220, damping: 28 }}
-            className="fixed left-0 top-0 z-50 h-full w-[92%] max-w-sm bg-white shadow-2xl overflow-y-auto"
+            className="fixed inset-0 z-50 h-[100dvh] w-full bg-white overflow-y-auto"
           >
             <button
-              className="absolute right-6 top-6 text-4xl text-black z-10"
+              className="absolute right-4 top-9 text-4xl text-black z-10"
               onClick={() => setMobileOpen(false)}
             >
               <HiOutlineX />
             </button>
 
             <div className="flex justify-start px-6 pt-6">
-              <Image 
-                src="/logo.svg" 
-                alt="Koky · Hurghada trips" 
-                width={300} 
-                height={100} 
-                className="h-16 w-auto object-contain object-left"
-              />
+              <Link href="/" onClick={() => setMobileOpen(false)} className="flex items-center gap-3 notranslate">
+                <Image 
+                  src="/logo.svg" 
+                  alt="Koky · Hurghada trips logo" 
+                  width={100} 
+                  height={100} 
+                  className="h-14 w-auto object-contain object-left"
+                />
+                {/* Mobile Menu Brand Text */}
+                <div className="flex flex-col justify-center text-[#0A7BBE]">
+                  <span 
+                    className="text-2xl font-bold leading-none tracking-tight" 
+                    style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+                  >
+                    Koky
+                  </span>
+                  <span className="text-[10px] font-bold tracking-[0.2em] mt-1 uppercase">
+                    Hurghada Trips
+                  </span>
+                </div>
+              </Link>
             </div>
 
             {/* MOBILE NAV LINKS */}
@@ -192,6 +215,34 @@ export default function Navbar() {
                 </motion.div>
               ))}
             </motion.nav>
+
+            {/* FLOATING BOOK NOW LINK (Bottom Right) */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0 }}
+              transition={{ delay: 0.4, duration: 0.4 }}
+              className="absolute bottom-8 right-6 z-10"
+            >
+              <Link
+                href="/booknow"
+                onClick={() => setMobileOpen(false)}
+                className="flex items-center gap-2 text-2xl font-bold text-[#0A7BBE] hover:text-[#075E94] transition-colors"
+              >
+                <span>Book Now</span>
+                <motion.span
+                  animate={{ x: [0, 6, 0] }}
+                  transition={{ 
+                    duration: 1.5, 
+                    repeat: Infinity, 
+                    ease: "easeInOut" 
+                  }}
+                  className="text-2xl leading-none"
+                >
+                  →
+                </motion.span>
+              </Link>
+            </motion.div>
           </motion.aside>
         )}
       </AnimatePresence>
@@ -208,12 +259,10 @@ export default function Navbar() {
 interface NavLinkProps {
   href: string;
   children: React.ReactNode;
+  isHome: boolean;
 }
 
-function NavLink({ href, children }: NavLinkProps) {
-  const pathname = usePathname();
-  const isHome = pathname === "/";
-
+function NavLink({ href, children, isHome }: NavLinkProps) {
   return (
     <Link
       href={href}

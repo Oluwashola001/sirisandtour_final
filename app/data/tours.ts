@@ -280,7 +280,7 @@ export const tours: Tour[] = [
     heroVideo: "/videos/sham.mp4",
     gallery: ["/images/tours/16.jpg", "/images/tours/17.jpg"],
     overview: [
-      "Sharm El Sheikh... Where your family story begins with Koky · Hurghada trips. ✨",
+      "Sharm El Sheikh... Where your family story begins with Koky. ✨",
       "At Koky, we believe that travel is not just about visiting places, but about sharing warm moments with the ones you love. In Sharm El Sheikh, we are your extended family, opening the doors to beauty and adventure for you.",
       "The Colors of the Sea: Dive into the breathtaking waters of Ras Mohammed, where you and your children will discover a divine masterpiece of vibrant coral reefs. 🐠🤿",
       "The Serenity of the Soul: Enjoy a peaceful moment before the majestic architecture of Al-Sahaba Mosque and the unique beauty of the Heavenly Cathedral. 🕌⛪",
@@ -1472,7 +1472,7 @@ export const tours: Tour[] = [
     heroVideo: "/videos/fayoum.mp4",
     gallery: ["/images/tours/18.jpg", "/images/tours/19.jpg"],
     overview: [
-      "Fayoum... An oasis of tranquility for your family with Koky · Hurghada trips. ✨",
+      "Fayoum... An oasis of tranquility for your family with Koky. ✨",
       "In Fayoum, nature speaks the language of peace, and we guide you on a journey back to simple, authentic beauty.",
       "Wadi El-Hitan (Valley of the Whales): A breathtaking open-air museum and UNESCO World Heritage Site. 🐋⏳",
       "Wadi El-Rayan Waterfalls: Family joy surrounded by the soothing sound of cascading water in the desert. 🌊🏜️",
@@ -1633,7 +1633,7 @@ export const tours: Tour[] = [
       "/images/tours/20.jpg"
     ],
     overview: [
-      "Siwa... Your family’s dream oasis with Koky · Hurghada trips. ✨",
+      "Siwa... Your family’s dream oasis with Koky. ✨",
       "In Siwa, time stands still and the soul finds peace. We invite you to experience refined simplicity with your loved ones.",
       "Shali Fortress: Walk through the ruins of the ancient mud-brick city built from kershif and salt. 🏰🧱",
       "Cleopatra’s Spring: Enjoy family moments in crystal-clear natural springs beneath the shade of palm trees. 🏊‍♂️🌴",
@@ -2051,7 +2051,7 @@ export const tours: Tour[] = [
     ],
   },
   {
-    title: "Don't just be a tourist... be part of the family! Koky · Hurghada trips designs a city tour like you've never dreamed of (8:00 am - 9:00 pm)",
+    title: "Don't just be a tourist... be part of the family! Koky designs a city tour like you've never dreamed of (8:00 am - 9:00 pm)",
     cardTitle: "Hurghada",
     slug: makeSlug("Egypt Cultural Heritage Tour"),
     description: "Immerse yourself in Egypt’s history and culture.",
